@@ -1,0 +1,80 @@
+<script src="http://mbostock.github.com/d3/d3.v2.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
+
+
+<script>
+		var data = [
+        { date: "17-Oct-16", close: 117.54 },
+        { date: "14-Oct-16", close: 117.63 },
+        { date: "13-Oct-16", close: 116.98 },
+        { date: "12-Oct-16", close: 117.34 },
+        { date: "11-Oct-16", close: 116.30 },
+        { date: "10-Oct-16", close: 117.34 }
+    ];
+var margin = {top: 20, right: 20, bottom: 30, left: 50},
+    width = 740 - margin.left - margin.right,
+    height = 380 - margin.top - margin.bottom;
+var formatDate = d3.time.format("%e-%b-%y");
+data.forEach(function (d) { d = type(d) });
+var x = d3.time.scale()
+    .range([0, width]);
+var y = d3.scale.linear()
+    .range([height, 0]);
+var xAxis = d3.svg.axis()
+    .scale(x)
+    .orient("bottom");
+var yAxis = d3.svg.axis()
+    .scale(y)
+    .orient("left");
+var line = d3.svg.line()
+    .x(function(d) { return x(d.date); })
+    .y(function(d) { return y(d.close); });
+var svg = d3.select(".flex-item3").append("svg")
+    .attr("width", width + margin.left + margin.right)
+    .attr("height", height + margin.top + margin.bottom)
+  .append("g")
+    .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+//d3.tsv("data.tsv", type, function(error, data) {
+//  if (error) throw error;
+  x.domain(d3.extent(data, function(d) { return d.date; }));
+  y.domain(d3.extent(data, function(d) { return d.close; }));
+  svg.append("g")
+      .attr("class", "x axis")
+      .attr("transform", "translate(0," + height + ")")
+      .call(xAxis);
+  svg.append("g")
+      .attr("class", "y axis")
+      .call(yAxis)
+    .append("text")
+      .attr("transform", "rotate(-90)")
+      .attr("y", 6)
+      .attr("dy", ".71em")
+      .style("text-anchor", "end")
+      .text("Apple Inc.($)");
+  svg.append("path")
+      .datum(data)
+      .attr("class", "line")
+      .attr("d", line);
+//});
+  function type(d) {
+      d.date = formatDate.parse(d.date);
+      d.close = +d.close;
+  return d;
+}
+	</script>
+	
+	<script>
+    $( ".flex-item2" ).click(function() {
+  $( ".flex-item2" ).hide('fast','easeOutBounce');
+  $( ".flex-item1" ).hide('fast','easeOutBounce');
+  $(".flex-item3").show('fast','easeInBounce');
+  
+});
+ $( ".flex-item3" ).click(function() {
+  $( ".flex-item3" ).hide('fast','easeOutBounce');
+  $( ".flex-item1" ).show('fast','easeOutBounce');
+  $(".flex-item2").show('fast','easeInBounce');
+  
+});
+	</script>
