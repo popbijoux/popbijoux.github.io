@@ -13,6 +13,7 @@
 <style>figure{margin:0}.tmblr-iframe{position:absolute}.tmblr-iframe.hide{display:none}</style>
 <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
      <link href="https://fonts.googleapis.com/css?family=Lato:300" rel="stylesheet">
+  
     <style>
     aside, article, header, footer, nav {
 	display: block;
@@ -131,8 +132,8 @@ img {
 }
         
         .imglg img {
-    max-width: 60%;
-    max-height: 60%;
+    max-width: 40%;
+    max-height: 40%;
     margin-left 0;
     margin-right: 0;
 
@@ -264,10 +265,6 @@ h2 {
        
         
         
-         background-color: #2E343B;
-        
-        
-        
 h3  {
     font-family: 'Lato', sans-serif;
     font-size: 1.4em;
@@ -281,6 +278,12 @@ h4 {
 }
       .dark {
      color: black;
+ 
+}
+        
+           .redfont {
+     color: red;
+              
  
 }
 
@@ -307,11 +310,40 @@ h4 {
      border-bottom: solid 1px gray;
      border-top: solid 1px gray;
             text-align: center;
-    
-		  
-		    
-		    
+        
 	    }
+        
+            .lrgbottom {
+	    
+	    font-size: 1em;
+     border-bottom: solid 1px gray;
+            text-align: center;
+        
+	    }
+        
+        
+            .next {
+      
+            width:100%;
+            background-color: rgb(92, 209, 168); 
+              font-family: 'Lato', sans-serif;
+    font-size: 1.2em;
+    text-align: center;
+    border-collapse:collapse;
+    color:  black;
+    padding-top: 14px;
+    padding-bottom: 14px;
+          
+          
+        }
+        
+        .hiddencard  {
+            display: none;
+        }
+        
+         .nextButton, .submitButton, .nextResAButton, .nextResBButton, .nextResCButton, .nextResDButton  {
+            display: none;
+        }
         
         .next {
       
@@ -327,6 +359,9 @@ h4 {
           
           
         }
+        
+        
+
         
              .next:hover {
       
@@ -401,15 +436,47 @@ border-radius: 16px;
     
     
     <!--box 1-->
+    
+        <div class="flex-item3 introCard">
+<table class="tabletop">
+    <td colspan="4" class="lrg"><h2 class="dark">Your Risk Profile</h2></td>
+ 
+<tr>
+<th>
+    
+    <img src="https://popbijoux.github.io/risk/icons_risk_intro_page.svg" ></th></tr>
 
-<div class="flex-item2">
+     <tr><td colspan="1" class="lrg"><h2 class="dark">Fill out this 1-minute Questionnaire to find out more about your risk profile preferences<br></h2></td></tr>
+ 
+  <tr></tr>
+        <td></td>
+ 
+<tr>
+    <td class="imgbox lrgbottom"><img src="https://popbijoux.github.io/risk/icons_risk_sml1_clear.svg">
+        <img src="https://popbijoux.github.io/risk/icons_risk_sml2.svg">
+    <img src="https://popbijoux.github.io/risk/icons_risk_sml3.svg">
+        <img src="https://popbijoux.github.io/risk/icons_risk_sml4.svg"></td></tr>
+    
+    <tr></tr>
+        <td></td>
+  
+    
+    
+
+
+</table>
+
+</div>
+      
+
+<div class="flex-item2 hiddencard Quest1">
 <table class="tabletop">
        <td colspan="4" class="lrg"><h4>Risk Assessment Questionnaire</h4></td>
 <tr>
     <th class="imgbox"><img src="https://popbijoux.github.io/risk/icons_risk_sml1.svg">
         <img src="https://popbijoux.github.io/risk/icons_risk_sml2.svg">
     <img src="https://popbijoux.github.io/risk/icons_risk_sml3.svg">
-        <img src="https://popbijoux.github.io/risk/icons_risk_sml4.svg"></th>
+        <img src="https://popbijoux.github.io/risk/icons_risk_sml4.svg"></th></tr>
     
     
     <tr>
@@ -452,12 +519,12 @@ border-radius: 16px;
 </div>
     
 <!--box 2-->
-    <div class="flex-item2">
+    <div class="flex-item2 hiddencard Quest2">
 <table class="tabletop">
        <td colspan="4" class="lrg"><h4>Risk Assessment Questionnaire</h4></td>
 <tr>
     <th class="imgbox"><img src="https://popbijoux.github.io/risk/icons_risk_sml1.svg">
-        <img src="https://popbijoux.github.io/risk/icons_risk_sml2.svg">
+        <img src="https://popbijoux.github.io/risk/icons_risk_sml2_green.svg">
     <img src="https://popbijoux.github.io/risk/icons_risk_sml3.svg">
         <img src="https://popbijoux.github.io/risk/icons_risk_sml4.svg"></th>
     
@@ -503,15 +570,14 @@ border-radius: 16px;
 <!--box 3-->
     
     <!--box 2-->
-    <div class="flex-item2">
+    <div class="flex-item2 hiddencard Quest3">
 <table class="tabletop">
       <td colspan="4" class="lrg"><h4>Risk Assessment Questionnaire</h4></td>
 <tr>
     <th class="imgbox"><img src="https://popbijoux.github.io/risk/icons_risk_sml1.svg">
-        <img src="https://popbijoux.github.io/risk/icons_risk_sml2.svg">
-    <img src="https://popbijoux.github.io/risk/icons_risk_sml3.svg">
+        <img src="https://popbijoux.github.io/risk/icons_risk_sml2_green.svg">
+    <img src="https://popbijoux.github.io/risk/icons_risk_sml3_green.svg">
         <img src="https://popbijoux.github.io/risk/icons_risk_sml4.svg"></th>
-    
     
     <tr>
 <th colspan="4" class="lrg">3. Which is closest  percentage range you ever lost on a single investment?
@@ -553,15 +619,17 @@ border-radius: 16px;
 <!--box 4-->
     
     
-      <div class="flex-item2">
+      <div class="flex-item2 hiddencard Quest4">
 <table class="tabletop">
     <td colspan="4" class="lrg"><h4>Risk Assessment Questionnaire</h4></td>
 
 <tr>
     <th class="imgbox"><img src="https://popbijoux.github.io/risk/icons_risk_sml1.svg">
-        <img src="https://popbijoux.github.io/risk/icons_risk_sml2.svg">
-    <img src="https://popbijoux.github.io/risk/icons_risk_sml3.svg">
-        <img src="https://popbijoux.github.io/risk/icons_risk_sml4.svg"></th>
+        <img src="https://popbijoux.github.io/risk/icons_risk_sml2_green.svg">
+    <img src="https://popbijoux.github.io/risk/icons_risk_sml3_green.svg">
+        <img src="https://popbijoux.github.io/risk/icons_risk_sml4_green.svg"></th>
+    
+    </tr>
     
     
     <tr>
@@ -575,12 +643,12 @@ border-radius: 16px;
 	<tr></tr>
         <td></td>
 	 <tr><td colspan="4"><div class="answer">
-		<input name="q1" value="value1" id="value1" type="radio" checked="checked" /> Not sure/depends.
+		<input name="q1" value="value2" id="value1" type="radio" checked="checked" /> Not sure/depends.
 
          </div> </td></tr>
 
 	 <tr><td colspan="4"><div class="answer">
-		<input name="q1" value="value2" id="value2" type="radio" /> No
+		<input name="q1" value="value1" id="value2" type="radio" /> No
 
 	</div></td></tr>
 
@@ -599,41 +667,7 @@ border-radius: 16px;
     
     
     
-    
-
-          <div class="flex-item2">
-<table class="tabletop">
-      <td colspan="4" class="lrg"><h4>Your Risk Profile is...</h4></td>
-<tr>
-    <tr>
-    <th> <img src="https://popbijoux.github.io/risk/profile_basic_risk.svg" ></th></tr>
-    
-
-    <tr><th></th></tr>
-   
-   <td colspan="1" class="lrg"><h3>Basic Risk</h3></td>
-
-
-</table>
-</div>
-    
-        
-       <div class="flex-item2">
-<table class="tabletop">
-       <td colspan="4" class="lrg"><h4>Your Risk Profile is...</h4></td>
-<tr>
-    <tr>
-    <th> <img src="https://popbijoux.github.io/risk/profile_moderate.svg" ></th></tr>
-    
-
-    <tr><th></th></tr>
-      <td colspan="1" class="lrg"><h3>Moderate</h3></td>
-
-
-</table>
-</div>
-    
-           <div class="flex-item2">
+               <div class="flex-item2 hiddencard hiddenResA">
 <table class="tabletop">
           <td colspan="4" class="lrg"><h4>Your Risk Profile is...</h4></td>
 <tr>
@@ -650,9 +684,48 @@ border-radius: 16px;
     
     
     
+
+    
+        
+       <div class="flex-item2 hiddencard hiddenResB">
+<table class="tabletop">
+       <td colspan="4" class="lrg"><h4>Your Risk Profile is...</h4></td>
+<tr>
+    <tr>
+    <th> <img src="https://popbijoux.github.io/risk/profile_moderate.svg" ></th></tr>
+    
+
+    <tr><th></th></tr>
+      <td colspan="1" class="lrg"><h3>Moderate</h3></td>
+
+
+</table>
+</div>
+    
+
+    
+        
+
+          <div class="flex-item2 hiddencard hiddenResC">
+<table class="tabletop">
+      <td colspan="4" class="lrg"><h4>Your Risk Profile is...</h4></td>
+<tr>
+    <tr>
+    <th> <img src="https://popbijoux.github.io/risk/profile_basic_risk.svg" ></th></tr>
+    
+
+    <tr><th></th></tr>
+   
+   <td colspan="1" class="lrg"><h3>Basic Risk</h3></td>
+
+
+</table>
+</div>
+    
+    
     
        
-           <div class="flex-item2">
+           <div class="flex-item2 hiddencard hiddenResD">
 <table class="tabletop">
           <td colspan="4" class="lrg"><h4>Your Risk Profile is...</h4></td>
 <tr>
@@ -675,26 +748,17 @@ border-radius: 16px;
 <!--box 3-->
     
     <!--box 2-->
-    <div class="flex-item3">
-<table class="tabletop">
-    <td colspan="4" class="lrg"><h4 class="dark">Your Risk Profile</h4></td>
- 
-<tr>
-       <tr><th></th></tr>
- 
-    <th class="imglg">
-        <img src="https://popbijoux.github.io/risk/risk_profile_test_intro.svg" ></th></tr>
- <tr></tr>
-        <tr><th></th></tr>
-    
-    <td colspan="1" class="lrg"><h3 class="dark">Take this 2-minute to find out your risk preferences</h3></td>
-   
-
-
-</table>
-</div>
+  
 <!--box 4-->
-    <div class="next">NEXT ></div>
+    <div class="next getStartedButton">GET STARTED ></div>
+    <div class="next nextButton">NEXT ></div>
+     <div class="next submitButton">SUBMIT ></div>
+    <div class="next nextResAButton">NEXT ANSWER ></div>
+     <div class="next nextResBButton">NEXT ANSWER ></div>
+     <div class="next nextResCButton">NEXT ANSWER ></div>
+     <div class="next nextResDButton">THE END-:)</div>
+  
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script>
        var result;
    
@@ -708,15 +772,15 @@ border-radius: 16px;
       var value3;
       var value4;
       var value5;
-      var value6;
+     
       
       question = 1;
-      value1 = 0;
-      value2 = 0;
-      value3 = 0;
-      value4 = 0;
-      value5 = 0;
-      value6 = 0;
+      value1 = 1;
+      value2 = 2;
+      value3 = 3;
+      value4 = 4;
+      value5 = 5;
+   
       
       result = "";
 
@@ -793,12 +857,7 @@ border-radius: 16px;
 
       }
 
-      else if (value6 > value1 && value6 > value2 && value6 > value3 && value6 > value4 && value6 > value5 && value6 > 0) {
-
-         // value6 is the highest
-         result = "value6";
-
-      }
+     
 
       else {
          result = "404";
@@ -809,6 +868,68 @@ border-radius: 16px;
    }
 
 // ]]></script>
+    
+<script>
+$( ".getStartedButton" ).click(function() {
+$( ".getStartedButton" ).hide('fast');
+$( ".introCard" ).hide('fast');
+$( ".Quest1" ).show('fast');
+$( ".Quest2" ).show('fast');
+$( ".Quest3" ).show('fast');
+$( ".nextButton" ).show('fast');
+
+});
+    
+$( ".nextButton" ).click(function() {
+$( ".nextButton" ).hide('fast');
+$( ".submitButton" ).show('fast');
+$( ".Quest1" ).hide('fast');
+$( ".Quest2" ).hide('fast');
+$( ".Quest3" ).hide('fast');
+$( ".Quest4" ).show('fast');
+
+});
+    
+$( ".submitButton" ).click(function() {
+$( ".submitButton" ).hide('fast');
+$( ".planButton" ).show('fast');
+$( ".Quest4" ).hide('fast');
+$( ".planButton" ).show('fast');
+$( ".hiddenResD" ).show('fast');
+$( ".nextResAButton" ).show('fast');
+    
+   
+});
+    
+$( ".nextResAButton" ).click(function() {
+$( ".nextResAButton" ).hide('fast');
+$( ".nextResBButton" ).show('fast');
+$( ".hiddenResA" ).show('fast');
+$( ".hiddenResD" ).hide('fast');
+
+   
+});
+    
+$( ".nextResBButton" ).click(function() {
+$( ".nextResBButton" ).hide('fast');
+$( ".nextResCButton" ).show('fast');
+$( ".hiddenResB" ).show('fast');
+$( ".hiddenResA" ).hide('fast');
+
+   
+});
+    
+$( ".nextResCButton" ).click(function() {
+$( ".nextResCButton" ).hide('fast');
+$( ".nextResDButton" ).show('fast');
+$( ".hiddenResB" ).hide('fast');
+$( ".hiddenResC" ).show('fast');
+
+   
+});
+
+    
+    </script>
 
   <script src="//d3js.org/d3.v3.min.js"></script>
 
