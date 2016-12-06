@@ -1,0 +1,819 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Risk Profile Questionnaire</title>
+<!--[if lt IE 9]>
+<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+<style>
+     <style>figure{margin:0}.tmblr-iframe{position:absolute}.tmblr-iframe.hide{display:none}</style>
+<style>figure{margin:0}.tmblr-iframe{position:absolute}.tmblr-iframe.hide{display:none}</style>
+<style>figure{margin:0}.tmblr-iframe{position:absolute}.tmblr-iframe.hide{display:none}</style>
+<style>figure{margin:0}.tmblr-iframe{position:absolute}.tmblr-iframe.hide{display:none}</style>
+<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+     <link href="https://fonts.googleapis.com/css?family=Lato:300" rel="stylesheet">
+    <style>
+    aside, article, header, footer, nav {
+	display: block;
+        }
+        html, body {
+	margin: 0;
+	padding: 0;
+    font-family: 'Montserrat', sans-serif;
+    text-align: center
+            }
+html {
+	background: rgb(200, 200, 200);
+}
+body {
+	width: 98%;
+	background: rgb(240, 240, 240);
+	margin: 0 auto 1em;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+     }
+    header {
+	background: rgb(150, 150, 150);
+	margin-bottom: 5px;
+        height: 50px;
+    }
+    header, h1 {
+	color: black;
+	text-align: center;
+	line-height: 1.5em;
+	text-transform: uppercase;
+	letter-spacing:.1em;
+	margin: 0;
+}
+    .flex-container {
+    display: -webkit-flex;
+    display: flex;
+    flex-flow: row wrap;
+    align-content: space-between;
+    justify-content: space-between;
+    margin-top: 48px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 48px;
+    width: 96%;
+    background-color: lightgrey;
+}
+
+    .flex-item2 {
+    background-color: black;
+  
+    padding-top: 12px;
+    width: 300px;
+    height: 460px;
+    margin-top: 32px;
+    margin-bottom: 48px;
+    display: flex;
+    border-radius: 15px;
+        margin-left: auto;
+    margin-right: auto;
+    border-radius: 16px;
+         border:1px solid gray;
+         box-shadow: 3px 5px 3px #888888;
+    }
+  .flex-item2:hover  {
+background-color: #2E343B;
+    box-shadow: 3px 5px 3px #79A9E8;
+}
+.flex-item2:hover .lrg {
+    color: #79A9E8;
+     border-bottom: solid 1px darkgray;
+     border-top: solid 1px darkgray;
+}
+        
+         .flex-item3 {
+        background: rgb(220, 220, 220);
+    padding-top: 12px;
+    width: 300px;
+    height: 460px;
+    margin-top: 32px;
+    margin-bottom: 48px;
+    display: flex;
+    border-radius: 15px;
+        margin-left: auto;
+    margin-right: auto;
+    border-radius: 16px;
+         border:1px solid gray;
+         box-shadow: 3px 5px 3px #888888;
+    }
+  .flex-item3:hover  {
+
+    box-shadow: 3px 5px 3px #79A9E8;
+  
+}
+      
+    .flex-item3:hover .dark   {
+
+       color: #79A9E8;
+}
+      
+        
+        footer {
+	background: rgb(150, 150, 150);
+	font-size: 1em;
+	color: black;
+    height: 48px;
+            margin-top: 48px;
+}
+img {
+    max-width: 75%;
+    max-height: 75%;
+    margin-left 0;
+    margin-right: 0;
+
+  
+}
+        
+        .imglg img {
+    max-width: 60%;
+    max-height: 60%;
+    margin-left 0;
+    margin-right: 0;
+
+  
+}
+        
+        
+        .imgbox {
+            justify-content: center;
+            display: block;
+            height: 75px;
+            top: 0;
+            bottom: 0;
+            margin-bottom: -24px;
+           
+  
+}
+
+td {
+    font-family: 'Lato', sans-serif;
+    font-size: 1em;
+    text-align: left;
+    color: lightgray;
+    border-collapse:collapse;
+     margin-left 10px;
+    margin-right: 0;
+    align-content: center;
+    padding-top: 4px;
+    padding-bottom:4px;
+   
+   
+   
+}
+        
+        td .topmarg {
+    font-family: 'Lato', sans-serif;
+    font-size: 1em;
+    text-align: left;
+    color: lightgray;
+    border-collapse:collapse;
+     margin-left 10px;
+    margin-right: 0;
+    align-content: center;
+    padding-top: 4px;
+    padding-bottom:4px;
+    padding-left: 16px;
+   
+   
+}
+   
+th {
+    font-family: 'Lato', sans-serif;
+    font-size: .8em;
+    text-align: center;
+    border-collapse:collapse;
+    color: lightgray;
+    padding-top: 14px;
+    padding-bottom: 14px;
+
+}
+tr {
+    text-align: left;
+       font-family: 'Lato', sans-serif;
+    font-size: .9em;
+    border-collapse:collapse;
+    color: lightgray;
+    padding-top: 12px;
+    padding-bottom: 12px;
+
+}
+        
+      .answer {
+    text-align: left;
+    font-size: 1em;
+       font-family: 'Lato', sans-serif;
+    border-collapse:collapse;
+    color: lightgray;
+          padding-bottom: 4px;
+          padding-top:  4px;
+
+}
+        
+              .borders {
+  margin-bottom: 24px;
+
+}
+table {
+    margin-left: auto;
+     margin-right: auto;
+     width: 88%;
+}
+.tabletop {
+    margin-bottom: 12px;
+    margin-top: 16px;
+}
+.tabletop2 {
+    margin-bottom: 20px;
+    margin-top: 32px;
+}
+.greencell  {
+    background: limegreen;
+    border-radius: 5px;
+    padding: 2px;
+    text-align: center;
+}
+.highlight {
+    background: rgba(120, 120, 120,0.5);
+    margin:4px;
+    height: 20px;
+    border-radius: 8px;
+}
+
+        h1  {
+    font-family: 'Lato', sans-serif;
+    font-size: 1.8em;
+}
+        
+h2 {
+    font-family: 'Lato', sans-serif;
+    font-size: 1.6em;
+   
+}
+        
+    h2 .dark {
+    font-family: 'Lato', sans-serif;
+    font-size: 1.6em;
+   background-color: #2E343B;
+}
+       
+        
+        
+         background-color: #2E343B;
+        
+        
+        
+h3  {
+    font-family: 'Lato', sans-serif;
+    font-size: 1.4em;
+}
+h4 {
+    font-family: 'Lato', sans-serif;
+    font-size: 1.1em;
+    line-height: .5em;
+    text-align: center;
+ 
+}
+      .dark {
+     color: black;
+ 
+}
+
+        
+             .dark:hover {
+     color: #79A9E8;
+}
+
+        
+   
+        
+.sml {
+    font-size: .6em;
+    color: rgb(100, 100, 100);
+}
+.containersml  {
+    height: 100px;
+    margin-bottom: 36px;
+    margin-top: 8px;
+}
+	    .lrg {
+	    
+	    font-size: 1em;
+     border-bottom: solid 1px gray;
+     border-top: solid 1px gray;
+            text-align: center;
+    
+		  
+		    
+		    
+	    }
+        
+        .next {
+      
+            width:100%;
+            background-color: rgb(92, 209, 168); 
+              font-family: 'Lato', sans-serif;
+    font-size: 1.4em;
+    text-align: center;
+    border-collapse:collapse;
+    color:  black;
+    padding-top: 14px;
+    padding-bottom: 14px;
+          
+          
+        }
+        
+             .next:hover {
+      
+            width:100%;
+           
+              font-family: 'Lato', sans-serif;
+    font-size: 1.5em;
+    text-align: center;
+    border-collapse:collapse;
+   
+    padding-top: 14px;
+    padding-bottom: 14px;
+              
+                 
+                 
+          
+        }
+        
+        form {
+           margin-top: 32px;
+        }
+        
+@media only screen and (max-width: 640px) {
+   .box3  {
+  display: none;
+  }
+	
+  .flex-item2, {
+  background-color: black;
+  width: 300px;
+  height: 460px;
+  margin-top: 32px;
+  margin-bottom: 64px;
+  display: inline-block;
+  border-radius: 15px;
+      margin-left: auto;
+  margin-right: auto;
+  border-radius: 16px;
+       border:1px solid gray;
+       box-shadow: 3px 5px 3px #888888;
+  }
+  .flex-item2:hover  {
+background-color: #2E343B;
+width: 308px;
+height: 468px;
+margin-top: 32px;
+margin-bottom: 64px;
+display: inline-block;
+border-radius: 15px;
+   margin-left: auto;
+margin-right: auto;
+border-radius: 16px;
+    border:1px solid darkgray;
+    box-shadow: 3px 5px 3px #79A9E8;
+}
+}
+    </style>
+<link rel="stylesheet" type="text/css" href="http://assets.tumblr.com/fonts/gibson/stylesheet.css?v=3">
+
+<!-- BEGIN TUMBLR FACEBOOK OPENGRAPH TAGS --><!-- If you'd like to specify your own Open Graph tags, define the og:url and og:title tags in your theme's HTML. --><!-- Read more: http://ogp.me/ --><meta property="fb:app_id" content="48119224995" /><meta property="og:site_name" content="" /><meta property="og:title" content="" /><meta property="og:url" content="http://uxxo-wireframes.tumblr.com/Company_One" /><meta property="og:determiner" content="a" /><meta property="og:description" content="" /><meta property="og:type" content="tumblr-feed:entry" /><meta property="og:image" content="http://assets.tumblr.com/images/default_avatar/cube_open_128.png" /><meta property="al:ios:url" content="tumblr://x-callback-url/blog?blogName=uxxo-wireframes&amp;postID=" /><meta property="al:ios:app_name" content="Tumblr" /><meta property="al:ios:app_store_id" content="305343404" /><meta property="al:android:url" content="tumblr://x-callback-url/blog?blogName=uxxo-wireframes&amp;postID=" /><meta property="al:android:app_name" content="Tumblr" /><meta property="al:android:package" content="com.tumblr" /><!-- END TUMBLR FACEBOOK OPENGRAPH TAGS -->
+
+
+</head>
+<body>
+    <header>
+    </header>
+<!--[if lt IE 9]>
+<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+<div class="flex-container">
+
+    
+    
+    <!--box 1-->
+
+<div class="flex-item2">
+<table class="tabletop">
+       <td colspan="4" class="lrg"><h4>Risk Assessment Questionnaire</h4></td>
+<tr>
+    <th class="imgbox"><img src="https://popbijoux.github.io/risk/icons_risk_sml1.svg">
+        <img src="https://popbijoux.github.io/risk/icons_risk_sml2.svg">
+    <img src="https://popbijoux.github.io/risk/icons_risk_sml3.svg">
+        <img src="https://popbijoux.github.io/risk/icons_risk_sml4.svg"></th>
+    
+    
+    <tr>
+<th colspan="4" class="lrg">1. When do you think you will need the amont you are currently investing?</th>
+        </tr>
+    <tr></tr>
+        <td></td>
+    
+    <form name="quiz" action="javascript:check();" class="quizform">
+    <div class="quizsection">
+ 
+	
+	 <tr><td colspan="4" ><div class="answer">
+		<input name="q1" value="value1" id="value1" type="radio" checked="checked" /> Immediately.
+         </div> </td></tr>
+
+	 <tr><td colspan="4"><div class="answer">
+		<input name="q1" value="value2" id="value2" type="radio" /> Within the next 3 Years.
+	</div></td></tr>
+
+	<tr><td colspan="4"><div class="answer">
+		<input name="q1" value="value3" id="value3" type="radio" /> From 3 to 7 Years.
+	</div></td></tr>
+
+	<tr><td colspan="4"><div class="answer">
+		<input name="q1" value="value4" id="value4" type="radio" /> From 7 to 12 Years.
+	</div></td></tr>
+
+	<tr><td colspan="4"><div class="answer">
+		<input name="q1" value="value5" id="value5" type="radio" /> Longer than 12 Years.
+	</div></td></tr>
+
+
+
+</div>
+    </form>
+  
+
+</table>
+</div>
+    
+<!--box 2-->
+    <div class="flex-item2">
+<table class="tabletop">
+       <td colspan="4" class="lrg"><h4>Risk Assessment Questionnaire</h4></td>
+<tr>
+    <th class="imgbox"><img src="https://popbijoux.github.io/risk/icons_risk_sml1.svg">
+        <img src="https://popbijoux.github.io/risk/icons_risk_sml2.svg">
+    <img src="https://popbijoux.github.io/risk/icons_risk_sml3.svg">
+        <img src="https://popbijoux.github.io/risk/icons_risk_sml4.svg"></th>
+    
+    
+    <tr>
+<th colspan="4" class="lrg">2. What amount would you expect to add to your portfolio annually, over the next five years?</th>
+      
+        </tr>
+    <form name="quiz" action="javascript:check();" class="quizform">
+    <div class="quizsection">
+ 
+        
+	<tr></tr>
+        <td></td>
+	 <tr><td colspan="4"><div class="answer">
+		<input name="q1" value="value1" id="value1" type="radio" checked="checked" /> None
+         </div> </td></tr>
+
+	 <tr><td colspan="4"><div class="answer">
+		<input name="q1" value="value2" id="value2" type="radio" /> Less than $5,000
+	</div></td></tr>
+
+	<tr><td colspan="4"><div class="answer">
+		<input name="q1" value="value3" id="value3" type="radio" /> Between $5,000 and $10,000
+	</div></td></tr>
+
+	<tr><td colspan="4"><div class="answer">
+		<input name="q1" value="value4" id="value4" type="radio" /> Between $10,000 and $20,000 
+	</div></td></tr>
+
+	<tr><td colspan="4"><div class="answer">
+		<input name="q1" value="value5" id="value5" type="radio" /> Greater than $20,000 
+	</div></td></tr>
+
+
+
+</div>
+    </form>
+  
+
+</table>
+</div>
+<!--box 3-->
+    
+    <!--box 2-->
+    <div class="flex-item2">
+<table class="tabletop">
+      <td colspan="4" class="lrg"><h4>Risk Assessment Questionnaire</h4></td>
+<tr>
+    <th class="imgbox"><img src="https://popbijoux.github.io/risk/icons_risk_sml1.svg">
+        <img src="https://popbijoux.github.io/risk/icons_risk_sml2.svg">
+    <img src="https://popbijoux.github.io/risk/icons_risk_sml3.svg">
+        <img src="https://popbijoux.github.io/risk/icons_risk_sml4.svg"></th>
+    
+    
+    <tr>
+<th colspan="4" class="lrg">3. Which is closest  percentage range you ever lost on a single investment?
+</th>
+        </tr>
+    <form name="quiz" action="javascript:check();" class="quizform">
+    <div class="quizsection">
+ 
+	<tr></tr>
+        <td></td>
+	 <tr><td colspan="4" ><div class="answer">
+		<input name="q1" value="value1" id="value1" type="radio" checked="checked" /> Never lost money.
+         </div> </td></tr>
+
+	 <tr><td colspan="4"><div class="answer">
+		<input name="q1" value="value2" id="value2" type="radio" /> 0-25%
+	</div></td></tr>
+
+	<tr><td colspan="4"><div class="answer">
+		<input name="q1" value="value3" id="value3" type="radio" /> 25-50%
+	</div></td></tr>
+
+	<tr><td colspan="4"><div class="answer">
+		<input name="q1" value="value4" id="value4" type="radio" /> 50-75%
+	</div></td></tr>
+
+	<tr><td colspan="4"><div class="answer">
+		<input name="q1" value="value5" id="value5" type="radio" /> 75-100%
+	</div></td></tr>
+
+
+
+</div>
+    </form>
+  
+
+</table>
+</div>
+<!--box 4-->
+    
+    
+      <div class="flex-item2">
+<table class="tabletop">
+    <td colspan="4" class="lrg"><h4>Risk Assessment Questionnaire</h4></td>
+
+<tr>
+    <th class="imgbox"><img src="https://popbijoux.github.io/risk/icons_risk_sml1.svg">
+        <img src="https://popbijoux.github.io/risk/icons_risk_sml2.svg">
+    <img src="https://popbijoux.github.io/risk/icons_risk_sml3.svg">
+        <img src="https://popbijoux.github.io/risk/icons_risk_sml4.svg"></th>
+    
+    
+    <tr>
+<th colspan="4" class="lrg">4. Would you be more comfortable investing in stocks that have done well the last few years?</th>
+      
+        </tr>
+    <form name="quiz" action="javascript:check();" class="quizform">
+    <div class="quizsection">
+ 
+        
+	<tr></tr>
+        <td></td>
+	 <tr><td colspan="4"><div class="answer">
+		<input name="q1" value="value1" id="value1" type="radio" checked="checked" /> Not sure/depends.
+
+         </div> </td></tr>
+
+	 <tr><td colspan="4"><div class="answer">
+		<input name="q1" value="value2" id="value2" type="radio" /> No
+
+	</div></td></tr>
+
+	<tr><td colspan="4"><div class="answer">
+		<input name="q1" value="value3" id="value3" type="radio" /> Yes
+	</div></td></tr>
+
+
+
+</div>
+    </form>
+  
+
+</table>
+</div>
+    
+    
+    
+    
+
+          <div class="flex-item2">
+<table class="tabletop">
+      <td colspan="4" class="lrg"><h4>Your Risk Profile is...</h4></td>
+<tr>
+    <tr>
+    <th> <img src="https://popbijoux.github.io/risk/profile_basic_risk.svg" ></th></tr>
+    
+
+    <tr><th></th></tr>
+   
+   <td colspan="1" class="lrg"><h3>Basic Risk</h3></td>
+
+
+</table>
+</div>
+    
+        
+       <div class="flex-item2">
+<table class="tabletop">
+       <td colspan="4" class="lrg"><h4>Your Risk Profile is...</h4></td>
+<tr>
+    <tr>
+    <th> <img src="https://popbijoux.github.io/risk/profile_moderate.svg" ></th></tr>
+    
+
+    <tr><th></th></tr>
+      <td colspan="1" class="lrg"><h3>Moderate</h3></td>
+
+
+</table>
+</div>
+    
+           <div class="flex-item2">
+<table class="tabletop">
+          <td colspan="4" class="lrg"><h4>Your Risk Profile is...</h4></td>
+<tr>
+    <tr>
+    <th> <img src="https://popbijoux.github.io/risk/profile_conservative.svg" ></th></tr>
+    
+  <tr><th></th></tr>
+   
+   
+    <td colspan="1" class="lrg"><h3>Conservative</h3></td>
+
+</table>
+</div>
+    
+    
+    
+    
+       
+           <div class="flex-item2">
+<table class="tabletop">
+          <td colspan="4" class="lrg"><h4>Your Risk Profile is...</h4></td>
+<tr>
+    
+    <tr>
+ 
+    <th> <img src="https://popbijoux.github.io/risk/profile_advanced_risk.svg" ></th></tr>
+    
+  <tr><th></th></tr>
+   
+    <td colspan="1" class="lrg"><h3>Advanced Risk</h3></td>
+    
+  
+
+</table>
+</div>
+    
+    
+
+<!--box 3-->
+    
+    <!--box 2-->
+    <div class="flex-item3">
+<table class="tabletop">
+    <td colspan="4" class="lrg"><h4 class="dark">Your Risk Profile</h4></td>
+ 
+<tr>
+       <tr><th></th></tr>
+ 
+    <th class="imglg">
+        <img src="https://popbijoux.github.io/risk/risk_profile_test_intro.svg" ></th></tr>
+ <tr></tr>
+        <tr><th></th></tr>
+    
+    <td colspan="1" class="lrg"><h3 class="dark">Take this 2-minute to find out your risk preferences</h3></td>
+   
+
+
+</table>
+</div>
+<!--box 4-->
+    <div class="next">NEXT ></div>
+    <script>
+       var result;
+   
+   function check()
+
+   {
+
+      var question;
+      var value1;
+      var value2;
+      var value3;
+      var value4;
+      var value5;
+      var value6;
+      
+      question = 1;
+      value1 = 0;
+      value2 = 0;
+      value3 = 0;
+      value4 = 0;
+      value5 = 0;
+      value6 = 0;
+      
+      result = "";
+
+      var choice;
+      
+      for (question = 1; question <= 3; question++) {
+      
+         var q = document.forms['quiz'].elements['q'+question];
+
+            for (var i = 0; i < q.length; i++) {
+               if (q[i].checked) {
+                  choice = q[i].value;
+               }
+            }
+
+            if (choice == "value1") {
+               value1++;
+            }
+
+            if (choice == "value2") {
+               value2++;
+            }
+
+            if (choice == "value3") {
+               value3++;
+            }
+
+            if (choice == "value4") {
+               value4++;
+            }
+
+            if (choice == "value5") {
+               value5++;
+            }
+
+            if (choice == "value6") {
+               value6++;
+            }
+
+         }
+
+      if (value1 >= value2 && value1 >= value3 && value1 >= value4 && value1 >= value5 && value1 >= value6 && value1 > 0) {
+
+         // value1 is the highest
+         result = "value1";
+
+      }
+
+      else if (value2 > value1 && value2 >= value3 && value2 >= value4 && value2 >= value5 && value2 >= value6 && value2  > 0) {
+
+         // value2 is the highest
+         result = "value2";
+
+      }
+
+      else if (value3 > value1 && value3 > value2 && value3 >= value4 && value3 >= value5 && value3 >= value6 && value3 > 0) {
+
+         // value3 is the highest
+         result = "value3";
+
+      }
+
+      else if (value4 > value1 && value4 > value2 && value4 > value3 && value4 >= value5 && value4 >= value6 && value4 > 0) {
+
+         // value4 is the highest
+         result = "value4"; 
+
+      }
+
+      else if (value5 > value1 && value5 > value2 && value5 > value3 && value5 > value4 && value5 >= value6 && value5 > 0) {
+
+         // value5 is the highest
+         result = "value5";
+
+      }
+
+      else if (value6 > value1 && value6 > value2 && value6 > value3 && value6 > value4 && value6 > value5 && value6 > 0) {
+
+         // value6 is the highest
+         result = "value6";
+
+      }
+
+      else {
+         result = "404";
+      }
+
+      window.location = result + '.html';
+
+   }
+
+// ]]></script>
+
+  <script src="//d3js.org/d3.v3.min.js"></script>
+
+
+
+</body>
+
+</html>
