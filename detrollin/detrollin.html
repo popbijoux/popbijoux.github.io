@@ -715,8 +715,7 @@ border-radius: 16px;
         typeSpeed: 100
       });
   });
-    
-      $(function(){
+    $( ".cardTwo" ).click(function() {
       $(".text2").typed({
         strings: ["Your tryen 2 deny My First Ammendmets right?!!"],
         typeSpeed: 100
@@ -735,12 +734,14 @@ $( ".cardTwo" ).show('fast');
 });
     
 $( ".cardTwo" ).click(function() {
+$( ".cardTwo" ).hide('fast');
 $( ".cardThree" ).show('fast');
     
 
 });    
     
 $( ".cardThree" ).click(function() {
+$( ".cardThree" ).hide('fast');
 $( ".cardFour" ).show('fast');
 
 });     
@@ -754,7 +755,6 @@ $( ".cardFive" ).show('fast');
 $( ".cardFive" ).click(function() {
 $( ".cardFive" ).hide('fast');
 $( ".cardFour" ).hide('fast');
-$( ".cardTwo" ).show('fast');
 $( ".cardOne" ).show('fast');
 
 }); 
