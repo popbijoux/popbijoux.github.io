@@ -1,0 +1,771 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Risk Profile Questionnaire</title>
+<!--[if lt IE 9]>
+<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+<style>
+     <style>figure{margin:0}.tmblr-iframe{position:absolute}.tmblr-iframe.hide{display:none}</style>
+<style>figure{margin:0}.tmblr-iframe{position:absolute}.tmblr-iframe.hide{display:none}</style>
+<style>figure{margin:0}.tmblr-iframe{position:absolute}.tmblr-iframe.hide{display:none}</style>
+<style>figure{margin:0}.tmblr-iframe{position:absolute}.tmblr-iframe.hide{display:none}</style>
+<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+     <link href="https://fonts.googleapis.com/css?family=Lato:300" rel="stylesheet">
+  
+    <style>
+    aside, article, header, footer, nav {
+	display: block;
+        }
+        html, body {
+	margin: 0;
+	padding: 0;
+    font-family: 'Montserrat', sans-serif;
+    text-align: center
+            }
+html {
+	background: rgb(200, 200, 200);
+}
+body {
+	width: 98%;
+	background: rgb(240, 240, 240);
+	margin: 0 auto 1em;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+     }
+    header {
+	background: rgb(150, 150, 150);
+	margin-bottom: 5px;
+        height: 50px;
+    }
+    header, h1 {
+	color: black;
+	text-align: center;
+	line-height: 1.5em;
+	text-transform: uppercase;
+	letter-spacing:.1em;
+	margin: 0;
+}
+    .flex-container {
+    display: -webkit-flex;
+    display: flex;
+    flex-flow: row wrap;
+    align-content: space-between;
+    justify-content: space-between;
+    margin-top: 48px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 48px;
+    width: 96%;
+  
+}
+
+    .flex-item2 {
+    background-color: black;
+  
+    padding-top: 12px;
+    width: 300px;
+    height: 460px;
+    margin-top: 32px;
+    margin-bottom: 48px;
+    display: flex;
+    border-radius: 15px;
+        margin-left: auto;
+    margin-right: auto;
+    border-radius: 16px;
+         border:1px solid gray;
+         box-shadow: 3px 5px 3px #888888;
+    }
+  .flex-item2:hover  {
+background-color: #2E343B;
+    box-shadow: 3px 5px 3px #79A9E8;
+}
+.flex-item2:hover .lrg {
+    color: #79A9E8;
+     border-bottom: solid 1px darkgray;
+     border-top: solid 1px darkgray;
+}
+        
+         .flex-item3 {
+        background: white;
+    padding-top: 12px;
+    width: 300px;
+   
+    margin-top: 32px;
+    margin-bottom: 48px;
+    display: flex;
+    border-radius: 15px;
+        margin-left: auto;
+    margin-right: auto;
+    border-radius: 16px;
+         border:1px solid gray;
+         box-shadow: 3px 5px 3px #888888;
+               position: relative; 
+  z-index: 1; 
+  width: 300px; 
+              height: 460px;
+    }
+  .flex-item3:hover  {
+
+    box-shadow: 3px 5px 3px #79A9E8;
+  
+}
+      
+    .flex-item3:hover .dark   {
+
+       color: #79A9E8;
+}
+      
+        
+        footer {
+	background: rgb(150, 150, 150);
+	font-size: 1em;
+	color: black;
+    height: 48px;
+            margin-top: 48px;
+}
+img {
+    max-width: 70%;
+    max-height: 70%;
+    margin-left 0;
+    margin-right: 0;
+
+  
+}
+        
+        
+        
+        img h2 {
+    max-width: 80%;
+    max-height: 80%;
+    margin-left 0;
+    margin-right: 0;
+    background-color: azure;        
+
+  
+}
+  
+        
+        .imglg img {
+  background-color: 
+
+  
+}
+        
+        
+        .imgbox {
+            justify-content: center;
+            display: block;
+            height: 75px;
+            top: 0;
+            bottom: 0;
+            margin-bottom: -24px;
+           
+  
+}
+
+td {
+    font-family: 'Lato', sans-serif;
+    font-size: 1em;
+    text-align: left;
+    color: lightgray;
+    border-collapse:collapse;
+     margin-left 10px;
+    margin-right: 0;
+    align-content: center;
+    padding-top: 4px;
+    padding-bottom:4px;
+   
+   
+   
+}
+        
+        td .topmarg {
+    font-family: 'Lato', sans-serif;
+    font-size: 1em;
+    text-align: left;
+    color: lightgray;
+    border-collapse:collapse;
+     margin-left 10px;
+    margin-right: 0;
+    align-content: center;
+    padding-top: 4px;
+    padding-bottom:4px;
+    padding-left: 16px;
+   
+   
+}
+   
+th {
+    font-family: 'Lato', sans-serif;
+    font-size: .8em;
+    text-align: center;
+    border-collapse:collapse;
+    color: lightgray;
+    padding-top: 14px;
+    padding-bottom: 14px;
+
+}
+tr {
+    text-align: left;
+       font-family: 'Lato', sans-serif;
+    font-size: .9em;
+    border-collapse:collapse;
+    color: lightgray;
+    padding-top: 12px;
+    padding-bottom: 12px;
+
+}
+        
+      .answer {
+    text-align: left;
+    font-size: 1em;
+       font-family: 'Lato', sans-serif;
+    border-collapse:collapse;
+    color: lightgray;
+          padding-bottom: 4px;
+          padding-top:  4px;
+
+}
+        
+              .borders {
+  margin-bottom: 24px;
+
+}
+table {
+  
+     width: 100%;
+  
+    
+     position: absolute; 
+  z-index: -1;
+  top: 8px; 
+  left: -10%; 
+  width: 120%; 
+  height: 490px; 
+}
+.tabletop {
+    margin-bottom: 12px;
+    margin-top: 0px;
+}
+.tabletop2 {
+    margin-bottom: 20px;
+    margin-top: 32px;
+}
+.greencell  {
+    background: limegreen;
+    border-radius: 5px;
+    padding: 2px;
+    text-align: center;
+}
+.highlight {
+    background: rgba(120, 120, 120,0.5);
+    margin:4px;
+    height: 20px;
+    border-radius: 8px;
+}
+
+        h1  {
+    font-family: 'Lato', sans-serif;
+    font-size: 1.8em;
+}
+        
+  
+        
+    h2 .dark {
+    font-family: 'Lato', sans-serif;
+    font-size: 1.6em;
+   background-color: #2E343B;
+}
+       
+      
+            h2 .textbox {
+   color: blue;
+                width: 100%;
+}
+        
+        
+        
+h3  {
+    font-family: 'Lato', sans-serif;
+    font-size: 1.4em;
+}
+h4 {
+    font-family: 'Lato', sans-serif;
+    font-size: 1.1em;
+    line-height: .5em;
+    text-align: center;
+ 
+}
+      .dark {
+     color: black;
+ 
+}
+        
+           .redfont {
+     color: red;
+              
+ 
+}
+
+     .cardTwo, .cardThree, .cardFour, .cardFive {
+            
+            display: none;
+        
+        }
+        
+             .dark:hover {
+     color: #79A9E8;
+}
+
+        
+   
+        
+.sml {
+    font-size: .6em;
+    color: rgb(100, 100, 100);
+}
+.containersml  {
+    height: 100px;
+    margin-bottom: 36px;
+    margin-top: 8px;
+}
+	    .lrg {
+	    
+	    font-size: 1em;
+
+            text-align: center;
+        
+	    }
+        
+        
+        .wide  {
+            max-width: 100%;
+            min-width: 100%;
+            
+        }
+        
+         .wide img  {
+            max-width: 100%;
+            min-width: 100%;
+             top: 0;
+              margin-top: -12px;
+            
+        } 
+        
+        
+        
+            .lrgbottom {
+	    
+	    font-size: 1em;
+     border-bottom: solid 1px gray;
+            text-align: center;
+        
+	    }
+        
+        
+ 
+        
+        .hiddencard  {
+            display: none;
+        }
+        
+         .nextButton, .submitButton, .nextResAButton, .nextResBButton, .nextResCButton, .nextResDButton  {
+            display: none;
+        }
+        
+        .next1 {
+      
+            width:300px;
+            background-color: rgb(0, 138, 239); 
+              font-family: 'Lato', sans-serif;
+            font-size: 1.2em;
+            text-align: center;
+            border-collapse:collapse;
+            color:  lightgrey;
+            padding-top: 14px;
+            padding-bottom: 14px;
+            justify-content: center;
+            margin-top: 82px;
+            margin-left: 27px;
+            margin-right: auto;
+            border-radius: 0px 0px 15px 15px; 
+            position: relative;
+          
+          
+          
+        }
+        
+        
+        .next2 {
+      
+            width:300px;
+            background-color: rgb(0, 138, 239); 
+              font-family: 'Lato', sans-serif;
+            font-size: 1.2em;
+            text-align: center;
+            border-collapse:collapse;
+            color:  lightgrey;
+            padding-top: 14px;
+            padding-bottom: 14px;
+            justify-content: center;
+            margin-top: 302px;
+            margin-left: 27px;
+            margin-right: auto;
+            border-radius: 0px 0px 15px 15px; 
+            position: relative;
+          
+          
+          
+        }
+        
+        
+         .next3 {
+      
+            width:300px;
+            background-color: rgb(0, 138, 239); 
+              font-family: 'Lato', sans-serif;
+            font-size: 1.2em;
+            text-align: center;
+            border-collapse:collapse;
+            color:  lightgrey;
+            padding-top: 14px;
+            padding-bottom: 14px;
+            justify-content: center;
+            margin-top: 280px;
+            margin-left: 27px;
+            margin-right: auto;
+            border-radius: 0px 0px 15px 15px; 
+            position: relative;
+          
+        
+          
+        }
+        
+           .next4 {
+      
+            width:300px;
+            background-color: rgb(0, 138, 239); 
+              font-family: 'Lato', sans-serif;
+            font-size: 1.2em;
+            text-align: center;
+            border-collapse:collapse;
+            color:  lightgrey;
+            padding-top: 14px;
+            padding-bottom: 14px;
+            justify-content: center;
+            margin-top: 285px;
+            margin-left: 27px;
+            margin-right: auto;
+            border-radius: 0px 0px 15px 15px; 
+            position: relative;
+          
+        
+          
+        }
+        
+        .textbox {
+      
+            width:200px;
+            background-color: rgb(220, 220, 220); 
+              font-family: 'Lato', sans-serif;
+            font-size: 1.6em;
+            text-align: center;
+            border-collapse:collapse;
+            color:  black;
+            padding: 24px;
+            margin-left: 50px;
+          height: 140px;
+            margin-top: 12px;
+            border-radius: 5px 5px 5px 5px; 
+            float: left;
+            position: absolute;
+          
+          
+          
+        }
+        
+        whitetext {
+            color: white;
+        }
+        
+        
+
+        
+             .next:hover {
+      
+                 
+          
+        }
+        
+        form {
+           margin-top: 32px;
+        }
+        
+@media only screen and (max-width: 640px) {
+   .box3  {
+  display: none;
+  }
+	
+  .flex-item2, {
+  background-color: black;
+  width: 300px;
+  height: 460px;
+  margin-top: 32px;
+  margin-bottom: 64px;
+  display: inline-block;
+  border-radius: 15px;
+      margin-left: auto;
+  margin-right: auto;
+  border-radius: 16px;
+       border:1px solid gray;
+       box-shadow: 3px 5px 3px #888888;
+  }
+  .flex-item2:hover  {
+background-color: #2E343B;
+width: 308px;
+height: 468px;
+margin-top: 32px;
+margin-bottom: 64px;
+display: inline-block;
+border-radius: 15px;
+   margin-left: auto;
+margin-right: auto;
+border-radius: 16px;
+    border:1px solid darkgray;
+    box-shadow: 3px 5px 3px #79A9E8;
+}
+    
+    
+    
+}
+    </style>
+<link rel="stylesheet" type="text/css" href="http://assets.tumblr.com/fonts/gibson/stylesheet.css?v=3">
+
+<!-- BEGIN TUMBLR FACEBOOK OPENGRAPH TAGS --><!-- If you'd like to specify your own Open Graph tags, define the og:url and og:title tags in your theme's HTML. --><!-- Read more: http://ogp.me/ --><meta property="fb:app_id" content="48119224995" /><meta property="og:site_name" content="" /><meta property="og:title" content="" /><meta property="og:url" content="http://uxxo-wireframes.tumblr.com/Company_One" /><meta property="og:determiner" content="a" /><meta property="og:description" content="" /><meta property="og:type" content="tumblr-feed:entry" /><meta property="og:image" content="http://assets.tumblr.com/images/default_avatar/cube_open_128.png" /><meta property="al:ios:url" content="tumblr://x-callback-url/blog?blogName=uxxo-wireframes&amp;postID=" /><meta property="al:ios:app_name" content="Tumblr" /><meta property="al:ios:app_store_id" content="305343404" /><meta property="al:android:url" content="tumblr://x-callback-url/blog?blogName=uxxo-wireframes&amp;postID=" /><meta property="al:android:app_name" content="Tumblr" /><meta property="al:android:package" content="com.tumblr" /><!-- END TUMBLR FACEBOOK OPENGRAPH TAGS -->
+
+
+</head>
+<body>
+    <header>
+    </header>
+<!--[if lt IE 9]>
+<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+<div class="flex-container">
+
+    
+    
+    <!--box 1-->
+    
+        <div class="flex-item3 cardOne">
+<table class="tabletop">
+
+   <tr></tr>
+        <td></td>
+      <tr></tr>
+        <td></td>
+      <tr></tr>
+        <td></td>
+<tr>
+<th>
+    
+    <img src="https://popbijoux.github.io/detrollin/detrollin_img_logo.svg" ></th></tr>
+
+     <tr><td colspan="1" class="lrg"><h2 class="next1 getStartedButton ">talk back time, y'all!!!<br></h2></td></tr>
+ 
+  <tr></tr>
+        <td></td>
+ 
+
+    
+
+
+</table>
+
+</div>
+      
+
+    
+    
+    
+    
+            <div class="flex-item3 cardTwo">
+<table class="tabletop">
+
+ 
+<tr>
+<th class="wide">
+    
+    <img src="https://popbijoux.github.io/detrollin/detrollin_sml_header.svg" ></th></tr>
+    
+      <tr><th colspan="4" class="lrg left"><h2 class="dark textbox">Press the button below to Insert the Troll Phrase.
+
+
+     <tr><td colspan="1" class="lrg"><h2 class="next2 getStartedButton">Insert Troll Phrase<br></h2></td></tr>
+ 
+  <tr></tr>
+        <td></td>
+ 
+
+  
+
+</table>
+
+</div>
+    
+    
+                    <div class="flex-item3 cardThree">
+<table class="tabletop">
+
+ 
+<tr>
+<th class="wide">
+    
+    <img src="https://popbijoux.github.io/detrollin/detrollin_sml_header.svg" ></th></tr>
+    
+      <tr><th colspan="4" class="lrg left"><h2 class="dark textbox text2">Your tryen 2 deny My First Ammendmets right?!!</h2></th></tr>
+
+
+     <tr><td colspan="1" class="lrg"><h2 class="next4 getStartedButton">De-Troll<br></h2></td></tr>
+ 
+  <tr></tr>
+        <td></td>
+ 
+
+  
+
+</table>
+
+</div>
+    
+     <div class="flex-item3 cardFour">
+<table class="tabletop">
+
+   <tr></tr>
+        <td></td>
+      <tr></tr>
+        <td></td>
+      <tr></tr>
+        <td></td>
+<tr>
+<th>
+    
+    <img src="https://popbijoux.github.io/detrollin/detrollin_img_logo.svg" ></th></tr>
+
+     <tr><td colspan="1" class="lrg"><h2 class="next1 getStartedButton ">New De-Troll Phrase<br></h2></td></tr>
+ 
+  <tr></tr>
+        <td></td>
+ 
+
+    
+
+
+</table>
+
+</div>
+    
+    
+                <div class="flex-item3 cardFive">
+<table class="tabletop">
+
+ 
+<tr>
+<th class="wide">
+    
+    <img src="https://popbijoux.github.io/detrollin/detrollin_sml_header.svg" ></th></tr>
+    
+      <tr><th colspan="4" class="lrg left"><h2 class="dark textbox text1">U R Muslim terroriss from syrian counitres includen isreeal and franch. ]
+          </h2></th></tr>
+
+
+     <tr><td colspan="1" class="lrg"><h2 class="next3 getStartedButton">Insert New Troll Phrase<br></h2></td></tr>
+ 
+  <tr></tr>
+     
+ 
+
+  
+
+</table>
+
+</div>
+    
+    
+    
+
+      
+    
+    
+ 
+  
+<!--box 4-->
+
+  
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://cdn.rawgit.com/thiagoh/de-animate/master/dist/jquery.de-animate.min.js"></script>
+<script src="typed.js"></script>
+<script>
+ $( ".cardThree" ).click(function() {
+      $(".text1").typed({
+        strings: ["U R Muslim terroriss from syrian counitres includen isreeal and franch."],
+        typeSpeed: 100
+      });
+  });
+    
+      $(function(){
+      $(".text2").typed({
+        strings: ["Your tryen 2 deny My First Ammendmets right?!!"],
+        typeSpeed: 100
+      });
+  });
+</script>
+  
+    
+<script>
+
+    
+$( ".cardOne" ).click(function() {
+$( ".cardOne" ).hide('fast');
+$( ".cardTwo" ).show('fast');
+
+});
+    
+$( ".cardTwo" ).click(function() {
+$( ".cardThree" ).show('fast');
+    
+
+});    
+    
+$( ".cardThree" ).click(function() {
+$( ".cardFour" ).show('fast');
+
+});     
+
+$( ".cardFour" ).click(function() {
+$( ".cardFour" ).hide('fast');
+$( ".cardFive" ).show('fast');
+
+}); 
+    
+$( ".cardFive" ).click(function() {
+$( ".cardFive" ).hide('fast');
+$( ".cardFour" ).hide('fast');
+$( ".cardTwo" ).show('fast');
+$( ".cardOne" ).show('fast');
+
+}); 
+    
+    
+    </script>
+
+  <script src="//d3js.org/d3.v3.min.js"></script>
+
+
+
+</body>
+
+</html>
