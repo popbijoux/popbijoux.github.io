@@ -1,0 +1,1075 @@
+/*
+  File: plusser.classic.style6.css
+  Created: 12/30/16
+  Latest Update: 01/08/16
+  Created by: Manuela L.
+  Version: 1.7
+*/
+
+/* To-do next:
+
+-Make sure page wrap is exactly the same size and that there is one for each image type.
+-Determine the font sizes for comment title, comment, etc...
+-Create the 2-pic and 3-pic image containers.
+1. comment bars (transparent and on top of the mid img area, kept together by a wrapper with the z index)
+2. select the final icons/buttons.
+3. define clearly what these icons are, and what they do
+4. Include, at last, the javascript that makes this stuff come together.
+5. Create CSS sprite animations
+
+*/
+
+/* Colour reference
+
+html {background: rgb(200, 200, 200);}
+body {background: rgb(240, 240, 240);}
+nav bars: {background: rgba(200, 200, 200, 0.3);}
+
+*/
+
+/* fonts reference
+font-family: 'Open Sans', sans-serif;
+font-family: 'Lato', sans-serif;
+*/
+
+/*
+
+<!-[page structure]>
+<![•••••••••••••••]>
+<![•••••••••••••••]>
+1. Iphone Background[ {position: relative; z-index: 1;} ]
+  2. Iphone Screen[ {position: relative; z-index: 2;}  ]
+        2.1 Top Nav[ {position: absolute; z-index: 3;} ]
+          2.11 Top Nav Wrapper[ {position: none; z-index: none;} ]
+        2.2 Bottom Nav[ {position: absolute; z-index: 4;}]
+          2.21 Top Nav Wrapper[ z-index: none ]
+
+<![••Add page wrap here••]>
+    2.3 Page Wrap [ position: relative; z-index: 5;]
+
+        3.imgWrap[ z-index: none ]
+        [•••••underlying image base for each image•••••]
+          4.img [ z-index: none ]
+          [•••••image dictates size of ImgWrap•••••]
+            5.imgTopLayer [ z-index: none ]
+            [•••••transparent layer that holds•••••]
+              5.1 titleBarWrap[]
+              5.2 rightIconBar[]
+              5.3 bottomIconBar[]
+              5.4 stickerArea[]
+
+<![•••••••••••••••]>
+<![•••••••••••••••]>
+<![endif]-->
+*/
+
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ layouts */
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+
+<style>
+
+aside, article, header, footer, nav {
+    display: block;
+        }
+html, body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Lato', sans-serif;
+    text-align: center
+            }
+html {
+  background: rgb(200, 200, 200);
+}
+
+body {
+    width: 98%;
+    background: rgb(240, 240, 240);
+    margin: 0 auto 1em;
+    display: flex;
+    flex-direction: row;
+
+}
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ layout */
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Iphone Body*/
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+
+
+/*fullSizePhone*/
+/*the background where the iPhone img is placed*/
+
+/* ------- POSITIONED ELEMENT WITH Z-INDEX -------*/
+/* --------POSITION: RELATIVE  -------------------*/
+/* --------Z-INDEX:1  ----------------------------*/
+    .fullSizePhone {
+    display: -webkit-flex;
+    display: flex;
+    position: relative;
+    z-index: 1;
+    flex-flow: row wrap;
+    align-content: space-between;
+    justify-content: space-between;
+    margin-top: 48px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 48px;
+    width: 426px;
+    height: 857px;
+    background-color: lightgrey;
+    background: url(https://popbijoux.github.io/Iphone/blk.png);
+    background-repeat: no-repeat;
+}
+
+/* .fullPhoneScreen  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+ /*Full-size Mobile Screen Iphone6*/
+ /*fullPhoneScreen*/
+ /*the full size of the Iphone*/
+
+/* ------- POSITIONED ELEMENT WITH Z-INDEX -------*/
+/* --------POSITION: RELATIVE  -------------------*/
+/* --------Z-INDEX:2  ----------------------------*/
+ .fullPhoneScreen {
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        z-index: 2;
+        background-color: gray;
+        width: 370px;
+        height: 660px;
+        margin-top: 88px;
+        margin-bottom: 44px;
+        margin-left: auto;
+        margin-right: auto;
+        border:1px solid gray;
+        box-shadow: 3px 5px 3px #888888;
+        overflow: hidden;
+}
+
+
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ nav bars & nav elements */
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ top nav bar*/
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+
+/*nav bar top*/
+/*nav bar on top where the icons are*/
+/*position: absolute 1/_*/
+/* z-index: 3*/
+
+/* ------- POSITIONED ELEMENT WITH Z-INDEX  -------*/
+/* --------POSITION: ABSOLUTE   -------------------*/
+/* --------Z-INDEX:10  ----------------------------*/
+.topNav {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    z-index: 13;
+    background: rgba(200, 200, 200, 0.3);
+    font-size: 1em;
+    color: black;
+    height: 100px;
+    width:370px;
+    border-collapse:collapse;
+
+
+}
+
+#topNavVert {
+    background-image: url(imgs_main_page/Icons_Plusser_buttons_speech.svg), url(imgs_main_page/plusser_yellow_bkg_solid.png), url(imgs_main_page/plusser_logo_channels.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 58px 58px, 60px 60px, 58px 58px;
+    background-position: 14px 32px, 152px 32px, 300px 26px;
+    overflow: visible;
+
+}
+
+
+
+#topNavVert:before {
+     content: '';
+     position: absolute;
+     width: 380px;
+     height: 20px;
+     background: yellow;
+ }
+
+
+
+/* ------- POSITIONED ELEMENT WITH Z-INDEX  -------*/
+/* --------POSITION: ABSOLUTE   -------------------*/
+/* --------Z-INDEX:10  ----------------------------*/
+
+.navBarBottom {
+  display: flex;
+    flex-direction: column;
+    position: absolute;
+    z-index: 200;
+  margin-top: 580px;
+     align-content: flex-end;
+    justify-content: flex-end;
+    align-self: flex-end;
+    background: rgba(200, 200, 200, 0.4);
+    font-size: 1em;
+    color: black;
+    height: 80px;
+    width:370px;
+    border-collapse:collapse;
+
+
+
+
+  }
+
+  #navBarBottomIcons {
+    background-image: url(imgs_main_page/plusser_logo_search_3.svg), url(imgs_main_page/home_2.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 82px 82px, 54px 54px;
+    background-position: 0px 12px, 308px 20px;
+    overflow: visible;
+
+
+    }
+
+
+
+
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~ nav bar common elements */
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+
+
+    .navWrapper {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-content: center;
+        font-size: 1em;
+        color: black;
+        border-collapse: collapse;
+        width:100%;
+        margin: 36px 0px 0px  0px;
+        position: relative;;
+        z-index: 50;
+
+    }
+
+    /*navIconBox*/
+    /*place each separate icon in on here, even when they're wrapped in button tags*/
+        .navIconLeft {
+            display: flex
+            width: 120px
+            margin: auto;
+            padding: 10px;
+            margin: 12px 0px 0px 0px;
+            position: absolute;
+            z-index: 60;
+
+
+        }
+
+    /*navIconBox*/
+    /*place each separate icon in on here, even when they're wrapped in button tags*/
+        .navIconRight{
+            display: flex
+            width: 120px;
+            margin-left: auto;
+            padding: 10px;
+            position: absolute;
+            z-index: 13;
+
+        }
+
+        .navIconCenter{
+            display: flex
+            width: 120px;
+            margin: auto;
+            padding: 10px;
+
+        }
+
+      /*navBoxLrg*/
+        /*place larger bottom icon in here*/
+        .navBoxLrg {
+            display: flex
+            width: 120px;
+            margin: auto;
+            padding: 10px;
+            margin-bottom: 32px;
+        }
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Page & Image Containers */
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+/* ------- POSITIONED ELEMENT WITH Z-INDEX  -------*/
+/* --------POSITION: RELATIVE   -------------------*/
+/* --------Z-INDEX:3   ----------------------------*/
+.rowWrapOneRow {
+    display: flex;
+    position: absolute;
+    z-index: 3;
+    flex-flow: row wrap;
+    width: 364px;
+    height: 260px;
+    overflow: hidden;
+    margin-left: 4px;
+    margin-right: 4px;
+
+}
+
+
+
+
+
+/* ------- POSITIONED ELEMENT WITH Z-INDEX  -------*/
+/* --------POSITION: ABSOLUTE   -------------------*/
+/* --------POSITION: RELATIVE   -------------------*/
+/* --------Z-INDEX:3   ----------------------------*/
+
+.unitWrapTwoLeftRow {
+    display: flex;
+    position: absolute;
+    z-index: 4;
+    flex-flow: row wrap;
+    width: 180px;
+    height: 100%;
+    overflow: hidden;
+    margin-left: ;
+}
+
+.unitWrapTwoRightRow {
+    display: flex;
+    position: absolute;
+    z-index: 4;
+    flex-flow: row wrap;
+    width: 180px;
+    height: 100%;
+    overflow: hidden;
+    margin-left: 184px;
+}
+
+
+
+/* ------- POSITIONED ELEMENT WITH Z-INDEX  -------*/
+/* --------POSITION: RELATIVE   -------------------*/
+/* --------Z-INDEX:5   ----------------------------*/
+      .rowWrapTwoRow  {
+    display: inline-block;
+    position: absolute;
+    z-index: 5;
+    flex-flow: row wrap;
+    width: 370px;
+    height: 240px;
+    overflow: hidden;
+    margin-top: 248px;
+margin-left: 4px;
+}
+
+
+.bottomIconBarRowWrapTwoRow {
+        margin-top: 198px;
+        z-index: 30;
+        height: 40px;
+        width: 100%;
+        display: flex;
+        position: absolute;
+        flex-direction: column;
+        justify-content: center;
+        align-content: center;
+        align-self: flex-end;
+        margin-right: auto;
+        background: rgba(58, 246, 162, 1);
+        background-image: url(imgs_main_page/plusser_logo5.svg
+);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 28px 28px;
+        background-position: 8px 6px;
+        overflow: visible;
+
+        font-family: 'Open Sans', sans-serif;
+          font-size: .8em;
+          line-height: 1em;
+          font-weight: 400;
+          text-align: center;
+          text-indent: 40px;
+      }
+
+      .bottomIconBarRowWrapTwoRow:after {
+        content: "comment";
+        margin-top: 13px;
+        text-align: left;
+      }
+
+
+
+/* ------- POSITIONED ELEMENT WITH Z-INDEX  -------*/
+/* --------POSITION: ABSOLUTE   -------------------*/
+/* --------POSITION: RELATIVE   -------------------*/
+/* --------Z-INDEX:6   ----------------------------*/
+
+      .unitLeftWrapThreeRow {
+    display: flex;
+    position: absolute;
+    z-index: 6;
+    flex-flow: column wrap;
+    width: 120px;
+    height: 100%;
+    overflow: hidden;
+
+
+}
+
+   .unitCenterWrapThreeRow {
+    display: flex;
+    position: absolute;
+    z-index: 6;
+    flex-flow: column wrap;
+    width: 120px;
+    height: 100%;
+    overflow: hidden;
+    margin-left: 122px;
+
+
+}
+
+   .unitRightWrapThreeRow {
+    display: flex;
+    position: absolute;
+    z-index: 6;
+    flex-flow: column wrap;
+    width: 120px;
+    height: 100%;
+    overflow: hidden;
+    margin-left: 244px;
+
+
+}
+
+
+/* ------- POSITIONED ELEMENT WITH Z-INDEX  -------*/
+/* --------POSITION: ABSOLUTE   -------------------*/
+/* --------POSITION: RELATIVE   -------------------*/
+/* --------Z-INDEX:7   ----------------------------*/
+      .rowWrapThreeRow  {
+    display: flex;
+    position: absolute;
+    z-index: 7;
+    flex-flow: column wrap;
+    width: 370px;
+    height: 240px;
+    overflow: hidden;
+    margin-top: 490px;
+    margin-left: 4px;
+
+}
+
+.bottomThirdIconBarFullLength {
+        margin-top: 116px;
+        z-index: 17;
+        height: 40px;
+        width: 100%;
+        display: flex;
+        position: absolute;
+        flex-direction: column;
+        justify-content: center;
+        align-content: center;
+        align-self: flex-end;
+        margin-right: auto;
+        background: rgba(58, 246, 162, 0.7);
+        background-image: url(imgs_main_page/plusser_logo5.svg
+);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 28px 28px;
+        background-position: 8px 6px;
+        overflow: visible;
+        font-family: 'Open Sans', sans-serif;
+          font-size: .8em;
+          line-height: 1em;
+          font-weight: 400;
+          text-align: center;
+          text-indent: 40px;
+      }
+
+      .bottomThirdIconBarFullLength:after {
+        content: "comment";
+        margin-top: 13px;
+        text-align: left;
+      }
+
+
+
+/* ------- POSITIONED ELEMENT WITH Z-INDEX  -------*/
+/* --------POSITION: ABSOLUTE   -------------------*/
+/* --------POSITION: RELATIVE   -------------------*/
+/* --------Z-INDEX:8   ----------------------------*/
+
+               .rowWrapOneCommentRow {
+    display: flex;
+    position: absolute;
+    z-index: 80;
+    flex-flow: column wrap;
+    width: 100%;
+    height: 40px;
+margin-top: 360px;
+    overflow: hidden;
+    background: rgba(254, 68, 111, 0.3);
+    background-image: url(imgs_main_page/plusser_logo6.svg
+);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 28px 28px;
+    background-position: 8px 6px;
+    overflow: visible;
+    font-family: 'Open Sans', sans-serif;
+    font-size: .8em;
+    line-height: 1em;
+    font-weight: 400;
+    text-align: center;
+    text-indent: 40px;
+}
+
+.rowWrapOneCommentRow:after {
+  content: "floating comment";
+  margin-top: 13px;
+  text-align: left;
+}
+
+
+             .rowWrapOneCommentRowHalf {
+    display: flex;
+    position: absolute;
+    z-index: 80;
+    flex-flow: column wrap;
+    width: 50%;
+    height: 40px;
+margin-top: 300px;
+    overflow: hidden;
+    background: rgba(254, 68, 222, 0.6);
+    background-image: url(imgs_main_page/plusser_logo6.svg
+);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 28px 28px;
+    background-position: 8px 6px;
+    overflow: visible;
+    font-family: 'Open Sans', sans-serif;
+    font-size: .8em;
+    line-height: 1em;
+    font-weight: 400;
+    text-align: center;
+    text-indent: 40px;
+
+}
+
+.rowWrapOneCommentRowHalf:after {
+  content: "floating comment";
+  margin-top: 13px;
+  text-align: left;
+}
+
+.columnWrapFull {
+    display: flex;
+    position: absolute;
+    z-index: 15;
+    flex-flow: row wrap;
+    width: 100%
+    height: 660px;
+    overflow: hidden;
+    margin-left: 4px;
+    margin-right: 4px;
+
+}
+
+/* ------- POSITIONED ELEMENT WITH Z-INDEX  -------*/
+/* --------POSITION: ABSOLUTE   -------------------*/
+/* --------POSITION: RELATIVE   -------------------*/
+/* --------Z-INDEX:9   ----------------------------*/
+
+        img {
+              max-width: 100%;
+              max-height: 100%;
+              display: flex;
+              position: absolute;
+              z-index: 9;
+
+        }
+
+        #imgTopIcons.img {
+               position: absolute;
+               z-index: 30;
+         }
+
+
+
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ general styles */
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+
+/* ------- POSITIONED ELEMENT WITH Z-INDEX  -------*/
+/* --------POSITION: ABSOLUTE   -------------------*/
+/* --------Z-INDEX:6   ----------------------------*/
+              .imgTopLayer {
+                  display: flex;
+                   position: absolute;
+                  z-index: 10;
+                  justify-content: flex-end;
+                  align-self: flex-end;
+                  align-items: flex-end;
+                  background: rgba(200, 200, 200, 0.4);
+                  width: 370px;
+                  height: 140px;
+                  margin-top: 100px;
+
+              }
+
+/* ------- POSITIONED ELEMENT WITH Z-INDEX  -------*/
+/* --------POSITION: ABSOLUTE   -------------------*/
+/* --------Z-INDEX:7   ----------------------------*/
+
+                  .imgTitleBarWrap {
+                      height: 40px;
+                      width: 100%;
+                      display: flex;
+                       position: absolute;
+                      z-index: 11;
+                      flex-direction: column;
+                      justify-content: center;
+                      align-content: center;
+                      margin-right: auto;
+                      border-top: 1px dotted gray;
+                      background: rgba(91, 102, 241, 0.7);
+                      background-image: url(imgs_main_page/female_comment_pic.svg);
+                      background-repeat: no-repeat;
+                      background-position: center;
+                      background-size: 28px 28px;
+                      background-position: 8px 6px;
+                      overflow: visible;
+                      font-family: 'Open Sans', sans-serif;
+                      font-size: .8em;
+                      font-weight: 400;
+                      text-align: left;
+                      text-indent: 40px;
+
+                  }
+ .imgTitleBarWrap:after {
+   content: "title"
+ }
+
+ .secondButtonLayer {
+     height: 60px;
+     width: 100%;
+     display: flex;
+      position: absolute;
+     z-index: 11;
+     flex-direction: column;
+     justify-content: center;
+     align-content: center;
+     margin-right: auto;
+     border-top: 1px dotted gray;
+     border-bottom: 1px dotted gray;
+     background: rgba(91, 102, 241, 0.7);
+     background-image: url(imgs_main_page/plusser_search_magnet.svg);
+     background-repeat: no-repeat;
+     background-position: center;
+     background-size: 28px 28px;
+     background-position: 8px 6px;
+     overflow: visible;
+     font-family: 'Open Sans', sans-serif;
+     font-size: .8em;
+     font-weight: 400;
+     text-align: left;
+     text-indent: 40px;
+
+ }
+
+                  #imgTitleBarWrapFullVertical {
+                   margin-top: 100px;
+                     background: rgba(91, 102, 241, 0.1);
+
+                  }
+
+                  #imgIconsTitleBar {
+                   margin-top: 100px;
+                   background: rgba(102, 102, 102, 0.2);
+                   background-image: url(imgs_main_page/female_comment_pic.svg);
+                   background-repeat: no-repeat;
+                   background-position: center;
+                   background-size: 28px 28px;
+                   background-position: 8px 6px;
+                   overflow: visible;
+                   font-family: 'Open Sans', sans-serif;
+   font-size: .8em;
+   font-weight: 400;
+   text-align: left;
+   text-indent: 40px;
+
+                  }
+
+                  #imgIconsTitleBarThree {
+
+                   margin-top: 100px;
+                   background-image: url(imgs_main_page/thunder_red_yellow_icons.png), url(imgs_main_page/thunder_red_yellow_icons.png), url(imgs_main_page/thunder_red_yellow_icons.png);
+                   background-repeat: no-repeat;
+                   background-position: center;
+                   background-size: 28px 28px, 28px 28px, 28px 28px;
+                   background-position: 24px 4px, 168px 4px, 314px 4px;
+                   overflow: visible;
+
+                  }
+
+
+
+/* ------- POSITIONED ELEMENT WITH Z-INDEX  -------*/
+/* --------POSITION: ABSOLUTE   -------------------*/
+/* --------Z-INDEX:8   ----------------------------*/
+
+                   .imgBottomIconBar  {
+                    height: 40px;
+                      width: 100%;
+                      margin-top: 204px;
+                      display: flex;
+                       position: absolute;
+                      z-index: 12;
+                      flex-direction: column;
+                      justify-content: center;
+                      align-content: center;
+                      align-self: flex-end;
+                      margin-right: auto;
+                      background: rgba(58, 246, 162, 0.7);
+                      background-image: url(imgs_main_page/plusser_logo5.svg
+);
+                      background-repeat: no-repeat;
+                      background-position: center;
+                      background-size: 28px 28px;
+                      background-position: 8px 6px;
+                      overflow: visible;
+                      font-family: 'Open Sans', sans-serif;
+                      font-size: .8em;
+                      line-height: 1em;
+                      font-weight: 400;
+                      text-align: center;
+                      text-indent: 40px;
+                    }
+
+                    .imgBottomIconBar:after {
+                    content: "otherscomment";
+                    margin-top: 13px;
+                    text-align: left;
+                    }
+
+                    }
+
+
+
+#imgBottomIcon {
+
+
+}
+
+.bottomIconBarFullLength {
+        margin-top: 420px;
+        height: 40px;
+        width: 100%;
+        display: flex;
+        position: absolute;
+        z-index: 17;
+        flex-direction: column;
+        justify-content: center;
+        align-content: center;
+        align-self: flex-end;
+        margin-right: auto;
+        background: rgba(58, 246, 162, 1);
+        border-bottom: 1px dotted gray;
+        border-top: 1px dotted gray;
+
+}
+
+
+#bottomIconBarFull {
+  position: absolute;
+  z-index: 202;
+    background: rgba(200, 200, 200, 0.1);
+     background-image: url(imgs_main_page/plusser_logo2.svg);
+     background-repeat: no-repeat;
+     background-size: 28px 28px;
+      background-position: 8px 6px;
+     overflow: visible;
+
+}
+.bottomThird {}
+
+.bottomScreenFullLength {
+        margin-top: 460px;
+        z-index: 25;
+        height: 200px;
+        width: 100%;
+        display: flex;
+        position: absolute;
+        flex-direction: column;
+        justify-content: center;
+        align-content: center;
+        align-self: flex-end;
+        margin-right: auto;
+        background: rgba(243, 232, 108, 0.1);
+        background-image: url(imgs_main_page/photo_img_icon_hrz.svg);
+        background-repeat: no-repeat;
+        background-position: 0px -100px;
+        overflow: hidden;
+        opacity: .3;
+
+}
+
+
+
+
+
+
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ general styles */
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ fonts */
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+h1  {
+    font-family: 'Lato', sans-serif;
+    font-size: 1.8em;
+}
+
+h2 {
+    font-family: 'Lato', sans-serif;
+    font-size: 1.6em;
+}
+
+h2 .dark {
+
+    font-family: 'Lato', sans-serif;
+    font-size: 1.6em;
+    background-color: #2E343B;
+}
+
+
+h3  {
+    font-family: 'Lato', sans-serif;
+    font-size: 1.1em;
+}
+
+
+h4 {
+    font-family: 'Open Sans', sans-serif;
+    font-size: .8em;
+    font-weight: 400;
+    text-align: left;
+
+}
+
+.imgTitleText  {
+    font-family: 'Open Sans', sans-serif;
+    font-size: .8em;
+    font-weight: 400;
+    text-align: left;
+    text-indent: 40px;
+
+}
+
+
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ custom classes */
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ all*/
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+
+.pAbsolute {
+    position: absolute;
+
+}
+
+.pRelative; {
+    position: relative;
+
+}
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ "benched" classes */
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+
+ /*(designed for the page but not being used)*/
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~ .imgStickerArea     */
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+
+
+/* ------- POSITIONED ELEMENT WITH Z-INDEX  -------*/
+/* --------POSITION: RELATIVE   -------------------*/
+/* --------Z-INDEX:4   ----------------------------*/
+    .imgWrap {
+        display:  flex;
+        position: relative;
+        z-index: 4;
+        justify-content: flex-start;
+        flex-flow: row wrap;
+        align-self: flex-start;
+        align-items: flex-start;
+        overflow: hidden;
+         width: 360px;
+        height: 240px;
+
+    }
+
+
+/* ------- POSITIONED ELEMENT WITH Z-INDEX  -------*/
+/* --------POSITION: RELATIVE   -------------------*/
+/* --------Z-INDEX:5   ----------------------------*/
+ /*
+ .imgpageWrap3Row  {
+              max-width: 120px;
+              display: flex;
+              position: relative;
+              z-index: 5;
+        }
+*/
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ bottom nav bar*/
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+
+/* ------- POSITIONED ELEMENT WITH Z-INDEX  -------*/
+/* --------POSITION: RELATIVE   -------------------*/
+/* --------Z-INDEX:5   ----------------------------*/
+/*
+         .imgpageWrap2Row  {
+              max-width: 180px;
+              max-height: 240px;
+              display: flex;
+              position: relative;
+              z-index: 5;
+
+        }
+
+        #navBarBottomIcons {
+          background-image: url(imgs_main_page/Icons_Plusser_buttons_speech.svg), url(imgs_main_page/thunder_red_yellow_icons.png), url(imgs_main_page/home_2.svg);
+          background-repeat: no-repeat;
+          background-position: center;
+          background-size: 72px 72px, 60px 60px, 54px 54px;
+          background-position: 22px 12px, 152px 8px, 298px 12px;
+          overflow: visible;
+
+
+          }
+
+
+*/
+
+
+  .navMidFiller {
+  display: flex;
+  position: absolute;
+  z-index: 2;
+  margin-top: 100px;
+    flex-direction: column;
+     align-content: flex-end;
+    justify-content: flex-end;
+    align-self: flex-end;
+    background: blue;
+    font-size: 1em;
+    color: black;
+    height: 480px;
+    width:370px;
+    border-collapse:collapse;
+
+
+
+  }
+
+
+        .imgStickerArea {
+                      height: 60px;
+                      display: flex;
+                      position: absolute;
+                      z-index: 9;
+                      flex-direction: column;
+                      justify-content: center;
+                      align-content: center;
+                      margin-right: auto;
+                      width: 100%;
+                      margin-top: 140px;
+                      background: rgba(200, 200, 200, 0.7);
+
+                   }
+
+
+          .imgRightIconBar {
+                          height: 100%;
+                          display: flex;
+                          position: absolute;
+                          z-index: 7
+                          flex-direction: column;
+                          justify-content: center;
+                          align-content: center;
+                          margin-right: auto;
+                          margin-left: 300px;
+                          margin-top: 16px;
+                          width: 20%;
+                          background: yellow;
+
+
+                      }
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~ Tumblr-specific Code*/
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+
+<style>
+     <style>figure{margin:0}.tmblr-iframe{position:absolute}.tmblr-iframe.hide{display:none}</style>
+<style>figure{margin:0}.tmblr-iframe{position:absolute}.tmblr-iframe.hide{display:none}</style>
+<style>figure{margin:0}.tmblr-iframe{position:absolute}.tmblr-iframe.hide{display:none}</style>
+<style>figure{margin:0}.tmblr-iframe{position:absolute}.tmblr-iframe.hide{display:none}</style>
+<link href="https://fonts.googleapis.com/css?family=Lato:300" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Open+Sans" />
+
+    </style>
