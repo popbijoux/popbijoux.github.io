@@ -163,6 +163,7 @@ h4 {
     </header>
 <div class="flex-container">
        <div class="flex-item1">
+	       <img src="gifs/Just say no_2.gif">
        <div class="topNav"></div>
         <div class="bottomNav"></div>
     </div>
@@ -178,6 +179,23 @@ h4 {
     </script>
 
   <script src="//d3js.org/d3.v3.min.js"></script>
+	  <script src="//cdnjs.cloudflare.com/ajax/libs/annyang/2.6.0/annyang.min.js"></script>
+	<script>
+if (annyang) {
+  // Let's define our first command. First the text we expect, and then the function it should call
+  var commands = {
+    'hide': function() {
+      $('.videoContainer').hide();
+    }
+  };
+
+  // Add our commands to annyang
+  annyang.addCommands(commands);
+
+  // Start listening. You can call this here, or attach this call to an event, button, etc.
+  annyang.start();
+}
+</script>
 
 
 
