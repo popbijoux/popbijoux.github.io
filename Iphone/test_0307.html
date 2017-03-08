@@ -142,9 +142,9 @@ h4 {
     line-height: .5em;
     text-align: center;
 	
-	.noFinger {
+	#noFinger.div {
 	display: hidden;
-	}	
+	}
 
     </style>
 <!--[if lt IE 9]>
@@ -154,8 +154,8 @@ h4 {
 <body>
 <div class="flex-container">
 	
-       <div  class="flex-item1">
-        <div id="nofinger_hype_container" class="noFinger" style="margin:auto;position:absolute;width:375px;height:667px;overflow:hidden;">
+       <div id="noFinger" class="flex-item1">
+        <div id="nofinger_hype_container" style="margin:auto;position:absolute;width:375px;height:667px;overflow:hidden;">
      		<script type="text/javascript" charset="utf-8" src="no_finger/nofinger_hype_generated_script.js?19750"></script>
      	</div>
        <div class="topNav"></div>
@@ -177,7 +177,7 @@ if (annyang) {
   // Let's define our first command. First the text we expect, and then the function it should call
   var commands = {
 'nope': function() {
-  $(".noFinger").show().delay(5000).fadeOut();
+  $("#noFinger").show().delay(5000).fadeOut();
                             }
                       };
 //"no" finger
