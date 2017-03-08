@@ -152,7 +152,7 @@ h4 {
 </head>
 <body>
 <div class="flex-container">
-       <div class="flex-item1">
+       <div id="hide" class="flex-item1">
         <div id="nofinger_hype_container" class="hide"  style="margin:auto;position:absolute;width:375px;height:667px;overflow:hidden;">
      		<script type="text/javascript" charset="utf-8" src="no_finger/nofinger_hype_generated_script.js?19750"></script>
      	</div>
@@ -168,19 +168,20 @@ h4 {
 
 
   <script src="//d3js.org/d3.v3.min.js"></script>
-	  <script src="//cdnjs.cloudflare.com/ajax/libs/annyang/2.6.0/annyang.min.js"></script>
-	<script>
+	 
+<script src="//cdnjs.cloudflare.com/ajax/libs/annyang/2.6.0/annyang.min.js"></script>
+<script>
 if (annyang) {
   // Let's define our first command. First the text we expect, and then the function it should call
-var commands = {
-  'hide': function() {
-    $('.hide').hide();
-
-  }
-      
+  var commands = {
+    'hide': function() {
+      $('#hide').hide();
+    }
+  };
 
   // Add our commands to annyang
   annyang.addCommands(commands);
+
   // Start listening. You can call this here, or attach this call to an event, button, etc.
   annyang.start();
 }
