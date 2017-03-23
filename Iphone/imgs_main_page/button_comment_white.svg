@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 16.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" id="Layer_1" xmlns:xl="http://www.w3.org/1999/xlink"
+	 xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="31.667px"
+	 height="28.833px" viewBox="0 0 31.667 28.833" enable-background="new 0 0 31.667 28.833" xml:space="preserve">
+<title>Canvas 4</title>
+<title>Layer 1</title>
+<g>
+	<path fill="#E6E6E6" d="M28.208,3.684H3.458c-1.367,0-2.475,1.108-2.475,2.475v16.094c0,1.366,1.108,2.475,2.475,2.475h17.37
+		l4.902,4.902v-4.902h2.479c1.365,0,2.476-1.107,2.476-2.475V6.159C30.683,4.792,29.574,3.684,28.208,3.684z M29.445,22.252
+		c0,0.682-0.557,1.237-1.236,1.237H25.73h-1.236v1.235v1.918l-2.793-2.793l-0.361-0.359h-0.512H3.458
+		c-0.682,0-1.238-0.557-1.238-1.236V6.159c0-0.682,0.556-1.237,1.238-1.237h24.75c0.683,0,1.236,0.555,1.236,1.237V22.252z"/>
+	<g>
+		<circle fill="#E6E6E6" cx="15.77" cy="14.344" r="1.344"/>
+		<circle fill="#E6E6E6" cx="21.144" cy="14.344" r="1.344"/>
+		<circle fill="#E6E6E6" cx="10.521" cy="14.344" r="1.344"/>
+	</g>
+</g>
+</svg>
