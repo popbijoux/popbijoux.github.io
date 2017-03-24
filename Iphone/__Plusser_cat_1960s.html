@@ -136,62 +136,7 @@ Your browser does not support the video tag.
 <!--[••••••••••••••••••••••••••••••••••••••••••••••••••]-->
 <!--[••••••••••••••••••••••••••••••••••••••••••••••••••]-->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-<script src="//d3js.org/d3.v3.min.js"></script>
   <script src="annyang.js"></script>
-
-<script>
-var Vids = (function() {
-    var _currentId = -1;
-    var _urls =
-     ["videos/1960s_freedom_riders_vert.mp4","videos/1960s_Jackie_mourning_VERT.mp4", "videos/1960s_Gainsbourg_Bardot_Bonnie_And_Clyde.mp4", "videos/1960s_francegall.mp4",
-     "videos/1960s_Jackie_Arrives.mp4", "videos/1960s_John_Jr_Salutes.mp4", "videos/1960s_Kennedy_Parade_VERT.mp4","videos/1960s_marilyn.mp4","videos/1960s_kennedy_speech.mp4",
-     "videos/1960s_mlk_I_have_a_dream.mp4","videos/1960s_kennedy_speech.mp4", "videos/1960s_MLK_longer_speech.mp4","videos/1960s_Bardot_Profile.mp4","videos/1960s_warhol_silver_factory_vert_crppd.mp4",  ];
-
-      // literal array
-    return {
-        next: function() {
-            if (++_currentId >= _urls.length)
-                _currentId = 0;
-             return this.play(_currentId);
-        },
-        prev: function() {
-            if (--_currentId < 0)
-                _currentId = _urls.length - 1;
-            return this.play(_currentId);
-        },
-        play: function(id) {
-            var myVideo = document.getElementsByTagName('video')[0];
-            myVideo.src = _urls[id];
-            myVideo.load();
-            myVideo.play();
-            return false;
-       }
-    }
-})();
-
-
-$(".buttonVolumeOnBlue").click( function (){
-if( $("#topVid video").prop('muted') ) {
-        $("#topVid video").prop('muted', false);
-
-  } else {
-    $("#topVid video").prop('muted', true);
-
-
-  }
-});
-
-
-
-$(".buttonTeardropChannelBlue").click( function (){
-  if( $("#bottomVid").is(':visible') ) {
-      $("#bottomVid").hide();
-
-      } else {
-        $("#bottomVid").show();
-      }
-  });
-</script>
 <script>
 
 
