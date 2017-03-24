@@ -141,12 +141,10 @@ if (annyang) {
 // Let's define our first command. First the text we expect, and then the function it should call
 var commands = {
 'hello': function() {
-$("#blockTheWall_001").show();
-setTimeout(function() {
-      $('#blockTheWall_001').hide();
-  }, 2000);
-});
-
+$('#blockTheWall_001').show('slow', function(){
+              $('#blockTheWall_001').delay(5000).hide();
+           });
+         });
 
 
 // Add our commands to annyang
