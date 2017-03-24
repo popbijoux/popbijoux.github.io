@@ -142,8 +142,11 @@ if (annyang) {
 var commands = {
 'hello': function() {
 $("#blockTheWall_001").show();
-                            }
-                      };
+setTimeout(function() {
+      $('#blockTheWall_001').hide();
+  }, 2000);
+});
+
 
 
 // Add our commands to annyang
