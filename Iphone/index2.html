@@ -102,7 +102,7 @@ width:300px;
 
 <div id="elementToShare" contenteditable style="margin-top: 3px;">
 
-  
+
 
     <video controls style="width:300px;height:600px;position:absolute;background-color:black;" poster=""></video>
 
@@ -133,8 +133,8 @@ recorder.stopRecording(function(url) {
 var elementToShare = document.getElementById('elementToShare');
 var canvas2d = document.createElement('canvas');
 var context = canvas2d.getContext('2d');
-canvas2d.width = elementToShare.clientWidth;
-canvas2d.height = elementToShare.clientHeight;
+canvas2d.width = elementToShare;
+canvas2d.height = elementToShare;
 canvas2d.style.top = 0;
 canvas2d.style.left = 0;
 canvas2d.style.zIndex = -1;
