@@ -1,234 +1,281 @@
-<!--
-> Muaz Khan     - https://github.com/muaz-khan
-> MIT License   - https://www.webrtc-experiment.com/licence/
-> Documentation - https://github.com/streamproc/MediaStreamRecorder
-> =================================================================
-> gif-recorder.html
--->
+
 <!DOCTYPE html>
-<html lang="en">
+<!--
+Copyright 2012 Eric Bidelman
 
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+     http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+
+Author: Eric Bidelman (ebidel@)
+-->
+<html>
 <head>
-    <title>WebRTC Gif Recording using MediaStreamRecorder</title>
-
-    <script src="https://cdn.WebRTC-Experiment.com/MediaStreamRecorder.js"></script>
-    <script src="https://cdn.webrtc-experiment.com/gif-recorder.js"></script>
-
-    <!-- for Edige/FF/Chrome/Opera/etc. getUserMedia support -->
-    <script src="https://cdn.WebRTC-Experiment.com/gumadapter.js"></script>
-
-    <link rel="stylesheet" href="https://cdn.webrtc-experiment.com/style.css">
-
-    <style>
-        input {
-            border: 1px solid rgb(46, 189, 235);
-            border-radius: 3px;
-            font-size: 1em;
-            outline: none;
-            padding: .2em .4em;
-            width: 60px;
-            text-align: center;
-        }
-    </style>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="chrome=1" />
+<link href="../common.css" rel="stylesheet" type="text/css" media="all">
+<title>Record a getUserMedia() Session</title>
+<style>
+a[download] {
+  text-transform: uppercase;
+  font-size: 11px;
+  font-weight: bold;
+}
+h4 {
+  padding: 15px;
+  background: black;
+  color: white;
+  margin: 10px 0 10px 0;
+  border-radius: 100px 0 100px 0;
+  letter-spacing: 1px;
+  font-weight: 300;
+}
+section > div {
+  text-align: center;
+  display: inline-block;
+  margin: 0 15px;
+  min-width: 400px;
+}
+#video-preview {
+  height: 300px;
+}
+button.recording {
+  color: darkred;
+  border-color: red;
+}
+section {
+  margin-top: 2em;
+}
+h2 {
+  text-align: center;
+}
+</style>
 </head>
-
 <body>
-    <article>
-        <header style="text-align: center;">
-            <h1>
-                    <a href="https://www.webrtc-experiment.com/">WebRTC</a> Gif Recording using <a href="https://github.com/streamproc/MediaStreamRecorder" target="_blank">MediaStreamRecorder</a>
-                </h1>
-            <p>
-                <a href="https://www.webrtc-experiment.com/">HOME</a>
-                <span> &copy; </span>
-                <a href="http://www.MuazKhan.com/" target="_blank">Muaz Khan</a> .
-                <a href="http://twitter.com/WebRTCWeb" target="_blank" title="Twitter profile for WebRTC Experiments">@WebRTCWeb</a> .
-                <a href="https://github.com/muaz-khan?tab=repositories" target="_blank" title="Github Profile">Github</a> .
-                <a href="https://github.com/streamproc/MediaStreamRecorder/issues?state=open" target="_blank">Latest issues</a> .
-                <a href="https://github.com/streamproc/MediaStreamRecorder/commits/master" target="_blank">What's New?</a>
-            </p>
-        </header>
 
-        <div class="github-stargazers"></div>
+<details>
+  <summary>What's this?</summary>
+  <div>
+    <p>An example of creating a .webm movie from a <code>getUserMedia()</code> video capture.</p>
+    <p><b>Support:</b> Chrome 21 supports <code>getUserMedia()</code>.</p>
+  </div>
+</details>
 
-        <section class="experiment" style="padding: 5px;">
-            <label for="time-interval">Time Interval (milliseconds):</label>
-            <input type="text" id="time-interval" value="5000">
+<h2>Recording .webm video from a <code>getUserMedia()</code>.</h2>
 
-            <button id="start-recording">Start</button>
-            <button id="stop-recording" disabled>Stop</button>
+<section>
+<div style="float:left;">
+  <button id="camera-me">1. Turn on camera</button>
+  <h4><code>getUserMedia()</code> feed</h4>
+  <video autoplay></video>
+</div>
+<div id="video-preview">
+  <button id="record-me" disabled>2. Record<!--⚫--></button>
+  <button id="stop-me" disabled>◼</button>
+  <!--<button id="play-me" disabled>►</button>-->
+  <span id="elasped-time"></span>
+  <h4>.webm recording (no audio)</h4>
+</div>
+</section>
 
-            <button id="pause-recording" disabled>Pause</button>
-            <button id="resume-recording" disabled>Resume</button>
+<!--<script src="libwebp-0.1.3.min.js"></script>-->
+<script src="whammy.min.js"></script>
+<script>
+(function(exports) {
 
-            <br>
-            <br>
+exports.URL = exports.URL || exports.webkitURL;
 
-            <label for="video-width">Video Width:</label>
-            <input type="text" id="video-width" value="320">
+exports.requestAnimationFrame = exports.requestAnimationFrame ||
+    exports.webkitRequestAnimationFrame || exports.mozRequestAnimationFrame ||
+    exports.msRequestAnimationFrame || exports.oRequestAnimationFrame;
 
-            <label for="video-height">Video Height:</label>
-            <input type="text" id="video-height" value="240">
-        </section>
+exports.cancelAnimationFrame = exports.cancelAnimationFrame ||
+    exports.webkitCancelAnimationFrame || exports.mozCancelAnimationFrame ||
+    exports.msCancelAnimationFrame || exports.oCancelAnimationFrame;
 
-        <section class="experiment">
-            <div id="videos-container">
-            </div>
-        </section>
-        <script>
-            function captureUserMedia(mediaConstraints, successCallback, errorCallback) {
-                navigator.mediaDevices.getUserMedia(mediaConstraints).then(successCallback).catch(errorCallback);
-            }
-            var mediaConstraints = {
-                video: true
-            };
-            document.querySelector('#start-recording').onclick = function() {
-                this.disabled = true;
-                captureUserMedia(mediaConstraints, onMediaSuccess, onMediaError);
-            };
-            document.querySelector('#stop-recording').onclick = function() {
-                this.disabled = true;
-                mediaRecorder.stop();
-                mediaRecorder.stream.stop();
-                document.querySelector('#pause-recording').disabled = true;
-                document.querySelector('#start-recording').disabled = false;
-            };
-            document.querySelector('#pause-recording').onclick = function() {
-                this.disabled = true;
-                mediaRecorder.pause();
-                document.querySelector('#resume-recording').disabled = false;
-            };
-            document.querySelector('#resume-recording').onclick = function() {
-                this.disabled = true;
-                mediaRecorder.resume();
-                document.querySelector('#pause-recording').disabled = false;
-            };
-            var mediaRecorder;
-            function onMediaSuccess(stream) {
-                var video = document.createElement('video');
-                var videoWidth = document.getElementById('video-width').value || 320;
-                var videoHeight = document.getElementById('video-height').value || 240;
-                video = mergeProps(video, {
-                    controls: true,
-                    width: videoWidth,
-                    height: videoHeight,
-                    src: URL.createObjectURL(stream)
-                });
-                video.play();
-                videosContainer.appendChild(video);
-                videosContainer.appendChild(document.createElement('hr'));
-                mediaRecorder = new MediaStreamRecorder(stream);
-                mediaRecorder.stream = stream;
-                mediaRecorder.mimeType = 'image/gif'; // this line is mandatory
-                mediaRecorder.videoWidth = videoWidth;
-                mediaRecorder.videoHeight = videoHeight;
-                mediaRecorder.ondataavailable = function(blob) {
-                    var a = document.createElement('a');
-                    a.target = '_blank';
-                    a.innerHTML = 'Open Recorded GIF No. ' + (index++) + ' (Size: ' + bytesToSize(blob.size) + ') Time Length: ' + getTimeLength(timeInterval);
-                    a.href = URL.createObjectURL(blob);
-                    videosContainer.appendChild(a);
-                    videosContainer.appendChild(document.createElement('hr'));
-                };
-                var timeInterval = document.querySelector('#time-interval').value;
-                if (timeInterval) timeInterval = parseInt(timeInterval);
-                else timeInterval = 5 * 1000;
-                // get blob after specific time interval
-                mediaRecorder.start(timeInterval);
-                document.querySelector('#stop-recording').disabled = false;
-                document.querySelector('#pause-recording').disabled = false;
-            }
-            function onMediaError(e) {
-                console.error('media error', e);
-            }
-            var videosContainer = document.getElementById('videos-container');
-            var index = 1;
-            // below function via: http://goo.gl/B3ae8c
-            function bytesToSize(bytes) {
-                var k = 1000;
-                var sizes = ['Bytes', 'KB', 'MB', 'GB', 'TB'];
-                if (bytes === 0) return '0 Bytes';
-                var i = parseInt(Math.floor(Math.log(bytes) / Math.log(k)), 10);
-                return (bytes / Math.pow(k, i)).toPrecision(3) + ' ' + sizes[i];
-            }
-            // below function via: http://goo.gl/6QNDcI
-            function getTimeLength(milliseconds) {
-                var data = new Date(milliseconds);
-                return data.getUTCHours() + " hours, " + data.getUTCMinutes() + " minutes and " + data.getUTCSeconds() + " second(s)";
-            }
-            window.onbeforeunload = function() {
-                document.querySelector('#start-recording').disabled = false;
-            };
-        </script>
+navigator.getUserMedia = navigator.getUserMedia ||
+    navigator.webkitGetUserMedia || navigator.mozGetUserMedia ||
+    navigator.msGetUserMedia;
 
-        <pre style="border-left: 2px solid red; margin-left:2em; padding-left: 1em;">
-// cdn.webrtc-experiment.com/MediaStreamRecorder.js
-// cdn.webrtc-experiment.com/gif-recorder.js
+var ORIGINAL_DOC_TITLE = document.title;
+var video = $('video');
+var canvas = document.createElement('canvas'); // offscreen canvas.
+var rafId = null;
+var startTime = null;
+var endTime = null;
+var frames = [];
 
-var mediaConstraints = {
-    video: true
+function $(selector) {
+  return document.querySelector(selector) || null;
+}
+
+function toggleActivateRecordButton() {
+  var b = $('#record-me');
+  b.textContent = b.disabled ? 'Record' : 'Recording...';
+  b.classList.toggle('recording');
+  b.disabled = !b.disabled;
+}
+
+function turnOnCamera(e) {
+  e.target.disabled = true;
+  $('#record-me').disabled = false;
+
+  video.controls = false;
+
+  var finishVideoSetup_ = function() {
+    // Note: video.onloadedmetadata doesn't fire in Chrome when using getUserMedia so
+    // we have to use setTimeout. See crbug.com/110938.
+    setTimeout(function() {
+      video.width = 300;//video.clientWidth;
+      video.height = 600;// video.clientHeight;
+      // Canvas is 1/2 for performance. Otherwise, getImageData() readback is
+      // awful 100ms+ as 640x480.
+      canvas.width = video.width;
+      canvas.height = video.height;
+    }, 1000);
+  };
+
+  navigator.getUserMedia({video: true, audio: true}, function(stream) {
+    video.src = window.URL.createObjectURL(stream);
+    finishVideoSetup_();
+  }, function(e) {
+    alert('Fine, you get a movie instead of your beautiful face ;)');
+
+    video.src = 'Chrome_ImF.mp4';
+    finishVideoSetup_();
+  });
 };
 
-navigator.getUserMedia(mediaConstraints, onMediaSuccess, onMediaError);
+function record() {
+  var elapsedTime = $('#elasped-time');
+  var ctx = canvas.getContext('2d');
+  var CANVAS_HEIGHT = canvas.height;
+  var CANVAS_WIDTH = canvas.width;
 
-function onMediaSuccess(stream) {
-    var mediaRecorder = new MediaStreamRecorder(stream);
-    mediaRecorder.mimeType = 'image/gif';
-    mediaRecorder.ondataavailable = function (blob) {
-        // POST/PUT "Blob" using FormData/XHR2
-        var blobURL = URL.createObjectURL(blob);
-        document.write('<a href="' + blobURL + '">' + blobURL + '</a>');
-    };
-    mediaRecorder.start(3000);
+  frames = []; // clear existing frames;
+  startTime = Date.now();
+
+  toggleActivateRecordButton();
+  $('#stop-me').disabled = false;
+
+  function drawVideoFrame_(time) {
+    rafId = requestAnimationFrame(drawVideoFrame_);
+
+    ctx.drawImage(video, 0, 0, CANVAS_WIDTH, CANVAS_HEIGHT);
+
+    document.title = 'Recording...' + Math.round((Date.now() - startTime) / 1000) + 's';
+
+    // Read back canvas as webp.
+    //console.time('canvas.dataURL() took');
+    var url = canvas.toDataURL('image/webp', 1); // image/jpeg is way faster :(
+    //console.timeEnd('canvas.dataURL() took');
+    frames.push(url);
+
+    // UInt8ClampedArray (for Worker).
+    //frames.push(ctx.getImageData(0, 0, CANVAS_WIDTH, CANVAS_HEIGHT).data);
+
+    // ImageData
+    //frames.push(ctx.getImageData(0, 0, CANVAS_WIDTH, CANVAS_HEIGHT));
+  };
+
+  rafId = requestAnimationFrame(drawVideoFrame_);
+};
+
+function stop() {
+  cancelAnimationFrame(rafId);
+  endTime = Date.now();
+  $('#stop-me').disabled = true;
+  document.title = ORIGINAL_DOC_TITLE;
+
+  toggleActivateRecordButton();
+
+  console.log('frames captured: ' + frames.length + ' => ' +
+              ((endTime - startTime) / 1000) + 's video');
+
+  embedVideoPreview();
+};
+
+function embedVideoPreview(opt_url) {
+  var url = opt_url || null;
+  var video = $('#video-preview video') || null;
+  var downloadLink = $('#video-preview a[download]') || null;
+
+  if (!video) {
+    video = document.createElement('video');
+    video.autoplay = true;
+    video.controls = true;
+    video.loop = true;
+    //video.style.position = 'absolute';
+    //video.style.top = '70px';
+    //video.style.left = '10px';
+    video.style.width = canvas.width + 'px';
+    video.style.height = canvas.height + 'px';
+    $('#video-preview').appendChild(video);
+
+    downloadLink = document.createElement('a');
+    downloadLink.download = 'capture.webm';
+    downloadLink.textContent = '[ download video ]';
+    downloadLink.title = 'Download your .webm video';
+    var p = document.createElement('p');
+    p.appendChild(downloadLink);
+
+    $('#video-preview').appendChild(p);
+
+  } else {
+    window.URL.revokeObjectURL(video.src);
+  }
+
+  // https://github.com/antimatter15/whammy
+  // var encoder = new Whammy.Video(1000/60);
+  // frames.forEach(function(dataURL, i) {
+  //   encoder.add(dataURL);
+  // });
+  // var webmBlob = encoder.compile();
+
+  if (!url) {
+    var webmBlob = Whammy.fromImageArray(frames, 1000 / 60);
+    url = window.URL.createObjectURL(webmBlob);
+  }
+
+  video.src = url;
+  downloadLink.href = url;
 }
 
-function onMediaError(e) {
-    console.error('media error', e);
+function initEvents() {
+  $('#camera-me').addEventListener('click', turnOnCamera);
+  $('#record-me').addEventListener('click', record);
+  $('#stop-me').addEventListener('click', stop);
 }
-</pre>
 
-        <a href="https://www.webrtc-experiment.com/msr/" style="border-bottom: 1px solid red; color: red; font-size: 1.2em; position: absolute; right: 0; text-decoration: none; top: 0;">MediaStreamRecorder Demos</a>
+initEvents();
 
-        <section class="experiment own-widgets latest-commits">
-            <h2 class="header" id="updates" style="color: red; padding-bottom: .1em;"><a href="https://github.com/streamproc/MediaStreamRecorder/commits/master" target="_blank">Latest Updates</a>
-            </h2>
-            <div id="github-commits"></div>
-        </section>
+exports.$ = $;
 
-        <section class="experiment own-widgets">
-            <h2 class="header" id="updates" style="color: red; padding-bottom: .1em;"><a href="https://github.com/streamproc/MediaStreamRecorder/commits/master" target="_blank">Latest Issues</a>
-            </h2>
-            <div id="github-issues"></div>
-        </section>
+})(window);
 
-        <section class="experiment">
-            <h2 class="header" id="feedback">Feedback</h2>
-            <div>
-                <textarea id="message" style="height: 8em; margin: .2em; width: 98%; border: 1px solid rgb(189, 189, 189); outline: none; resize: vertical;" placeholder="Have any message? Suggestions or something went wrong?"></textarea>
-            </div>
-            <button id="send-message" style="font-size: 1em;">Send Message</button><small style="margin-left:1em;">Enter your email too; if you want "direct" reply!</small>
-        </section>
+</script>
+<script>
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-22014378-1']);
+  _gaq.push(['_trackPageview']);
 
-        <section class="experiment own-widgets latest-commits">
-            <h2 class="header" id="updates" style="color: red; padding-bottom: .1em;"><a href="https://github.com/streamproc/MediaStreamRecorder/commits/master" target="_blank">Latest Updates</a>
-            </h2>
-            <div id="github-commits"></div>
-        </section>
-
-        <script>
-            window.useThisGithubPath = 'streamproc/MediaStreamRecorder';
-        </script>
-        <script src="https://cdn.webrtc-experiment.com/commits.js" async></script>
-    </article>
-
-    <a href="https://github.com/streamproc/MediaStreamRecorder" class="fork-left"></a>
-
-    <footer>
-        <p>
-            <a href="https://www.webrtc-experiment.com/">WebRTC Experiments</a> © <a href="https://plus.google.com/+MuazKhan" rel="author" target="_blank">Muaz Khan</a>
-            <a href="mailto:muazkh@gmail.com" target="_blank">muazkh@gmail.com</a>
-        </p>
-    </footer>
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+<!--[if IE]>
+<script src="http://ajax.googleapis.com/ajax/libs/chrome-frame/1/CFInstall.min.js"></script>
+<script>CFInstall.check({mode: 'overlay'});</script>
+<![endif]-->
 </body>
-
 </html>
