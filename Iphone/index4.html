@@ -21,14 +21,7 @@ function successCallback(stream) {
 
     var recorder = RecordRTC(stream, {
     type: 'video'
-    video: {
-    width: 320,
-    height: 600
- },
- canvas: {
-    width: 320,
-    height: 600
- }
+
     });
     recorder.startRecording();
 
