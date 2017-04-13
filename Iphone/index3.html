@@ -23,194 +23,130 @@
 <script src="https://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
 
 <style>
-body {
-    overflow-x: hidden;
-    background: rgb(233, 233, 233);
-}
-#elementToShare {
-    background: rgb(233, 233, 233);
-    font-size: 2em;
-    height: 100%;
-    left: 0;
-    padding: 0 1em;
-    position: absolute;
-    top: 0;
-    width: 100%;
-}
-input,
-textarea {
-    border: 1px solid red;
-    font-size: 1em;
-    outline: none;
-    padding: .3em .8em;
-}
-button,
-input[type=button] {
-    -moz-border-radius: 3px;
-    -moz-transition: none;
-    -webkit-transition: none;
-    background: #0370ea;
-    background: -moz-linear-gradient(top, #008dfd 0, #0370ea 100%);
-    background: -webkit-linear-gradient(top, #008dfd 0, #0370ea 100%);
-    border: 1px solid #076bd2;
-    border-radius: 3px;
-    color: #fff;
-    display: inline-block;
-    font-family: inherit;
-    font-size: .8em;
-    font-size: 1.5em;
-    line-height: 1.3;
-    padding: 5px 12px;
-    text-align: center;
-    text-shadow: 1px 1px 1px #076bd2;
-}
-button:hover,
-input[type=button]:hover {
-    background: rgb(9, 147, 240);
-}
-button:active,
-input[type=button]:active {
-    background: rgb(10, 118, 190);
-}
-button[disabled],
-input[type=button][disabled] {
-    background: none;
-    border: 1px solid rgb(187, 181, 181);
-    color: gray;
-    text-shadow: none;
-}
-a {
-    color: #2844FA;
-    cursor: pointer;
-    text-decoration: none;
-}
-a:hover,
-a:focus {
-    color: #1B29A4;
-}
-a:active {
-    color: #000;
-}
-img, textarea, input, video {
-    vertical-align: top;
-}
-textarea {
-    resize: verticalz;
+
 }
 </style>
+<body>
+	<section class="design-surface">
+<iframe src="//giphy.com/embed/BPxJjwsNBDMdy" width="480" height="348.38709677419354" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/rihanna-gif-BPxJjwsNBDMdy">via GIPHY</a></p>
+		<canvas id="temp-canvas"></canvas>
+		<canvas id="main-canvas" opacity=0></canvas>
+	</section>
 
-<div id="elementToShare" contenteditable style="margin-top: 3px;">
-    <h2>HTML5 WebPage Activity Recording using RecordRTC</h2>
-    <input type="text" value="Type Text!" />
-    <textarea>resize textarea</textarea><br>
-    You can resize image or above header and drag/move video:<br>
-    <img src="WebRTC.png" style="max-width:100%;position:absolute;left:0;background-color:black;">
-    <video controls style="width:33%;position:absolute;right:100px; top:150px;background-color:black;" poster="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcTaNXZNkyP2h2vTVJ6MNzQ-qjN8CkmPgtXmNwgMDm4U79frY2j4mQ"></video>
-    <br />
+    <script src="https://cdn.webrtc-experiment.com/RecordRTC/Canvas-Recording/canvas-designer.js"></script>
+	<script src="https://cdn.webrtc-experiment.com/RecordRTC.js"></script>
+	<script src="https://cdn.webrtc-experiment.com/getScreenId.js"></script>
 
-    <div id="other-demo-hints">There is another demo, that allows you <a href="https://www.webrtc-experiment.com/RecordRTC/Canvas-Recording/record-canvas-drawings.html">record drawings</a>!</div>
 
-    <br>
 
-    <pre>
-var recorder = RecordRTC(document.documentElement, {
-    type: 'canvas',
-    showMousePointer: true
-});
-recorder.startRecording();
-recorder.stopRecording(function(url) {
-    window.open(url);
-});
-</pre>
-</div>
 
-<div style="position: fixed;left: 20%;right: 20%;text-align: center;">
-    <button id="start" contenteditable="false">Start Canvas Recording</button>
-    <button id="stop" disabled contenteditable="false">Stop</button>
-</div>
+
+    <input type="text" id="text-input" style="position: absolute; top: -100000px; left: -100000px; z-index: 1000000;border:0;outline:none; font-size: 15px;padding:0;margin:0; background: transparent; width: 100%;">
+
+	<!------------------------------------------>
+
+  	<div class="start-top-recording" style="position: absolute;top: 3px;right: 20px;z-index: 9;">
+
+
+	    <button id="start">Start Canvas Recording</button>
+	    <button id="stop" disabled>Stop</button>
+	</div>
+
+
 
 <script src="https://cdn.webrtc-experiment.com/screenshot.js"></script>
 <script src="https://cdn.webrtc-experiment.com/RecordRTC.js"></script>
 <script src="https://cdn.WebRTC-Experiment.com/gumadapter.js"></script>
 
 <script>
-$( 'img' ).css('cursor', 'move').draggable().resizable();
-$('video, h2, #other-demo-hints').css('cursor', 'move').draggable();
-var elementToShare = document.getElementById('elementToShare');
-var canvas2d = document.createElement('canvas');
-var context = canvas2d.getContext('2d');
-canvas2d.width = elementToShare.clientWidth;
-canvas2d.height = elementToShare.clientHeight;
-canvas2d.style.top = 0;
-canvas2d.style.left = 0;
-canvas2d.style.zIndex = -1;
-(document.body || document.documentElement).appendChild(canvas2d);
-var isRecordingStarted = false;
-var isStoppedRecording = false;
-(function looper() {
-    if(!isRecordingStarted) {
-        return setTimeout(looper, 500);
-    }
-    html2canvas(elementToShare, {
-        grabMouse: true,
-        onrendered: function(canvas) {
-            context.clearRect(0, 0, canvas2d.width, canvas2d.height);
-            context.drawImage(canvas, 0, 0, canvas2d.width, canvas2d.height);
-            if(isStoppedRecording) {
-                return;
-            }
-            setTimeout(looper, 1);
-        }
-    });
-})();
-var recorder = new RecordRTC(canvas2d, {
-    type: 'canvas'
-});
-document.getElementById('start').onclick = function() {
-    document.getElementById('start').disabled = true;
-    isStoppedRecording = false;
-    isRecordingStarted = true;
-    playVideo(function() {
-        recorder.startRecording();
-        setTimeout(function() {
-            document.getElementById('stop').disabled = false;
-        }, 1000);
-    });
-};
-document.getElementById('stop').onclick = function() {
-    this.disabled = true;
-    isStoppedRecording = true;
-    recorder.stopRecording(function() {
-        var blob = recorder.getBlob();
-        var video = document.createElement('video');
-        video.src = URL.createObjectURL(blob);
-        video.setAttribute('style', 'height: 100%; position: absolute; top:0;');
-        document.body.appendChild(video);
-        video.controls = true;
-        video.play();
-    });
-};
-window.onbeforeunload = function() {
-    document.getElementById('start').disabled = false;
-    document.getElementById('stop').disabled = true;
-};
-webrtcUtils.enableLogs = false;
-var videoElement = document.querySelector('video');
-function playVideo(callback) {
-    function successCallback(stream) {
-        videoElement.onloadedmetadata = function() {
-            callback();
-        };
-        videoElement.src = URL.createObjectURL(stream);
-        videoElement.play();
-    }
-    function errorCallback(error) {
-        console.error('get-user-media error', error);
-        callback();
-    }
-    var mediaConstraints = { video: true };
-    navigator.mediaDevices.getUserMedia(mediaConstraints).then(successCallback).catch(errorCallback);
-}
+var params = {
+    		tools: JSON.stringify({
+    			pencil: true,
+    			// dragMultiple: true,
+    			eraser: true,
+    			text: true
+    			/*image: true,
+		        line: true,
+		        dragSingle: true,
+		        rectangle: true,
+		        arc: true,
+		        bezier: true,
+		        quadratic: true,
+		        */
+    		}),
+	        selectedIcon: 'pencil'
+    	}
+
+
+
+  var recorder;
+	document.getElementById('start').onclick = function() {
+	    document.getElementById('start').disabled = true;
+	    recorder = new RecordRTC(window.canvasElementToBeRecorded, {
+			type: 'canvas',
+		    disableLogs: false
+		});
+	    recorder.startRecording();
+	    setTimeout(function() {
+	         document.getElementById('stop').disabled = false;
+	    }, 1000);
+	};
+	document.getElementById('stop').onclick = function() {
+	   this.disabled = true;
+	   document.body.innerHTML = '<h1 style="font-size:30px;text-align:center;margin:15px;color:red;font-weight:normal;">Please check page title for the encoding progress.<br><br>Frames are being encoded to generate a HD smooth WebM!<br><br><small>Please never click "kill" button; otherwise the entire encoding process will be crashed.</small></h1>';
+	   setTimeout(function() {
+		   	recorder.stopRecording(function() {
+		   		var blob = recorder.getBlob();
+		    	var video = document.createElement('video');
+		        video.src = URL.createObjectURL(blob);
+		        video.setAttribute('style', 'height: 100%; position: absolute; top:0; left:0;z-index:9999;width:100%;');
+		        document.body.appendChild(video);
+		        video.controls = true;
+		        video.play();
+		    });
+		}, 100);
+	};
+	document.getElementById('capture-screen').onclick = function() {
+		this.disabled = true;
+		getScreenId(function (error, sourceId, screen_constraints) {
+			if(error) {
+				alert(error);
+				return;
+			}
+			if(sourceId === 'firefox') {
+				screen_constraints.video.width = screen.width;
+				screen_constraints.video.height = screen.height;
+			}
+			else {
+				screen_constraints.video.mandatory.maxWidth =
+				screen_constraints.video.mandatory.minWidth = screen.width;
+				screen_constraints.video.mandatory.maxHeight =
+				screen_constraints.video.mandatory.minHeight = screen.height;
+				screen_constraints.video.mandatory.minAspectRatio = 1.77;
+			}
+		    navigator.getUserMedia = navigator.mozGetUserMedia || navigator.webkitGetUserMedia;
+		    navigator.getUserMedia(screen_constraints, function (stream) {
+		    	window.screenVideoElement = document.createElement('video');
+		    	screenVideoElement.onloadedmetadata = function() {
+			    	window.canvasElementToBeRecorded.getContext('2d').drawImage(
+			    		screenVideoElement, 0, -50,
+			    		window.canvasElementToBeRecorded.width,
+			    		window.canvasElementToBeRecorded.height);
+			    	document.getElementById('capture-screen').disabled = false;
+			    	stream.stop();
+			    };
+			    screenVideoElement.src = URL.createObjectURL(stream);
+		    	screenVideoElement.play();
+		    }, function (error) {
+		        alert(JSON.stringify(error));
+		    });
+		});
+	};
+	window.onbeforeunload = function() {
+	    document.getElementById('start').disabled = false;
+	    document.getElementById('stop').disabled = true;
+	};
+
 </script>
 </body>
 
