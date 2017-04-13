@@ -7,11 +7,24 @@
 
 <script src="https://cdn.WebRTC-Experiment.com/RecordRTC.js"></script>
 <script src="https://cdn.webrtc-experiment.com/gumadapter.js"></script>
-<style></style>
+<style>
+#videoWrapper{
+    position:relative;
+    width: 200px;
+    height: 800px;
+    background: #333;
+}
+#videoWrapper video{
+    width: 100%;
+    height: 100%;
+}
+</style>
 <body>
 <!---PLEASE DON'T TOUCH THIS PAGE LEAVE IT AS IS--->
 <!---COPY AND PASTE FOR OTHER TESTS--->
+<div id="videoWrapper">
 <video  controls autoplay></video>
+</div>
 <script>
 function successCallback(stream) {
      document.querySelector('video').src = URL.createObjectURL(stream);
