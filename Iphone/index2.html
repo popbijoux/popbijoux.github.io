@@ -103,7 +103,14 @@ textarea {
 
 
     <pre>
-
+      var recorder = RecordRTC(document.documentElement, {
+          type: 'canvas',
+          showMousePointer: true
+      });
+      recorder.startRecording();
+      recorder.stopRecording(function(url) {
+          window.open(url);
+      });
 </pre>
 </div>
 
@@ -117,14 +124,6 @@ textarea {
 <script src="https://cdn.WebRTC-Experiment.com/gumadapter.js"></script>
 
 <script>
-var recorder = RecordRTC(document.documentElement, {
-    type: 'canvas',
-    showMousePointer: true
-});
-recorder.startRecording();
-recorder.stopRecording(function(url) {
-    window.open(url);
-});
 $( 'img' ).css('cursor', 'move').draggable().resizable();
 $('video, h2, #other-demo-hints').css('cursor', 'move').draggable();
 var elementToShare = document.getElementById('elementToShare');
