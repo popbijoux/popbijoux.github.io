@@ -109,6 +109,14 @@ width:300px;
 
 
     <pre>
+      var recorder = RecordRTC(document.documentElement, {
+          type: 'canvas',
+          showMousePointer: true
+      });
+      recorder.startRecording();
+      recorder.stopRecording(function(url) {
+          window.open(url);
+      }
 );
 </pre>
 </div>
@@ -123,19 +131,12 @@ width:300px;
 <script src="https://cdn.WebRTC-Experiment.com/gumadapter.js"></script>
 
 <script>
-var recorder = RecordRTC(document.documentElement, {
-    type: 'canvas',
-    showMousePointer: true
-});
-recorder.startRecording();
-recorder.stopRecording(function(url) {
-    window.open(url);
-}
+
 var elementToShare = document.getElementById('elementToShare');
 var canvas2d = document.createElement('canvas');
 var context = canvas2d.getContext('2d');
-canvas2d.width = elementToShare;
-canvas2d.height = elementToShare;
+canvas2d.width = 300;
+canvas2d.height = 600;
 canvas2d.style.top = 0;
 canvas2d.style.left = 0;
 canvas2d.style.zIndex = -1;
