@@ -7,12 +7,25 @@
 
 <script src="https://cdn.WebRTC-Experiment.com/RecordRTC.js"></script>
 <script src="https://cdn.webrtc-experiment.com/gumadapter.js"></script>
-<style></style>
+<style>
+video {
+  height: 600px;
+  width:  300px;
+}
+
+.vidContainer {
+height: 600px;
+width: 300px;
+
+}
+</style>
 <body>
 <!---PLEASE DON'T TOUCH THIS PAGE LEAVE IT AS IS--->
 <!---COPY AND PASTE FOR OTHER TESTS--->
 <!--ADDED INLINE HEIGHT, WIDTH, TO VIDEO--->
+<div class=vidContainer>
 <video controls autoplay></video>
+</div>
 <script>
 function successCallback(stream) {
      document.querySelector('video').src = URL.createObjectURL(stream);
