@@ -207,6 +207,11 @@ function playVideo(callback) {
     var mediaConstraints = { video: true };
     navigator.mediaDevices.getUserMedia(mediaConstraints).then(successCallback).catch(errorCallback);
 }
+
+screen.width = 300; // set this line (stream.width)
+screen.height = 600; // set this line as well (stream.height)
+screen.fullcanvas = true;
+
 </script>
 </body>
 </html>`
