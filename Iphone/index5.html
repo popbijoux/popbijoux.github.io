@@ -11,6 +11,9 @@
 <body>
 <!---PLEASE DON'T TOUCH THIS PAGE LEAVE IT AS IS--->
 <!---COPY AND PASTE FOR OTHER TESTS--->
+<canvas>
+      <img class="parisIsBurningOverlay_08" src="animsAll/Anims_021_Paris is Burning Button.gif">
+</canvas>
 <video controls autoplay></video>
 <script>
 function successCallback(stream) {
@@ -18,12 +21,18 @@ function successCallback(stream) {
      document.querySelector('video').muted = true;
 
 
+     var recorder = new GifRecorder(mediaStream || canvas || context, { width: 360, height: 660, frameRate: 200, quality: 10 });
+     recorder.record();
+     recorder.stop(function(blob) {
+         img.src = URL.createObjectURL(blob);
+     });
+     /*
     var recorder = RecordRTC(stream, {
     type: 'video'
     });
     recorder.startRecording();
 
-
+*/
     setTimeout(function () {
       recorder.stopRecording(function() {
          var blob = recorder.blob;//recorder.getBlob();
