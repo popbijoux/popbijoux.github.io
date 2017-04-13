@@ -92,13 +92,10 @@ textarea {
     <input type="text" value="Type Text!" />
     <textarea>resize textarea</textarea><br>
     You can resize image or above header and drag/move video:<br>
-    <img src="WebRTC.png" style="max-width:100%;position:absolute;left:0;background-color:black;">
-    <video controls style="width:33%;position:absolute;right:100px; top:150px;background-color:black;" poster="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcTaNXZNkyP2h2vTVJ6MNzQ-qjN8CkmPgtXmNwgMDm4U79frY2j4mQ"></video>
+
+    <video controls style="width:90%;position:absolute;right:100px; top:150px;background-color:black;" poster="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcTaNXZNkyP2h2vTVJ6MNzQ-qjN8CkmPgtXmNwgMDm4U79frY2j4mQ"></video>
     <br />
 
-    <div id="other-demo-hints">There is another demo, that allows you <a href="https://www.webrtc-experiment.com/RecordRTC/Canvas-Recording/record-canvas-drawings.html">record drawings</a>!</div>
-
-    <br>
 
     <pre>
 var recorder = RecordRTC(document.documentElement, {
@@ -122,8 +119,6 @@ recorder.stopRecording(function(url) {
 <script src="https://cdn.WebRTC-Experiment.com/gumadapter.js"></script>
 
 <script>
-$( 'img' ).css('cursor', 'move').draggable().resizable();
-$('video, h2, #other-demo-hints').css('cursor', 'move').draggable();
 var elementToShare = document.getElementById('elementToShare');
 var canvas2d = document.createElement('canvas');
 var context = canvas2d.getContext('2d');
