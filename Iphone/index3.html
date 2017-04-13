@@ -1,281 +1,220 @@
 
-<!DOCTYPE html>
-<!--
-Copyright 2012 Eric Bidelman
+<title>HTML5 WebPage Activity Recording using RecordRTC</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+<link rel="author" type="text/html" href="https://plus.google.com/+MuazKhan">
+<meta name="author" content="Muaz Khan">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 
-Licensed under the Apache License, Version 2.0 (the "License");
-you may not use this file except in compliance with the License.
-You may obtain a copy of the License at
+<link rel="stylesheet" href="https://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+<script src="https://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
 
-     http://www.apache.org/licenses/LICENSE-2.0
-
-Unless required by applicable law or agreed to in writing, software
-distributed under the License is distributed on an "AS IS" BASIS,
-WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-See the License for the specific language governing permissions and
-limitations under the License.
-
-Author: Eric Bidelman (ebidel@)
--->
-<html>
-<head>
-<meta charset="utf-8" />
-<meta http-equiv="X-UA-Compatible" content="chrome=1" />
-<link href="../common.css" rel="stylesheet" type="text/css" media="all">
-<title>Record a getUserMedia() Session</title>
 <style>
-a[download] {
-  text-transform: uppercase;
-  font-size: 11px;
-  font-weight: bold;
+body {
+    overflow-x: hidden;
+    background: rgb(233, 233, 233);
 }
-h4 {
-  padding: 15px;
-  background: black;
-  color: white;
-  margin: 10px 0 10px 0;
-  border-radius: 100px 0 100px 0;
-  letter-spacing: 1px;
-  font-weight: 300;
+#elementToShare {
+    background: rgb(233, 233, 233);
+    font-size: 2em;
+    height: 660px;
+    width: 360px;
+    left: 0;
+    padding: 0 1em;
+    position: relative;
+    top: 0;
+    width: 100%;
 }
-section > div {
-  text-align: center;
-  display: inline-block;
-  margin: 0 15px;
-  min-width: 400px;
+input,
+textarea {
+    border: 1px solid red;
+    font-size: 1em;
+    outline: none;
+    padding: .3em .8em;
 }
-#video-preview {
-  height: 300px;
+button,
+input[type=button] {
+    -moz-border-radius: 3px;
+    -moz-transition: none;
+    -webkit-transition: none;
+    background: #0370ea;
+    background: -moz-linear-gradient(top, #008dfd 0, #0370ea 100%);
+    background: -webkit-linear-gradient(top, #008dfd 0, #0370ea 100%);
+    border: 1px solid #076bd2;
+    border-radius: 3px;
+    color: #fff;
+    display: inline-block;
+    font-family: inherit;
+    font-size: .8em;
+    font-size: 1.5em;
+    line-height: 1.3;
+    padding: 5px 12px;
+    text-align: center;
+    text-shadow: 1px 1px 1px #076bd2;
 }
-button.recording {
-  color: darkred;
-  border-color: red;
+button:hover,
+input[type=button]:hover {
+    background: rgb(9, 147, 240);
 }
-section {
-  margin-top: 2em;
+button:active,
+input[type=button]:active {
+    background: rgb(10, 118, 190);
 }
-h2 {
-  text-align: center;
+button[disabled],
+input[type=button][disabled] {
+    background: none;
+    border: 1px solid rgb(187, 181, 181);
+    color: gray;
+    text-shadow: none;
+}
+a {
+    color: #2844FA;
+    cursor: pointer;
+    text-decoration: none;
+}
+a:hover,
+a:focus {
+    color: #1B29A4;
+}
+a:active {
+    color: #000;
+}
+img, textarea, input, video {
+    vertical-align: top;
+}
+textarea {
+    resize: verticalz;
+}
+
+canvas, video {
+  position: absolute;
+  z-index: 199;
+   margin-top: 0px;
+   margin-left: 0px;
+height: 600px;
+width:300px;
+   /*border: 1px dotted white;*/
+   /*display: none;*/
+
 }
 </style>
-</head>
-<body>
 
-<details>
-  <summary>What's this?</summary>
-  <div>
-    <p>An example of creating a .webm movie from a <code>getUserMedia()</code> video capture.</p>
-    <p><b>Support:</b> Chrome 21 supports <code>getUserMedia()</code>.</p>
-  </div>
-</details>
+<div id="elementToShare" contenteditable style="margin-top: 3px;">
 
-<h2>Recording .webm video from a <code>getUserMedia()</code>.</h2>
 
-<section>
-<div style="float:left;">
-  <button id="camera-me">1. Turn on camera</button>
-  <h4><code>getUserMedia()</code> feed</h4>
-  <video autoplay></video>
+
+    <video controls style="width:360px;height:660px;position:absolute;background-color:black;" poster=""></video>
+
+
+
+    <pre>
+      var recorder = RecordRTC(document.documentElement, {
+          type: 'canvas',
+          showMousePointer: true
+      });
+      recorder.startRecording();
+      recorder.stopRecording(function(url) {
+          window.open(url);
+      }
+);
+
+</pre>
+<canvas></canvas>
 </div>
-<div id="video-preview">
-  <button id="record-me" disabled>2. Record<!--⚫--></button>
-  <button id="stop-me" disabled>◼</button>
-  <!--<button id="play-me" disabled>►</button>-->
-  <span id="elasped-time"></span>
-  <h4>.webm recording (no audio)</h4>
+
+<div style="position: fixed;left: 20%;right: 20%;text-align: center;">
+    <button id="start" contenteditable="false">Start Canvas Recording</button>
+    <button id="stop" disabled contenteditable="false">Stop</button>
 </div>
-</section>
 
-<!--<script src="libwebp-0.1.3.min.js"></script>-->
-<script src="whammy.min.js"></script>
+<script src="https://cdn.webrtc-experiment.com/screenshot.js"></script>
+<script src="https://cdn.webrtc-experiment.com/RecordRTC.js"></script>
+<script src="https://cdn.WebRTC-Experiment.com/gumadapter.js"></script>
+
 <script>
-(function(exports) {
 
-exports.URL = exports.URL || exports.webkitURL;
 
-exports.requestAnimationFrame = exports.requestAnimationFrame ||
-    exports.webkitRequestAnimationFrame || exports.mozRequestAnimationFrame ||
-    exports.msRequestAnimationFrame || exports.oRequestAnimationFrame;
+screen.width = 300; // set this line (stream.width)
+screen.height = 600; // set this line as well (stream.height)
+screen.fullcanvas = true;
 
-exports.cancelAnimationFrame = exports.cancelAnimationFrame ||
-    exports.webkitCancelAnimationFrame || exports.mozCancelAnimationFrame ||
-    exports.msCancelAnimationFrame || exports.oCancelAnimationFrame;
-
-navigator.getUserMedia = navigator.getUserMedia ||
-    navigator.webkitGetUserMedia || navigator.mozGetUserMedia ||
-    navigator.msGetUserMedia;
-
-var ORIGINAL_DOC_TITLE = document.title;
-var video = $('video');
-var canvas = document.createElement('canvas'); // offscreen canvas.
-var rafId = null;
-var startTime = null;
-var endTime = null;
-var frames = [];
-
-function $(selector) {
-  return document.querySelector(selector) || null;
-}
-
-function toggleActivateRecordButton() {
-  var b = $('#record-me');
-  b.textContent = b.disabled ? 'Record' : 'Recording...';
-  b.classList.toggle('recording');
-  b.disabled = !b.disabled;
-}
-
-function turnOnCamera(e) {
-  e.target.disabled = true;
-  $('#record-me').disabled = false;
-
-  video.controls = false;
-
-  var finishVideoSetup_ = function() {
-    // Note: video.onloadedmetadata doesn't fire in Chrome when using getUserMedia so
-    // we have to use setTimeout. See crbug.com/110938.
-    setTimeout(function() {
-      video.width = 300;//video.clientWidth;
-      video.height = 600;// video.clientHeight;
-      // Canvas is 1/2 for performance. Otherwise, getImageData() readback is
-      // awful 100ms+ as 640x480.
-      canvas.width = video.width;
-      canvas.height = video.height;
-    }, 1000);
-  };
-
-  navigator.getUserMedia({video: true, audio: true}, function(stream) {
-    video.src = window.URL.createObjectURL(stream);
-    finishVideoSetup_();
-  }, function(e) {
-    alert('Fine, you get a movie instead of your beautiful face ;)');
-
-    video.src = 'Chrome_ImF.mp4';
-    finishVideoSetup_();
-  });
+var elementToShare = document.getElementById('elementToShare');
+var canvas2d = document.createElement('canvas');
+var context = canvas2d.getContext('2d');
+canvas2d.width = 300;
+canvas2d.height = 600;
+canvas2d.style.top = 0;
+canvas2d.style.left = 0;
+canvas2d.style.zIndex = -1;
+(document.body || document.documentElement).appendChild(canvas2d);
+var isRecordingStarted = false;
+var isStoppedRecording = false;
+(function looper() {
+    if(!isRecordingStarted) {
+        return setTimeout(looper, 500);
+    }
+    html2canvas(elementToShare, {
+        grabMouse: true,
+        onrendered: function(canvas) {
+            context.clearRect(0, 0, canvas2d.width, canvas2d.height);
+            context.drawImage(canvas, 0, 0, canvas2d.width, canvas2d.height);
+            if(isStoppedRecording) {
+                return;
+            }
+            setTimeout(looper, 1);
+        }
+    });
+})();
+var recorder = new RecordRTC(canvas2d, {
+    type: 'canvas'
+});
+document.getElementById('start').onclick = function() {
+    document.getElementById('start').disabled = true;
+    isStoppedRecording = false;
+    isRecordingStarted = true;
+    playVideo(function() {
+        recorder.startRecording();
+        setTimeout(function() {
+            document.getElementById('stop').disabled = false;
+        }, 1000);
+    });
 };
-
-function record() {
-  var elapsedTime = $('#elasped-time');
-  var ctx = canvas.getContext('2d');
-  var CANVAS_HEIGHT = canvas.height;
-  var CANVAS_WIDTH = canvas.width;
-
-  frames = []; // clear existing frames;
-  startTime = Date.now();
-
-  toggleActivateRecordButton();
-  $('#stop-me').disabled = false;
-
-  function drawVideoFrame_(time) {
-    rafId = requestAnimationFrame(drawVideoFrame_);
-
-    ctx.drawImage(video, 0, 0, CANVAS_WIDTH, CANVAS_HEIGHT);
-
-    document.title = 'Recording...' + Math.round((Date.now() - startTime) / 1000) + 's';
-
-    // Read back canvas as webp.
-    //console.time('canvas.dataURL() took');
-    var url = canvas.toDataURL('image/webp', 1); // image/jpeg is way faster :(
-    //console.timeEnd('canvas.dataURL() took');
-    frames.push(url);
-
-    // UInt8ClampedArray (for Worker).
-    //frames.push(ctx.getImageData(0, 0, CANVAS_WIDTH, CANVAS_HEIGHT).data);
-
-    // ImageData
-    //frames.push(ctx.getImageData(0, 0, CANVAS_WIDTH, CANVAS_HEIGHT));
-  };
-
-  rafId = requestAnimationFrame(drawVideoFrame_);
+document.getElementById('stop').onclick = function() {
+    this.disabled = true;
+    isStoppedRecording = true;
+    recorder.stopRecording(function() {
+        var blob = recorder.getBlob();
+        var video = document.createElement('video');
+        video.src = URL.createObjectURL(blob);
+        video.setAttribute('style', 'height: 100%; position: absolute; top:0;');
+        document.body.appendChild(video);
+        video.controls = true;
+        video.play();
+    });
 };
-
-function stop() {
-  cancelAnimationFrame(rafId);
-  endTime = Date.now();
-  $('#stop-me').disabled = true;
-  document.title = ORIGINAL_DOC_TITLE;
-
-  toggleActivateRecordButton();
-
-  console.log('frames captured: ' + frames.length + ' => ' +
-              ((endTime - startTime) / 1000) + 's video');
-
-  embedVideoPreview();
+window.onbeforeunload = function() {
+    document.getElementById('start').disabled = false;
+    document.getElementById('stop').disabled = true;
 };
-
-function embedVideoPreview(opt_url) {
-  var url = opt_url || null;
-  var video = $('#video-preview video') || null;
-  var downloadLink = $('#video-preview a[download]') || null;
-
-  if (!video) {
-    video = document.createElement('video');
-    video.autoplay = true;
-    video.controls = true;
-    video.loop = true;
-    //video.style.position = 'absolute';
-    //video.style.top = '70px';
-    //video.style.left = '10px';
-    video.style.width = canvas.width + 'px';
-    video.style.height = canvas.height + 'px';
-    $('#video-preview').appendChild(video);
-
-    downloadLink = document.createElement('a');
-    downloadLink.download = 'capture.webm';
-    downloadLink.textContent = '[ download video ]';
-    downloadLink.title = 'Download your .webm video';
-    var p = document.createElement('p');
-    p.appendChild(downloadLink);
-
-    $('#video-preview').appendChild(p);
-
-  } else {
-    window.URL.revokeObjectURL(video.src);
-  }
-
-  // https://github.com/antimatter15/whammy
-  // var encoder = new Whammy.Video(1000/60);
-  // frames.forEach(function(dataURL, i) {
-  //   encoder.add(dataURL);
-  // });
-  // var webmBlob = encoder.compile();
-
-  if (!url) {
-    var webmBlob = Whammy.fromImageArray(frames, 1000 / 60);
-    url = window.URL.createObjectURL(webmBlob);
-  }
-
-  video.src = url;
-  downloadLink.href = url;
+webrtcUtils.enableLogs = false;
+var videoElement = document.querySelector('video');
+function playVideo(callback) {
+    function successCallback(stream) {
+        videoElement.onloadedmetadata = function() {
+            callback();
+        };
+        videoElement.src = URL.createObjectURL(stream);
+        videoElement.play();
+    }
+    function errorCallback(error) {
+        console.error('get-user-media error', error);
+        callback();
+    }
+    var mediaConstraints = { video: true };
+    navigator.mediaDevices.getUserMedia(mediaConstraints).then(successCallback).catch(errorCallback);
 }
-
-function initEvents() {
-  $('#camera-me').addEventListener('click', turnOnCamera);
-  $('#record-me').addEventListener('click', record);
-  $('#stop-me').addEventListener('click', stop);
-}
-
-initEvents();
-
-exports.$ = $;
-
-})(window);
-
 </script>
-<script>
-  var _gaq = _gaq || [];
-  _gaq.push(['_setAccount', 'UA-22014378-1']);
-  _gaq.push(['_trackPageview']);
-
-  (function() {
-    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-  })();
-</script>
-<!--[if IE]>
-<script src="http://ajax.googleapis.com/ajax/libs/chrome-frame/1/CFInstall.min.js"></script>
-<script>CFInstall.check({mode: 'overlay'});</script>
-<![endif]-->
 </body>
 </html>
