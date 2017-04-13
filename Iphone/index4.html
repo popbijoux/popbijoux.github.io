@@ -149,12 +149,25 @@
           background-repeat: no-repeat;
         }
 
-        canvas, video {
+        canvas {
           position: absolute;
           z-index: 199;
            margin-top: 0px;
            margin-left: 0px;
            background: gray;
+           height: 660px;
+           width: 366px;
+           /*border: 1px dotted white;*/
+           /*display: none;*/
+
+        }
+
+        canvas {
+          position: absolute;
+          z-index: 200;
+           margin-top: 0px;
+           margin-left: 0px;
+           background: blue;
            height: 660px;
            width: 366px;
            /*border: 1px dotted white;*/
@@ -169,13 +182,12 @@
         <h1>
             Click to <button id="btn-record-webm" style="font-size:inherit;">Record as WebM</button>
         </h1>
-        <section>
+
             <canvas id="canvas">
-              <img class="resizableAnim" data-anim="3" src="animsAll/Anims_015_no fingerwith n-o-p-e.gif">
+              <img src="animsAll/Anims_015_no fingerwith n-o-p-e.gif">
 
 
             </canvas>
-        </section>
 
 
     <!-- below section handles RecordRTC and WhammyRecorder -->
