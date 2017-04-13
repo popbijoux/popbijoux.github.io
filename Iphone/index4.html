@@ -12,7 +12,7 @@
 <!---PLEASE DON'T TOUCH THIS PAGE LEAVE IT AS IS--->
 <!---COPY AND PASTE FOR OTHER TESTS--->
 <!--ADDED INLINE HEIGHT, WIDTH, TO VIDEO--->
-<video  width="400" height="600"controls autoplay></video>
+<video controls autoplay></video>
 <script>
 function successCallback(stream) {
      document.querySelector('video').src = URL.createObjectURL(stream);
@@ -21,6 +21,10 @@ function successCallback(stream) {
 
     var recorder = RecordRTC(stream, {
     type: 'video'
+    canvas: {
+       width: 300,
+       height: 600
+   }
     });
     recorder.startRecording();
 
