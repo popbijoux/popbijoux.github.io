@@ -3,55 +3,61 @@
 <head>
 <meta charset="UTF-8">
 
-<title>RecordRTC Stream DON'T TOUCH!!!</title>
+<title>Video+Screen recording using RecordRTC</title>
+<h1>Video+Screen recording using RecordRTC</h1>
 
-<script src="https://cdn.WebRTC-Experiment.com/RecordRTC.js"></script>
-<script src="https://cdn.webrtc-experiment.com/gumadapter.js"></script>
-<style></style>
-<body>
-<!---PLEASE DON'T TOUCH THIS PAGE LEAVE IT AS IS--->
-<!---COPY AND PASTE FOR OTHER TESTS--->
-<canvas>
-      <img class="parisIsBurningOverlay_08" src="animsAll/Anims_021_Paris is Burning Button.gif">
-</canvas>
 <video controls autoplay></video>
+
+<script src="RecordRTC.js"></script>
+<script src="https://cdn.WebRTC-Experiment.com/getScreenId.js"></script>
 <script>
-function successCallback(stream) {
-     document.querySelector('video').src = URL.createObjectURL(stream);
-     document.querySelector('video').muted = true;
-
-
-     var recorder = new GifRecorder(mediaStream || canvas || context, { width: 360, height: 660, frameRate: 200, quality: 10 });
-     recorder.record();
-     recorder.stop(function(blob) {
-         img.src = URL.createObjectURL(blob);
-     });
-     /*
-    var recorder = RecordRTC(stream, {
-    type: 'video'
+navigator.getUserMedia = navigator.getUserMedia || navigator.mozGetUserMedia || navigator.webkitGetUserMedia;
+function captureScreen(cb) {
+    getScreenId(function (error, sourceId, screen_constraints) {
+        navigator.getUserMedia(screen_constraints, cb, function (error) {
+          console.error('getScreenId error', error);
+          alert('Failed to capture your screen. Please check Chrome console logs for further information.');
+        });
     });
-    recorder.startRecording();
-
-*/
-    setTimeout(function () {
-      recorder.stopRecording(function() {
-         var blob = recorder.blob;//recorder.getBlob();
-         var url = URL.createObjectURL(blob);
-      document.querySelector('video').src = url;
-      document.querySelector('video').muted = false;
-     });
-    }, 10 * 1000);
 }
-
-function errorCallback(error) {
-    // maybe another application is using the device
-    alert(error);
+function captureCamera(cb) {
+    navigator.getUserMedia({audio: true, video: true}, cb, function (error) {});
 }
+captureScreen(function(screen) {
+    captureCamera(function(camera) {
+        screen.width = window.screen.width;
+        screen.height = window.screen.height;
+        screen.fullcanvas = true;
 
-var mediaConstraints = { video: true, audio: true };
+        camera.width = 300;
+        camera.height = 600;
+        camera.top = screen.height - camera.height;
+        camera.left = screen.width - camera.width;
 
-navigator.mediaDevices.getUserMedia(mediaConstraints).then(successCallback).catch(errorCallback);
-
+        var recorder = RecordRTC([screen, camera], {
+            type: 'video',
+            mimeType: 'video/webm',
+            previewStream: function(s) {
+                document.querySelector('video').muted = true;
+                document.querySelector('video').src = URL.createObjectURL(s);
+            }
+        });
+        recorder.startRecording();
+        setTimeout(function() {
+            recorder.stopRecording(function() {
+                var blob = recorder.getBlob();
+                document.querySelector('video').src = URL.createObjectURL(blob);
+                document.querySelector('video').muted = false;
+                [screen, camera].forEach(function(stream) {
+                    stream.getVideoTracks().forEach(function(track) {
+                        track.stop();
+                    });
+                    stream.getAudioTracks().forEach(function(track) {
+                        track.stop();
+                    });
+                })
+            });
+        }, 5 * 1000);
+    });
+});
 </script>
-</body>
-</html>
