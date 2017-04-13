@@ -171,7 +171,7 @@
                 }
                 setTimeout(looper, 100);
             })();
-            var seconds = 15;
+            var seconds = 10;
             var interval = setInterval(function() {
                 seconds--;
                 if(document.querySelector('h1')) {
@@ -180,3 +180,9 @@
             }, 1000);
             setTimeout(function() {
                 clearTimeout(interval);
+                stop = true;
+}, seconds * 1000);
+};
+</script>
+</body>
+</html>
