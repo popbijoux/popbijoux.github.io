@@ -24,7 +24,8 @@ body {
     padding: 0 1em;
     position: absolute;
     top: 0;
-    width: 100%;
+    width: 360px;
+    height: 660px;
 }
 input,
 textarea {
@@ -97,19 +98,12 @@ textarea {
     <video controls style="width100%;position:absolute;right:100px; top:150px;background-color:black;" poster=""></video>
     <br />
 
-    <div id="other-demo-hints">There is another demo, that allows you <a href="https://www.webrtc-experiment.com/RecordRTC/Canvas-Recording/record-canvas-drawings.html">record drawings</a>!</div>
 
-    <br>
+
+
 
     <pre>
-var recorder = RecordRTC(document.documentElement, {
-    type: 'canvas',
-    showMousePointer: true
-});
-recorder.startRecording();
-recorder.stopRecording(function(url) {
-    window.open(url);
-});
+
 </pre>
 </div>
 
@@ -123,6 +117,14 @@ recorder.stopRecording(function(url) {
 <script src="https://cdn.WebRTC-Experiment.com/gumadapter.js"></script>
 
 <script>
+var recorder = RecordRTC(document.documentElement, {
+    type: 'canvas',
+    showMousePointer: true
+});
+recorder.startRecording();
+recorder.stopRecording(function(url) {
+    window.open(url);
+});
 $( 'img' ).css('cursor', 'move').draggable().resizable();
 $('video, h2, #other-demo-hints').css('cursor', 'move').draggable();
 var elementToShare = document.getElementById('elementToShare');
