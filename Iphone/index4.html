@@ -137,6 +137,31 @@
             width: 0;
             height: 0;
         }
+
+        .videoContainerAnim75 {
+          position: absolute;
+          z-index: 14;
+          width: 75%;
+          height: 75%;
+          opacity: .8;
+          margin-top: 420px;
+          overflow: hidden;
+          background-repeat: no-repeat;
+        }
+
+        canvas {
+          position: absolute;
+          z-index: 199;
+           margin-top: 0px;
+           margin-left: 0px;
+           background: blue;
+           height: 660px;
+           width: 366px;
+           /*border: 1px dotted white;*/
+           /*display: none;*/
+
+        }
+
     </style>
 </head>
     <body>
@@ -144,7 +169,12 @@
             Click to <button id="btn-record-webm" style="font-size:inherit;">Record as WebM</button>
         </h1>
         <section>
-            <canvas id="canvas"></canvas>
+            <canvas id="canvas">
+              <div class="videoContainerAnim75 draggableAnim profileAnims" style="position: absolute; left: 190px; top: -60px; width: 50%; height: 50%;">
+              <img class="resizableAnim" data-anim="3" src="animations/Block the wall_single.gif">
+              </div>
+
+            </canvas>
         </section>
 
 
