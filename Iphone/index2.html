@@ -109,7 +109,7 @@ width:300px;
 
 
     <pre>
-      var recorder = RecordRTC(document.documentElement, {
+      var recorder = RecordRTC(documentElement, {
           type: 'canvas',
           showMousePointer: true
       });
@@ -135,12 +135,12 @@ width:300px;
 var elementToShare = document.getElementById('elementToShare');
 var canvas2d = document.createElement('canvas');
 var context = canvas2d.getContext('2d');
-canvas2d.width = 300;
-canvas2d.height = 600;
+canvas2d.width = 360;
+canvas2d.height = 660;
 canvas2d.style.top = 0;
 canvas2d.style.left = 0;
 canvas2d.style.zIndex = -1;
-(document.body || document.documentElement).appendChild(canvas2d);
+(document.documentElement).appendChild(canvas2d);
 var isRecordingStarted = false;
 var isStoppedRecording = false;
 (function looper() {
