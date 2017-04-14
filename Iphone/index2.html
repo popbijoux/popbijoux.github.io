@@ -150,10 +150,12 @@ $(".buttonRoundVoiceToTextBlue").click(function() {
 //RecordRTC
 
 //Artyom
-
+artyom.on(["Hello"]).then(function(i){
+    console.log("Triggered");
+});
 // Start the commands !
 artyom.initialize({
-    lang: "en-US", // GreatBritain english
+    lang: "en-US", // USA english
     continuous: true, // Listen forever
     soundex: true,// Use the soundex algorithm to increase accuracy
     debug: true, // Show messages in the console
