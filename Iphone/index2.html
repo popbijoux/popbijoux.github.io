@@ -32,7 +32,7 @@
              <div class="topNav">
                               <img src="https://popbijoux.github.io/Iphone/top_network_signals3.png" width="370px" height="20px">
                               <div class="buttonMegaphone hideProfilePageIcons"></div>
-                        
+
 
 
                               <div class="buttonChannelWhiteNoText hideProfilePageIcons"></div>
@@ -121,10 +121,67 @@
 <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
 <script src="https://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
 <script>
+
+
+$(".buttonRoundVoiceToAnimWhite").click(function() {
+  $(".buttonRoundVoiceToAnimBlue").show();
+    $(".buttonRoundVoiceToAnimWhite").hide();
+
+});
+
+$(".buttonRoundVoiceToAnimBlue").click(function() {
+  $(".buttonRoundVoiceToAnimWhite").show();
+    $(".buttonRoundVoiceToAnimBlue").hide();
+
+});
+
+$(".buttonRoundVoiceToTextWhite").click(function() {
+  $(".buttonRoundVoiceToTextBlue").show();
+    $(".buttonRoundVoiceToTextWhite").hide();
+
+});
+
+$(".buttonRoundVoiceToTextBlue").click(function() {
+  $(".buttonRoundVoiceToTextWhite").show();
+    $(".buttonRoundVoiceToTextBlue").hide();
+
+});
+
 //RecordRTC
 
 //Artyom
 
+// Start the commands !
+artyom.initialize({
+    lang: "en-US", // GreatBritain english
+    continuous: true, // Listen forever
+    soundex: true,// Use the soundex algorithm to increase accuracy
+    debug: true, // Show messages in the console
+    //executionKeyword: "and do it now",
+    listen: true // Start to listen commands !
+}).then(() => {
+    console.log("Artyom has been succesfully initialized");
+}).catch((err) => {
+    console.error("Artyom couldn't be initialized: ", err);
+});
+
+/**
+ * To speech text
+
+artyom.say("Hello, this is a demo text. The next text will be spoken in Spanish",{
+    onStart: () => {
+        console.log("Reading ...");
+    },
+    onEnd: () => {
+        console.log("No more text to talk");
+
+        // Force the language of a single speechSynthesis
+        artyom.say("Hola, esto está en Español", {
+            lang:"es-ES"
+        });
+    }
+});
+ */
 var settings = {
     continuous:true, // Don't stop never because i have https connection
     onResult:function(text){
@@ -139,8 +196,7 @@ var settings = {
     }
 };
 
-// Link the events to buttons in the document
-/*
+
 $(".buttonRoundVoiceToTextWhite").click(function(){
     // Start the Dictation
     UserDictation.start();
@@ -149,7 +205,7 @@ $(".buttonRoundVoiceToTextWhite").click(function(){
 $(".buttonRoundVoiceToTextBlue").click(function(){
     // Stop the Dictation
     UserDictation.stop();
-});*/
+});
 //end of artyom
 
   if (annyang) {
