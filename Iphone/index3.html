@@ -15,7 +15,7 @@ le
   Created by: Manuela L.
   Version: 1.00
 <![•••••••••••••••]>
-<![•••••••••••••••]>
+<![•••••••DO NOT MODIFY!!!••••••••]>
 
 
 <!-->
@@ -71,6 +71,12 @@ le
    <form>
      <input type="text" name="lastname">
    </form>
+   <div class="mdl-card__supporting-text">
+                                 <h4>Recognized text</h4>
+                                 <b><span id='recognized-text'></span></b><br>
+                                 Here will appear the recognized text when you talk.
+                             </div>
+
 
  </div>
 
@@ -162,6 +168,17 @@ var settings = {
         alert("Dictation stopped by the user");
     }
 };
+
+
+            artyom.redirectRecognizedTextOutput(function(text,isFinal){
+                var sel = $('#recognized-text');
+                if(isFinal){
+                    sel.html('');
+                }else{
+                    sel.html(text);
+                }
+            });
+
 
 var UserDictation = artyom.newDictation(settings);
 
