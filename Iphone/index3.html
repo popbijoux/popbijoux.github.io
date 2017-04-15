@@ -69,7 +69,7 @@ le
  <div>
 
    <form>
-     <input id='recognized-text' type="text" name="lastname">
+     <input type="text" name="lastname">
    </form>
 
 
@@ -116,7 +116,7 @@ le
 <!--[•••••••]-->
 <script src="plusser.js"></script>
 
-<script src="annyang.js"></script>
+
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/annyang/2.6.0/annyang.min.js"></script>
 <script>
@@ -163,16 +163,6 @@ var settings = {
         alert("Dictation stopped by the user");
     }
 };
-
-
-            artyom.redirectRecognizedTextOutput(function(text,isFinal){
-                var sel = $('#recognized-text');
-                if(isFinal){
-                    sel.html('');
-                }else{
-                    sel.html(text);
-                }
-            });
 
 
 var UserDictation = artyom.newDictation(settings);
