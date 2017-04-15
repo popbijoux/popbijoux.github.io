@@ -125,28 +125,55 @@
 
 
 
-//RecordRTC
+//artyom
 
-//Artyom
-
-// Start the commands !
-artyom.initialize({
-    lang: "en-US", // USA english
-    continuous: true, // Listen forever
-    soundex: true,// Use the soundex algorithm to increase accuracy
-    debug: true, // Show messages in the console
-    //executionKeyword: "and do it now",
-    listen: true // Start to listen commands !
-}).then(() => {
-    console.log("Artyom has been succesfully initialized");
-}).catch((err) => {
-    console.error("Artyom couldn't be initialized: ", err);
+$(".buttonRoundVoiceToAnimWhite").click(function(){
+    // Start the Dictation
+    UserDictation.start();
 });
 
-/artyom.on(["Hello"]).then(function(i){
-    console.log("Triggered");
+$(".buttonRoundAnimToTextWhite").click(function(){
+    // Stop the Dictation
+    UserDictation.stop();
 });
+function startArtyom(){
+    artyom.initialize({
+      lang:"en-GB",// More languages are documented in the library
+      continuous:false,//if you have https connection, you can activate continuous mode
+      debug:true,//Show everything in the console
+      listen:true // Start listening when this function is triggered
+    });
+  }
 
+  function stopArtyom(){
+    artyom.fatality();
+  }
+
+  window.onload = function(){
+      var tab = document.getElementById("commands-list");
+      var commands =  artyom.getAvailableCommands();
+      var html = '';
+
+      for(var i = 0;i < commands.length;i++){
+          var command = commands[i];
+          html += command.description + " : <span style='color:blue;'>"+command.indexes.toString()+"</span><br>";
+      }
+
+      tab.innerHTML = html;
+
+      artyom.initialize({lang:"es-ES"});
+
+    var vocesitas = [
+        {lang:"es-ES",description: "Espanol"},
+        {lang:"de-DE",description: "Deutsch"},
+        {lang:"pt-PT",description: "Portugues"},
+        {lang:"it-IT",description: "Italiano"}
+    ];
+
+    vocesitas.forEach(function(voice){
+        $('#select-voice').append($('<option>', {value:voice.lang, text:voice.description}));
+    });
+  };
 /**
  * To speech text
 
@@ -179,15 +206,7 @@ var settings = {
 };
 
 
-$(".buttonRoundVoiceToTextWhite").click(function(){
-    // Start the Dictation
-    UserDictation.start();
-});
 
-$(".buttonRoundVoiceToTextBlue").click(function(){
-    // Stop the Dictation
-    UserDictation.stop();
-});
 //end of artyom
 
 
