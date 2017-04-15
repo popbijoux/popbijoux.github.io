@@ -135,24 +135,15 @@ $(".buttonRoundVoiceToAnimBlue").click(function() {
 
 });
 
-$(".buttonRoundVoiceToTextWhite").click(function() {
-  $(".buttonRoundVoiceToTextBlue").show();
-    $(".buttonRoundVoiceToTextWhite").hide();
 
-});
 
-$(".buttonRoundVoiceToTextBlue").click(function() {
-  $(".buttonRoundVoiceToTextWhite").show();
-    $(".buttonRoundVoiceToTextBlue").hide();
-
-});
 
 //RecordRTC
 
 //Artyom
-/*artyom.on(["Hello"]).then(function(i){
+artyom.on(["Hello"]).then(function(i){
     console.log("Triggered");
-});*/
+});
 // Start the commands !
 artyom.initialize({
     lang: "en-US", // USA english
@@ -200,14 +191,20 @@ var settings = {
 
 
 $(".buttonRoundVoiceToTextWhite").click(function(){
+  $(".buttonRoundVoiceToTextBlue").show();
+    $(".buttonRoundVoiceToTextWhite").hide();
     // Start the Dictation
     UserDictation.start();
 });
 
 $(".buttonRoundVoiceToTextBlue").click(function(){
+  $(".buttonRoundVoiceToTextWhite").show();
+    $(".buttonRoundVoiceToTextBlue").hide();
     // Stop the Dictation
     UserDictation.stop();
 });
+
+
 //end of artyom
 
   if (annyang) {
