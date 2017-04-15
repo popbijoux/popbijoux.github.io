@@ -56,16 +56,15 @@ le
  <div class="topHorizontalButtonRow">
  <div class="buttonRoundVoiceToAnimWhite"></div>
  <div class="buttonRoundVoiceToAnimBlue hidden"></div>
-
- </div>
-
  <!-- Buttons to start the dictation object -->
  <input class="buttonRoundVoiceToTextWhite" type="button" value="Recognize text" />
  <input class="buttonRoundVoiceToTextBlue hidden" type="button" value="stop recognition" />
  <!-- end of buttons-->
- <!-- In this input the recognized text will appear -->
- <input id="artyom-redirect-output" type="text" name="lastname">
- <!-- end of input-->
+
+ </div>
+
+
+
 
  <div id="hiddenKeywordAnimations" class="videoContainer">
 
@@ -73,10 +72,11 @@ le
  <div>
 
    <form>
+     <!-- In this input the recognized text will appear -->
      <input id="artyom-redirect-output" type="text" name="lastname">
+     <!-- end of input-->
    </form>
 
-<span id="artyom-redirect-output"></span>
  </div>
 
 
@@ -130,10 +130,6 @@ le
 <script src="https://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
 <script>
 
-
-
-
-<script>
     // Configure artyom
     var UserDictation = artyom.newDictation({
         continuous: true, // Don't stop never because i have https connection
