@@ -58,6 +58,9 @@ le
  <div class="buttonRoundVoiceToAnimBlue hidden"></div>
  <div class="buttonRoundVoiceToTextWhite"></div>
  <div class="buttonRoundVoiceToTextBlue hidden"></div>
+
+ <input class="buttonRoundVoiceToTextWhite" type="button" onclick="startRecognition();" value="Recognize text" />
+   <input class="buttonRoundVoiceToTextBlue hidden" type="button" onclick="stopRecognition();" value="stop recognition" />
  </div>
 
 
@@ -73,8 +76,7 @@ le
 
  </div>
 
- <input type="button" onclick="startRecognition();" value="Recognize text" />
-   <input type="button" onclick="stopRecognition();" value="stop recognition" />
+
          <img id="nope_015"  class="hiddenElement" src="animsAll/Anims_015_no fingerwith n-o-p-e.gif">
  <img id="blockTheWall_001" class="hiddenElement" src="animsAll/Anims_001_Block the wall.gif">
          <img id="button1960s_002" class="hiddenElement" src="animsAll/Anims_002_Button_1960s.gif">
@@ -124,6 +126,30 @@ le
 <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
 <script src="https://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
 <script>
+
+$(".buttonRoundVoiceToAnimWhite").click(function() {
+  $(".buttonRoundVoiceToAnimBlue").show();
+    $(".buttonRoundVoiceToAnimWhite").hide();
+
+});
+
+$(".buttonRoundVoiceToAnimBlue").click(function() {
+  $(".buttonRoundVoiceToAnimWhite").show();
+    $(".buttonRoundVoiceToAnimBlue").hide();
+
+});
+
+$(".buttonRoundVoiceToTextWhite").click(function() {
+  $(".buttonRoundVoiceToTextBlue").show();
+    $(".buttonRoundVoiceToTextWhite").hide();
+
+});
+
+$(".buttonRoundVoiceToTextBlue").click(function() {
+  $(".buttonRoundVoiceToTextWhite").show();
+    $(".buttonRoundVoiceToTextBlue").hide();
+
+});
 
 var settings = {
     continuous:true, // Don't stop never because i have https connection
