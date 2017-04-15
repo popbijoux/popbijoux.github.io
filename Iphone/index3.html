@@ -72,7 +72,7 @@ le
      <input id="artyom-redirect-output" type="text" name="lastname">
    </form>
 
-
+<span id="artyom-redirect-output"></span>
  </div>
 
 
@@ -178,20 +178,12 @@ function stopRecognition(){
 
 artyom.redirectRecognizedTextOutput(function(recognized,isFinal){
     if(isFinal){
-        console.log("Final recognized text: " + recognized);
+        console.log("Final recognized text: ");
     }else{
         console.log(recognized);
     }
 });
 
-if(artyom.recognizingSupported()){
-                   artyom.redirectRecognizedTextOutput(function(recognized,isFinal){
-                       if(isFinal){
-                           $("#artyom-redirect-output").text("");//Nothing
-                       }else{
-                           $("#artyom-redirect-output").text(recognized);
-                       }
-                   });
 
 
 //end of artyom
