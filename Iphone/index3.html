@@ -1,404 +1,311 @@
-
-<!DOCTYPE html>
+<!DOCTYPE HTML>
 <html>
 <head>
-<meta charset="utf-8" />
-<title>Artyom.js - A Sticky Notes Demo</title>
-<link rel="icon" href="../../favicon.ico" type="image/x-icon">
-<link  href="https://fonts.googleapis.com/css?family=Reenie+Beanie:regular" rel="stylesheet" type="text/css">
-<script src="artyom.js"></script>
-<style type="text/css">
-table, td, th {
-    border: 1px solid white;
-    padding:5px;
-}
-*{
-  margin:0;
-  padding:0;
-}
-body{
-  font-family:arial,sans-serif;
-  font-size:100%;
-  margin:3em;
-  background:#666;
-  color:#fff;
-}
-h2,p{
-  font-size:100%;
-  font-weight:normal;
-}
-ul,li{
-  list-style:none;
-}
-ul{
-  overflow:hidden;
-  padding:3em;
-}
-ul li a{
-  text-decoration:none;
-  color:#000;
-  background:#ffc;
-  display:block;
-  height:10em;
-  width:10em;
-  padding:1em;
-  overflow: auto;
-  -moz-box-shadow:5px 5px 7px rgba(33,33,33,1);
-  -webkit-box-shadow: 5px 5px 7px rgba(33,33,33,.7);
-  box-shadow: 5px 5px 7px rgba(33,33,33,.7);
-  -moz-transition:-moz-transform .15s linear;
-  -o-transition:-o-transform .15s linear;
-  -webkit-transition:-webkit-transform .15s linear;
-}
+<meta charset="UTF-8">
 
-ul li{
-  margin:1em;
-  float:left;
-}
-ul li h2{
-  font-size:140%;
-  font-weight:bold;
-  padding-bottom:10px;
-}
-ul li p{
-  font-family:"Reenie Beanie",arial,sans-serif;
-  font-size:1.5em;
-}
-ul li a{
-  -webkit-transform: rotate(-6deg);
-  -o-transform: rotate(-6deg);
-  -moz-transform:rotate(-6deg);
-}
-ul li:nth-child(even) a{
-  -o-transform:rotate(4deg);
-  -webkit-transform:rotate(4deg);
-  -moz-transform:rotate(4deg);
-  position:relative;
-  top:5px;
-  background:#cfc;
-}
-ul li:nth-child(3n) a{
-  -o-transform:rotate(-3deg);
-  -webkit-transform:rotate(-3deg);
-  -moz-transform:rotate(-3deg);
-  position:relative;
-  top:-5px;
-  background:#ccf;
-}
-ul li:nth-child(5n) a{
-  -o-transform:rotate(5deg);
-  -webkit-transform:rotate(5deg);
-  -moz-transform:rotate(5deg);
-  position:relative;
-  top:-10px;
-}
-ul li a:hover,ul li a:focus{
-  box-shadow:10px 10px 7px rgba(0,0,0,.7);
-  -moz-box-shadow:10px 10px 7px rgba(0,0,0,.7);
-  -webkit-box-shadow: 10px 10px 7px rgba(0,0,0,.7);
-  -webkit-transform: scale(1.25);
-  -moz-transform: scale(1.25);
-  -o-transform: scale(1.25);
-  position:relative;
-  z-index:5;
-}
-ol{text-align:center;}
-ol li{display:inline;padding-right:1em;}
-ol li a{color:#fff;}
-</style>
+<title>Final Call-Out Page</title>
+
+<!--[document information]>
+<![•••••••••••••••]>
+<![•••••••••••••••]>
+  File: 1Gtest.html
+  Created: 12/31/16
+  Last Modified: 01/13/17
+  Created by: Manuela L.
+  Version: 1.00
+<![•••••••••••••••]>
+<![•••••••••••••••]>
+
+
+<!-->
+<link rel="stylesheet" type="text/css" href="plusser.css">
 </head>
 <body>
-    <p style="text-align:center;">
-        <a href="https://github.com/sdkcarlos/artyom.js">
-            <img src="../../sites/artyom-resources/images/artyomjs-logo.png" width="200"/>
-        </a>
-    </p>
-  <ol>
-    <li>
-        <label for="language-selector">Select the Artyom Language for this demo when you want</label>
-        <select id="language-selector">
-            <option value="en-GB" selected="selected">English Great Britain</option>
-            <option value="en-US">English USA</option>
-            <option value="de-DE">Deutsch</option>
-            <option value="es-ES">Español</option>
-            <option value="it-IT">Italiano</option>
-            <option value="fr-FR">Français</option>
-        </select>
-    </li>
-    <li><strong>Demo without Japanese (Artyom supports too Japanese)</strong></li>
-    <li><a href="#"></a></li>
-  </ol>
-    <br>
-    <p style="text-align:center;">
-        A simple demostration of how to use artyom in Continuous mode , add all the notes that you want ! They will be added in your Local Storage and will be accessible whenever you enter to this site<br>
-        Artyom will be always available if you allow the use of the microphone for the first time thanks to the <em>https://</em> connection.<br>
-        You can visit another websites while artyom is active ! It will listen although another tab is on user focus<b>,visit the Facebook wall of your girlfriend while this site is opened and add some dead notes :)</b><br>
-        Click on any note, artyom will read it, and all the recognized text will appear here :<br>
-        <span id="output-artyom" style="font-size: 20px;font-family: monospace;font-style: italic;color: coral;"></span>
-    </p>
-  <ul id="sticky_notes_container">
-  </ul>
-    <h3>Commands for create notes in all the languages [English, Italiano, Espanol, Francais, Deutsch] <small>Select a language and search the command in the list below</small></h3>
-    <a href="javascript:void(0);" onclick="RestartDemo()" style="color: aquamarine;">
-        Restart Original Demo (All notes will be deleted)
-    </a>
-    <table id="table-commands" style="width:100%;">
-        <thead>
-            <tr>
-                <td>Voice commands (say according to the initialization language)</td>
-                <td>Description</td>
-            </tr>
-        </thead>
-        <tbody>
-        </tbody>
-    </table>
+<!--[••••••••••••••••••••••••••••••••••••••••••••••••••]-->
+<!--[••••••••••••••••••••••••••••••••••••••••••••••••••]-->
+<!--[••••••••••••••••••••••••••••••••••••••••••••••••••]-->
+<div class="fullSizePhone">
+    <div id="profilePage" class="fullPhoneScreen">
+<!--[••••••••••••••••••••••••••••••••••••••••••••••••••]-->
+<!--[••••••••••••••••••••••••••••••••••••••••••••••••••]-->
+<!--[••••••••••••••••••••••••••••••••••••••••••••••••••]-->
+             <div class="topNav">
+                              <img src="https://popbijoux.github.io/Iphone/top_network_signals3.png" width="370px" height="20px">
+                              <div class="buttonMegaphone hideProfilePageIcons"></div>
 
-<script src="../../sites/ui-resources/js/jquery.min.js"></script>
+
+
+                              <div class="buttonChannelWhiteNoText hideProfilePageIcons"></div>
+            </div><!--[end of topNav]-->
+<!--[••••••••••••••••••••••••••••••••••••••••••••••••••]-->
+<!--[••••••••••••••••••••••••••••••••••••••••••••••••••]-->
+<!--[••••••••••••••••••••••••••••••••••••••••••••••••••]-->
+<div class="navBarBottom">
+
+  <div class="buttonWhiteDictionary hideProfilePageIcons"></div>
+   <div class="buttonSelectionBackWhite hidden"></div>
+       <div class="buttonMoreWhite hidden"></div>
+
+    <div class="buttonSelectionBlue hidden"></div>
+
+  <div class="buttonHomeWhite hideProfilePageIcons"></div>
+
+ </div><!--[navBarBottom]-->
+ <div class="topHorizontalButtonRow">
+ <div class="buttonRoundVoiceToAnimWhite"></div>
+ <div class="buttonRoundVoiceToAnimBlue hidden"></div>
+ <div class="buttonRoundVoiceToTextWhite"></div>
+ <div class="buttonRoundVoiceToTextBlue hidden"></div>
+ </div>
+
+
+
+ <div id="hiddenKeywordAnimations" class="videoContainer">
+
+
+ <div>
+
+   <form>
+     <input type="text" name="lastname">
+   </form>
+
+ </div>
+
+
+         <img id="nope_015"  class="hiddenElement" src="animsAll/Anims_015_no fingerwith n-o-p-e.gif">
+ <img id="blockTheWall_001" class="hiddenElement" src="animsAll/Anims_001_Block the wall.gif">
+         <img id="button1960s_002" class="hiddenElement" src="animsAll/Anims_002_Button_1960s.gif">
+         <img id="eggsandbacon_005" class="hiddenElement" src="animsAll/Anims_005_Eggs and Bacon.gif">
+         <img id="muslimBan_016" class="hiddenElement" src="animsAll/Anims_016_no_muslim_ban.gif">
+         <img id="toast_018" class="hiddenElement" src="animsAll/Anims_018_Toast.gif">
+
+         <img id="ourStory_020" class="hiddenElement" src="animsAll/Anims_020_Button_Our Story.gif">
+         <img id="justsayno_011" class="hiddenElement" src="animsAll/Anims_011_just_say_no_airplane.gif">
+         <img id="buttonPolitics_003" class="hiddenElement" src="animsAll/Anims_003_Button_Politics.gif">
+
+         <!--[••••••••••••••••••••••••••••••••••••••••••••••••••]-->
+         <!--[••••••••••••••••••••••••••••••••••••••••••••••••••]-->
+
+         <img id="buttonwearethepeople_004" class="hiddenElement" src="animsAll/Anims_004_Button_We_are_the_people_stripe_badge.gif">
+         <img id="hotdog_006" class="hiddenElement" src="animsAll/Anims_006_Hot_Dogs.gif">
+         <img id="IcameIsawIconquered_007"  class="hiddenElement" src="animsAll/Anims_007_I came I saw I conquered.gif">
+         <img id="Icame_008"  class="hiddenElement" src="animsAll/Anims_008_I came.gif">
+         <img id="Isaw_009" class="hiddenElement" src="animsAll/Anims_009_I saw.gif">
+         <img id="jackie_010" class="hiddenElement" src="animsAll/Anims_010_Jackie.gif">
+         <img id="killingtheeyelinergame_012"  class="hiddenElement" src="animsAll/Anims_012_killing the eyeliner game.gif">
+         <img id="nobaloons_014" class="hiddenElement" src="animsAll/Anims_014_no baloons.gif">
+         <img id="tearitdown_017" class="hiddenElement" src="animsAll/Anims_017_tear it down.gif">
+         <!--[••••••••••••••••••••••••••••••••••••••••••••••••••]-->
+         <!--[••••••••••••••••••••••••••••••••••••••••••••••••••]-->
+         <img id="wegotastory_019"  class="hiddenElement" src="animsAll/Anims_019_Button_We got a story_textandbook.gif">
+         <img id="parisIsBurningButton_021" class="hiddenElement" src="animsAll/Anims_021_Paris is Burning Button.gif">
+         <img id="sandwich_022" class="hiddenElement" src="animsAll/Anims_022_Sandwich_bitten.gif">
+         <img id="townHallsButton_023" class="hiddenElement" src="animsAll/Anims_023_Townhalls Button.gif">
+         <img id="WeAreThePeopleButton_024" class="hiddenElement" src="animsAll/Anims_024_We_are_the_people_buttons.gif">
+
+
+   </div>
+
+    </div><!--[end of fullPhoneScreen]-->
+
+</div><!--[end of fullSizePhone]-->
+<!--[•••••••]-->
+<script src="plusser.js"></script>
+<script src="artyom.js"></script>
+<script src="annyang.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/annyang/2.6.0/annyang.min.js"></script>
 <script>
-    var comandos = [
-        {
-            description:"Trigger the creation of a note with your voice ! Say the command and replace the * With the content of your note. <br> Example: <b>Make me a note call my mother this sunday</b>",
-            indexes:["Make me a note *","Create a note *","Remember me *","Creare una nota *","Crear nota *","Notiz hinzufügen *",'créer la note *'],
-            smart:true,
-            action:function(index,wildcard){
-                var id = parseInt($("#sticky_notes_container li").last().data("noteid")) + 1;
-                if(isNaN(id)){
-                    id = 1;
-                }
+<script src="typed.js"></script>
+<link rel="stylesheet" href="https://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+<script src="https://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+<script>
 
-                AddNote(wildcard,id,true);
-                    switch(artyom.getLanguage()){
-                        case "en-GB":
-                        case "en-US":
-                            artyom.say("The note has been added succesfully");
-                        break;
-                        case "it-IT":
-                            artyom.say("Nota è stato creato con successo");
-                        break;
-                        case "es-ES":
-                        case "es-CO":
-                            artyom.say("Nota creada satisfactoriamente");
-                        break;
-                        case "de-DE":
-                            artyom.say("Reminder erfolgreich erstellt");
-                        break;
-                    }
-            }
-        },
-        {
-            description:"Remove a note with the identified number! Replace the * With the number of an existing note <br> Example : <b>Remove note number 1</b>",
-            indexes:["Remove note number *","Remove the note number *","Delete the note number *","Delete note number *","eliminare la nota *","entfernen Note *","Remover nota numero *","supprimer la note *"],
-            smart:true,
-            action:function(index,wildcard){
-                var number = wildcard;
 
-                if(isNaN(number)){
-                    alert("Cannot remove the note with id : " + number + " . Is not numeric, if you say a number maybe, artyom doesn't give a numeric value, instead give in characters. Try again.");
-                }else{
-                    RemoveNoteNumber(number);
 
-                    switch(artyom.getLanguage()){
-                        case "en-US":
-                        case "en-GB":
-                            artyom.say("The note will not appear anymore in the list");
-                        break;
-                        case "es-ES":
-                        case "es-CO":
-                            artyom.say("Esa nota no aparecera mas en la lista");
-                        break;
-                        case "it-IT":
-                            artyom.say("La nota non apparirà più nella lista");
-                        break;
-                        case "de-DE":
-                            artyom.say("Diese Notiz nimmt auf der Liste erscheinen");
-                        break;
-                    }
-                }
-            }
-        },
-        {
-            description:"Removes all the notes saved in the document",
-            indexes: ["Remove all the notes","Remove everything","Delete all","Delete all the notes","eliminare tutte le note","rimuovere tutte le note","entfernen Sie alle Notizen","Eliminar todas las notas"],
-            action:function(){
-                switch(artyom.getLanguage()){
-                    case "en-US":
-                    case "en-GB":
-                        artyom.say("Are you sure you want to remove all the notes? You can't undo this action",{
-                            onEnd:function(){
-                                if(confirm("Delete all the notes?")){
-                                    window.localStorage.setItem("notes","[]");
-                                    $("#sticky_notes_container").empty();
-                                }
-                            }
-                        });
-                    break;
-                    case "it-IT":
-                        artyom.say("Sei sicuro di voler rimuovere tutte le note? Non è possibile annullare questa azione",{
-                            onEnd:function(){
-                                if(confirm("eliminare tutte le note?")){
-                                    window.localStorage.setItem("notes","[]");
-                                    $("#sticky_notes_container").empty();
-                                }
-                            }
-                        });
-                    break;
-                    case "es-ES":
-                    case "es-CO":
-                        artyom.say("Esta seguro de que quiere eliminar las notas? no puede deshacer esta acción",{
-                            onEnd:function(){
-                                if(confirm("Eliminar de todas maneras?")){
-                                    window.localStorage.setItem("notes","[]");
-                                    $("#sticky_notes_container").empty();
-                                }
-                            }
-                        });
-                    break;
-                    case "de-DE":
-                        artyom.say("Wirklich wollen, um alle Notizen löschen? Sie können diese Aktion nicht rückgängig gemacht werden",{
-                            onEnd:function(){
-                                if(confirm("löschen")){
-                                    window.localStorage.setItem("notes","[]");
-                                    $("#sticky_notes_container").empty();
-                                }
-                            }
-                        });
-                    break;
-                }
-            }
-        }
-    ];
 
-    /**
-     * Add the commands to artyom !
-     * @param {type} param
-     */
-    artyom.addCommands(comandos);
+//RecordRTC
 
-    artyom.redirectRecognizedTextOutput(function(output,isFinal){
-        if(!isFinal){
-            $("#output-artyom").text(output);
-        }else{
-            $("#output-artyom").text("");
-        }
-    });
+//Artyom
+/artyom.on(["Hello"]).then(function(i){
+    console.log("Triggered");
+});
+// Start the commands !
+artyom.initialize({
+    lang: "en-US", // USA english
+    continuous: true, // Listen forever
+    soundex: true,// Use the soundex algorithm to increase accuracy
+    debug: true, // Show messages in the console
+    //executionKeyword: "and do it now",
+    listen: true // Start to listen commands !
+}).then(() => {
+    console.log("Artyom has been succesfully initialized");
+}).catch((err) => {
+    console.error("Artyom couldn't be initialized: ", err);
+});
 
-    $(window).load(function(){
-        RenderCommands();
-        //We create an artyom extension in order to call it when we want
-        artyom.extensions.StartMainDemo = function(lang){
-            artyom.initialize({
-                lang:lang,
-                continuous:true,//Listen forever
-                listen:true,
-                debug:true
-            });
-        };
+/**
+ * To speech text
 
-        artyom.extensions.StartMainDemo($("#language-selector").val());
-    });
+artyom.say("Hello, this is a demo text. The next text will be spoken in Spanish",{
+    onStart: () => {
+        console.log("Reading ...");
+    },
+    onEnd: () => {
+        console.log("No more text to talk");
 
-    $(function(){
-        if(!artyom.device.isChrome){
-            alert("ARTYOM ONLY WORKS IN Google Chrome BROWSER");
-        }
-
-        if(!window.localStorage.getItem("notes")){
-            window.localStorage.setItem("notes",'[{"id":"1","content":"Reminder: create something awesome with artyom later"},{"id":"2","content":"Recordatorio: Crear algo asombroso con artyom luego"},{"id":"3","content":"Zur Erinnerung: schaffen etwas erstaunlich, mit Artyom später"},{"id":"4","content":"Promemoria: creare qualcosa di incredibile con Artyom più tardi"},{"id":"5","content":"Rappel: créer quelque chose d´incroyable avec Artyom tard"}]');
-        }
-
-        var notas = JSON.parse(window.localStorage.getItem("notes"));
-
-        for(var i = 0;i < notas.length;i++){
-            AddNote(notas[i].content,notas[i].id,false);
-        }
-
-        if(window.localStorage.getItem("lang")){
-            $("#language-selector").val(window.localStorage.getItem("lang"));
-        }
-
-        $("#language-selector").change(function(){
-            artyom.fatality();//Stop Any previous artyom if exist
-            var lang = $(this).val();
-            window.localStorage.setItem("lang",lang);
-            setTimeout(function(){
-                artyom.extensions.StartMainDemo(lang);
-            },2000);
+        // Force the language of a single speechSynthesis
+        artyom.say("Hola, esto está en Español", {
+            lang:"es-ES"
         });
-    });
-
-    function AddNote(content,id,addToLocal){
-        if(typeof(window.localStorage) !== "undefined"){
-            if(addToLocal === true){
-                var notitas = window.localStorage.getItem("notes");
-                if(notitas){
-                    var group = JSON.parse(notitas);
-                    group.push({id:id,content:content});
-                    window.localStorage.setItem("notes",JSON.stringify(group));
-                }else{
-                    var neu = [{id:id,content:content}];
-                    window.localStorage.setItem("notes",JSON.stringify(neu));
-                }
-            }
-        }
-
-        var note = '<li data-noteid="'+id+'" title="Click to talk this note">\n\
-                    <a href="javascript:void(0);" onclick="sayNoteContent(this);">\n\
-                      <h2>Note #'+id+'</h2>\n\
-                      <p>'+content+'</p>\n\
-                    </a>\n\
-                  </li>';
-        $("#sticky_notes_container").append(note);
     }
-
-    function RemoveNoteNumber(id){
-        var notas = JSON.parse(window.localStorage.getItem("notes"));
-        var found = false;
-
-        for(var i = notas.length - 1; i >= 0; i--) {
-            if(notas[i].id == id) {
-               notas.splice(i, 1);
-               found = true;
-            }
-        }
-
-        if(!found){
-            alert("Cannot remove note number " + id + " because it doesn't exist !");
-        }
-
-        window.localStorage.setItem("notes",JSON.stringify(notas));
-
-        $("li[data-noteid='"+id+"']").remove();
+});
+ */
+var settings = {
+    continuous:true, // Don't stop never because i have https connection
+    onResult:function(text){
+        // Show the Recognized text in the console
+        console.log("Recognized text: ", text);
+    },
+    onStart:function(){
+        console.log("Dictation started by the user");
+    },
+    onEnd:function(){
+        alert("Dictation stopped by the user");
     }
+};
 
 
-    function RenderCommands(){
-        var comandi = artyom.getAvailableCommands();
+$(".buttonRoundVoiceToTextWhite").click(function(){
+    // Start the Dictation
+    UserDictation.start();
+});
 
-        for(var i = 0;i < comandi.length;i++){
-            var com = comandi[i];
-            var list = "";
-            for(var q = 0;q < com.indexes.length;q++){
-                list += "<br>" + com.indexes[q];
-            }
+$(".buttonRoundVoiceToTextBlue").click(function(){
+    // Stop the Dictation
+    UserDictation.stop();
+});
+//end of artyom
 
-            var row = '<tr>\n\
-                        <td>'+list+'</td>\n\
-                        <td>'+com.description+'</td>\n\
-                        </tr>';
-            $("#table-commands tbody").append(row);
-        }
-    }
+  if (annyang) {
+  // Let's define our first command. First the text we expect, and then the function it should call
+  var commands = {
+  'block (the wall)': function() {
+    $("#blockTheWall_001").show().delay(4000).fadeOut();
+  },
 
-    function RestartDemo(){
-        window.localStorage.removeItem("notes");
-        window.localStorage.removeItem("lang");
-        window.location.reload();
-    }
+  'no wall': function() {
+    $("#blockTheWall_001").show().delay(4000).fadeOut();
+  },
 
-    function sayNoteContent(dom){
-        artyom.say($(dom).find("p").text());
-    }
+
+  'sixties': function() {
+  $("#button1960s_002").show().delay(10000).fadeOut();
+                              },
+
+  'eggs (and bacon)': function() {
+  $("#eggsandbacon_005").show().delay(12000).fadeOut();
+                            },
+
+  'bacon': function() {
+  $("#eggsandbacon_005").show().delay(12000).fadeOut();
+                          },
+
+  '(no) ban': function() {
+  $("#muslimBan_016").show().delay(8000).fadeOut();
+                          },
+
+  'nope': function() {
+  $("#nope_015").show().delay(12000).fadeOut();
+                          },
+
+  'toast': function() {
+  $("#toast_018").show().delay(12000).fadeOut();
+                        },
+
+  '(our) story': function() {
+  $("#ourStory_020").show().delay(8000).fadeOut();
+                        },
+
+  'just say (no)': function() {
+  $("#justsayno_011").show().delay(8000).fadeOut();
+                        },
+
+  'politics': function() {
+  $("#buttonPolitics_003").show().delay(8000).fadeOut();
+                        },
+
+  '(we are) the people': function() {
+  $("#buttonwearethepeople_004").show().delay(8000).fadeOut();
+                    },
+
+  'hot dog': function() {
+  $("#hotdog_006").show().delay(8000).fadeOut();
+                    },
+
+  'I came I saw I conquered': function() {
+  $("#IcameIsawIconquered_007").show().delay(8000).fadeOut();
+                  },
+
+  'I came': function() {
+  $("#Icame_008").show().delay(8000).fadeOut();
+                    },
+
+  'I saw': function() {
+  $("#Isaw_009").show().delay(8000).fadeOut();
+                  },
+
+  'jackie': function() {
+  $("#jackie_010").show().delay(8000).fadeOut();
+                  },
+
+                'jackie': function() {
+                $("#jackie_010").show().delay(8000).fadeOut();
+                                },
+
+  'killing the eyeliner game': function() {
+  $("#killingtheeyelinergame_012").show().delay(8000).fadeOut();
+                },
+
+  'no way': function() {
+  $("#nobaloons_014").show().delay(8000).fadeOut();
+                  },
+
+  'tear it down': function() {
+  $("#tearitdown_017").show().delay(8000).fadeOut();
+                },
+    //------------------
+  'we got a story': function() {
+  $("#wegotastory_019").show().delay(8000).fadeOut();
+                  },
+
+  'killing (the eyeliner game)': function() {
+  $("#killingtheeyelinergame_012").show().delay(8000).fadeOut();
+                },
+
+  'sandwich': function() {
+  $("#sandwich_022").show().delay(8000).fadeOut();
+                  },
+
+  'town halls': function() {
+  $("#townHallsButton_023").show().delay(8000).fadeOut();
+                },
+
+  'we are the people': function() {
+  $("#WeAreThePeopleButton_024").show().delay(8000).fadeOut();
+                },
+
+                        };
+
+
+  // Add our commands to annyang
+  annyang.addCommands(commands);
+  // Start listening. You can call this here, or attach this call to an event, button, etc.
+  annyang.start();
+  }
+
+
 </script>
 </body>
-
 </html>
