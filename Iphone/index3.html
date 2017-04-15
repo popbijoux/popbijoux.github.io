@@ -3,7 +3,7 @@
 <html>
 <head>
 <meta charset="utf-8" />
-<title>Artyom Demo Copy</title>
+<title>Artyom.js - A Sticky Notes Demo</title>
 <link rel="icon" href="../../favicon.ico" type="image/x-icon">
 <link  href="https://fonts.googleapis.com/css?family=Reenie+Beanie:regular" rel="stylesheet" type="text/css">
 <script src="../../sites/ui-resources/js/artyom.min.js"></script>
@@ -109,7 +109,10 @@ ol li a{color:#fff;}
 </head>
 <body>
     <p style="text-align:center;">
-
+        <a href="https://github.com/sdkcarlos/artyom.js">
+            <img src="../../sites/artyom-resources/images/artyomjs-logo.png" width="200"/>
+        </a>
+    </p>
   <ol>
     <li>
         <label for="language-selector">Select the Artyom Language for this demo when you want</label>
@@ -126,9 +129,15 @@ ol li a{color:#fff;}
     <li><a href="#"></a></li>
   </ol>
     <br>
-
-
-
+    <p style="text-align:center;">
+        A simple demostration of how to use artyom in Continuous mode , add all the notes that you want ! They will be added in your Local Storage and will be accessible whenever you enter to this site<br>
+        Artyom will be always available if you allow the use of the microphone for the first time thanks to the <em>https://</em> connection.<br>
+        You can visit another websites while artyom is active ! It will listen although another tab is on user focus<b>,visit the Facebook wall of your girlfriend while this site is opened and add some dead notes :)</b><br>
+        Click on any note, artyom will read it, and all the recognized text will appear here :<br>
+        <span id="output-artyom" style="font-size: 20px;font-family: monospace;font-style: italic;color: coral;"></span>
+    </p>
+  <ul id="sticky_notes_container">
+  </ul>
     <h3>Commands for create notes in all the languages [English, Italiano, Espanol, Francais, Deutsch] <small>Select a language and search the command in the list below</small></h3>
     <a href="javascript:void(0);" onclick="RestartDemo()" style="color: aquamarine;">
         Restart Original Demo (All notes will be deleted)
@@ -317,10 +326,49 @@ ol li a{color:#fff;}
         });
     });
 
+    function AddNote(content,id,addToLocal){
+        if(typeof(window.localStorage) !== "undefined"){
+            if(addToLocal === true){
+                var notitas = window.localStorage.getItem("notes");
+                if(notitas){
+                    var group = JSON.parse(notitas);
+                    group.push({id:id,content:content});
+                    window.localStorage.setItem("notes",JSON.stringify(group));
+                }else{
+                    var neu = [{id:id,content:content}];
+                    window.localStorage.setItem("notes",JSON.stringify(neu));
+                }
+            }
+        }
 
+        var note = '<li data-noteid="'+id+'" title="Click to talk this note">\n\
+                    <a href="javascript:void(0);" onclick="sayNoteContent(this);">\n\
+                      <h2>Note #'+id+'</h2>\n\
+                      <p>'+content+'</p>\n\
+                    </a>\n\
+                  </li>';
+        $("#sticky_notes_container").append(note);
+    }
 
+    function RemoveNoteNumber(id){
+        var notas = JSON.parse(window.localStorage.getItem("notes"));
+        var found = false;
 
+        for(var i = notas.length - 1; i >= 0; i--) {
+            if(notas[i].id == id) {
+               notas.splice(i, 1);
+               found = true;
+            }
+        }
 
+        if(!found){
+            alert("Cannot remove note number " + id + " because it doesn't exist !");
+        }
+
+        window.localStorage.setItem("notes",JSON.stringify(notas));
+
+        $("li[data-noteid='"+id+"']").remove();
+    }
 
 
     function RenderCommands(){
