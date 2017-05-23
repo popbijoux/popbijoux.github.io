@@ -3,15 +3,15 @@
 <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 viewBox="0 0 198 197" style="enable-background:new 0 0 198 197;" xml:space="preserve">
 <style type="text/css">
-	.st0{fill:none;stroke:#E6E6E6;stroke-miterlimit:10;}
-	.st1{fill:#E6E6E6;}
+	.st0{fill:none;stroke:#C8C8C8;stroke-width:3;stroke-miterlimit:10;}
+	.st1{fill:#C8C8C8;}
 </style>
 <title>Slice 1</title>
 <desc>Created with Sketch.</desc>
 <path id="Shape" class="st0" d="M100,189L100,189c-50.6,0-91.7-41.2-91.7-91.7C8.3,46.7,49.4,5.6,100,5.6s91.7,41.2,91.7,91.7
 	C191.7,147.9,150.6,189,100,189L100,189z"/>
 <g>
-	<path class="st1" d="M64.8,126.3c8.7,0,15.8-7.3,15.8-16.3l0.1-32.7c0-9-7.1-16.3-15.9-16.3s-15.9,7.3-15.9,16.3v32.7
+	<path class="st1" d="M64.8,126.3c8.7,0,15.8-7.3,15.8-16.3l0.1-32.7c0-9-7.1-16.3-15.9-16.3s-15.9,7.3-15.9,16.3V110
 		C48.9,119,56,126.3,64.8,126.3z"/>
 	<path class="st1" d="M92.8,109.9c0,16.3-13.4,27.8-28,27.8s-28-11.4-28-27.8h-8.9c0,18.6,14.3,33.9,31.7,36.6v17.8h10.5v-17.8
 		c17.3-2.7,31.7-17.9,31.7-36.6H92.8z"/>
@@ -24,8 +24,8 @@
 	<title>Canvas 4</title>
 	<g>
 		<title>Layer 1</title>
-		<path class="st1" d="M134.8,72.1v10.9h18.2v43.6h10.9V83.1H182V72.1H134.8z M112.9,101.2h10.9v25.4h10.9v-25.4h10.9V90.3h-32.7
-			V101.2z"/>
+		<path class="st1" d="M134.8,72.1V83H153v43.6h10.9V83.1H182v-11H134.8z M112.9,101.2h10.9v25.4h10.9v-25.4h10.9V90.3h-32.7
+			C112.9,90.3,112.9,101.2,112.9,101.2z"/>
 	</g>
 </g>
 </svg>
