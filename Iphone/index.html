@@ -130,6 +130,16 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 
 <script src="//cdnjs.cloudflare.com/ajax/libs/annyang/2.6.0/annyang.min.js"></script>
+  <script src="plusser.js"></script>
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/annyang/2.6.0/annyang.min.js"></script>
+<script src="typed.js"></script>
+  <script src="artyom.min.js"></script>
+<link rel="stylesheet" href="https://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+<script src="https://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
 <script>
 if (annyang) {
 // Let's define our first command. First the text we expect, and then the function it should call
@@ -247,35 +257,56 @@ annyang.addCommands(commands);
 // Start listening. You can call this here, or attach this call to an event, button, etc.
 annyang.start();
 }
-
-var Vids = (function() {
-    var _currentId = -1;
-    var _urls =
-     ["videos/1960s_freedom_riders_vert.mp4","videos/1960s_Jackie_mourning_VERT.mp4", "videos/1960s_Gainsbourg_Bardot_Bonnie_And_Clyde.mp4", "videos/1960s_francegall.mp4",
-     "videos/1960s_Jackie_Arrives.mp4", "videos/1960s_John_Jr_Salutes.mp4", "videos/1960s_Kennedy_Parade_VERT.mp4","videos/1960s_marilyn.mp4","videos/1960s_kennedy_speech.mp4",
-     "videos/1960s_mlk_I_have_a_dream.mp4","videos/1960s_kennedy_speech.mp4", "videos/1960s_MLK_longer_speech.mp4","videos/1960s_Bardot_Profile.mp4","videos/1960s_warhol_silver_factory_vert_crppd.mp4",  ];
-
-      // literal array
-    return {
-        next: function() {
-            if (++_currentId >= _urls.length)
-                _currentId = 0;
-             return this.play(_currentId);
+    // Configure artyom
+    var UserDictation = artyom.newDictation({
+        continuous: true, // Don't stop never because i have https connection
+        onResult: function (text) {
+            /**
+             * Set the recognized text as value of the text input
+            **/
+            $("#artyom-redirect-output").val(text);
         },
-        prev: function() {
-            if (--_currentId < 0)
-                _currentId = _urls.length - 1;
-            return this.play(_currentId);
+        onStart: function () {
+            console.log("Dictation started by the user");
         },
-        play: function(id) {
-            var myVideo = document.getElementsByTagName('video')[0];
-            myVideo.src = _urls[id];
-            myVideo.load();
-            myVideo.play();
-            return false;
-       }
-    }
-})();
+        onEnd: function () {
+            alert("Dictation stopped by the user");
+        }
+    });
+
+    var btnAnimWhite = $(".buttonRoundVoiceToAnimWhite");
+    var btnAnimBlue = $(".buttonRoundVoiceToAnimBlue");
+    var btnVoiceTextWhite = $(".buttonRoundVoiceToTextWhite");
+    var btnVoiceTextBlue = $(".buttonRoundVoiceToTextBlue");
+
+    btnAnimWhite.click(function () {
+        btnAnimBlue.show();
+        btnAnimWhite.hide();
+    });
+
+    btnAnimBlue.click(function () {
+        btnAnimWhite.show();
+        btnAnimBlue.hide();
+    });
+
+    // Start recognition with the Recognize text button
+    btnVoiceTextWhite.click(function () {
+        // Start recognition
+        UserDictation.start();
+
+        btnVoiceTextBlue.show();
+        btnVoiceTextWhite.hide();
+    });
+
+    // Stop recognition with the Stop recognition button
+    btnVoiceTextBlue.click(function () {
+        // Stop recognition
+        UserDictation.stop();
+
+        btnVoiceTextWhite.show();
+        btnVoiceTextBlue.hide();
+    });
+//end of artyom
 
 </script>
 </body>
