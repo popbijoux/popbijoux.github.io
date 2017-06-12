@@ -52,9 +52,14 @@
  <div class="topHorizontalButtonRow">
  <div class="buttonRoundVoiceToAnimWhite"></div>
  <div class="buttonRoundVoiceToAnimBlue hidden"></div>
- <div class="buttonRoundVoiceToTextWhite"></div>
- <div class="buttonRoundVoiceToTextBlue hidden"></div>
+   
+   
+<!-- Buttons to start the dictation object -->
+<input class="buttonRoundVoiceToTextWhite" type="button" value="Recognize text" />
+<input class="buttonRoundVoiceToTextBlue hidden" type="button" value="stop recognition" />
  </div>
+
+
 
 
 
@@ -64,7 +69,8 @@
  <div>
 
    <form>
-     <input id="artyom-redirect-output" type="text" name="lastname">
+<!-- In this input the recognized text will appear -->
+<input id="artyom-redirect-output" type="text" name="lastname">
    </form>
 
  </div>
@@ -235,7 +241,7 @@ $(".buttonRoundVoiceToTextBlue").click(function() {
     var UserDictation = artyom.newDictation({
         continuous: true, // Don't stop never because i have https connection
         onResult: function (text) {
-            /**
+            /** 
              * Set the recognized text as value of the text input
             **/
             $("#artyom-redirect-output").val(text);
@@ -247,16 +253,17 @@ $(".buttonRoundVoiceToTextBlue").click(function() {
             alert("Dictation stopped by the user");
         }
     });
-  /*
+
     var btnAnimWhite = $(".buttonRoundVoiceToAnimWhite");
     var btnAnimBlue = $(".buttonRoundVoiceToAnimBlue");
     var btnVoiceTextWhite = $(".buttonRoundVoiceToTextWhite");
     var btnVoiceTextBlue = $(".buttonRoundVoiceToTextBlue");
-  /*
+
     btnAnimWhite.click(function () {
         btnAnimBlue.show();
         btnAnimWhite.hide();
     });
+
     btnAnimBlue.click(function () {
         btnAnimWhite.show();
         btnAnimBlue.hide();
@@ -266,18 +273,20 @@ $(".buttonRoundVoiceToTextBlue").click(function() {
     btnVoiceTextWhite.click(function () {
         // Start recognition
         UserDictation.start();
-        //btnVoiceTextBlue.show();
-        //btnVoiceTextWhite.hide();
+
+        btnVoiceTextBlue.show();
+        btnVoiceTextWhite.hide();
     });
+
     // Stop recognition with the Stop recognition button
     btnVoiceTextBlue.click(function () {
         // Stop recognition
         UserDictation.stop();
-        //btnVoiceTextWhite.show();
-        //btnVoiceTextBlue.hide();
+
+        btnVoiceTextWhite.show();
+        btnVoiceTextBlue.hide();
     });
-  */
-//end of artyom
+
 </script>
 </body>
 </html>
