@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 
-<title>8:53</title>
+<title>9:00</title>
 
 <!--[document information]>
 <![•••••••••••••••]>
@@ -114,11 +114,11 @@
 
 </div><!--[end of fullSizePhone]-->
 <!--[•••••••]-->
-<script src="plusser.js"></script>
 <script src="annyang.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/annyang/2.6.0/annyang.min.js"></script>
 <script src="typed.js"></script>
+  <script src="artyom.min.js"></script>
 <link rel="stylesheet" href="https://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
 <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
 <script src="https://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
@@ -264,23 +264,13 @@
     var btnVoiceTextWhite = $(".buttonRoundVoiceToTextWhite");
     var btnVoiceTextBlue = $(".buttonRoundVoiceToTextBlue");
 
-    btnAnimWhite.click(function () {
-        btnAnimBlue.show();
-        btnAnimWhite.hide();
-    });
 
-    btnAnimBlue.click(function () {
-        btnAnimWhite.show();
-        btnAnimBlue.hide();
-    });
 
     // Start recognition with the Recognize text button
     btnVoiceTextWhite.click(function () {
         // Start recognition
         UserDictation.start();
 
-        btnVoiceTextBlue.show();
-        btnVoiceTextWhite.hide();
     });
 
     // Stop recognition with the Stop recognition button
@@ -288,8 +278,6 @@
         // Stop recognition
         UserDictation.stop();
 
-        btnVoiceTextWhite.show();
-        btnVoiceTextBlue.hide();
     });
 </script>
 </body>
