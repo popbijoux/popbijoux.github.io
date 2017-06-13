@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 
-<title>index_2 15:11</title>
+<title>index_2 15:20</title>
 
 <!--[document information]>
 <![•••••••••••••••]>
@@ -186,7 +186,7 @@ recognition.onend = function() { //a function to restart it when it stops
 recognition.onresult = function(event) { 
     var whatWasHeard = event.results[0][0].transcript; //get what was heard    
     //document.body.innerHTML = whatWasHeard; //original version. Update below
-	document.getElementById("voiceToText").innerHTML = whatWasHeard; //updated version
+	document.getElementById("hiddenKeywordAnimations").innerHTML = whatWasHeard; //updated version
 };
 	
 	
