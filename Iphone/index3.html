@@ -53,57 +53,17 @@
   
 
 <script>
+var recognition = new webkitSpeechRecognition(); //get new instance
+recognition.start(); //start it
+recognition.onend = function() { //a function to restart it when it stops
+	recognition.start();
+}
 
-    // Configure artyom
-    var UserDictation = artyom.newDictation({
-        continuous: true, // Don't stop never because i have https connection
-        onResult: function (text) {
-            /**
-             * Set the recognized text as value of the text input
-            **/
-            $("#artyom-redirect-output").val(text);
-        },
-        onStart: function () {
-            console.log("Dictation started by the user");
-        },
-        onEnd: function () {
-            alert("Dictation stopped by the user");
-        }
-    });
+recognition.onresult = function(event) { 
+    var whatWasHeard = event.results[0][0].transcript; //get what was heard    
+    document.body.innerHTML = whatWasHeard; //write it to the body
+};
 
-    var btnAnimWhite = $(".buttonRoundVoiceToAnimWhite");
-    var btnAnimBlue = $(".buttonRoundVoiceToAnimBlue");
-    var btnVoiceTextWhite = $(".buttonRoundVoiceToTextWhite");
-    var btnVoiceTextBlue = $(".buttonRoundVoiceToTextBlue");
-
-    btnAnimWhite.click(function () {
-        btnAnimBlue.show();
-        btnAnimWhite.hide();
-    });
-
-    btnAnimBlue.click(function () {
-        btnAnimWhite.show();
-        btnAnimBlue.hide();
-    });
-
-    // Start recognition with the Recognize text button
-    btnVoiceTextWhite.click(function () {
-        // Start recognition
-        UserDictation.start();
-
-        btnVoiceTextBlue.show();
-        btnVoiceTextWhite.hide();
-    });
-
-    // Stop recognition with the Stop recognition button
-    btnVoiceTextBlue.click(function () {
-        // Stop recognition
-        UserDictation.stop();
-
-        btnVoiceTextWhite.show();
-        btnVoiceTextBlue.hide();
-    });
-//end of artyom
 </script>
 
 
