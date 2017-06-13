@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 
-<title>9:06</title>
+<title>9:20</title>
 
 <!--[document information]>
 <![•••••••••••••••]>
@@ -70,7 +70,7 @@
 
    <form>
      <!-- In this input the recognized text will appear -->
-<input id="artyom-redirect-output" type="text" name="lastname">
+<input id="demo-echo" type="text" name="lastname">
    </form>
 
  </div>
@@ -117,7 +117,6 @@
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 
-  <script src="artyom.min.js"></script>
 <link rel="stylesheet" href="https://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
 <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
 <script src="https://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
@@ -241,43 +240,46 @@
   annyang.start();
   }
 
-// Configure artyom
-    var UserDictation = artyom.newDictation({
-        continuous: true, // Don't stop never because i have https connection
-        onResult: function (text) {
-            /** 
-             * Set the recognized text as value of the text input
-            **/
-            $("#artyom-redirect-output").val(text);
-        },
-        onStart: function () {
-            console.log("Dictation started by the user");
-        },
-        onEnd: function () {
-            alert("Dictation stopped by the user");
-        }
-    });
+<script type="text/javascript">
+	function startListening() {
+		var recognition = new (webkitSpeechRecognition || SpeechRecognition)();
+		recognition.lang = 'en-US';
+		recognition.interimResults = false;
+		recognition.maxAlternatives = 1;
+		recognition.start();
 
-    var btnAnimWhite = $(".buttonRoundVoiceToAnimWhite");
-    var btnAnimBlue = $(".buttonRoundVoiceToAnimBlue");
-    var btnVoiceTextWhite = $(".buttonRoundVoiceToTextWhite");
-    var btnVoiceTextBlue = $(".buttonRoundVoiceToTextBlue");
+		[
+		 'onaudiostart',
+		 'onaudioend',
+		 'onend',
+		 'onerror',
+		 'onnomatch',
+		 'onresult',
+		 'onsoundstart',
+		 'onsoundend',
+		 'onspeechend',
+		 'onstart'
+		].forEach(function(eventName) {
+			recognition[eventName] = function(e) {
+				console.log(eventName, e);
+			};
+		});
 
+		document.querySelector('#start-button').innerHTML = 'Listening...';
 
+		recognition.onend = function() {
+			document.querySelector('#start-button').innerHTML = 'Start Listening';
+		};
+		recognition.onresult = function() {
+			document.querySelector('#demo-echo').textContent = event.results[0][0].transcript;
+		};
+	};
 
-    // Start recognition with the Recognize text button
-    btnVoiceTextWhite.click(function () {
-        // Start recognition
-        UserDictation.start();
+	(function() {
+		document.querySelector('#start-button').addEventListener('click', startListening);
+	})();
 
-    });
-
-    // Stop recognition with the Stop recognition button
-    btnVoiceTextBlue.click(function () {
-        // Stop recognition
-        UserDictation.stop();
-
-    });
+	</script>
 </script>
 </body>
 </html>
