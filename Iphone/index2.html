@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 
-<title>index_2 5:01</title>
+<title>index_2 5:22</title>
 
 <!--[document information]>
 <![•••••••••••••••]>
@@ -179,10 +179,7 @@
 	
 	
 	
-annyang.addCallback('result', function(phrases) {
-$("#output").text(phrases); 
 
-});
 	
 //annyang start
 if (annyang) {
@@ -572,7 +569,9 @@ $("#thisNation_013").show().delay(14000).fadeOut();
 annyang.addCommands(commands);
 // Start listening. You can call this here, or attach this call to an event, button, etc.
 annyang.start();
-//var sayThis = function(result) {   $("#output").text(result); }
+annyang.addCallback('result', function(phrases) {
+$("#output").text(phrases)[0]; 
+
 
 }
 
