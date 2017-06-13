@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 
-<title>Final Call-Out Page</title>
+<title>index_2 10:16</title>
 
 <!--[document information]>
 <![•••••••••••••••]>
@@ -120,152 +120,394 @@
 <script src="https://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
 <script>
 
+//annyang start
+if (annyang) {
+// Let's define our first command. First the text we expect, and then the function it should call
+var commands = {
+//block the wall
+'block (the wall)': function() {
+  $("#blockTheWall_001").show().delay(4000).fadeOut();
+},
+//no wall (prohibition sign)
+'no wall': function() {
+  $("#blockTheWall_001").show().delay(4000).fadeOut();
+},
 
-$(".buttonRoundVoiceToAnimWhite").click(function() {
-  $(".buttonRoundVoiceToAnimBlue").show();
-    $(".buttonRoundVoiceToAnimWhite").hide();
-
-});
-
-$(".buttonRoundVoiceToAnimBlue").click(function() {
-  $(".buttonRoundVoiceToAnimWhite").show();
-    $(".buttonRoundVoiceToAnimBlue").hide();
-
-});
-
-$(".buttonRoundVoiceToTextWhite").click(function() {
-  $(".buttonRoundVoiceToTextBlue").show();
-    $(".buttonRoundVoiceToTextWhite").hide();
-
-});
-
-$(".buttonRoundVoiceToTextBlue").click(function() {
-  $(".buttonRoundVoiceToTextWhite").show();
-    $(".buttonRoundVoiceToTextBlue").hide();
-
-});
-
-
-
-//end of artyom
-
-  if (annyang) {
-  // Let's define our first command. First the text we expect, and then the function it should call
-  var commands = {
-  'block (the wall)': function() {
-    $("#blockTheWall_001").show().delay(4000).fadeOut();
-  },
-
-  'no wall': function() {
-    $("#blockTheWall_001").show().delay(4000).fadeOut();
-  },
-
-
-  'sixties': function() {
-  $("#button1960s_002").show().delay(10000).fadeOut();
-                              },
-
-  'eggs (and bacon)': function() {
-  $("#eggsandbacon_005").show().delay(12000).fadeOut();
+//sixties button
+'sixties': function() {
+$("#button1960s_002").show().delay(10000).fadeOut();
                             },
-
-  'bacon': function() {
-  $("#eggsandbacon_005").show().delay(12000).fadeOut();
+                            
+//eggs and bacom
+'eggs (and bacon)': function() {
+$("#eggsandbacon_005").show().delay(12000).fadeOut();
                           },
-
-  '(no) ban': function() {
-  $("#muslimBan_016").show().delay(8000).fadeOut();
-                          },
-
-  'nope': function() {
-  $("#nope_015").show().delay(12000).fadeOut();
-                          },
-
-  'toast': function() {
-  $("#toast_018").show().delay(12000).fadeOut();
+//bacon
+'bacon': function() {
+$("#eggsandbacon_005").show().delay(12000).fadeOut();
                         },
-
-  '(our) story': function() {
-  $("#ourStory_020").show().delay(8000).fadeOut();
+                        
+//ban, no ban (muslim ban)
+'(no) ban': function() {
+$("#muslimBan_016").show().delay(8000).fadeOut();
                         },
-
-  'just say (no)': function() {
-  $("#justsayno_011").show().delay(8000).fadeOut();
+//nope (finger with text)
+'nope': function() {
+$("#nope_015").show().delay(12000).fadeOut();
                         },
-
-  'politics': function() {
-  $("#buttonPolitics_003").show().delay(8000).fadeOut();
-                        },
-
-  '(we are) the people': function() {
-  $("#buttonwearethepeople_004").show().delay(8000).fadeOut();
-                    },
-
-  'hot dog': function() {
-  $("#hotdog_006").show().delay(8000).fadeOut();
-                    },
-
-  'I came I saw I conquered': function() {
-  $("#IcameIsawIconquered_007").show().delay(8000).fadeOut();
+//toast
+'toast': function() {
+$("#toast_018").show().delay(12000).fadeOut();
+                      },
+//our story
+'(our) story': function() {
+$("#ourStory_020").show().delay(8000).fadeOut();
+                      },
+//just say no
+'just say (no)': function() {
+$("#justsayno_011").show().delay(8000).fadeOut();
+                      },
+//politics (button)
+'politics': function() {
+$("#buttonPolitics_003").show().delay(8000).fadeOut();
+                      },
+//(we are) the people
+'(we are) the people': function() {
+$("#buttonwearethepeople_004").show().delay(8000).fadeOut();
                   },
-
-  'I came': function() {
-  $("#Icame_008").show().delay(8000).fadeOut();
-                    },
-
-  'I saw': function() {
-  $("#Isaw_009").show().delay(8000).fadeOut();
+//hot dog
+'hot dog': function() {
+$("#hotdog_006").show().delay(8000).fadeOut();
                   },
-
-  'jackie': function() {
-  $("#jackie_010").show().delay(8000).fadeOut();
+//I came, I saw, I conquered
+'I came I saw I conquered': function() {
+$("#IcameIsawIconquered_007").show().delay(8000).fadeOut();
+                },
+//I came
+'I came': function() {
+$("#Icame_008").show().delay(8000).fadeOut();
                   },
-
-                'jackie': function() {
-                $("#jackie_010").show().delay(8000).fadeOut();
-                                },
-
-  'killing the eyeliner game': function() {
-  $("#killingtheeyelinergame_012").show().delay(8000).fadeOut();
+//I saw
+'I saw': function() {
+$("#Isaw_009").show().delay(8000).fadeOut();
+                },
+//jackie (flowers falling slowly)
+'jackie': function() {
+$("#jackie_010").show().delay(8000).fadeOut();
                 },
 
-  'no way': function() {
-  $("#nobaloons_014").show().delay(8000).fadeOut();
-                  },
-
-  'tear it down': function() {
-  $("#tearitdown_017").show().delay(8000).fadeOut();
+//killing the eyeliner game
+'killing the eyeliner game': function() {
+$("#killingtheeyelinergame_012").show().delay(8000).fadeOut();
+              },
+//no baloons 
+'no': function() {
+$("#nobaloons_014").show().delay(8000).fadeOut();
                 },
-    //------------------
-  'we got a story': function() {
-  $("#wegotastory_019").show().delay(8000).fadeOut();
-                  },
-
-  'killing (the eyeliner game)': function() {
-  $("#killingtheeyelinergame_012").show().delay(8000).fadeOut();
+//tear it down (build the wall)
+'tear it down': function() {
+$("#tearitdown_017").show().delay(8000).fadeOut();
+              },
+//we got a story
+'we got a story': function() {
+$("#wegotastory_019").show().delay(8000).fadeOut();
                 },
-
-  'sandwich': function() {
-  $("#sandwich_022").show().delay(8000).fadeOut();
-                  },
-
-  'town halls': function() {
-  $("#townHallsButton_023").show().delay(8000).fadeOut();
+//sandwich
+'sandwich': function() {
+$("#sandwich_022").show().delay(8000).fadeOut();
                 },
+//town halls 
+'town halls': function() {
+$("#townHallsButton_023").show().delay(8000).fadeOut();
+              },
+              
+//we are the people 
+'we are the people': function() {
+$("#WeAreThePeopleButton_024").show().delay(8000).fadeOut();
+              },
+              
+//boom 
+'boom': function() {
+$("#boom_025").show().delay(8000).fadeOut();
+              },
 
-  'we are the people': function() {
-  $("#WeAreThePeopleButton_024").show().delay(8000).fadeOut();
-                },
+//slanted brush 
+'slanted brush': function() {
+$("#slantedBrush_026").show().delay(8000).fadeOut();
+              },
+              
+//slanted brush 
+'eyeliner pencil': function() {
+$("#eyelinerPencil_027").show().delay(8000).fadeOut();
+              },
+              
+//bonnie parker
+'eyeliner pencil': function() {
+$("#bonnieParker_028").show().delay(8000).fadeOut();
+              },
+              
+//Clyde Barrow
+'Clyde Barrow': function() {
+$("#clydeBarrow_029").show().delay(8000).fadeOut();
+              },
+                
+//pour La Police ce ne fait de mystere >>> French
+'Pour la Police': function() {
+$("#bonnieAndClydePolice_030").show().delay(8000).fadeOut();
+              },
+            
+//shit show
+'Pour la Police': function() {
+$("#shitShow_031").show().delay(8000).fadeOut();
+              },  
+              
+//bang
+'Pour la Police': function() {
+$("#bang_032").show().delay(8000).fadeOut();
+              },
+              
+//crickets
+'crickets': function() {
+$("#crickets_033").show().delay(8000).fadeOut();
+              },
 
-                        };
+//do your job
+'do your job': function() {
+$("#doYourJob_034").show().delay(8000).fadeOut();
+              },              
+              
+//shelter freaks
+'(shelter) freaks': function() {
+$("#freakShelter_035").show().delay(8000).fadeOut();
+              },  
+
+//get to the point
+'(get to) the point': function() {
+$("#getToThePoint_036").show().delay(8000).fadeOut();
+              }, 
+              
+//government
+'government': function() {
+$("#government_037").show().delay(8000).fadeOut();
+              }, 
+              
+//grab back
+'grab back': function() {
+$("#grabBackSigns_038").show().delay(8000).fadeOut();
+              }, 
+              
+//one
+'one': function() {
+$("#one_039").show().delay(8000).fadeOut();
+              }, 
+              
+//two
+'two': function() {
+$("#two_040").show().delay(8000).fadeOut();
+              }, 
+              
+//three
+'three': function() {
+$("#three_041").show().delay(8000).fadeOut();
+              }, 
+              
+//four
+'four': function() {
+$("#four_042").show().delay(8000).fadeOut();
+              }, 
+              
+//five
+'five': function() {
+$("#five_043").show().delay(8000).fadeOut();
+              }, 
+              
+//elections 2018
+'five': function() {
+$("#elections2018_044").show().delay(8000).fadeOut();
+              }, 
+              
+//alternative facts
+'alternative facts': function() {
+$("#alternativeFacts_045").show().delay(8000).fadeOut();
+              }, 
+              
+//hell no
+'hell no': function() {
+$("#hellNo_048").show().delay(8000).fadeOut();
+              },
+              
+//I got a trophy
+'(I got a) trophy': function() {
+$("#iGotATrophy_049").show().delay(8000).fadeOut();
+              }, 
+              
+//I went to a ball
+'(I went to) a ball': function() {
+$("#iWentToABall_050").show().delay(8000).fadeOut();
+              },  
+              
+//impeach
+'impeach': function() {
+$("#impeach_051").show().delay(8000).fadeOut();
+              },
+              
+//ka-ching
+'ka-ching': function() {
+$("#ka-Ching_052").show().delay(8000).fadeOut();
+              },
+              
+//pay to play
+'pay to play': function() {
+$("#payToPlay_053").show().delay(8000).fadeOut();
+              },  
+              
+//pow
+'pow': function() {
+$("#pow_054").show().delay(8000).fadeOut();
+              },  
+              
+//pow
+'pow': function() {
+$("#pow_054").show().delay(8000).fadeOut();
+              },                           
+              
+//the leaker
+'(the) leaker': function() {
+$("#theLeaker_055").show().delay(8000).fadeOut();
+              }, 
+              
+//Transparency Now 
+'transparency now': function() {
+$("#transparencyNow_056").show().delay(8000).fadeOut();
+              },               
+              
+//Universe 
+'universe': function() {
+$("#universeMoving_057").show().delay(8000).fadeOut();
+              },
+              
+//we all breathe the same air
+'we all breathe the same air': function() {
+$("#weAllBreatheTheSameAir_058").show().delay(8000).fadeOut();
+              },                
+
+//we all cherish our childrens future
+'(we all) cherish our children's future': function() {
+$("#weAllCherishOurChildrensFuture_059").show().delay(8000).fadeOut();
+              },    
+              
+//we all live in this small plamnet
+'live in this small planet': function() {
+$("#weAllLiveInThisSmallPlanet_060").show().delay(8000).fadeOut();
+	  		},               
+
+//we are all mortal
+'all mortal': function() {
+$("#weAreAllMortal_061").show().delay(8000).fadeOut();
+	  		},  
+	  		
+//figure out how to do the image array here	  		
+//we need an independent investigation 01
+'(we all) cherish our children's future': function() {
+$("#weAreAllMortal_061").show().delay(8000).fadeOut();
+	  		},  		
+	  					
+//figure out how to do the image array here	  	               					
+//we need an independent investigation 02
+'(we all) cherish our children's future': function() {
+$("#weAreAllMortal_062").show().delay(8000).fadeOut();
+	  		},  
+	  		
+//country before party	  	               					
+'country before party': function() {
+$("#countryBeforeParty_067").show().delay(8000).fadeOut();
+	  		}, 	  		
+  		
+//dog ate taxes	  	               					
+'dog ate taxes': function() {
+$("#dogAteTaxes_068").show().delay(8000).fadeOut();
+	  		}, 	  		
+
+//full of shit	  	               					
+'full of shit': function() {
+$("#fullOfShit_069").show().delay(8000).fadeOut();
+	  		}, 	
+	  		
+//hello  	               					
+'hello': function() {
+$("#hello_070").show().delay(8000).fadeOut();
+	  		},	  		
+
+//obstruction of justice	               					
+'obstruction of justice': function() {
+$("#obstructionOfJustice_071").show().delay(8000).fadeOut();
+	  		},	
+	  		
+//senator dropped his mask	               					
+'dropped (his) mask': function() {
+$("#senatorDroppedHisMask_072").show().delay(8000).fadeOut();
+	  		}, 	
+//senator ran away
+'senator ran (away)': function() {
+$("#senatorRanAway_073").show().delay(8000).fadeOut();
+},	 
+
+//vote him out
+'vote him out': function() {
+$("#voteHimOut_074").show().delay(8000).fadeOut();
+},	  		
+
+//add these 2 to an array
+//we need an independent investigation 01 
+'vote him out': function() {
+$("#weNeedAnIndependentInvestigation_075").show().delay(8000).fadeOut();
+			},	 	
+			
+//we need an independent investigation 02 
+'vote him out': function() {
+$("#weNeedAnIndependentInvestigation_076").show().delay(8000).fadeOut();
+			},	 		
+	
+//showUsYourTaxes
+'show us your taxes': function() {
+$("#showUsYourTaxes_077").show().delay(8000).fadeOut();
+			},	 		
+			
+//Senator Full Story
+'the full story of the senator': function() {
+$("#senatorFullStory_078").show().delay(8000).fadeOut();
+			},
+			
+//What are you hiding
+'what are you hiding': function() {
+$("#whatAreYouHiding_079").show().delay(8000).fadeOut();
+			},	 	 		
+	
+	
+	//AmericaIsHomeToAll_01
+'America is': function() {
+$("#AmericaIsHomeToAll_080").show().delay(8000).fadeOut();
+			},	 
+			
+'Home to': function() {
+$("#AmericaIsHomeToAll_081").show().delay(8000).fadeOut();
+			},
+			
+'Home to all': function() {
+$("#AmericaIsHomeToAll_082").show().delay(8000).fadeOut();
+			},	 	 
+     };
 
 
-  // Add our commands to annyang
-  annyang.addCommands(commands);
-  // Start listening. You can call this here, or attach this call to an event, button, etc.
-  annyang.start();
-  }
 
+*/
+
+// Add our commands to annyang
+annyang.addCommands(commands);
+// Start listening. You can call this here, or attach this call to an event, button, etc.
+annyang.start();
+}
+//annyang end
 
 </script>
 </body>
