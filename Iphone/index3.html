@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 
-<title>Artyom 15:02</title>
+<title>Artyom 15:06</title>
 
 <!--[document information]>
 
@@ -19,6 +19,7 @@
 
 </head>
 <body>
+	<div id="voiceToText"></div>
 
 <!--[•••••••]-->
 <script src="jquery-3.2.1.min.js"></script>
@@ -34,8 +35,11 @@ recognition.onend = function() { //a function to restart it when it stops
 
 recognition.onresult = function(event) { 
     var whatWasHeard = event.results[0][0].transcript; //get what was heard    
-    document.body.innerHTML = whatWasHeard; //write it to the body
+    //document.body.innerHTML = whatWasHeard; //original version. Update below
+	document.getElementById("voiceToText").innerHTML = whatWasHeard; //updated version
 };
+	
+	
 
 </script>
 
