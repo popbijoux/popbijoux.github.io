@@ -64,7 +64,7 @@
  <div>
 
    <form>
-     <input id="voiceToText" type="text" name="lastname">
+     <input id="output" type="text" name="lastname">
    </form>
 
  </div>
@@ -569,12 +569,11 @@ $("#thisNation_013").show().delay(14000).fadeOut();
 annyang.addCommands(commands);
 // Start listening. You can call this here, or attach this call to an event, button, etc.
 annyang.start();
+var sayThis = function(result) {   $("#output").text(result); }
+
 }
 
-annyang.addCallback('result', function(userSaid) {
-document.getElementById("voiceToText").innerHTML.(userSaid);
 
-});
 //annyang end
 </script>
 </body>
