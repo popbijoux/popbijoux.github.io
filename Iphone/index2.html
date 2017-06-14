@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 
-<title>index_2 8:47</title>
+<title>index_2 8:54</title>
 
 <!--[document information]>
 <![•••••••••••••••]>
@@ -187,10 +187,14 @@
 	
 //annyang start
 if (annyang) {
+	
+var anything = function(anything) {
+document.getElementById("voiceToText").innerHTML = anything;
+};
 // Let's define our first command. First the text we expect, and then the function it should call
 var commands = {
 //speech recognition dictation
-'*anything': anything,
+//'*anything': anything,
 //block the wall 06.13_works
 'block (the wall)': function() {
   $("#blockTheWall_001").show().delay(4000).fadeOut();
@@ -574,9 +578,9 @@ $("#thisNation_013").show().delay(14000).fadeOut();
 	
 
 	
-	var anything = function(anything) {
-    document.getElementById("voiceToText").innerHTML = anything;
-};
+//	var anything = function(anything) {
+ //   document.getElementById("voiceToText").innerHTML = anything;
+//};
 // Add our commands to annyang
 annyang.addCommands(commands);
 // Start listening. You can call this here, or attach this call to an event, button, etc.
