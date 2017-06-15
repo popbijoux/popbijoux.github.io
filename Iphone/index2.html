@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 
-<title>index_2 9:32</title>
+<title>index_2 10:10</title>
 
 <!--[document information]>
 <![•••••••••••••••]>
@@ -144,6 +144,8 @@
 		<img id="AmericaIsHomeToAll_081" class="hiddenElement" src="animsAll/Anims_81_America is Home to All_A.gif">
 		<img id="AmericaIsHomeToAll_082" class="hiddenElement" src="animsAll/Anims_82_America is Home to All_B.gif">
 		<img id="riseUp_083" class="hiddenElement" src="animsAll/Anims_83_rise up.gif">
+		<img id="senatorMonster_084" class="hiddenElement" src="animsAll/Anims_84_senator monster.gif">
+		<img id="justSayNoFingerBaloons_085" class="hiddenElement" src="animsAll/Anims_85_Just say no_fingerBaloons.gif">
    	</div>
 
     </div><!--[end of fullPhoneScreen]-->
@@ -547,7 +549,16 @@ $("#thisNation_013").show().delay(14000).fadeOut();
 	
 'rise up': function() {
 $("#riseUp_083").show().delay(16000).fadeOut();
-			}
+			},
+	
+'senator came out': function() {
+$("#senatorMonster_084").show().delay(16000).fadeOut();
+			},	
+	
+'rise up': function() {
+$("#justSayNoFingerBaloons_083").show().delay(16000).fadeOut();
+			}	
+
 //'*allWords': whatWasHeard
 	
      };
@@ -557,7 +568,6 @@ annyang.addCallback('result',function(whatWasHeard) {
 document.getElementById("voiceToText").innerHTML = whatWasHeard;
 });
 	
-//var allWords = function(whatWasHeard) {   document.getElementById("voiceToText").innerHTML = whatWasHeard; }
 
 // Add our commands to annyang
 annyang.addCommands(commands);
