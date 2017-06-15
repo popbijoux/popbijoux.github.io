@@ -159,12 +159,6 @@
 <script src="https://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
 <script>
 	
-	
-// var commands = {
-//    '*anything': anything
-//};
-	
-	
 //annyang start
 if (annyang) {
 
@@ -562,16 +556,13 @@ $("#riseUp_083").show().delay(16000).fadeOut();
  //   document.getElementById("voiceToText").innerHTML = anything;
 //};
 	
-annyang.addCallback('result', function(whatWasHeard) {
+annyang.addCallback(/*'result',*/function(whatWasHeard) {
 document.getElementById("voiceToText").innerHTML = whatWasHeard;
 });	
 // Add our commands to annyang
 annyang.addCommands(commands);
 // Start listening. You can call this here, or attach this call to an event, button, etc.
 annyang.start();
-//annyang.addCallback('result', function(phrases) {
-//$("#output").text(phrases); 
-
 
 }
 //annyang end
