@@ -37,28 +37,24 @@
 <!--[••••••••••••••••••••••••••••••••••••••••••••••••••]-->
 <div class="navBarBottom">
 
-  <div class="buttonWhiteDictionary hideProfilePageIcons"></div>
-   <div class="buttonSelectionBackWhite hidden"></div>
-       <div class="buttonMoreWhite hidden"></div>
-
-    <div class="buttonSelectionBlue hidden"></div>
-
-  <div class="buttonHomeWhite hideProfilePageIcons"></div>
+		<div class="buttonWhiteDictionary hideProfilePageIcons"></div>
+		<div class="buttonSelectionBackWhite hidden"></div>
+		<div class="buttonMoreWhite hidden"></div>
+		<div class="buttonSelectionBlue hidden"></div>
+		<div class="buttonHomeWhite hideProfilePageIcons"></div>
 
  </div><!--[navBarBottom]-->
 	    
  <div class="topHorizontalButtonRow">
- <div class="buttonRoundVoiceToAnimWhite"></div>
- <div class="buttonRoundVoiceToAnimBlue hidden"></div>
- <div class="buttonRoundVoiceToTextWhite"></div>
- <div class="buttonRoundVoiceToTextBlue hidden"></div>
+		 <div class="buttonRoundVoiceToAnimWhite"></div>
+		 <div class="buttonRoundVoiceToAnimBlue hidden"></div>
+		 <div class="buttonRoundVoiceToTextWhite"></div>
+		 <div class="buttonRoundVoiceToTextBlue hidden"></div>
  </div>
 
 	    
+<div id="voiceToText"></div>
 
-   <form>
-     <input id="voiceToText" type="text" name="lastname">
-   </form>
 
  	
 
@@ -154,7 +150,6 @@
 
 </div><!--[end of fullSizePhone]-->
 <!--[•••••••]-->
-<script src="plusser.js"></script>
 <script src="annyang.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/annyang/2.6.0/annyang.min.js"></script>
@@ -172,10 +167,7 @@
 	
 //annyang start
 if (annyang) {
-	
-var anything = function(anything) {
-document.getElementById("voiceToText").innerHTML = anything;
-};
+
 // Let's define our first command. First the text we expect, and then the function it should call
 var commands = {
 //speech recognition dictation
