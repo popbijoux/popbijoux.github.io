@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 
-<title>index_2 9:23</title>
+<title>index_2 9:30</title>
 
 <!--[document information]>
 <![•••••••••••••••]>
@@ -547,15 +547,18 @@ $("#thisNation_013").show().delay(14000).fadeOut();
 	
 'rise up': function() {
 $("#riseUp_083").show().delay(16000).fadeOut();
-			}
-
+			},
+'*allWords': whatWasHeard
 	
      };
 	
 	
 annyang.addCallback('result',function(whatWasHeard) {
 document.getElementById("voiceToText").innerHTML = whatWasHeard;
-});	
+});
+	
+var allWords = function(whatWasHeard) {   document.getElementById("voiceToText").innerHTML = whatWasHeard; }
+
 // Add our commands to annyang
 annyang.addCommands(commands);
 // Start listening. You can call this here, or attach this call to an event, button, etc.
