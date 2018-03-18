@@ -8,11 +8,9 @@
 <!--[document information]>
 <![•••••••••••••••]>
 <![•••••••••••••••]>
-  File: 1Gtest.html
-  Created: 12/31/16
-  Last Modified: 01/13/17
-  Created by: Manuela L.
-  Version: 1.00
+  LATEST TEST WORKSSSS
+  PLEASE DON'T TOUCH!!!
+  03.16
 <![•••••••••••••••]>
 <![•••••••••••••••]>
 
@@ -58,22 +56,23 @@
  <div class="buttonRoundVoiceToTextBlue hidden"></div>
  </div>
 
-
+ <form>
+   <input id="writeHere" type="text" name="lastname">
+ </form>
 
  <div id="hiddenKeywordAnimations" class="videoContainer">
 
 
- <div>
 
-   <form>
-     <input id="writeHere" type="text" name="lastname">
-   </form>
-
- </div>
+   <img id="airport"  src="img_presentation/Politics_No_bans_no_walls_America_is_home_to_all_VERT.gif">
 
 
-         <img id="eggsandbacon_005" class="hiddenElement" src="animsAll/Anims_005_Eggs and Bacon.gif">
-   
+
+
+
+         <img id="baconbacon" class="hiddenElement" src="animsAll/Anims_005_Eggs and Bacon.gif">
+">
+
    </div>
 
     </div><!--[end of fullPhoneScreen]-->
@@ -96,19 +95,22 @@
 //end of artyom
 
   if (annyang) {
+
+
   // Let's define our first command. First the text we expect, and then the function it should call
   var commands = {
- 
+
   'bacon': function() {
-  $("#eggsandbacon_005").show().delay(12000).fadeOut();
+  $("#baconbacon").show().delay(12000).fadeOut();
                           },
 
+                          'protest': function() {
+                          $("#airport").show().delay(12000).fadeOut();
+                                                  },
 
                         };
-    
-    annyang.addCallback('result',function(whatWasHeard) {
-  document.getElementById("writeHere").innerHTML = whatWasHeard[0];
-});
+
+
 
 
   // Add our commands to annyang
@@ -116,9 +118,11 @@
   // Start listening. You can call this here, or attach this call to an event, button, etc.
   annyang.start();
   }
-  
-  
-  
+
+
+
+
+
 
 </script>
 </body>
