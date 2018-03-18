@@ -286,6 +286,11 @@
 <!--[•PARIS IS BURNING•VIDEO•I WENT TO A BALL•]-->
 <div id="videoParisIWentToABall" class="topVid">
            <img id="bacon" class="hiddenElement" src="animsAll/Anims_005_Eggs and Bacon.gif">
+             <img id="ball" class="hiddenElement" src="animsAll/ Anims_050_I went to a ball.gif">
+               <img id="trophy" class="hiddenElement" src="animsAll/Anims_049_I got a trophy.gif">
+  
+
+
 <div class="vidTitleText">PARIS IS BURNING: I went to a ball</div>
     <video loop onclick="this.paused? this.play() : this.pause()">
     <source src="videos/ParisisBurning_660x370_I_went_to_a_ball.mp4" type="video/mp4">
@@ -463,7 +468,15 @@ var commands = {
 $("#bacon").show().delay(12000).fadeOut();
                         },
 
-
+'ball': function() {
+$("#ball").show().delay(12000).fadeOut();
+                        },
+  
+  
+'trophy': function() {
+$("#trophy").show().delay(12000).fadeOut();
+                        },
+  
                       };
 
 
