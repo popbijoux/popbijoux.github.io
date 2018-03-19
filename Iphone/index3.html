@@ -175,6 +175,8 @@ margin: auto;
 <div class="mySlides fade">
 		<div class="titleFont"><mark>Plusser: Your voice becomes a moving story<mark></div>
 	<div class="imageAlignCenter"><img  src="img_presentation/Your voice is our moving story.gif" style="width:100%;"></div>
+				<div id="grab" class="imageAlignCenter"><img  src="img_presentation/Group Head Coordinated2.gif" style="width:100%;margin-top:-60px;display:none;"></div>
+
 </div>
 
 
@@ -229,6 +231,7 @@ margin: auto;
 <!--[•••••••]-->
 <script src="jquery-3.2.1.min.js"></script>
   <script src="jquery-ui.min.js"></script>
+			<script src="annyang.js"></script>
 
 
 <script>
@@ -296,6 +299,21 @@ function carousel() {
     if (myIndex > x.length) {myIndex = 1}
     x[myIndex-1].style.display = "block";
     setTimeout(carousel, 5000); // Change image every 2 seconds
+}
+	
+	if (annyang) {
+// Let's define our first command. First the text we expect, and then the function it should call
+var commands = {
+'bacon': function() {
+$("#grab").show().delay(12000).fadeOut();
+                        },
+
+  
+                      };
+// Add our commands to annyang
+annyang.addCommands(commands);
+// Start listening. You can call this here, or attach this call to an event, button, etc.
+annyang.start();
 }
 </script>
 
