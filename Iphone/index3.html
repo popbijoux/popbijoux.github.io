@@ -235,17 +235,6 @@ margin: auto;
 
 
 <script>
-var recognition = new webkitSpeechRecognition(); //get new instance
-recognition.start(); //start it
-recognition.onend = function() { //a function to restart it when it stops
-	recognition.start();
-}
-
-recognition.onresult = function(event) {
-    var whatWasHeard = event.results[0][0].transcript; //get what was heard
-    //document.body.innerHTML = whatWasHeard; //original version. Update below
-	document.getElementById("voiceToText").innerHTML = whatWasHeard; //updated version
-};
 
 
 
