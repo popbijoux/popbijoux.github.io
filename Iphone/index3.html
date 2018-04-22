@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 
-<title>1. Co Purpose</title>
+<title>Plusser Presentation GH</title>
 
 <!--[document information]>
 
@@ -169,23 +169,20 @@ margin: auto;
 <!--[end of topNav]-->
 <div class="slideshow-container">
 <!--1.Company Purpose><!-->
-<div class="logo"><img  src="img_presentation/PlusserLogo.svg" style="width:58px;margin-top:16px;"></div>
 
 
 <div class="mySlides fade">
-		<div class="titleFont"><mark>Plusser: Your voice becomes a moving story<mark></div>
-	<div class="imageAlignCenter"><img  src="img_presentation/Your voice is our moving story.gif" style="width:100%;"></div>
-				<div id="grab" class="imageAlignCenter"><img  src="img_presentation/Group Head Coordinated2.gif" style="width:100%;margin-top:-60px;display:none;"></div>
 
+	<div class="imageAlignCenter"><img  src="img_presentation/Plusser video_Your Voice is Our.gif" style="width:100%;margin-top:-36px;"></div>
 </div>
 
 
 
-<div class="mySlides fade">
-	<div class="titleFont"><mark>Plusser: Your voice becomes a moving story<mark></div>
 
-	<div class="imageAlignCenter"><img  src="img_presentation/Group Head Coordinated2.gif" style="width:100%;margin-top:-60px;"></div>
-</div>
+
+
+
+
 
 
 
@@ -231,10 +228,20 @@ margin: auto;
 <!--[•••••••]-->
 <script src="jquery-3.2.1.min.js"></script>
   <script src="jquery-ui.min.js"></script>
-			<script src="annyang.js"></script>
 
 
 <script>
+var recognition = new webkitSpeechRecognition(); //get new instance
+recognition.start(); //start it
+recognition.onend = function() { //a function to restart it when it stops
+	recognition.start();
+}
+
+recognition.onresult = function(event) {
+    var whatWasHeard = event.results[0][0].transcript; //get what was heard
+    //document.body.innerHTML = whatWasHeard; //original version. Update below
+	document.getElementById("voiceToText").innerHTML = whatWasHeard; //updated version
+};
 
 
 
@@ -287,22 +294,7 @@ function carousel() {
     myIndex++;
     if (myIndex > x.length) {myIndex = 1}
     x[myIndex-1].style.display = "block";
-    setTimeout(carousel, 5000); // Change image every 2 seconds
-}
-	
-	if (annyang) {
-// Let's define our first command. First the text we expect, and then the function it should call
-var commands = {
-'bacon': function() {
-$("#grab").show().delay(12000).fadeOut();
-                        },
-
-  
-                      };
-// Add our commands to annyang
-annyang.addCommands(commands);
-// Start listening. You can call this here, or attach this call to an event, button, etc.
-annyang.start();
+    setTimeout(carousel, 8000); // Change image every 2 seconds
 }
 </script>
 
