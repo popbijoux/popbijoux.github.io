@@ -1,0 +1,127 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="UTF-8">
+
+<title>Say Bacon+ transcription</title>
+
+<!--[document information]>
+<![•••••••••••••••]>
+<![•••••••••••••••]>
+  LATEST TEST WORKSSSS
+  PLEASE DON'T TOUCH!!!
+  03.16
+<![•••••••••••••••]>
+<![•••••••••••••••]>
+
+
+<!-->
+<link rel="stylesheet" type="text/css" href="plusser.css">
+</head>
+<body>
+<!--[••••••••••••••••••••••••••••••••••••••••••••••••••]-->
+<!--[••••••••••••••••••••••••••••••••••••••••••••••••••]-->
+<!--[••••••••••••••••••••••••••••••••••••••••••••••••••]-->
+<div class="fullSizePhone">
+    <div id="profilePage" class="fullPhoneScreen">
+<!--[••••••••••••••••••••••••••••••••••••••••••••••••••]-->
+<!--[••••••••••••••••••••••••••••••••••••••••••••••••••]-->
+<!--[••••••••••••••••••••••••••••••••••••••••••••••••••]-->
+             <div class="topNav">
+                              <img src="https://popbijoux.github.io/Iphone/top_network_signals3.png" width="370px" height="20px">
+                              <div class="buttonMegaphone hideProfilePageIcons"></div>
+
+
+
+                              <div class="buttonChannelWhiteNoText hideProfilePageIcons"></div>
+            </div><!--[end of topNav]-->
+<!--[••••••••••••••••••••••••••••••••••••••••••••••••••]-->
+<!--[••••••••••••••••••••••••••••••••••••••••••••••••••]-->
+<!--[••••••••••••••••••••••••••••••••••••••••••••••••••]-->
+<div class="navBarBottom">
+
+  <div class="buttonWhiteDictionary hideProfilePageIcons"></div>
+   <div class="buttonSelectionBackWhite hidden"></div>
+       <div class="buttonMoreWhite hidden"></div>
+
+    <div class="buttonSelectionBlue hidden"></div>
+
+  <div class="buttonHomeWhite hideProfilePageIcons"></div>
+
+ </div><!--[navBarBottom]-->
+ <div class="topHorizontalButtonRow">
+ <div class="buttonRoundVoiceToAnimWhite"></div>
+ <div class="buttonRoundVoiceToAnimBlue hidden"></div>
+ <div class="buttonRoundVoiceToTextWhite"></div>
+ <div class="buttonRoundVoiceToTextBlue hidden"></div>
+ </div>
+
+
+
+ <div id="voiceToText" type="text" name="lastname">
+
+
+ <div id="hiddenKeywordAnimations" class="videoContainer">
+
+
+
+<img id="noBan" class="hiddenElement" src="animsAll/Anims_016_no_muslim_ban.gif">
+
+
+
+
+
+         <img id="baconbacon" class="hiddenElement" src="animsAll/Anims_005_Eggs and Bacon.gif">
+
+   </div>
+
+    </div><!--[end of fullPhoneScreen]-->
+
+</div><!--[end of fullSizePhone]-->
+<!--[•••••••]-->
+<script src="plusser.js"></script>
+<script src="annyang.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/annyang/2.6.0/annyang.min.js"></script>
+<script src="typed.js"></script>
+<link rel="stylesheet" href="https://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+<script src="https://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+<script>
+
+
+
+
+//end of artyom
+
+  if (annyang) {
+
+
+  // Let's define our first command. First the text we expect, and then the function it should call
+  var commands = {
+
+  'bacon': function() {
+  $("#baconbacon").show().delay(12000).fadeOut();
+                          },
+
+                        };
+
+
+
+
+  // Add our commands to annyang
+  annyang.addCommands(commands);
+  // Start listening. You can call this here, or attach this call to an event, button, etc.
+  annyang.start();
+  }
+
+
+
+ annyang.addCallback('result',function(whatWasHeard) { document.getElementById("voiceToText").innerHTML = whatWasHeard[0]; });
+
+
+
+
+</script>
+</body>
+</html>
