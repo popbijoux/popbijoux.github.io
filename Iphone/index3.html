@@ -234,11 +234,12 @@ margin: auto;
 <script>
 
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script> <script src="//cdnjs.cloudflare.com/ajax/libs/annyang/2.6.0/annyang.min.js"></script> 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script> 
+	<script src="//cdnjs.cloudflare.com/ajax/libs/annyang/2.6.0/annyang.min.js"></script> 
 	
 
 	
-<script> if (annyang) {  Let's define a command. var commands = { 'hello': function() { alert('Hello world!'); } }; // Add our commands to annyang annyang.addCommands(commands); // Start listening. annyang.start(); } annyang.addCallback('result',function(whatWasHeard) { document.getElementById("voiceToText").innerHTML = whatWasHeard[0]; }); </script>	
+<script> if (annyang) {  Let's define a command. var commands = { 'hello': function() { alert('Hello world!'); } }; // Add our commands to annyang annyang.addCommands(commands); // Start listening. annyang.start(); } annyang.addCallback('result',function(whatWasHeard) { document.getElementById("voiceToText").innerHTML = whatWasHeard[0]; }); 
 
 
 
