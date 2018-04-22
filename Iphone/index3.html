@@ -229,21 +229,16 @@ margin: auto;
 <script src="jquery-3.2.1.min.js"></script>
   <script src="jquery-ui.min.js"></script>
 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script> <script src="//cdnjs.cloudflare.com/ajax/libs/annyang/2.6.0/annyang.min.js"></script> <script> if (annyang) { // Let's define a command. var commands = { 'hello': function() { alert('Hello world!'); } }; // Add our commands to annyang annyang.addCommands(commands); // Start listening. annyang.start(); } annyang.addCallback('result',function(whatWasHeard) { document.getElementById("voiceToText").innerHTML = whatWasHeard[0]; }); </script>
 
 <script>
-var recognition = new webkitSpeechRecognition(); //get new instance
-recognition.start(); //start it
-recognition.onend = function() { //a function to restart it when it stops
-	recognition.start();
-}
-
-recognition.onresult = function(event) {
-    var whatWasHeard = event.results[0][0].transcript; //get what was heard
-    //document.body.innerHTML = whatWasHeard; //original version. Update below
-	document.getElementById("voiceToText").innerHTML = whatWasHeard; //updated version
-};
 
 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script> <script src="//cdnjs.cloudflare.com/ajax/libs/annyang/2.6.0/annyang.min.js"></script> 
+	
+
+	
+<script> if (annyang) {  Let's define a command. var commands = { 'hello': function() { alert('Hello world!'); } }; // Add our commands to annyang annyang.addCommands(commands); // Start listening. annyang.start(); } annyang.addCallback('result',function(whatWasHeard) { document.getElementById("voiceToText").innerHTML = whatWasHeard[0]; }); </script>	
 
 
 
