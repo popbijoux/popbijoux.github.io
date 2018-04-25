@@ -237,7 +237,10 @@ margin: auto;
 	<!--**pain points**-->
 	<div class="imageFullBox hiddenElement" id="everyone">
 		<img  src="imagesPres/Plusser video_Everyone.gif" style="width:100%;"></div>
-
+	<div class="imageFullBox hiddenElement" id="speakUp">
+		<img  src="imagesPres/speakUpGroupClap.gif" style="width:100%;"></div>
+	
+	
 		<div class="imageFullBox hiddenElement" id="genZ"><img  src="imagesPres/Plusser video_Gen Z speaks up.gif" style="width:100%;"></div>
 
 	<div class="imageFullBox hiddenElement" id="americaIsHome"><img  src="imagesPres/Plusser video_America is home to all.gif" style="width:100%;"></div>
@@ -305,10 +308,7 @@ margin: auto;
 //check the text div and display image if this is contained ...
 //tested and works now i must check after voice writes in text
 
-//I want my voice to be heard
-if ($("#voiceToText:contains('I want my voice to be heard')").length) {
-  $("#everyone").show().delay(12000).fadeOut();
-}
+
 //I want my speak up for the values that made me who I am
 if ($("#voiceToText:contains('I want to speak up for the values')").length) {
   $("#americaIsHome").show().delay(12000).fadeOut();
@@ -339,15 +339,21 @@ if ($("#voiceToText:contains('I want to join the chorus')").length) {
   $("#baconbacon").show().delay(12000).fadeOut();
                           },
 	  
+	  	   'I want my voice to be heard': function() {
+  $("#speakUp").show().delay(12000).fadeOut();
+                          },
+	  
 	   '(I want my voice to) shape the future': function() {
   $("#genZ").show().delay(12000).fadeOut();
                           },
 	  
 	  
 	  
-	     '(I want speak up for) the values': function() {
+	     'I want speak up for the values that made me who I am': function() {
   $("#americaIsHome").show().delay(12000).fadeOut();
                           },
+	  
+	 
 
 	   'voice': function() {
   $("#yourVoice").show().delay(12000).fadeOut();
