@@ -59,9 +59,6 @@ background-position: -2px -2px;
 
 }
 
-
-
-
 .titleFont
 {
 	font-family: "Francois One";
@@ -223,27 +220,34 @@ margin: auto;
 </head>
 <body>
 <div class="slideshow-container">
-	<div class="transcriptionText" id="voiceToText" type="text" name="lastname"></div>
-
+	<div class="transcriptionText" id="voiceToText" type="text" name="lastname">everyone</div>
+	<!--**your voice**-->
 	<div class=imageContainer>
-			<div class="imageSmallBox hiddenElement" id="yourVoice"><img  src="imagesPres/Plusser video_Your Voice is Our_Your Voice only.gif"></div>
+			<div class="imageSmallBox hiddenElement" id="yourVoiceOnly"><img  src="imagesPres/Plusser video_Your Voice is Our_Your Voice only.gif"></div>
 
-			<div class="imageSmallBox hiddenElement" id="yourVoice"><img  src="imagesPres/Plusser video_Your Voice is Our_Is Our only.gif"></div>
+			<div class="imageSmallBox hiddenElement" id="yourVoiceIsOur"><img  src="imagesPres/Plusser video_Your Voice is Our_Is Our only.gif"></div>
 
-			<div class="imageSmallBox hiddenElement" id="yourVoice"><img  src="imagesPres/Plusser video_Your Voice is Our_Moving Story.gif"></div>
+			<div class="imageSmallBox hiddenElement" id="yourVoiceMovingStory"><img  src="imagesPres/Plusser video_Your Voice is Our_Moving Story.gif"></div>
 
-			<div class="imageFullBox hiddenElement"><img  src="imagesPres/Plusser video_Your Voice is Our.gif" style="width:100%;"></div>
+			<div class="imageFullBox hiddenElement" id="yourVoiceIsOur"><img  src="imagesPres/Plusser video_Your Voice is Our.gif" style="width:100%;"></div>
 					</div>
-<!--[end of fullPhoneScreen]
+<!--
 	<div class="imageFullBox"><img  src="imagesPres/speakUpGroupClap.gif" style="width:100%;"></div>
 -->
+	<!--**pain points**-->
+	<div class="imageFullBox hiddenElement" id="everyone">
+		<img  src="imagesPres/Plusser video_Everyone.gif" style="width:100%;"></div>
 
-	<div class="imageFullBox hiddenElement"><img  src="imagesPres/Plusser video_Everyone.gif" style="width:100%;"></div>
-		<div class="imageFullBox hiddenElement"><img  src="imagesPres/Plusser video_Gen Z speaks up.gif" style="width:100%;"></div>
-	<div class="imageFullBox hiddenElement"><img  src="imagesPres/Plusser video_America is home to all.gif" style="width:100%;"></div>
+		<div class="imageFullBox hiddenElement" id="genZ"><img  src="imagesPres/Plusser video_Gen Z speaks up.gif" style="width:100%;"></div>
 
+	<div class="imageFullBox hiddenElement" id="americaIsHome"><img  src="imagesPres/Plusser video_America is home to all.gif" style="width:100%;"></div>
 
-	<div class="imageFullBox hiddenElement"><img  src="imagesPres/Group Head Coordinated2.gif" style="width:100%;"></div>
+	<div class="imageFullBox hiddenElement" id="americaIsHome"><img  src="imagesPres/Plusser video_America is home to all.gif" style="width:100%;"></div>
+	
+	<!--**pain points abstraction**-->
+		<div class="imageFullBox hiddenElement" id="dataPoints"><img  src="imagesPres/dataPoint.png" style="width:100%;"></div>
+
+	<div class="imageFullBox hiddenElement" id="peopleButtons"><img  src="imagesPres/peopleButtons.png" style="width:100%;"></div>
 
 
 
@@ -298,15 +302,32 @@ margin: auto;
 <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
 <script src="https://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
 <script>
+//check the text div and display image if this is contained ...
+//tested and works now i must check after voice writes in text
 
-if ($("#voiceToText:contains('voice')").length) {
-  $("#yourVoice").show().delay(12000).fadeOut();
+//I want my voice to be heard
+if ($("#voiceToText:contains('I want my voice to be heard')").length) {
+  $("#everyone").show().delay(12000).fadeOut();
+}
+//I want my speak up for the values that made me who I am
+if ($("#voiceToText:contains('I want to speak up for the values')").length) {
+  $("#americaIsHome").show().delay(12000).fadeOut();
+}
+
+//I want my voice to shape the future
+if ($("#voiceToText:contains('I want my voice to shape the future')").length) {
+  $("#genZ").show().delay(12000).fadeOut();
+}
+
+//I want to join the chorus of others who see the america of possibility that I see
+if ($("#voiceToText:contains('I want to join the chorus')").length) {
+  $("#everyone").show().delay(12000).fadeOut();
 }
 
 
-//end of artyom
 
 
+//annyang commands. next goal is to move image commands into text
 
   if (annyang) {
 
