@@ -4,19 +4,9 @@
 <head>
 <meta charset="UTF-8">
 
-<title>transcription & vid works2</title>
+<title>transcription & vid works2B</title>
 
-<!--[document information]>
-<![•••••••••••••••]>
-<![•••••••••••••••]>
-  LATEST TEST WORKSSSS
-  PLEASE DON'T TOUCH!!!
-  03.16
-<![•••••••••••••••]>
-<![•••••••••••••••]>
-
-
-<!-->
+<!---->
 <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Francois+One"/>
 <link href="https://fonts.googleapis.com/css?family=Poppins:400,700" rel="stylesheet">
 
@@ -168,7 +158,8 @@ margin: auto;
 	top: 0px;
   left: 0px;
 	position: relative;
-	justify-content: space-between;
+	justify-content: center;
+	align-content: flex-start;
 	width: 800px;
 	height: 380px;
 	z-index:20;
@@ -205,7 +196,7 @@ margin: auto;
 	font-variant: normal;
 	font-weight: 800;
 	line-height: 68px;
-	z-index: 10;
+	z-index: 40;
 	position: absolute;
 	top: 48px;
 	left: -12px;
@@ -223,50 +214,61 @@ margin: auto;
 	<div class="transcriptionText" id="voiceToText" type="text" name="lastname">everyone</div>
 	<!--**your voice**-->
 	<div class=imageContainer>
-			<div class="imageSmallBox hiddenElement" id="yourVoiceOnly"><img  src="imagesPres/Plusser video_Your Voice is Our_Your Voice only.gif"></div>
-
-			<div class="imageSmallBox hiddenElement" id="yourVoiceIsOur"><img  src="imagesPres/Plusser video_Your Voice is Our_Is Our only.gif"></div>
-
-			<div class="imageSmallBox hiddenElement" id="yourVoiceMovingStory"><img  src="imagesPres/Plusser video_Your Voice is Our_Moving Story.gif"></div>
-
-			<div class="imageFullBox hiddenElement" id="yourVoiceIsOur"><img  src="imagesPres/Plusser video_Your Voice is Our.gif" style="width:100%;"></div>
-					</div>
-<!--
-	<div class="imageFullBox"><img  src="imagesPres/speakUpGroupClap.gif" style="width:100%;"></div>
--->
-	<!--**pain points**-->
-	<div class="imageFullBox hiddenElement" id="everyone">
-		<img  src="imagesPres/Plusser video_Everyone.gif" style="width:100%;"></div>
-	<div class="imageFullBox hiddenElement" id="speakUp">
-		<img  src="imagesPres/speakUpGroupClap.gif" style="width:100%;"></div>
-	
-	
-		<div class="imageFullBox hiddenElement" id="genZ"><img  src="imagesPres/Plusser video_Gen Z speaks up.gif" style="width:100%;"></div>
-
-	<div class="imageFullBox hiddenElement" id="americaIsHome"><img  src="imagesPres/Plusser video_America is home to all.gif" style="width:100%;"></div>
+				<!--your voice-->
+				<div class="imageSmallBox" id="yourVoiceOnly"><img  src="imagesPres/Plusser video_Your Voice is Our_Your Voice only.gif"></div>
+				<!--is our-->
+				<div class="imageSmallBox hiddenElement" id="yourVoiceIsOur"><img  src="imagesPres/Plusser video_Your Voice is Our_Is Our only.gif"></div>
+				<!--moving story-->
+				<div class="imageSmallBox hiddenElement" id="yourVoiceMovingStory"><img  src="imagesPres/Plusser video_Your Voice is Our_Moving Story.gif"></div>
+				<!--your voice is our moving story-->
+				<div class="imageFullBox hiddenElement" id="yourVoiceIsOurFull"><img  src="imagesPres/Plusser video_Your Voice is Our.gif" style="width:100%;"></div>
 
 
-	
-	<!--**pain points abstraction**-->
-		<div class="imageFullBox hiddenElement" id="dataPoints"><img  src="imagesPres/dataPoint.png" style="width:100%;"></div>
+<!--to the tech narrative, I am an abstraction-->
+	<div class="imageFullBox hiddenElement" id="anAbstraction"><img  src="imagesPres/anAbstraction.png" style="width:100%;margin-top:300px;"></div>
 
-	<div class="imageFullBox hiddenElement" id="peopleButtons"><img  src="imagesPres/peopleButtons.png" style="width:100%;"></div>
+<!--traction talks back-->
+<div class="imageFullBox hiddenElement" id="tractionTalksBack"><img  src="imagesPres/traction talks back.png" style="width:100%;margin-top:240px;"></div>
 
 
 
-							</div>
 
 
-									</div>
+<!--**pain points**-->
+<!--I want to join the chorus of others-->
+<div class="imageFullBox hiddenElement" id="everyone">
+<img  src="imagesPres/Plusser video_Everyone.gif" style="width:100%;"></div>
 
+<!--I want my voice to be heard-->
+<div class="imageFullBox hiddenElement" id="speakUp">
+<img  src="imagesPres/speakUpGroupClap.gif" style="width:100%;"></div>
+<!--<div class="imageFullBox"><img  src="imagesPres/speakUpGroupClap.gif" style="width:100%;"></div>-->
 
+<!--I want my voice to shape the future-->
+<div class="imageFullBox hiddenElement" id="genZ"><img  src="imagesPres/Plusser video_Gen Z speaks up.gif" style="width:100%;"></div>
 
+<!--I want to speak up for the values that made me who I am-->
+<div class="imageFullBox" id="americaIsHome"><img  src="imagesPres/americaIsHomeToAll.gif" style="width:100%;"></div>
+
+<!--**pain points abstraction**-->
+<!--it's time those known only as data points-->
+<div class="imageSmallBox hiddenElement" id="dataPoints"><img  src="imagesPres/dataPoint.png" style="width:100%;"></div>
+<!--get to shape the narrative of technology in their own terms-->
+<div class="imageFullBox hiddenElement" id="peopleButtons"><img  src="imagesPres/peopleButtons.png" style="width:80%;"></div>
+
+<!--solution-->
+<!--solution: your voice instantly creates collective stories-->
+
+<div class="imageFullBox hiddenElement" id="solution"><img  src="imagesPres/solution.png" style="width:100%;margin-top:200px;"></div>
+
+<!--end of slideshow container-->
+</div>
 
 </div>
 
 <br>
 
-
+<!--video container-->
   <div class="container" style="margin-top: 10px">
     <div class="row">
       <div class="col-sm-6">
@@ -274,30 +276,19 @@ margin: auto;
 
         <video autoplay style="height:600px; width: 900px;"></video>
       </div>
-
     </div>
   </div>
-
+<!--end of video container-->
 
 
 
 
 
  <div id="hiddenKeywordAnimations" class="videoContainer">
-
-
-
-
-
-
          <img id="baconbacon" class="hiddenElement" src="animsAll/Anims_005_Eggs and Bacon.gif">
+</div>
 
-   </div>
 
-    </div><!--[end of fullPhoneScreen]-->
-
-</div><!--[end of fullSizePhone]-->
-<!--[•••••••]-->
 <script src="annyang.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/annyang/2.6.0/annyang.min.js"></script>
@@ -338,22 +329,22 @@ if ($("#voiceToText:contains('I want to join the chorus')").length) {
   'bacon': function() {
   $("#baconbacon").show().delay(12000).fadeOut();
                           },
-	  
+
 	  	   'I want my voice to be heard': function() {
   $("#speakUp").show().delay(12000).fadeOut();
                           },
-	  
+
 	   '(I want my voice to) shape the future': function() {
   $("#genZ").show().delay(12000).fadeOut();
                           },
-	  
-	  
-	  
+
+
+
 	     'I want speak up for the values that made me who I am': function() {
   $("#americaIsHome").show().delay(12000).fadeOut();
                           },
-	  
-	 
+
+
 
 	   'voice': function() {
   $("#yourVoice").show().delay(12000).fadeOut();
