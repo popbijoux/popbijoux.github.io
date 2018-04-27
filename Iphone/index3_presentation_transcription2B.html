@@ -248,7 +248,7 @@ margin: auto;
 <div class="imageFullBox hiddenElement" id="genZ"><img  src="imagesPres/Plusser video_Gen Z speaks up.gif" style="width:100%;"></div>
 
 <!--I want to speak up for the values that made me who I am-->
-<div class="imageFullBox" id="americaIsHome"><img  src="imagesPres/Plusser video_America is home to all.gif" style="width:100%;"></div>
+<div class="imageFullBox" id="americaIsHome"><img  src="imagesPres/americaIsHomeToAll.gif" style="width:100%;"></div>
 
 <!--**pain points abstraction**-->
 <!--it's time those known only as data points-->
@@ -302,17 +302,17 @@ margin: auto;
 
 
 //I want my speak up for the values that made me who I am
-if ($("#voiceToText:contains('I want to speak up for the values')").length) {
-  $("#americaIsHome").show().delay(12000).fadeOut();
-}
+//if ($("#voiceToText:contains('I want to speak up for the values')").length) {
+//  $("#americaIsHome").show().delay(12000).fadeOut();
+//}
 
 //I want my voice to shape the future
-if ($("#voiceToText:contains('I want my voice to shape the future')").length) {
-  $("#genZ").show().delay(12000).fadeOut();
-}
+//if ($("#voiceToText:contains('I want my voice to shape the future')").length) {
+//  $("#genZ").show().delay(12000).fadeOut();
+//}
 
 //I want to join the chorus of others who see the america of possibility that I see
-if ($("#voiceToText:contains('I want to join the chorus')").length) {
+//if ($("#voiceToText:contains('I want to join the chorus')").length) {
   $("#everyone").show().delay(12000).fadeOut();
 }
 
@@ -331,15 +331,15 @@ if ($("#voiceToText:contains('I want to join the chorus')").length) {
 
 //your voice is our moving story
 //your voice
-'*voice*': function() {
+'(your) voice *': function() {
 $("#yourVoiceOnly").show().delay(12000).fadeOut();
                     },
 //is our
-'*is our*': function() {
+'(your voice) is our *': function() {
 $("#yourVoiceIsOur").show().delay(12000).fadeOut();
                     },
 //moving story
-'*moving story': function() {
+'(your voice is our) moving story': function() {
 $("#yourVoiceMovingStory").show().delay(12000).fadeOut();
 										 },
 
