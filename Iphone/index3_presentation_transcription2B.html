@@ -259,7 +259,7 @@ margin: auto;
 <!--solution-->
 <!--solution: your voice instantly creates collective stories-->
 
-<div class="imageFullBox" id="solution"><img  src="imagesPres/solution.png" style="width:100%;margin-top:200px;"></div>
+<div class="imageFullBox hiddenElement" id="solution"><img  src="imagesPres/solution.png" style="width:100%;margin-top:200px;"></div>
 
 <!--end of slideshow container-->
 </div>
@@ -331,11 +331,11 @@ if ($("#voiceToText:contains('I want to join the chorus')").length) {
 
 //your voice is our moving story
 //your voice
-'voice': function() {
+'(your) voice*': function() {
 $("#yourVoiceOnly").show().delay(12000).fadeOut();
                     },
 //is our
-'is our': function() {
+'(your voice) is our (moving story)': function() {
 $("#yourVoiceIsOur").show().delay(12000).fadeOut();
                     },
 //moving story
