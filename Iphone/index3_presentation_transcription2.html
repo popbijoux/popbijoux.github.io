@@ -304,29 +304,23 @@ margin: auto;
   // Let's define our first command. First the text we expect, and then the function it should call
   var commands = {
 
-  'bacon': function() {
-  $("#baconbacon").show().delay(12000).fadeOut();
-                          },
+		//your voice is our moving story
+		//your voice
+		'(your) voice': function() {
+		$("#yourVoiceOnly").show().delay(12000).fadeOut();
+		                    },
+		//is our
+		'is our': function() {
+		$("#yourVoiceIsOur").show().delay(12000).fadeOut();
+		                    },
+		//moving story
+		'moving story': function() {
+		$("#yourVoiceMovingStory").show().delay(12000).fadeOut();
+												 },
 
-	  	   'I want my voice to be heard': function() {
-  $("#speakUp").show().delay(12000).fadeOut();
-                          },
-
-	   '(I want my voice to) shape the future': function() {
-  $("#genZ").show().delay(12000).fadeOut();
-                          },
-
-
-
-	     'I want speak up for the values that made me who I am': function() {
-  $("#americaIsHome").show().delay(12000).fadeOut();
-                          },
-
-
-
-	   'voice': function() {
-  $("#yourVoice").show().delay(12000).fadeOut();
-                          },
+		 'your voice is our moving story': function() {
+		 $("#yourVoiceIsOurFull").show().delay(12000).fadeOut();
+		 										 }
 
                         };
 
