@@ -331,17 +331,21 @@ if ($("#voiceToText:contains('I want to join the chorus')").length) {
 
 //your voice is our moving story
 //your voice
-'(your) voice': function() {
+'*voice*': function() {
 $("#yourVoiceOnly").show().delay(12000).fadeOut();
                     },
 //is our
-'(your voice) is our (moving story)': function() {
+'*is our*': function() {
 $("#yourVoiceIsOur").show().delay(12000).fadeOut();
                     },
 //moving story
-'(your voice is our) moving story': function() {
+'*moving story': function() {
 $("#yourVoiceMovingStory").show().delay(12000).fadeOut();
 										 },
+
+ 'your voice is our moving story': function() {
+ $("#yourVoiceMovingStory").show().delay(12000).fadeOut();
+ 										 },
 
  //to the tech narrative I'm an abstraction
  'to the tech narrative': function() {
