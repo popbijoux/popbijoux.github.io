@@ -211,7 +211,7 @@ margin: auto;
 </head>
 <body>
 <div class="slideshow-container">
-	<div class="transcriptionText" id="voiceToText" type="text" name="lastname">everyone17: *fixed bug2* not using chained animations at this time</div>
+	<div class="transcriptionText" id="voiceToText" type="text" name="lastname">everyone18: america is home added 2 imgs</div>
 	<!--**your voice**-->
 	<div class=imageContainer>
 				<!--your voice-->
@@ -257,8 +257,11 @@ margin: auto;
 <div class="imageFullBox hiddenElement" id="genZ"><img src="imagesPres/Plusser video_Gen Z speaks up.gif" style="width:100%;"></div>
 
 <!--I want to speak up for the values that made me who I am-->
-<div class="imageFullBox hiddenElement" id="americaIsHome"><img src="imagesPres/americaIsHomeToAll.gif"></div>
+<div class="imageFullBox americaIsHome hiddenElement">
 
+		<img class="americaIsHome hiddenElement" src="imagesPres/America is home_all characters_2018 update2.gif"></div>
+	<img class="americaIsHome hiddenElement" src="imagesPres/americaIsHomeToAll.gif"></div>
+</div>
 <!--**pain points abstraction**-->
 <!--it's time those known only as data points-->
 <div class="imageSmallBox hiddenElement" id="dataPoints"><img src="imagesPres/dataPoint.png" style="width:100%;margin-top:200px;"></div>
@@ -352,7 +355,7 @@ margin: auto;
 					},
 	//I want speak up for the values that made me who I am
 	'I want to speak up *': function() {
-	$("#americaIsHome").show().delay(12000).fadeOut();
+	$(".americaIsHome").show().delay(12000).fadeOut();
 					},
 //I want join everyone who sees the america of possibility that I see
 'I want to join *': function() {
