@@ -289,7 +289,7 @@ topNav.hide();
 animCallOut.show().not("img").show().find(animTitle).hide().find(animTextBox).show();
 callOutOneBottom.show().find("*").hide();
 btnNextBlueOne.show();
-callOutOneTop.show().find(".buttonRoundVoiceToTextWhite, .buttonRoundVoiceToAnimBlue, .buttonCloseRed").show();
+callOutOneTop.show().find(".buttonRoundVoiceToTextWhite, .buttonRoundVoiceToAnimBlue, .buttonCloseRed ").show();
 //animTextBox.show();
 vidTitleText.hide();
 
@@ -308,8 +308,7 @@ page03Profile.hide().find("*").hide();
 topNav.hide();
 animCallOut.css("background-color", "rgba(0,0,0,0.6)");
 animCallOut.show().find(".buttonRoundStarWhite, .buttonRoundStarBlue, .buttonChainWhite, .buttonChainBlue, #animTitle").hide().find(".buttonContainerBottom").show().find("#animTextBox").show();
-//callOutOneTop.show().find(".buttonRoundVoiceToTextWhite, .buttonRoundVoiceToAnimBlue, .buttonCloseRed ").show();
-callOutOneTop.show().find(".buttonRoundVoiceToTextWhite, .buttonRoundVoiceToAnimBlue").show();
+callOutOneTop.show().find(".buttonRoundVoiceToTextWhite, .buttonRoundVoiceToAnimBlue, .buttonCloseRed ").show();
 
 
 //callOutOneBottom.show();
@@ -1142,7 +1141,7 @@ profAnims07.show();
 
 
 //LIST OF ALL ANIMATIONS USED IN THE VOICE AREA
-
+/*
 var blockTheWall = $("#blockTheWall_001");
 var button1960s = $("#button1960s_002");
 var buttonPolitics = $("#buttonPolitics_003");
@@ -1168,180 +1167,13 @@ var sandwich = $("#sandwich_022");
 var townhallsButton = $("#townHallsButton_023");
 var weAreThePeopleButton = $("#WeAreThePeopleButton_024");
 //24-27 missing
-
+*/
 $( function() {
   $( ".drag" ).draggable();
 } );
 
-// Configure artyom
-var UserDictation = artyom.newDictation({
-    continuous: true, // Don't stop never because i have https connection
-    onResult: function (text) {
-        /**
-         * Set the recognized text as value of the text input
-        **/
-        $("#artyom-redirect-output").val(text);
-    },
-    onStart: function () {
-        console.log("Dictation started by the user");
-    },
-    onEnd: function () {
-        alert("Dictation stopped by the user");
-    }
-});
-
-var btnVoiceAnimWhite = $(".buttonRoundVoiceToAnimWhite");
-var btnVoiceAnimBlue = $(".buttonRoundVoiceToAnimBlue");
-var btnVoiceTextWhite = $(".buttonRoundVoiceToTextWhite");
-var btnVoiceTextBlue = $(".buttonRoundVoiceToTextBlue");
-
-btnAnimWhite.click(function () {
-    btnAnimBlue.show();
-    btnAnimWhite.hide();
-});
-
-btnAnimBlue.click(function () {
-    btnAnimWhite.show();
-    btnAnimBlue.hide();
-});
-
-// Start recognition with the Recognize text button
-btnVoiceTextWhite.click(function () {
-    // Start recognition
-    UserDictation.start();
-
-    btnVoiceTextBlue.show();
-    btnVoiceTextWhite.hide();
-});
-
-// Stop recognition with the Stop recognition button
-btnVoiceTextBlue.click(function () {
-    // Stop recognition
-    UserDictation.stop();
-
-    btnVoiceTextWhite.show();
-    btnVoiceTextBlue.hide();
-});
-//end of artyom
 
 
-//annyang start
-if (annyang) {
-// Let's define our first command. First the text we expect, and then the function it should call
-var commands = {
-'block (the wall)': function() {
-  $("#blockTheWall_001").show().delay(4000).fadeOut();
-},
-
-'no wall': function() {
-  $("#blockTheWall_001").show().delay(4000).fadeOut();
-},
-
-
-'sixties': function() {
-$("#button1960s_002").show().delay(10000).fadeOut();
-                            },
-
-'eggs (and bacon)': function() {
-$("#eggsandbacon_005").show().delay(12000).fadeOut();
-                          },
-
-'bacon': function() {
-$("#eggsandbacon_005").show().delay(12000).fadeOut();
-                        },
-
-'(no) ban': function() {
-$("#muslimBan_016").show().delay(8000).fadeOut();
-                        },
-
-'nope': function() {
-$("#nope_015").show().delay(12000).fadeOut();
-                        },
-
-'toast': function() {
-$("#toast_018").show().delay(12000).fadeOut();
-                      },
-
-'(our) story': function() {
-$("#ourStory_020").show().delay(8000).fadeOut();
-                      },
-
-'just say (no)': function() {
-$("#justsayno_011").show().delay(8000).fadeOut();
-                      },
-
-'politics': function() {
-$("#buttonPolitics_003").show().delay(8000).fadeOut();
-                      },
-
-'(we are) the people': function() {
-$("#buttonwearethepeople_004").show().delay(8000).fadeOut();
-                  },
-
-'hot dog': function() {
-$("#hotdog_006").show().delay(8000).fadeOut();
-                  },
-
-'I came I saw I conquered': function() {
-$("#IcameIsawIconquered_007").show().delay(8000).fadeOut();
-                },
-
-'I came': function() {
-$("#Icame_008").show().delay(8000).fadeOut();
-                  },
-
-'I saw': function() {
-$("#Isaw_009").show().delay(8000).fadeOut();
-                },
-
-'jackie': function() {
-$("#jackie_010").show().delay(8000).fadeOut();
-                },
-
-              'jackie': function() {
-              $("#jackie_010").show().delay(8000).fadeOut();
-                              },
-
-'killing the eyeliner game': function() {
-$("#killingtheeyelinergame_012").show().delay(8000).fadeOut();
-              },
-
-'no way': function() {
-$("#nobaloons_014").show().delay(8000).fadeOut();
-                },
-
-'tear it down': function() {
-$("#tearitdown_017").show().delay(8000).fadeOut();
-              },
-  //------------------
-'we got a story': function() {
-$("#wegotastory_019").show().delay(8000).fadeOut();
-                },
-
-'killing (the eyeliner game)': function() {
-$("#killingtheeyelinergame_012").show().delay(8000).fadeOut();
-              },
-
-'sandwich': function() {
-$("#sandwich_022").show().delay(8000).fadeOut();
-                },
-
-'town halls': function() {
-$("#townHallsButton_023").show().delay(8000).fadeOut();
-              },
-
-'we are the people': function() {
-$("#WeAreThePeopleButton_024").show().delay(8000).fadeOut();
-              },
-
-                      };
-
-
-// Add our commands to annyang
-annyang.addCommands(commands);
-// Start listening. You can call this here, or attach this call to an event, button, etc.
-annyang.start();
-}
 //annyang end
 
 
