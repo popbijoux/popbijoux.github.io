@@ -298,6 +298,9 @@ margin: auto;
 
 <div class="imageFullBox hiddenElement" id="hateSpeech"><img src="imagesPres/hate speech bots.gif" style="width:100%;margin-top:200px;"></div>
 
+<div class="imageFullBox hiddenElement" id="trumpSurprise"><img src="imagesPres/Trump Surprise.gif" style="width:70%;margin-top:200px;"></div>
+
+
 <!--solution-->
 <!--solution: your voice instantly creates collective stories-->
 
@@ -382,10 +385,14 @@ $(".americaIsHome").show().delay(12000).fadeOut();
 $("#everyone").show().delay(12000).fadeOut();
 				},
 //Yet public conversation has been literally programmed to run on negative syntax.
-'yet public conversation *': function() {
-$("#hateSpeech").show().delay(12000).fadeOut();
+'(yet) public conversation *': function() {
+$("#trumpSurprise").show().delay(12000).fadeOut();
 				},
 //Text <inputs> have been hijacked by  hate speech via bots and trolls
+'text inputs *': function() {
+$("#hateSpeech").show().delay(12000).fadeOut();
+				},
+
 //Text interfaces and text inputs are not enough.
 //The text-input architecture benefits Big Tech cos. It’s not in their interest to change it.
 
