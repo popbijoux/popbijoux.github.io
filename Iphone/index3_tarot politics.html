@@ -233,7 +233,11 @@ margin: auto;
 </div>
 
 </div>
+<audio class="hiddenElement" id="laughTrackSample">
 
+  <source src="laughTrackSample.mp3" type="audio/mpeg">
+Your browser does not support the audio element.
+</audio>
 <br>
 
 <!--video container-->
@@ -273,15 +277,42 @@ margin: auto;
   var commands = {
 
 
-//nice to meet you.  Traction talks back
+//Michael Cohen with friends
 'Michael Cohen with friends': function() {
 $("#michaelCohen").show().delay(60000).fadeOut();
-									 }
+},
+
+//Bill Browder
+'Bill': function() {
+$("#billBrowder").show().delay(60000).fadeOut();
+},
+
+//Junior
+'Bill': function() {
+$("#DonJr").show().delay(60000).fadeOut();
+},
+
+//Don Jr.
+'Bill': function() {
+$("#DonJr").show().delay(60000).fadeOut();
+},
+/*
+billBrowder.jpg
+DonJr.jpeg
+jaredkushner.jpg
+lev.jpg
+michaelCohen.jpg
+RussianLawyerNatalia.jpg
+Sergei_Magnitsky.jpg
+*/
+
+
+'witch hunt': function() {
+	$("#laughTrackSample")[0].play();
+	},
 
 
 
-
-  };
 
   // Add our commands to annyang
   annyang.addCommands(commands);
