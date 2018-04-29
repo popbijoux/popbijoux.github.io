@@ -295,6 +295,9 @@ margin: auto;
 <!--get to shape the narrative of technology in their own terms-->
 <div class="imageFullBox hiddenElement" id="peopleButtons"><img src="imagesPres/peopleButtons.png" style="width:80%;margin-top:200px;"></div>
 
+
+<div class="imageFullBox hiddenElement" id="hateSpeech"><img src="imagesPres/hate speech bots.gif" style="width:100%;margin-top:200px;"></div>
+
 <!--solution-->
 <!--solution: your voice instantly creates collective stories-->
 
@@ -356,20 +359,13 @@ margin: auto;
 		'moving story': function() {
 		$("#yourVoiceMovingStory").show().delay(12000).fadeOut();
 												 },
-
+	//your voice is our moving story
 		 'your voice is our moving story': function() {
 		 $("#yourVoiceIsOurFull").show().delay(12000).fadeOut();
 												 },
 
-	 //to the tech narrative I'm an abstraction
-	 'to the tech narrative *': function() {
-	 $("#anAbstraction").show().delay(12000).fadeOut();
-												},
 
-	//traction talks back
-	'(nice to meet you) traction talks back': function() {
-	$("#tractionTalksBack").show().delay(12000).fadeOut();
-											},
+
 
 	 //pain points: section of 4
 	//I want my voice to be heard
@@ -388,6 +384,24 @@ margin: auto;
 'I want to join *': function() {
 $("#everyone").show().delay(12000).fadeOut();
 },
+
+
+//Yet public conversation has been literally programmed to run on negative syntax.
+'yet public conversation *': function() {
+$("#hateSpeech").show().delay(12000).fadeOut();
+},
+//Text <inputs> have been hijacked by  hate speech via bots and trolls
+//Text interfaces and text inputs are not enough.
+//The text-input architecture benefits Big Tech cos. It’s not in their interest to change it.
+
+
+//to the tech narrative I'm an abstraction
+'to the tech narrative *': function() {
+$("#anAbstraction").show().delay(12000).fadeOut();
+										 },
+
+
+
 //it's time those known only as data points
 
 '(it is time) data points': function() {
@@ -398,11 +412,15 @@ $("#dataPoints").show().delay(12000).fadeOut();
 $("#peopleButtons").show().delay(12000).fadeOut();
 				}
 
+//nice to meet you.  Traction talks back
+'(nice to meet you) traction talks back': function() {
+$("#tractionTalksBack").show().delay(12000).fadeOut();
+									 },
 
-                        };
 
 
 
+  };
 
   // Add our commands to annyang
   annyang.addCommands(commands);
