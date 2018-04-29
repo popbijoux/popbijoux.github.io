@@ -1,0 +1,350 @@
+
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="UTF-8">
+
+<title>transcription & vid works2+ voice</title>
+
+<!---->
+<link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Francois+One"/>
+<link href="https://fonts.googleapis.com/css?family=Poppins:400,700" rel="stylesheet">
+
+	<script src="https://cdn.WebRTC-Experiment.com/RecordRTC.js"></script>
+<script src="https://cdn.webrtc-experiment.com/gumadapter.js"></script>
+<style>
+
+.fullSizePhone {
+
+position: absolute;
+z-index: 20;
+flex-flow: row wrap;
+align-content: space-between;
+justify-content: space-between;
+margin-top: 0px;
+margin-left: 160px;
+margin-right: auto;
+margin-bottom: 48px;
+width: 240px;
+height:540px;
+background-color: black;
+background: url(img_presentation/Iphone_White2.svg);
+background-repeat: no-repeat;
+background-size: 240px 540px;
+background-position: -2px -2px;
+}
+
+.logo {
+
+
+		z-index: 5;
+			position: absolute;
+			display: flex;
+			flex-flow: row;
+			margin-top: 12px;
+			margin-left: 360px;
+			margin-right: auto;
+			height: 80px;
+
+
+}
+
+.titleFont
+{
+	font-family: "Francois One";
+	font-size: 24px;
+	color: blue;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: 500;
+	line-height: 48px;
+		z-index: 4;
+			position:relative;
+			top: 96px;
+			left: -12px;
+			text-align: center;
+			width: 800px;
+
+}
+
+
+.titleFont a
+{
+
+	font-family: "Francois One";
+	font-size: 24px;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: 500;
+	line-height: 20px;
+		z-index: ;
+			position:relative;
+			top: 20px;
+			left: 12px;
+			text-transform: uppercase;
+
+}
+
+
+h3 {
+	font-family: "Francois One";
+		text-transform: uppercase;
+	font-size: 32px;
+	color: blue;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: 500;
+	line-height: 8px;
+		z-index: 5;
+			position:relative;
+			top: 6px;
+			left: 24px;
+			text-align: left;
+			width: 800px;
+}
+.container {
+  position:absolute;
+  top: 10px;
+  left: 250px;
+  z-index: 1;
+}
+.drawing {
+  position:absolute;
+  top: 50px;
+  left: 250px;
+  z-index: 2;
+
+}
+
+* {box-sizing: border-box;}
+.mySlides {display: none;}
+
+img {
+width:100%;
+margin: auto;
+
+
+}
+
+.imageAlignRight {
+	top: 88px;
+  left: 440px;
+	position: absolute;
+	width:300px;
+}
+
+.imageFullBox {
+	top: 0px;
+  left: 0px;
+	position: absolute;
+	width:780px;
+	height: 360px;
+	z-index:20;
+}
+
+.imageSmallBox{
+	top: 210px;
+  left: 0px;
+	position: relative;
+	width:260px;
+	height: 360px;
+	z-index:20;
+	display: flex;
+	align-items: baseline;
+}
+
+.imageTinyBox{
+	top: 210px;
+  left: -36px;
+	position: relative;
+	width:120px;
+	z-index:20;
+	display: flex;
+	align-items: baseline;
+}
+
+
+.imageContainer {
+	top: 0px;
+  left: 0px;
+	position: relative;
+	justify-content: center;
+	align-content: flex-end;
+	width: 800px;
+	height: 380px;
+	z-index:20;
+	display: flex;
+	align-items: flex-end;
+}
+
+/* Slideshow container */
+.slideshow-container {
+	display: flex;
+	justify-content: center;
+	align-content: center;
+  width: 800px;
+	height: 600px;
+  position: relative;
+  margin: auto;
+	top: 60px;
+	left: 100px;
+	  z-index: 3;
+
+}
+
+.hiddenElement {
+	display: none;
+}
+
+
+.transcriptionText
+{
+	font-family: "Poppins";
+	font-size: 68px;
+	color: blue;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: 800;
+	line-height: 68px;
+	z-index: 40;
+	position: absolute;
+	top: 48px;
+	left: -12px;
+	text-align: center;
+	width: 720px;
+	height: 140px;
+	text-decoration: underline;
+}
+
+</style>
+
+</head>
+<body>
+<div class="slideshow-container">
+	<div class="transcriptionText" id="voiceToText" type="text" name="lastname">everyone19: america is home added single imgs</div>
+	<!--**your voice**-->
+	<div class=imageContainer>
+				<!--your voice-->
+				<div class="imageFullBox hiddenElement" id="michaelCohen"><img src="imagesPres/Plusser video_Your Voice is Our_Your Voice only.gif"></div>
+				<!--is our-->
+
+
+<!--end of slideshow container-->
+</div>
+
+</div>
+
+<br>
+
+<!--video container-->
+  <div class="container" style="margin-top: 10px">
+    <div class="row">
+      <div class="col-sm-6">
+        <p><button type="button" class="btn btn-lg btn-default" onclick="getStream('video')">Grab video</button></p>
+
+        <video autoplay style="height:600px; width: 900px;"></video>
+      </div>
+    </div>
+  </div>
+<!--end of video container-->
+
+
+<script src="annyang.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/annyang/2.6.0/annyang.min.js"></script>
+<link rel="stylesheet" href="https://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+<script src="https://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+<script>
+//check the text div and display image if this is contained ...
+//tested and works now i must check after voice writes in text
+
+
+
+
+
+
+//annyang commands. next goal is to move image commands into text
+
+  if (annyang) {
+
+
+  // Let's define our first command. First the text we expect, and then the function it should call
+  var commands = {
+
+
+//nice to meet you.  Traction talks back
+'Michael Cohen with friends': function() {
+$("#michaelCohen").show().delay(60000).fadeOut();
+									 }
+
+
+
+
+  };
+
+  // Add our commands to annyang
+  annyang.addCommands(commands);
+  // Start listening. You can call this here, or attach this call to an event, button, etc.
+  annyang.start();
+  }
+
+
+
+ //annyang.addCallback('result',function(whatWasHeard) { document.getElementById("voiceToText").innerHTML = whatWasHeard[0]; });
+
+
+
+function getUserMedia(options, successCallback, failureCallback) {
+  var api = navigator.getUserMedia || navigator.webkitGetUserMedia ||
+    navigator.mozGetUserMedia || navigator.msGetUserMedia;
+  if (api) {
+    return api.bind(navigator)(options, successCallback, failureCallback);
+  }
+}
+
+function getStream (type) {
+  if (!navigator.getUserMedia && !navigator.webkitGetUserMedia &&
+    !navigator.mozGetUserMedia && !navigator.msGetUserMedia) {
+    alert('User Media API not supported.');
+    return;
+  }
+
+  var constraints = {};
+  constraints[type] = true;
+  getUserMedia(constraints, function (stream) {
+    var mediaControl = document.querySelector(type);
+
+    if ('srcObject' in mediaControl) {
+      mediaControl.srcObject = stream;
+      mediaControl.src = (window.URL || window.webkitURL).createObjectURL(stream);
+    } else if (navigator.mozGetUserMedia) {
+      mediaControl.mozSrcObject = stream;
+    }
+  }, function (err) {
+    alert('Error: ' + err);
+  });
+}
+
+
+
+
+var myIndex = 0;
+carousel();
+
+function carousel() {
+    var i;
+    var x = document.getElementsByClassName("mySlides");
+    for (i = 0; i < x.length; i++) {
+       x[i].style.display = "none";
+    }
+    myIndex++;
+    if (myIndex > x.length) {myIndex = 1}
+    x[myIndex-1].style.display = "block";
+    setTimeout(carousel, 8000); // Change image every 2 seconds
+}
+
+
+</script>
+</body>
+</html>
