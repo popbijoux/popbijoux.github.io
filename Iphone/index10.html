@@ -515,43 +515,46 @@ hidden">
 <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
 <script src="https://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
 <script>
+
+
+
+
+
+
+
+
 if (annyang) {
 // Let's define our first command. First the text we expect, and then the function it should call
 var commands = {
-
-
-
-
-
-
-
-
-
-  //She was warned
+//She was warned
 '(She was) warned': function() {
-$("#addImageHere").show().delay(12000).fadeOut();
+$("#sheWasWarned").show().delay(12000).fadeOut();
                         },
-
-
-
-
-<img id="explanation" class="hiddenElement" src="animsAll/sheWasGivenAnExplanation.gif">
+//HTML
 <img id="sheWasWarned" class="hiddenElement" src="animsAll/sheWasWarned.gif">
-<img id="nevertheless" class="hiddenElement" src="animsAll/nevertheless.gif">
+
 
   //She was given an explanation
 '(She was given an) explanation': function() {
-$("#addImageHere").show().delay(12000).fadeOut();
+$("#explanation").show().delay(12000).fadeOut();
                         },
+//HTML
+  <img id="explanation" class="hiddenElement" src="animsAll/sheWasGivenAnExplanation.gif">
+
   //Nevertheless she persisted
   'nevertheless': function() {
-  $("#addImageHere").show().delay(12000).fadeOut();
+  $("#nevertheless").show().delay(12000).fadeOut();
                           },
+//HTML
+<img id="nevertheless" class="hiddenElement" src="animsAll/nevertheless.gif">
+
 
   //Gen-Z Kids are not afraid
   'kids are not afraid': function() {
-  $("#addImageHere").show().delay(12000).fadeOut();
+  $("#riseUp").show().delay(12000).fadeOut();
                           },
+//HTML
+<img id="riseUp" class="hiddenElement" src="animsAll/thisNationWillRiseUp.gif">
 
 //America is home to all
 'america': function() {
