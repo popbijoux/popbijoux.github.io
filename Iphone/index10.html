@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 
-<title>Channel Page with Annyang</title>
+<title>Plusser Demo Latest</title>
 <!--[document information]>
 <![•••••••••••••••]>
 <![•••••••••••••••]>
@@ -359,10 +359,6 @@
   <img id="america" class="" src="img_presentation/America is home_all characters_2018 update4.gif">
   <img id="noBan" class="" src="img_presentation/Anims_016_no_muslim_ban.gif">
   <img id="noWall" class="" src="img_presentation/No wall, yellow_single.gif">
-
-
-
-
              <img id="america" class="hiddenElement" src="img_presentation/America is home to all_compressed.gif">
 
 <div class="vidTitleText">AIRPORT PROTESTS: No Ban, No Wall, America is Home to All</div>
@@ -380,6 +376,28 @@
     Your browser does not support the video tag.
     </video>
 </div>
+<!--[•AIRPORT PROTESTS•VIDEO•SHE WAS WARNED•]-->
+
+<div id="videoSheWasWarned" class="topVid">
+<div class="vidTitleText">SPEECHES: tear it down block the wall</div>
+    <video loop onclick="this.paused? this.play() : this.pause()">
+    <source src="videos/sheWasWarned.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+    </video>
+</div>
+<!--[•END OF AIRPORT PROTESTS•VIDEO•SHE WAS WARNED•]-->
+
+<!--[•AIRPORT PROTESTS•VIDEO•EMMA SPEECH•]-->
+
+<div id="videoEmma" class="topVid">
+<div class="vidTitleText">SPEECHES: Emma Gonzales speech</div>
+    <video loop onclick="this.paused? this.play() : this.pause()">
+    <source src="videos/emmaGonzalesSpeechCropped.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+    </video>
+</div>
+<!--[•END OF AIRPORT PROTESTS•VIDEO•EMMA SPEECH•]-->
+
 </div>
 <!--[•••••••••••••••••••••••••••••••••••]-->
 <!--[•END•CHANNEL: AIRPORT PROTESTS•••••]-->
@@ -500,6 +518,75 @@ hidden">
 if (annyang) {
 // Let's define our first command. First the text we expect, and then the function it should call
 var commands = {
+
+
+
+
+
+
+
+
+
+  //She was warned
+'(She was) warned': function() {
+$("#addImageHere").show().delay(12000).fadeOut();
+                        },
+
+
+
+nevertheless.gif
+<img id="explanation" class="hiddenElement" src="animsAll/sheWasGivenAnExplanation.gif">
+<img id="sheWasWarned" class="hiddenElement" src="animsAll/sheWasWarned.gif">
+
+  //She was given an explanation
+'(She was given an) explanation': function() {
+$("#addImageHere").show().delay(12000).fadeOut();
+                        },
+  //Nevertheless she persisted
+  'nevertheless': function() {
+  $("#addImageHere").show().delay(12000).fadeOut();
+                          },
+
+  //Gen-Z Kids are not afraid
+  'kids are not afraid': function() {
+  $("#addImageHere").show().delay(12000).fadeOut();
+                          },
+
+//America is home to all
+'america': function() {
+$("#america").show().delay(12000).fadeOut();
+                      },
+//we all live in this small planet
+'we all live (in this small planet)': function() {
+$("#addImageHere").show().delay(12000).fadeOut();
+                      },
+
+//We all cherish our children's future
+'we all cherish': function() {
+$("#addImageHere").show().delay(12000).fadeOut();
+                      },
+//We are all mortal
+'we are all mortal': function() {
+$("#addImageHere").show().delay(12000).fadeOut();
+                      },
+//I came, I saw, I conquered
+'I came (I saw I conquered)': function() {
+$("#addImageHere").show().delay(12000).fadeOut();
+                      },
+//we are the people, we got a Story
+'I came (I saw I conquered)': function() {
+$("#addImageHere").show().delay(12000).fadeOut();
+                      },
+//this nation will rise up
+'this nation': function() {
+$("#addImageHere").show().delay(12000).fadeOut();
+                      },
+
+
+
+
+
+
 'bacon': function() {
 $("#bacon").show().delay(12000).fadeOut();
                         },
@@ -510,18 +597,16 @@ $("#trophy").show().delay(12000).fadeOut();
 '(I went to a) ball': function() {
 $("#ball").show().delay(12000).fadeOut();
                         },
-
+  //no ban
 '(no) ban': function() {
 $("#noBan").show().delay(12000).fadeOut();
                     },
-
+  //no wall
 '(no) wall': function() {
 $("#noWall").show().delay(12000).fadeOut();
                     },
 
-    'america': function() {
-$("#america").show().delay(12000).fadeOut();
-                        }
+
 
                       };
 // Add our commands to annyang
