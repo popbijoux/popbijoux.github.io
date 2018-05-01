@@ -271,6 +271,20 @@ background-color: ;
 Your browser does not support the audio element.
 </audio>
 
+<audio class="hiddenElement" id="jaredThemeSong">
+
+  <source src="tarotPoImages/jaredThemeSong.mp3" type="audio/mpeg">
+Your browser does not support the audio element.
+</audio>
+
+
+<audio class="hiddenElement" id="kidsLaughing">
+
+  <source src="tarotPoImages/kidsLaughing.mp3" type="audio/mpeg">
+Your browser does not support the audio element.
+</audio>
+
+
 
 <audio class="hiddenElement" id="failSound">
 
@@ -355,7 +369,7 @@ Sergei_Magnitsky.jpg
 
 
 '(witch) hunt': function() {
-	$("#laughTrackSample")[0].play();
+	$("#kidsLaughing")[0].play();
 },
 
 	'no collusion': function() {
@@ -365,6 +379,11 @@ Sergei_Magnitsky.jpg
 	'fake news': function() {
 		$("#laughTrackSample")[0].play();
 		}
+
+		'Jared': function() {
+			$("#jaredThemeSong")[0].play();
+			}
+
 
 };
 
