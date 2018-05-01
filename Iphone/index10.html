@@ -335,7 +335,7 @@
 
 <!--[•AIRPORT PROTESTS•VIDEO•WHOSE STREETS•]-->
 <div id="videoAirportWhoseStreets" class="topVid">
-  <img id="weAreThePeople" class="" src="img_presentation/Anims_024_We_are_the_people We Got A Story.gif">
+  <img id="weAreThePeople" class="hiddenElement" src="img_presentation/Anims_024_We_are_the_people We Got A Story.gif">
 
 
 <div class="vidTitleText">WE ARE THE PEOPLE</div>
@@ -380,7 +380,9 @@
 
 <div id="videoSheWasWarned" class="topVid">
 
-  <img id="sheWasWarned" class="" src="animsAll/sheWasWarned.gif">
+  <img id="sheWasWarned" class="hiddenElement" src="animsAll/sheWasWarned.gif">
+  <img id="explanation" class="hiddenElement" src="animsAll/sheWasGivenAnExplanation.gif">
+  <img id="nevertheless" class="hiddenElement" src="animsAll/nevertheless.gif">
 <div class="vidTitleText">SPEECHES: She was warned...</div>
     <video loop onclick="this.paused? this.play() : this.pause()">
     <source src="videos/sheWasWarned.mp4" type="video/mp4">
@@ -392,6 +394,7 @@
 <!--[•AIRPORT PROTESTS•VIDEO•EMMA SPEECH•]-->
 
 <div id="videoEmma" class="topVid">
+  <img id="riseUp" class="hiddenElement" src="animsAll/thisNationWillRiseUp.gif">
 <div class="vidTitleText">SPEECHES: Emma Gonzales speech</div>
     <video loop onclick="this.paused? this.play() : this.pause()">
     <source src="videos/emmaGonzalesSpeechCropped.mp4" type="video/mp4">
@@ -541,14 +544,14 @@ $("#sheWasWarned").show().delay(12000).fadeOut();
 $("#explanation").show().delay(12000).fadeOut();
                         },
 //HTML
-  <img id="explanation" class="hiddenElement" src="animsAll/sheWasGivenAnExplanation.gif">
+  //<img id="explanation" class="hiddenElement" //src="animsAll/sheWasGivenAnExplanation.gif">
 
   //Nevertheless she persisted
   'nevertheless': function() {
   $("#nevertheless").show().delay(12000).fadeOut();
                           },
 //HTML
-<img id="nevertheless" class="hiddenElement" src="animsAll/nevertheless.gif">
+//<img id="nevertheless" class="hiddenElement" src="animsAll/nevertheless.gif">
 
 
   //Gen-Z Kids are not afraid
@@ -556,7 +559,7 @@ $("#explanation").show().delay(12000).fadeOut();
   $("#riseUp").show().delay(12000).fadeOut();
                           },
 //HTML
-<img id="riseUp" class="hiddenElement" src="animsAll/thisNationWillRiseUp.gif">
+//<img id="riseUp" class="hiddenElement" src="animsAll/thisNationWillRiseUp.gif">
 
 //America is home to all
 'america': function() {
@@ -579,10 +582,15 @@ $("#addImageHere").show().delay(12000).fadeOut();
 'I came (I saw I conquered)': function() {
 $("#addImageHere").show().delay(12000).fadeOut();
                       },
+
+
 //we are the people, we got a Story
-'I came (I saw I conquered)': function() {
-$("#addImageHere").show().delay(12000).fadeOut();
+'(we are the) people': function() {
+$("#weAreThePeople").show().delay(12000).fadeOut();
                       },
+//HTML
+//<img id="weAreThePeople" class="" src="img_presentation/Anims_024_We_are_the_people We Got A Story.gif">
+
 //this nation will rise up
 'this nation': function() {
 $("#addImageHere").show().delay(12000).fadeOut();
