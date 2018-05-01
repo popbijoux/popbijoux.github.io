@@ -355,13 +355,17 @@
 
 
 <!--[•AIRPORT PROTESTS•VIDEO•NO BAN, NO WALL, AMERICA IS HOME TO ALL •]-->
-<div id="videoAirportNoBanNoWall" class="topVid">
-  <img id="america" class="" src="img_presentation/America is home_all characters_2018 update4.gif">
-  <img id="noBan" class="" src="img_presentation/Anims_016_no_muslim_ban.gif">
-  <img id="noWall" class="" src="img_presentation/No wall, yellow_single.gif">
-             <img id="america" class="hiddenElement" src="img_presentation/America is home to all_compressed.gif">
+
 
 <div class="vidTitleText">AIRPORT PROTESTS: No Ban, No Wall, America is Home to All</div>
+
+
+<img id="noBan" class="hiddenElement" src="animsAll/noBan.gif">
+
+<img id="americaIsHome" class="" src="img_presentation/America is home_all characters_2018 update4.gif">
+
+<img id="americaIsHome2" class="hiddenElement" src="img_presentation/America is home to all_compressed.gif">
+
     <video loop poster="vidPosters/Politics_no ban_no wall_America is home to all.png" onclick="this.paused? this.play() : this.pause()">
     <source src="videos/Politics_No_bans_no_walls_America_is_home_to_all_VERT.mp4" type="video/mp4">
     Your browser does not support the video tag.
@@ -370,6 +374,9 @@
 
 <!--[•AIRPORT PROTESTS•VIDEO•TEAR IT DOWN BLOCK THE WALL•]-->
 <div id="videoAirportTearItDown" class="topVid">
+
+<img id="noWall" class="hiddenElement" src="img_presentation/No wall, yellow_single.gif">
+
 <div class="vidTitleText">AIRPORT PROTESTS: tear it down block the wall</div>
     <video loop onclick="this.paused? this.play() : this.pause()">
     <source src="videos/Politics_tear it down block the wall.mp4" type="video/mp4">
@@ -556,15 +563,36 @@ $("#explanation").show().delay(12000).fadeOut();
 
   //Gen-Z Kids are not afraid
   'kids are not afraid': function() {
-  $("#riseUp").show().delay(12000).fadeOut();
+  $("#thisNation").show().delay(12000).fadeOut();
                           },
 //HTML
 //<img id="riseUp" class="hiddenElement" src="animsAll/thisNationWillRiseUp.gif">
 
 //America is home to all
 'america': function() {
-$("#america").show().delay(12000).fadeOut();
+$("#americaIsHome2").show().delay(12000).fadeOut();
                       },
+
+
+//America is home to all
+//html
+
+
+'no ban': function() {
+$("#noBan").show().delay(12000).fadeOut();
+                      },
+
+
+
+
+'noWall': function() {
+$("#noWall").show().delay(12000).fadeOut();
+                      },
+
+
+
+
+
 //we all live in this small planet
 'we all live (in this small planet)': function() {
 $("#addImageHere").show().delay(12000).fadeOut();
@@ -596,11 +624,6 @@ $("#weAreThePeople").show().delay(12000).fadeOut();
 $("#addImageHere").show().delay(12000).fadeOut();
                       },
 
-
-
-
-
-
 'bacon': function() {
 $("#bacon").show().delay(12000).fadeOut();
                         },
@@ -618,7 +641,7 @@ $("#noBan").show().delay(12000).fadeOut();
   //no wall
 '(no) wall': function() {
 $("#noWall").show().delay(12000).fadeOut();
-                    },
+}
 
 
 
