@@ -523,7 +523,6 @@ hidden">
 <script src="annyang.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/annyang/2.6.0/annyang.min.js"></script>
-<link rel="stylesheet" href="https://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
 <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
 <script src="https://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
 <script>
@@ -535,7 +534,8 @@ var commands = {
 //She was warned
 '(She was) warned': function() {
 $("#sheWasWarned").show().delay(12000).fadeOut();
-                        },
+}
+/*
 //She was given an explanation
 '(She was given an) explanation': function() {
 $("#explanation").show().delay(12000).fadeOut();
@@ -606,10 +606,11 @@ $("#noBan").show().delay(12000).fadeOut();
 '(no) wall': function() {
 $("#noWall").show().delay(12000).fadeOut();
 }
-
+*/
 
 
                       };
+
 // Add our commands to annyang
 annyang.addCommands(commands);
 // Start listening. You can call this here, or attach this call to an event, button, etc.
