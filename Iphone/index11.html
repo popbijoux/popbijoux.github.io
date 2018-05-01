@@ -94,7 +94,7 @@
 <!--[•••••••••••••••••••]-->
 <div id="page01Channels" class="videoPosterContainer2">
 
-
+  <img id="weAreThePeople" class="hiddenElement" src="img_presentation/Anims_024_We_are_the_people We Got A Story.gif">
 <!--[•••••••••••••••••••••••••••••••••••••]-->
 <!--[•START OF ALL CHANNELS•••••••••••••••]-->
 <!--[•••••••••••••••••••••••••••••••••••••]-->
@@ -148,7 +148,8 @@
 <div id="videoSixtiesKennedySpeech" class="topVid">
 
 <img id="smallPlanet" class="hiddenElement" src="animsAll/we all live in a small planet.gif">
-
+<img id="childrensFuture" class="hiddenElement" src="animsAll/Anims_059_We all cherish our children's future.gif">
+<img id="mortal" class="hiddenElement" src="animsAll/Anims_061_we are all mortal.gif">
 
 <div class="vidTitleText">THE SIXTIES: Kennedy Speech</div>
     <video loop onclick="this.paused? this.play() : this.pause()">
@@ -264,6 +265,8 @@
 <div id="parisIsBurningAllVideoPosters" class="videoPosterContainer2">
 <!--[•PARIS IS BURNING•VIDEOS•I CAME, I SAW, I CONQUERED]-->
 <div id="videoParisIsBurningICameISaw" class="topVid">
+ <img id="iCameISawIConquered" class="" src="animsAll/Anims_007_I came I saw I conquered.gif">
+
 <div class="vidTitleText">PARIS IS BURNING: "I came, I saw, I conquered"</div>
       <video loop onclick="this.paused? this.play() : this.pause()" poster="vidPosters/parisIsBurning_I_came.png">
       <source src="videos/Paris is Burning_I came, I saw I conquered_with sound.mp4" type="video/mp4">
@@ -566,30 +569,29 @@ $("#noWall").show().delay(12000).fadeOut();
                       },
 //we all live in this small planet
 'we all live (in this small planet)': function() {
-$("#addImageHere").show().delay(12000).fadeOut();
+$("#smallPlanet").show().delay(12000).fadeOut();
                       },
 //We all cherish our children's future
 'we all cherish': function() {
-$("#addImageHere").show().delay(12000).fadeOut();
+$("#childrensFuture").show().delay(12000).fadeOut();
                       },
 //We are all mortal
 'we are all mortal': function() {
-$("#addImageHere").show().delay(12000).fadeOut();
+$("#mortal").show().delay(12000).fadeOut();
                       },
 //I came, I saw, I conquered
-'I came (I saw I conquered)': function() {
-$("#addImageHere").show().delay(12000).fadeOut();
+'I came *': function() {
+$("#iCameISawIConquered").show().delay(12000).fadeOut();
                       },
 //we are the people, we got a Story
 '(we are the) people': function() {
 $("#weAreThePeople").show().delay(12000).fadeOut();
                       },
-//HTML
-//<img id="weAreThePeople" class="" src="img_presentation/Anims_024_We_are_the_people We Got A Story.gif">
+
 
 //this nation will rise up
 'this nation': function() {
-$("#addImageHere").show().delay(12000).fadeOut();
+$("#thisNation").show().delay(12000).fadeOut();
                       },
 
 'bacon': function() {
