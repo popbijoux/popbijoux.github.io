@@ -285,6 +285,12 @@ Your browser does not support the audio element.
 </audio>
 
 
+<audio class="hiddenElement" id="everyWoman">
+
+  <source src="tarotPoImages/everywomanCropped.mp3" type="audio/mpeg">
+Your browser does not support the audio element.
+</audio>
+
 <audio class="hiddenElement" id="kidsLaughing">
 
   <source src="tarotPoImages/kidsLaughing.mp3" type="audio/mpeg">
@@ -294,6 +300,12 @@ Your browser does not support the audio element.
 <audio class="hiddenElement" id="muellersLion">
 
   <source src="tarotPoImages/muellersLion.mp3" type="audio/mpeg">
+Your browser does not support the audio element.
+</audio>
+
+<audio class="hiddenElement" id="muellersSong">
+
+  <source src="tarotPoImages/cantTouchShort.mp3" type="audio/mpeg">
 Your browser does not support the audio element.
 </audio>
 
@@ -386,7 +398,7 @@ Sergei_Magnitsky.jpg
 */
 
 var muellersLion = $("#muellersLion");
-
+var muellersSong = $("#muellersLion");
 
 '(witch) hunt': function() {
 	$("#kidsLaughing")[0].play();
@@ -407,12 +419,17 @@ var muellersLion = $("#muellersLion");
 			'Jared stop': function() {
 				$("#jaredThemeSong")[0].pause();
 			},
+
+			'(I am) everywoman': function() {
+				$("#everywoman")[0].play();
+			},
 				'(the) best people': function() {
 					$("#clownTheme")[0].play();
 				},
 
 					'mueller': function() {
-						$("#muellersLion")[0].play();
+						muellersLion.play();
+						muellersSong.delay(3000).play();
 						}
 
 };
