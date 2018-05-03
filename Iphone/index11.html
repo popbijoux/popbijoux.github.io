@@ -148,6 +148,7 @@
 <div id="videoSixtiesKennedySpeech" class="topVid">
 
 <img id="smallPlanet" class="hiddenElement" src="animsAll/we all live in a small planet.gif">
+<img id="weAllBreathe" class="hiddenElement" src="animsAll/Anims_058_we all breathe the same air.gif">
 <img id="childrensFuture" class="hiddenElement" src="animsAll/Anims_059_We all cherish our children's future.gif">
 <img id="mortal" class="hiddenElement" src="animsAll/Anims_061_we are all mortal.gif">
 
@@ -366,9 +367,12 @@
 
 <img id="noBan" class="hiddenElement" src="animsAll/noBan.gif">
 
-<img id="americaIsHome" class="" src="img_presentation/America is home_all characters_2018 update4.gif">
+<img id="americaIsHome" class="hiddenElement" src="img_presentation/America is home_all characters_2018 update4.gif">
 
 <img id="americaIsHome2" class="hiddenElement" src="img_presentation/America is home to all_compressed.gif">
+
+
+
 
 <div class="vidTitleText">AIRPORT PROTESTS: No Ban, No Wall, America is Home to All</div>
 
@@ -383,8 +387,8 @@
 
 <!--[•AIRPORT PROTESTS•VIDEO•TEAR IT DOWN BLOCK THE WALL•]-->
 <div id="videoAirportTearItDown" class="topVid">
+<img id="noWall" class="hiddenElement" src="animsAll/No wall, yellow_single.gif">
 
-<img id="noWall" class="hiddenElement" src="img_presentation/No wall, yellow_single.gif">
 
 <div class="vidTitleText">AIRPORT PROTESTS: tear it down block the wall</div>
     <video loop onclick="this.paused? this.play() : this.pause()">
@@ -568,15 +572,24 @@ $("#americaIsHome2").show().delay(12000).fadeOut();
 $("#noBan").show().delay(12000).fadeOut();
 },
 //no wall
-'noWall': function() {
+'no wall': function() {
 $("#noWall").show().delay(12000).fadeOut();
 },
-//we all live in this small planet
-'we all live (in this small planet)': function() {
+//block the wall
+'block (the wall)': function() {
+$("#blockTheWall").show().delay(12000).fadeOut();
+},
+//we all inhabit in this small planet
+'we all inhabit (this small planet)': function() {
 $("#smallPlanet").show().delay(12000).fadeOut();
 },
+
+//We all breathe the same air
+'we all breathe (the same air)': function() {
+$("#weAllBreathe").show().delay(12000).fadeOut();
+},
 //We all cherish our children's future
-'we all cherish': function() {
+'we all cherish (our childrens future)': function() {
 $("#childrensFuture").show().delay(12000).fadeOut();
 },
 //We are all mortal
