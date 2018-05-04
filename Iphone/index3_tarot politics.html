@@ -411,9 +411,17 @@ $("#michelleSarah").show().delay(20000).fadeOut();
 					$("#clownTheme")[0].play();
 				},
 
-					'mueller': function() {
-						$("#muellersSong")[0].play();
-						}
+//					'mueller': function() {
+//						$("#muellersSong")[0].play();
+//					},
+
+						'mueller': function() {
+							$("#muellersSong")[0].play(function()){
+								$("#muellersLion")[0].play();
+								});
+								return false;
+							});
+
 
 };
 
