@@ -34,8 +34,12 @@ iframe {
 <body>
 
 <div class="fullSizePhone">
+
     <div class="fullPhoneScreen">
+
 <iframe src="camera.html"></iframe>
+    <div class="vidTitleText" id="voiceToText" type="text">TEST: if text transcription picks up</div>
+
 
 <div class="topNav">
     <div class="topHorizontalButtonRow">
@@ -44,6 +48,8 @@ iframe {
             <div class="buttonPlusserLogo" style="margin-left: 24px"></div>
             <div class="buttonChannelWhite"></div>
 </div></div>
+
+
 <!--small planet-->
 <img id="smallPlanet" class="hiddenElement" src="animsAll/we all live in a small planet.gif">
 <!--our story (button)-->
@@ -105,6 +111,7 @@ iframe {
 
 
     </div><!--[end of fullPhoneScreen]-->
+
 </div><!--[end of fullSizePhone]-->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <script src="plusser_channels.js"></script>
@@ -212,6 +219,9 @@ annyang.addCommands(commands);
 // Start listening. You can call this here, or attach this call to an event, button, etc.
 annyang.start();
 }
+
+annyang.addCallback('result',function(whatWasHeard) { document.getElementById("voiceToText").innerHTML = whatWasHeard[0]; });
+
 </script>
 </body>
 </html>
