@@ -314,6 +314,13 @@ Your browser does not support the audio element.
   <source src="tarotPoImages/trumpet.mp3" type="audio/mpeg">
 Your browser does not support the audio element.
 </audio>
+
+
+<audio class="hiddenElement" id="trump">
+  <source src="tarotPoImages/babyCryingCropped.mp3" type="audio/mpeg">
+Your browser does not support the audio element.
+</audio>
+
 <br>
 
 <!--video container-->
@@ -421,6 +428,10 @@ $("#michelleSarah").show().delay(20000).fadeOut();
 
 				'look': function() {
 					$("#trumpet")[0].play();
+				},
+
+				'trump': function() {
+					$("#trump")[0].play();
 				},
 
 
