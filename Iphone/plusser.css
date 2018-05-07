@@ -992,7 +992,7 @@ color: white;
 .vidTitlePlusserCam {
 height: 30px;
 overflow: auto;
-width:100px;
+width:60px;
 display: flex;
 position: absolute;
 z-index: 210;
