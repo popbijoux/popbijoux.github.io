@@ -991,7 +991,7 @@ color: white;
 
 
 .vidTitlePlusserCam {
-height: 30px;
+height: auto;
 overflow: visible;
 width: auto;
 display: inline-block;
