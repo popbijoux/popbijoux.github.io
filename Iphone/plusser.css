@@ -993,6 +993,7 @@ color: white;
 .vidTitlePlusserCam {
 height: auto;
 overflow: visible;
+word-wrap: break-word;
 width: auto;
 display: inline-block;
 position: absolute;
@@ -1009,8 +1010,9 @@ background: rgba(91, 102, 241, 0.001);
 font-size: 1.2em;
 text-align: center;
 font-weight: 0;
-background-color: yellow;
-padding: 6px 12px;
+background-color: ;
+padding: 0px 0px;
+
 
 font-family: 'Poppins', sans-serif;
 /*font-weight: 200;*/
@@ -1018,6 +1020,13 @@ font-family: 'Poppins', sans-serif;
 
 
 }
+.vidTitlePlusserCam span {
+  background-color: yellow;
+  color: black;
+  display: inline;
+  padding: 0px 24px;
+}
+
 
 .vidTitleText_bottom {
 height: 30px;
