@@ -991,7 +991,8 @@ color: white;
 
 .vidTitlePlusserCam {
 height: 30px;
-width:;
+overflow: auto;
+width:100px;
 display: flex;
 position: absolute;
 z-index: 210;
