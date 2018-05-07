@@ -999,6 +999,8 @@ z-index: 210;
 flex-direction: row;
 flex-wrap:  wrap;
 justify-content: center;
+align-self: center;
+align-content: center;
 margin-top: 146px;
 margin-bottom: 0px;
 background: rgba(91, 102, 241, 0.001);
