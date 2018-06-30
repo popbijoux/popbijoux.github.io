@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+
+/*image#1, letters W,R */
+.heatherLipSync1_WR {
+    width: 200px;
+    height: 200px;
+    background-image: url("imagesPres/heatherSpriteLipSync.png");
+    background-position: -1200px -1400px;
+    animation: letters_WR 1s steps(1);
+    /*animation-fill-mode: forwards;*/
+    animation-iteration-count: 1;
+}
+/*second image, letter 0, keyframes */
+@keyframes letters_WR {
+   from { background-position:  0px; }
+     to { background-position: -200px; }
+}
+
+/*image#2, letter 0*/
+.heatherLipSync2_O {
+    width: 200px;
+    height: 200px;
+    background-image: url("imagesPres/heatherSpriteLipSync.png");
+    background-position: -1200px -1400px;
+    animation: letter_O 1s steps(2);
+    /*animation-fill-mode: forwards;*/
+    animation-iteration-count: 2;
+}
+/*second image, letter 0, keyframes */
+@keyframes letter_O {
+   from { background-position:  0px; }
+     to { background-position: -400px; }
+}
+
+
+
+
+/*image#3, letter A */
+.heatherLipSync3_A {
+      width: 200px;
+      height: 200px;
+      background-image: url("imagesPres/heatherSpriteLipSync.png");
+      background-position: -1200px -1400px;
+      animation: letter_A 1s steps(1);
+      /*animation-fill-mode: forwards;*/
+      animation-iteration-count: 1;
+}
+/*second image, letter 0, keyframes */
+@keyframes letter_A {
+   from { background-position:  -400px; }
+     to { background-position: -600px; }
+}
+
+
+/*image#4, letters M,B */
+.heatherLipSync4_MB {
+    width: 200px;
+    height: 200px;
+    background-image: url("imagesPres/heatherSpriteLipSync.png");
+background-position: -1200px -1400px;
+            animation: letters_MB 1s steps(1);
+            /*animation-fill-mode: forwards;*/
+        animation-iteration-count: 1;
+}
+/*second image, letter 0, keyframes */
+@keyframes letters_MB {
+   from { background-position:  -600px; }
+     to { background-position: -800px; }
+}
+
+/*image#5, letter E */
+.heatherLipSync5_E {
+      width: 200px;
+      height: 200px;
+      background-image: url("imagesPres/heatherSpriteLipSync.png");
+background-position: -1200px -1400px;
+      animation: letter_E 1s steps(1);
+      animation-iteration-count: 1;
+}
+/*second image, letter 0, keyframes */
+@keyframes letter_E {
+   from { background-position:  -800px; }
+     to { background-position: -1000px; }
+}
+
+/*image#6, letters U,Q */
+.heatherLipSync6_UQ {
+    width: 200px;
+    height: 200px;
+    background-image: url("imagesPres/heatherSpriteLipSync.png");
+background-position: -1200px -1400px;
+
+            animation: letters_UQ 1s steps(1);
+            /*animation-fill-mode: forwards;*/
+        animation-iteration-count: 1;
+}
+/*second image, letter 0, keyframes */
+@keyframes letters_UQ {
+   from { background-position: -1000px; }
+     to { background-position: -1200px; }
+}
+
+/*image#7, "else", meaning all images that don't match any of the images above*/
+.heatherLipSync_Else {
+    width: 200px;
+    height: 200px;
+    background-image: url("imagesPres/heatherSpriteLipSync.png");
+background-position: -1200px -1400px;
+
+            animation: letter_Else 1s steps(1);
+            /*animation-fill-mode: forwards;*/
+        animation-iteration-count: 2;
+}
+/*second image, letter 0, keyframes */
+@keyframes letter_Else {
+   from { background-position:  -1200px; }
+     to { background-position: -1400px; }
+}
+
+
+
+
+
+</style>
+</head>
+<body>
+          <input type="text" id="myinput">
+          <button id="btn"> click me</button>
+          <ol id="myol"></ol>
+
+<div id="heather" class="heatherLipSync1_WR"></div>
+
+</body>
+<script src="jquery.min.js"></script>
+<script>
+
+function myFunction() {
+    var element = document.getElementById("heather");
+
+
+
+
+element.classList.add("heatherLipSync4_MB");
+element.classList.add("heatherLipSync5_E");
+element.classList.add("heatherLipSync6_UQ");
+element.classList.add("heatherLipSync_Else");
+}
+
+function myFunction() {
+    var element = document.getElementById("heather");
+    element.classList.add("heatherLipSync1_WR");
+
+}
+
+function myFunction() {
+    var element = document.getElementById("heather");
+element.classList.add("heatherLipSync2_O");
+
+}
+
+function myFunction() {
+    var element = document.getElementById("heather");
+element.classList.add("heatherLipSync3_A");
+
+}
+
+
+
+
+
+if ($('#myinput').val().indexOf('i') > -1) {
+    //$('#heatherCatPaw1AI').show().delay(200).fadeOut();
+  }
+
+
+  if ($('#myinput').val().indexOf('a') > -1) {
+      //$('#heatherCatPaw1AI').show().delay(200).fadeOut();
+    }
+
+
+    if ($('#myinput').val().indexOf('e') > -1) {
+    //$('#heatherCatPaw1E').show().delay(200).fadeOut();
+    }
+
+    if ($('#myinput').val().indexOf('m') > -1) {
+    $('#heatherCatPaw1MPB').show().delay(200).fadeOut();
+    }
+
+    if ($('#myinput').val().indexOf('p') > -1) {
+    $('#heatherCatPaw1MPB').show().delay(200).fadeOut();
+    }
+
+    if ($('#myinput').val().indexOf('b') > -1) {
+    $('#heatherCatPaw1MPB').show().delay(200).fadeOut();
+    }
+
+    if ($('#myinput').val().indexOf('o') > -1) {
+    $('#heatherCatPaw1O').show().delay(200).fadeOut();
+    }
+
+
+    if ($('#myinput').val().indexOf('') > -1) {
+    $('#heatherCatPaw1TS').show().delay(200).fadeOut();
+    }
+
+    if ($('#myinput').val().indexOf('s') > -1) {
+    $('#heatherCatPaw1TS').show().delay(200).fadeOut();
+    }
+
+    if ($('#myinput').val().indexOf('u') > -1) {
+    $('#heatherCatPaw1UQ').show().delay(200).fadeOut();
+    }
+
+    if ($('#myinput').val().indexOf('q') > -1) {
+    $('#heatherCatPaw1UQ').show().delay(200).fadeOut();
+    }
+
+    if ($('#myinput').val().indexOf('w') > -1) {
+    $('#heatherCatPaw1WR').show().delay(200).fadeOut();
+    }
+    if ($('#myinput').val().indexOf('r') > -1) {
+    $('#heatherCatPaw1WR').show().delay(200).fadeOut();
+    }
+
+/* make the image dissapear after animation is finished */
+/*
+var x = document.getElementById("heather");
+x.addEventListener("animationend", myEndFunction);
+
+function myEndFunction() {
+    this.style.display = "none";
+
+}
+*/
+
+/*
+$("#btn").click(function() {
+  $.each($("#myinput").val().split(''), function(index, value) {
+    $('#myol').append('<li>' + value + '</li>');
+  });
+});
+*/
+
+</script>
+</html>
