@@ -1,0 +1,941 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="UTF-8">
+
+<title>Full Plusser Page Index 6_2019</title>
+<!--[document information]>
+<![•••••••••••••••]>
+<![•••••••••••••••]>
+Last Update:
+04-16-19
+Add new image locations
+
+<![•••••••••••••••]>
+
+<![•••••••••••••••]>
+<!-->
+<link rel="stylesheet" type="text/css" href="plusser.css">
+<link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Open+Sans" />
+<link href="https://fonts.googleapis.com/css?family=Lato:100" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
+</head>
+<body>
+
+<!--[••••••••••••••••••••••]-->
+<!--[•NAVIGATION INTERFACE•]-->
+<!--[••••••••••••••••••••••]-->
+
+<!--[•OUTER PHONE•]-->
+<div class="fullSizePhone">
+<!--[•PHONE SCREEN•]-->
+    <div class="fullPhoneScreen">
+<!--[•TOP NAV•]-->
+<div class="topNav">
+    <div class="topHorizontalButtonRow">
+    <div class="buttonRedBack hidden"></div>
+            <div class="buttonMegaphone" style="margin-left:-8px"></div>
+            <div class="buttonPlusserLogo" style="margin-left: 24px"></div>
+            <div class="buttonChannelWhite"></div>
+
+    </div><title>Home</title>
+<!--[•END•TOP HORIZ BUTTON ROW•]-->
+
+<!--[•SECOND(ARY) BUTTON ROW•]-->
+    <div id="topNavSecondLayer" class="topHorizontalButtonRow">
+
+          <div class="buttonRoundChannelWhite"></div>
+    <div class="buttonViewAnimsWhiteThree"></div>
+          <div class="buttonRoundVoiceToAnimWhite"></div>
+
+
+    </div>
+<!--[END •SECOND(ARY) BUTTON ROW•]-->
+
+<!--[BOTTOM NAV ROW•]-->
+    <div class="navBarBottom">
+
+          <div class="buttonWhiteDictionary"></div>
+          <div class="buttonSelectionBackBlue hidden"></div>
+
+          <div class="buttonMoreWhite hidden"></div>
+
+
+            <!--[••••••••••            <div class="buttonMoreBlue hidden"></div>
+••••••  <div class="buttonMoreBlue hidden"></div>••••••]-->
+
+<!--[••••••••  <div class="buttonSearchAnimsWhite hidden"></div>••••••••••••••]-->
+          <div class="buttonSelectionBlue hidden"></div>
+          <div class="buttonSelectionWhite hidden"></div>
+          <div class="buttonLocationProfile"></div>
+          <div class="buttonHomeGirl"></div>
+
+     </div>
+
+     <div class="navBarBottomSecondary hidden">
+         <div class="buttonTextWhite hidden"></div>
+           <div class="buttonVideoChainBlue hidden"></div>
+           <div class="buttonVideoChainWhite hidden"></div>
+
+      </div>
+
+
+<!--[END• BOTTOM NAV ROW•]-->
+    <img src="https://popbijoux.github.io/Iphone/top_network_signals3.png" width="370px" height="20px">
+</div>
+<!--[•END•TOP NAV•]-->
+
+<!--[•••••••••••••••••••••••••••]-->
+<!--[•END• NAVIGATION INTERFACE•]-->
+<!--[•••••••••••••••••••••••••••]-->
+
+<!--[•••••••••••••••••••]-->
+<!--[•PAGE•01•CHANNELS]-->
+<!--[•••••••••••••••••••]-->
+<div id="page01Channels" class="videoPosterContainer2">
+
+
+<!--[•••••••••••••••••••••••••••••••••••••]-->
+<!--[•START OF ALL CHANNELS•••••••••••••••]-->
+<!--[•••••••••••••••••••••••••••••••••••••]-->
+
+<!--[••••••••••••••••••]-->
+<!--[•CHANNEL: SIXTIES•]-->
+<!--[••••••••••••••••••]-->
+
+<!--[•SIXTIES•POSTERS•LARGE•]-->
+<div id="sixtiesvidPostersLg" class="videoPosterContainer2">
+<!--[•SIXTIES•VIDEOS•]-->
+<!--[•SIXTIES•VIDEO•FREEDOM RIDERS•]-->
+<div id="videoSixtiesFreedomRiders" class="topVid">
+  <div class="vidTitleText">THE SIXTIES: Freedom riders</div>
+      <video loop onclick="this.paused? this.play() : this.pause()">
+      <source src="videos/1960s_freedom_riders_vert.mp4" type="video/mp4" width="375px" height="670px">
+      Your browser does not support the video tag.
+      </video>
+</div><!--[•END•SIXTIES•VIDEO•FREEDOM RIDERS•]-->
+
+<!--[•SIXTIES•VIDEO•JACKIE MOURNING•]-->
+<div id="videoSixtiesJackieMourning" class="topVid">
+<div class="vidTitleText">THE SIXTIES: Jackie Mourning</div>
+    <video loop onclick="this.paused? this.play() : this.pause()">
+    <source src="videos/1960s_Jackie_mourning_VERT.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+    </video>
+</div><!--[•END•SIXTIES•VIDEO•JACKIE MOURNING•]-->
+
+<!--[•SIXTIES•VIDEO•JOHN JR SALUTES•]-->
+<div id="videoSixtiesJohnJrSalutes" class="topVid">
+<div class="vidTitleText">THE SIXTIES: John Kennedy Jr Salutes</div>
+    <video loop onclick="this.paused? this.play() : this.pause()">
+    <source src="videos/1960s_John_Jr_Salutes.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+    </video>
+</div><!--[•END•SIXTIES•VIDEO•JOHN JR SALUTES•]-->
+
+<!--[•SIXTIES•VIDEO•KENNEDY FUNERAL•]-->
+<div id="videoSixtiesKennedyParade" class="topVid channel1960s">
+<div class="vidTitleText">THE SIXTIES: Kennedy Parade</div>
+    <video loop onclick="this.paused? this.play() : this.pause()">
+    <source src="videos/1960s_Kennedy_Parade_VERT.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+    </video>
+</div><!--[•END•SIXTIES•VIDEO•JOHN JR SALUTES•]-->
+
+<!--[•SIXTIES•VIDEO•KENNEDY SPEECH•]-->
+<div id="videoSixtiesKennedySpeech" class="topVid">
+<div class="vidTitleText">THE SIXTIES: Kennedy Speech</div>
+    <video loop onclick="this.paused? this.play() : this.pause()">
+    <source src="videos/1960s_kennedy_speech.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+    </video>
+</div><!--[•END•SIXTIES•VIDEO•KENNEDY SPEECH•]-->
+
+<!--[•SIXTIES•VIDEO•MLK THIS NATION WILL RISE•]-->
+<div id="videoSixtiesMLKThisNation" class="topVid">
+<div class="vidTitleText">THE SIXTIES: MLK this nation will rise</div>
+    <video loop onclick="this.paused? this.play() : this.pause()">
+    <source src="videos/1960s_MLK_This_Nation_Anims_and_Sound.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+    </video>
+</div><!--[•END•SIXTIES•VIDEO•MLK THIS NATION WILL RISE•]-->
+
+<!--[•SIXTIES•VIDEO•WARHOL•]-->
+<div id="videoSixtiesWarhol" class="topVid">
+<div class="vidTitleText">THE SIXTIES: Warhol</div>
+    <video loop onclick="this.paused? this.play() : this.pause()">
+    <source src="videos/1960s_warhol_silver_factory_vert_crppd.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+    </video>
+</div><!--[•END•SIXTIES•VIDEO•WARHOL•]-->
+</div>
+
+<!--[••••••••••••••••••••••]-->
+<!--[•END•CHANNEL: SIXTIES•]-->
+<!--[••••••••••••••••••••••]-->
+
+<!--[•••••••••••••••••••••••••••]-->
+<!--[CHANNEL: LES SIXTIES FRANCE]-->
+<!--[•••••••••••••••••••••••••••]-->
+
+<!--[LES SIXTIES FRANCE•LARGE•]-->
+<div id="lesSixtiesFrancevidPostersLg" class="videoPosterContainer2">
+
+<!--[•LES SIXTIES FRANCE•VIDEOS•]-->
+<!--[•LES SIXTIES FRANCE•VIDEOS•BARDOT AND GAINSBOURG•]-->
+<div id="videoLesSixtiesBardotGainsbourg" class="topVid">
+<div class="vidTitleText">LES SIXTIES: Bardot & Gainsbourg, "Bonnie and Clyde"</div>
+
+      <video loop poster="vidPosters/lesSixtiesGainsbourgBardot.png" onclick="this.paused? this.play() : this.pause()">
+      <source src="videos/1960s_Gainsbourg_Bardot_Bonnie_And_Clyde.mp4" type="video/mp4"  >
+      Your browser does not support the video tag.
+      </video>
+</div>
+<!--[•END•SIXTIES•VIDEOS•BARDOT AND GAINSBOURG]-->
+
+<!--[•LES SIXTIES FRANCE•VIDEOS•FRANCE GALL]-->
+<div id="videoLesSixtiesFranceGall" class="topVid">
+<div class="vidTitleText">LES SIXTIES: France Gall "Baby Pop"</div>
+      <video loop poster="vidPosters/Sixties_franceGallPoster.png" onclick="this.paused? this.play() : this.pause()" >
+      <source src="videos/1960s_francegall.mp4" type="video/mp4" style="display:none;width:380px;">
+      Your browser does not support the video tag.
+      </video>
+</div><!--[•END•LES SIXTIES FRANCE•VIDEOS•FRANCE GALL]-->
+</div>
+<!--[•••••••••••••••••••••••••••••••]-->
+<!--[END•CHANNEL: LES SIXTIES FRANCE]-->
+<!--[•••••••••••••••••••••••••••••••]-->
+
+<!--[•••••••••••••••••••••••••••••••••••]-->
+<!--[•CHANNEL: KILLING THE EYELINER GAME]-->
+<!--[•••••••••••••••••••••••••••••••••••]-->
+
+<div id="killingTheEyelinerPosterLg" class="videoPosterContainer2">
+
+<!--[•KILLING THE EYELINER GAME•VIDEOS•]-->
+<div id="videoKillingTheEyelinerGame" class="topVid">
+<div class="vidTitleText">KILLING THE EYELINER GAME</div>
+      <video loop poster="vidPosters/Killing the eyeliner game2.png" onclick="this.paused? this.play() : this.pause()" >
+      <source src="videos/killing the eyeliner game.mp4" type="video/mp4">
+
+      Your browser does not support the video tag.
+      </video>
+</div>
+
+
+
+<!--[•ANIMATIONS• KILLING THE EYELINER GAME•]-->
+<div id=killingEyelinerSmallAnims class="videoPosterContainer hidden">
+
+    <div class="unitSmallVidPoster">
+    <img  src="animsAll/Anims_012_killing the eyeliner game.gif">
+    </div>
+
+    <div class="unitSmallVidPoster">
+    <img src="animsAll/Anims_026_killing the eyeliner game_slanted brush_single.gif">
+    </div>
+
+    <div id="vidPosterSmallKilling" class="unitSmallVidPoster">
+    <img src="animsAll/Anims_027_killing the eyeliner game_eyeliner_pencil_single.gif">
+    </div>
+<!--[•END• ANIMATIONS• KILLING THE EYELINER GAME•]-->
+</div>
+</div>
+
+<!--[••••••••••••••••••••••••••••••••••••••••]-->
+<!--[•END• CHANNEL: KILLING THE EYELINER GAME]-->
+<!--[••••••••••••••••••••••••••••••••••••••••]-->
+
+<!--[••••••••••••••••••••••••••]-->
+<!--[CHANNEL: PARIS IS BURNING•]-->
+<!--[••••••••••••••••••••••••••]-->
+<div id="parisIsBurningAllVideoPosters" class="videoPosterContainer2">
+<!--[•PARIS IS BURNING•VIDEOS•I CAME, I SAW, I CONQUERED]-->
+<div id="videoParisIsBurningICameISaw" class="topVid">
+<div class="vidTitleText">PARIS IS BURNING: "I came, I saw, I conquered"</div>
+      <video loop onclick="this.paused? this.play() : this.pause()" poster="vidPosters/parisIsBurning_I_came.png">
+      <source src="videos/Paris is Burning_I came, I saw I conquered_with sound.mp4" type="video/mp4">
+
+      Your browser does not support the video tag.
+      </video>
+</div>
+<!--[END • PARIS IS BURNING•VIDEOS•I CAME, I SAW, I CONQUERED]-->
+
+<!--[•PARIS IS BURNING•VIDEOS•GET INTO THE SUITS•]-->
+<div id="videoParisIsBurningGetIntoTheSuits" class="topVid">
+<div id="textParisSuits" class="vidTitleText">PARIS IS BURNING: Get into the Suits</div>
+      <video loop onclick="this.paused? this.play() : this.pause()" poster="vidPosters/parisIsBurning_School.png" >
+      <source src="videos/ParisisBurning_370x660_Get_Into_The_Suits_Vert.mp4" type="video/mp4">
+
+      Your browser does not support the video tag.
+      </video>
+</div><!--[END • PARIS IS BURNING•VIDEOS•GET INTO THE SUITS•]-->
+
+<!--[•PARIS IS BURNING•SCHOOL•]-->
+<div id="videoParisIsBurningSchool" class="topVid">
+<div class="vidTitleText">PARIS IS BURNING: School</div>
+      <video loop onclick="this.paused? this.play() : this.pause()" >
+      <source src="videos/ParisisBurning_370x660_School_Vert.mp4" type="video/mp4">
+
+      Your browser does not support the video tag.
+      </video>
+</div><!--[ END • PARIS IS BURNING•SCHOOL•]-->
+
+<!--[•PARIS IS BURNING•VIDEO•I WENT TO A BALL•]-->
+<div id="videoParisIWentToABall" class="topVid">
+<div class="vidTitleText">PARIS IS BURNING: I went to a ball</div>
+    <video loop onclick="this.paused? this.play() : this.pause()">
+    <source src="videos/ParisisBurning_660x370_I_went_to_a_ball.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+    </video>
+</div><!--[ END •PARIS IS BURNING•VIDEO•I WENT TO A BALL•]-->
+</div>
+<!--[•••••••••••••••••••••••••••••••]-->
+<!--[•END•CHANNEL: PARIS IS BURNING•]-->
+<!--[•••••••••••••••••••••••••••••••]-->
+
+<!--[•••••••••••••••••••••••••••••••]-->
+<!--[•CHANNEL: AIRPORT PROTESTS•••••]-->
+<!--[•••••••••••••••••••••••••••••••]-->
+<div id="channelAirportProtests" class="videoPosterContainer2">
+<!--[•AIRPORT PROTESTS•VIDEO•WE ARE THE PEOPLE•]-->
+<div id="videoAirportWeAreThePeople" class="topVid">
+<div class="vidTitleText">AIRPORT PROTESTS: We are the people</div>
+    <video loop poster="vidPosters/Politics_We got a story.png"
+    onclick="this.paused? this.play() : this.pause()">
+    <source src="videos/We are the people_anims and volume_FNL.mp4"
+     type="video/mp4">
+    Your browser does not support the video tag.
+    </video>
+
+
+</div><!--[•END•AIRPORT PROTESTS•VIDEO•WE ARE THE PEOPLE•]-->
+
+<!--[•AIRPORT PROTESTS•VIDEO•WHOSE STREETS•]-->
+<div id="videoAirportWhoseStreets" class="topVid">
+<div class="vidTitleText">AIRPORT PROTESTS: Whose Streets</div>
+    <video loop onclick="this.paused? this.play() : this.pause()">
+    <source src="videos/Politics_Atlanta_Whose_Streets.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+    </video>
+</div><!--[•END•AIRPORT PROTESTS•WHOSE STREETS•]-->
+
+<!--[•AIRPORT PROTESTS•VIDEO•NO BAN, NO WALL, AMERICA IS HOME TO ALL •]-->
+<div id="videoAirportNoBanNoWall" class="topVid">
+<div class="vidTitleText">AIRPORT PROTESTS: No Ban, No Wall, America is Home to All</div>
+    <video loop poster="vidPosters/Airport_No ban_No Wall1.png" onclick="this.paused? this.play() : this.pause()">
+    <source src="videos/Politics_No_bans_no_walls_America_is_home_to_all_VERT2.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+    </video>
+</div><!--[•END•AIRPORT PROTESTS•VIDEO•NO BAN, NO WALL, AMERICA IS HOME TO ALL •]-->
+
+<!--[•AIRPORT PROTESTS•VIDEO•TEAR IT DOWN BLOCK THE WALL•]-->
+<div id="videoAirportTearItDown" class="topVid">
+<div class="vidTitleText">AIRPORT PROTESTS: tear it down block the wall</div>
+    <video loop onclick="this.paused? this.play() : this.pause()">
+    <source src="videos/Politics_tear it down block the wall.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+    </video>
+</div>
+</div>
+<!--[•••••••••••••••••••••••••••••••••••]-->
+<!--[•END•CHANNEL: AIRPORT PROTESTS•••••]-->
+<!--[•••••••••••••••••••••••••••••••••••]-->
+
+<!--[•••••••••••••••••••••••]-->
+<!--[•CHANNEL:TOWNHALLS•••••]-->
+<!--[•••••••••••••••••••••••]-->
+<div id="townhallsPostersLg" class="videoPosterContainer2">
+<!--[•AIRPORT PROTESTS•VIDEO•TEAR IT DOWN BLOCK THE WALL•]-->
+    <div id="videoTownhallsJustSayNo" class="topVid">
+    <div class="vidTitleText">AIRPORTS: "We are the people"</div>
+    <video loop poster="vidPosters/Politics_We got a story.png"
+    onclick="this.paused? this.play() : this.pause()">
+    <source src="videos/We are the people_anims and volume_FNL.mp4"
+     type="video/mp4">
+    Your browser does not support the video tag.
+    </video>
+
+
+        <video loop onclick="this.paused? this.play() : this.pause()">
+        <source src="videos/Politics_Just say no_volume_on.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+        </video>
+
+
+
+    </div>
+<!--[•END•AIRPORT PROTESTS•TEAR IT DOWN•]-->
+</div>
+<!--[•••••••••••••••••••••••]-->
+<!--[•END•CHANNEL•TOWNHALLS•]-->
+<!--[•••••••••••••••••••••••]-->
+
+<!--[•••••••••••••••••••••••••••••••••••]-->
+<!--[•END OF ALL CHANNELS•••••••••••••••]-->
+<!--[•••••••••••••••••••••••••••••••••••]-->
+
+
+<!--[•••••••••••••••••••••••••••••••••••••••••••••]-->
+<!--[•START OF SMALL•CHANNELS•STRIP•••••••••••••••]-->
+<!--[•••••••••••••••••••••••••••••••••••••••••••••]-->
+
+<div id="smallChannelStrip" class="videoPosterContainer
+hidden">
+<!--[•SMALL•CHANNEL•PARIS IS BURNING•]-->
+    <div id="parisIsBurningChannelPoster" class="unitSmallVidPoster">
+          <div class="imgTitleText">paris is burning</div>
+          <div class="videoContainerAnim50 draggableAnim"></div>
+          <img  class="unitSmallVidPoster2" src="vidPosters/ParisisBurning_I got a trophy.png">
+    </div>
+<!--[•SMALL•CHANNEL•AIRPORT PROTESTS•]-->
+    <div id="airportProtestsChannelPoster" class="unitSmallVidPoster">
+          <div class="imgTitleText">airport protests</div>
+          <div class=" videoContainerAnim100 draggableAnim"></div>
+          <img class="resizableAnim" src="vidPosters/Airport_No ban_No Wall1.png">
+    </div>
+<!--[•SMALL•CHANNEL•TOWNHALLS•]-->
+    <div id="townhallsChannelPoster" class="unitSmallVidPoster">
+          <div class="imgTitleText">Townhalls</div>
+          <div class=" videoContainerAnim100 draggableAnim"></div>
+          <img class="resizableAnim" src="vidPosters/just say no.png">
+    </div>
+<!--[•SMALL•CHANNEL•SIXTIES•]-->
+    <div id="theSixtiesChannelPoster" class="unitSmallVidPoster">
+           <div class="imgTitleText">the sixties</div>
+           <div class=" videoContainerAnim100 draggableAnim"></div>
+           <img  class="unitSmallVidPoster2" src="vidPosters/Sixties_Jackie_mourning.png">
+    </div>
+<!--[•SMALL•CHANNEL•THE EYELINER GAME•]-->
+    <div id="eyelinerGameChannelPoster" class="unitSmallVidPoster">
+            <div class="imgTitleText">the eyeliner game</div>
+            <img class="resizableAnim" src="vidPosters/Killing the eyeliner game3.png">
+    </div>
+    <!--[•SMALL•CHANNEL•BEST SPEECHES•]-->
+    <div id="bestSpeechesChannelPoster" class="unitSmallVidPoster">
+           <div class="imgTitleText">best speeches</div>
+           <div class=" videoContainerAnim100 draggableAnim"></div>
+           <img class="resizableAnim" src="vidPosters/Peter Staley.png">
+    </div>
+            <!--[•SMALL•CHANNEL•WINDOW•••••••••••••••]-->
+    <div id="lesSixtiesFranceChannelPoster" class="unitSmallVidPoster">
+            <div class="imgTitleText">les sixties france</div>
+            <div class=" videoContainerAnim100 draggableAnim"></div>
+            <img class="resizableAnim" src="vidPosters/lesSixtiesGainsbourgBardot.png">
+    </div>
+</div>
+<!--[•••••••••••••••••••••••••••••••••••••••••••••]-->
+<!--[•END OF SMALL•CHANNELS•STRIP•••••••••••••••••]-->
+<!--[•••••••••••••••••••••••••••••••••••••••••••••]-->
+
+<!--[••••••••••••••••••••••]-->
+<!--[•END•PAGE•01•CHANNELS•]-->
+<!--[••••••••••••••••••••••]-->
+</div>
+
+<!--[•••••••••••••••••••••••••••••]-->
+<!--[•PAGE 05 ANIMATION CALL-OUTS•]-->
+<!--[•••••••••••••••••••••••••••••]-->
+<div class="animContainerCallOut">
+   <input id="animTextBox" class="dictationTextInput buttonRoundVoiceToTextWhite" type="button" name="callOutTextInput" placeholder="Type to search (or tap on the microphone icon above)" value="Start speaking:)">
+
+      <input id="animTitle" class="dictationTextInput buttonRoundVoiceToTextWhite hidden" type="button" name="animInfoTitle" value="Title">
+
+<!--[•••••••••••••••••••••••••••••]-->
+<!--[•ALL HIDDEN GIFs•••••••••••••]-->
+<!--[•••••••••••••••••••••••••••••]-->
+       <img class="muslimBanOverlay_01 hidden" src="animations/muslim ban brief2.gif" >
+       <img class="killingTheEyelinerOverlay_02 hidden" src="animations/killing the eyeliner game_header animation.gif">
+       <img class="blockTheWallOverlay_03 hidden" src="animations/Block the wall_single.gif">
+       <img class="ourStoryOverlay_04 hidden" src="animsAll/Anims_020_Button_Our Story.gif">
+       <img class="noBaloonsOverlay_05 hidden" src="animations/no baloons.gif">
+       <img class="iCameIsawIconqueredOverlay_06 hidden " src="animsAll/Anims_007_I came I saw I conquered.gif">
+       <img class="tearItDownOverlayAnims_07 hidden" src="animsAll/Anims_017_tear it down.gif">
+       <img class="parisIsBurningOverlay_08 hidden" src="animsAll/Anims_021_Paris is Burning Button.gif">
+       <img id="nope_015"  class="hiddenElement" src="animsAll/Anims_015_no fingerwith n-o-p-e.gif">
+       <img id="blockTheWall_001" class="hiddenElement"  src="animsAll/Anims_001_Block the wall.gif">
+       <img id="button1960s_002" class="hiddenElement" src="animsAll/Anims_002_Button_1960s.gif">
+       <img id="eggsandbacon_005" class="hiddenElement" src="animsAll/Anims_005_Eggs and Bacon.gif">
+       <img id="muslimBan_016" class="hiddenElement" src="animsAll/Anims_016_no_muslim_ban.gif">
+       <img id="toast_018" class="hiddenElement" src="animsAll/Anims_018_Toast.gif">
+       <img id="ourStory_020" class="hiddenElement" src="animsAll/Anims_020_Button_Our Story.gif">
+       <img id="justsayno_011" class="hiddenElement" src="animsAll/Anims_011_just_say_no_airplane.gif">
+       <img id="buttonPolitics_003" class="hiddenElement" src="animsAll/Anims_003_Button_Politics.gif">
+       <img id="buttonwearethepeople_004" class="hiddenElement" src="animsAll/Anims_004_Button_We_are_the_people_stripe_badge.gif">
+       <img id="hotdog_006" class="hiddenElement" src="animsAll/Anims_006_Hot_Dogs.gif">
+       <img id="IcameIsawIconquered_007"  class="hiddenElement" src="animsAll/Anims_007_I came I saw I conquered.gif">
+       <img id="Icame_008"  class="hiddenElement" src="animsAll/Anims_008_I came.gif">
+       <img id="Isaw_009" class="hiddenElement" src="animsAll/Anims_009_I saw.gif">
+       <img id="jackie_010" class="hiddenElement" src="animsAll/Anims_010_Jackie.gif">
+       <img id="killingtheeyelinergame_012"  class="hiddenElement" src="animsAll/Anims_012_killing the eyeliner game.gif">
+       <img id="nobaloons_014" class="hiddenElement" src="animsAll/Anims_014_no baloons.gif">
+       <img id="tearitdown_017" class="hiddenElement" src="animsAll/Anims_017_tear it down.gif">
+       <img id="wegotastory_019"  class="hiddenElement" src="animsAll/Anims_019_Button_We got a story_textandbook.gif">
+       <img id="parisIsBurningButton_021" class="hiddenElement" src="animsAll/Anims_021_Paris is Burning Button.gif">
+       <img id="sandwich_022" class="hiddenElement" src="animsAll/Anims_022_Sandwich_bitten.gif">
+       <img id="townHallsButton_023" class="hiddenElement" src="animsAll/Anims_023_Townhalls Button.gif">
+       <img id="WeAreThePeopleButton_024" class="hiddenElement" src="animsAll/Anims_024_We_are_the_people_buttons.gif">
+
+
+
+<!--[••••••••••••••••••••••••••••••••]-->
+<!--[•BUTTON CONTAINER TOP: CALL-OUT•]-->
+<!--[••••••••••••••••••••••••••••••••]-->
+<div id="callOutOneTop"  class="buttonContainerTop hidden">
+<div class="buttonRoundVoiceToAnimWhite hidden"></div>
+<div class="buttonRoundVoiceToAnimBlue hidden" style="margin-left:82px;margin-top:2px"></div>
+<div class="buttonRoundVoiceToTextWhite hidden" style="margin-right:80px;margin-top:2px"></div>
+
+<div class="buttonCloseBlue hidden" style="margin-left:318px;margin-top:6px"></div>
+<div class="buttonCloseRed hidden" style="margin-left:318px;margin-top:6px"></div>
+<!--[•••••••••••••••••••••••••••••••••••••••••••]-->
+<!--[••••••••••••••••<div class="buttonCloseRed hidden" style="margin-left:324px"></div>••••••••••]-->
+<!--[•••••••••••••••••••••••••••••••••••••••••••]-->
+</div>
+
+<!--[•••••••••••••••••••••••••••••••••••••••••••]-->
+<!--[•BUTTON CONTAINER BOTTOM: CALL OUT PAGE 01•]-->
+<!--[•••••••••••••••••••••••••••••••••••••••••••]-->
+<div id="callOutOneBottom" class="buttonContainerBottom">
+<div class="buttonCameraBlue"></div>
+<div class="buttonUploadBlue"></div>
+
+<div class="buttonRoundDictionaryBlue hidden"></div>
+<div class="buttonRoundStarBlue hidden"></div>
+<div class="buttonRoundStarWhite hidden"></div>
+<div class="buttonMoreBlue hidden"></div>
+<div class="buttonSearchAnimsWhite hidden"></div>
+<div class="buttonChainBlue hidden"></div>
+<div class="buttonChainWhite hidden"></div>
+
+
+
+<div class="buttonChatWithCallOut hidden"></div>
+<div class="buttonChatWithCallOutConfirmation hidden"></div>
+
+<div class="buttonChatWithFriend hidden"></div>
+<div class="buttonChatWithFriendConfirmation hidden"></div>
+
+<div class="buttonChatWithChannel hidden"></div>
+<div class="buttonChatWithChannelConfirmation hidden"></div>
+
+
+
+
+<div class="buttonNextBlueOne hidden"></div>
+<div class="buttonNextBlueTwo hidden"></div>
+<div class="buttonNextBlueThree hidden"></div>
+</div>
+
+
+
+
+</div>
+<!--[•••••••••••••••••••••••••••••••••]-->
+<!--[•END•PAGE 05 ANIMATION CALL-OUTS•]-->
+<!--[•••••••••••••••••••••••••••••••••]-->
+
+
+<!--[••••••••••••••••••••••••]-->
+<!--[•PAGE 04 DICTIONARY•••••]-->
+<!--[••••••••••••••••••••••••]-->
+<div id="page04Dictionary" class="videoContainer searchBoxPage">
+
+<!--[••••••••••••••••••••••••••••••••]-->
+<!--[•HEADER WITH CUSTOM BUTTONS•••••]-->
+<!--[••••••••••••••••••••••••••••••••]-->
+
+<div class="topHorizontalButtonRow" style="margin-top:98px">
+<div class="buttonMyWords" style="margin-left: 36px"></div>
+<div class="buttonMicrophoneBlue" style="margin-right: 0px"></div>
+<div class="buttonFaveStar" style="margin-right:48px"></div>
+</div>
+
+<!--[••••••••••••••••••••••••••••••••]-->
+<!--[•HEADER WITH CUSTOM BUTTONS•••••]-->
+<!--[••••••••••••••••••••••••••••••••]-->
+<form>
+    <div class="wrapper">
+        <input type="text" name="dictionary" placeholder="Type to search (or tap on the microphone icon above)">
+    </div>
+</form>
+
+<!--[•••••••••••••••••••••••••••••••••••••]-->
+<!--[•END• HEADER WITH CUSTOM BUTTONS•••••]-->
+<!--[•••••••••••••••••••••••••••••••••••••]-->
+
+
+<!--[•••••••••••••••••••••••••••••••••••••]-->
+<!--[•SCROLLABLE CELLS WITH IMAGES••••••••]-->
+<!--[•••••••••••••••••••••••••••••••••••••]-->
+
+  <div class="videoPosterContainer3">
+
+
+    <div class="unitSmallVidPoster3">
+    <div class="imgTitleText">tear it down</div>
+
+   <div class="videoContainerAnim50 draggableAnim"></div>
+   <img id="tearitdown_017" src="animsAll/Anims_017_tear it down.gif">
+
+    </div>
+
+    <div class="unitSmallVidPoster3">
+    <div class="imgTitleText">no ban</div>
+     <div class=" videoContainerAnim100 draggableAnim"></div>
+     <img id="muslimBan_016" src="animsAll/Anims_016_no_muslim_ban.gif">
+
+      </div>
+
+      <div class="unitSmallVidPoster3">
+      <div class="imgTitleText">I came, I saw, I conquered</div>
+      <div class=" videoContainerAnim100 draggableAnim"></div>
+      <img id="IcameIsawIconquered_007"  src="animsAll/Anims_007_I came I saw I conquered.gif">
+
+       </div>
+
+       <div class="unitSmallVidPoster3">
+       <div class="imgTitleText">paris is burning</div>
+       <div class=" videoContainerAnim100 draggableAnim"></div>
+         <img id="parisIsBurningButton_021" src="animsAll/Anims_021_Paris is Burning Button.gif">
+        </div>
+
+        <div class="unitSmallVidPoster3">
+        <div class="imgTitleText">no</div>
+        <div class=" videoContainerAnim100 draggableAnim"></div>
+        <img id="nobaloons_014"  src="animsAll/Anims_014_no baloons.gif">
+         </div>
+
+         <div class="unitSmallVidPoster3">
+         <div class="imgTitleText">toast</div>
+         <div class=" videoContainerAnim100 draggableAnim"></div>
+            <img id="toast_018" src="animsAll/Anims_018_Toast.gif">
+          </div>
+
+
+          </div>
+
+<!--[•••••••••••••••••••••••••••••••••••••••••]-->
+<!--[•END•SCROLLABLE CELLS WITH IMAGES••••••••]-->
+<!--[•••••••••••••••••••••••••••••••••••••••••]-->
+    </div>
+<!--[•••••••••••••••••••••••••••••]-->
+<!--[•END• PAGE 04 DICTIONARY•••••]-->
+<!--[•••••••••••••••••••••••••••••]-->
+
+
+
+
+
+
+<!--[••••••••••••••••••••••••••]-->
+<!--[•PAGE 02 LOCATION PAGE••••]-->
+<!--[••••••••••••••••••••••••••]-->
+<div id="page02Location" class="videoContainer">
+  <div class="columnWrapFull"> </div>
+  <div  class="videoContainerCallOutText"></div>
+  <!--[••••••••<div id="locationText" >NEW YORK, NY</div>••••••••••••••••••]-->
+
+
+<img src="imgs_main_page/New_York_Background_03.svg">
+
+<!--[•••••••••••••••]-->
+<!--[•IMAGE DIVS••••]-->
+<!--[•••••••••••••••]-->
+
+<div id="localAnims01" class="videoContainerAnim50 draggableAnim" style="position: absolute; left: 180px; top: -510px; width: 60%; height: 60%;">
+<img class="resizableAnim" src="animsAll/Anims_016_no_muslim_ban.gif" >
+</div>
+
+<div id="localAnims02" class="videoContainerAnim50 draggableAnim" style="position: absolute; left: 90px; top: -280px; width: 90%; height: 90%;">
+<img class="resizableAnim" src="animsAll/Anims_025_America is home to all_single.gif">
+</div>
+
+<div id="localAnims03" class="videoContainerAnim50 draggableAnim" style="position: absolute; left: 140px; top: -360px; width: 70%; height: 70%; transform: rotate(-3deg);">
+<img class="resizableAnim" src="animsAll/Anims_015_no fingerwith n-o-p-e.gif">
+</div>
+
+<div id="localAnims04" class="videoContainerAnim50 draggableAnim" style="position: absolute; left: -5px; top: -290px; width: 80%; height: 80%;">
+<img class="resizableAnim" src="animsAll/Anims_001_Block the wall.gif">
+</div>
+
+<div id="localAnims05" class="videoContainerAnim50 draggableAnim" style="position: absolute; left: -10px; top: 20px; width: 32%; height: 32%;">
+<img class="resizableAnim" src="animsAll/Anims_026_killing the eyeliner game_slanted brush_single.gif">
+</div>
+
+
+<div id="localAnims06" class="videoContainerAnim50 draggableAnim" style="position: absolute; left: 10px; top: -510px; width: 60%; height: 60%;">
+<img class="resizableAnim" src="animsAll/Anims_005_Eggs and Bacon.gif" >
+</div>
+
+<!--[••••••••••••••••••••]-->
+<!--[•END• IMAGE DIVS••••]-->
+<!--[••••••••••••••••••••]-->
+
+
+<!--[••••••••••••••••••••••••]-->
+<!--[••••BACKGROUND IMAGE••••]-->
+<!--[••••••••••<div id="manhattanPostersLg" class="videoPosterContainer2">
+      <img  class="unitSmallVidPoster2" src="vidPosters/New York_Manhattan Scene.png">
+</div>••••••••••••••]-->
+
+<!--[••••••••••••••••••••••••••••]-->
+<!--[••••END•BACKGROUND IMAGE••••]-->
+<!--[••••••••••••••••••••••••••••]-->
+</div>
+<!--[••••••••••••••••••••••••••]-->
+<!--[•  END• PAGE 02 LOCATION PAGE••••]-->
+<!--[••••••••••••••••••••••••••]-->
+
+
+
+<!--[••••••••••••••••••••••••••]-->
+<!--[•PAGE 03 PROFILE PAGE•••••]-->
+<!--[••••••••••••••••••••••••••]-->
+<div id="page03Profile" class="videoContainer">
+
+
+  <div class="columnWrapFull"> </div>
+  <div  class="videoContainerCallOutText"></div>
+  <div id="locationText" >manuela || NEW YORK, NY</div>
+<!--[••••••••••••••••••••••••••••••••••••]-->
+<!--[•VIDEO CONTAINER BUTTON OVERLAY•••••]-->
+<!--[••••••••••••••••••••••••••••••••••••]-->
+<img src="imgs_main_page/Music_saintEtienne.png">
+
+<!--[••••••••••••••••••••••••••••••••]-->
+<!--[•[PROFILE PAGE DRAG DROPS]•••••]-->
+<!--[••••••••••••••••••••••••••••••••]-->
+
+
+
+<div id="profileAnims01" class="videoContainerAnim50 draggableAnim resizable ui-widget-content" style="position: absolute; left: 180px; top: -510px; width: 50%; height: 50%;">
+<img class="ui-widget-header" src="animsAll/Anims_016_no_muslim_ban.gif" >
+</div>
+
+<div id="profileAnims02" class="videoContainerAnim50 draggableAnim resizable ui-widget-content" style="position: absolute; left: 10px; top: -360px; width: 35%; height: 35%;">
+<img class="ui-widget-header" src="animsAll/Anims_005_Eggs and Bacon.gif">
+</div>
+
+<div id="profileAnims03" class="videoContainerAnim75 draggableAnim resizable ui-widget-content" style="position: absolute; left: 220px; top: -30px; width: 38%; height: 38%;">
+<img class="ui-widget-header" src="animsAll/Anims_001_Block the wall.gif">
+</div>
+
+<div id="profileAnims04" class="videoContainerAnim75 draggableAnim resizable ui-widget-content" style="position: absolute; left: 230px; top: -270px; width: 40%; height: 40%;">
+<img class="ui-widget-header" src="animsAll/Anims_020_Button_Our Story.gif">
+</div>
+
+<div id="profileAnims05" class="videoContainerAnim100 draggableAnim resizable ui-widget-content" style="position: absolute; left: 140px; top: -360px; width: 80%; height: 80%;">
+<img class="ui-widget-header" src="animsAll/Anims_014_no baloons.gif">
+</div>
+
+<div id="profileAnims06" class="videoContainerAnim50 draggableAnim resizable ui-widget-content" style="position: absolute; left: 40px; top: -50px; width: 24%; height: 24%; transform: rotate(-3deg);">
+<img class="ui-widget-header" src="animsAll/Anims_007_I came I saw I conquered.gif">
+</div>
+
+<div id="profileAnims07" class="videoContainerAnim50 draggableAnim resizable ui-widget-content" style="position: absolute; left: -10px; top: -260px; width: 48%; height: 48%;">
+<img class="ui-widget-header" src="animsAll/Anims_017_tear it down.gif">
+</div>
+
+<div id="profileAnims08" class="videoContainerAnim50 draggableAnim resizable ui-widget-content" style="position: absolute; left: 50px; top: 40px; width: 50%; height: 50%;">
+<img class="ui-widget-header" src="animsAll/Anims_021_Paris is Burning Button.gif">
+</div>
+
+
+</div>
+
+
+<!--[••••••••••••••••••••••••••••••••••••]-->
+<!--[•VIDEO CONTAINER BUTTON OVERLAY•••••]-->
+<!--[••••••••••••••••••••••••••••••••••••]-->
+<div class="videoContainerButtonOverlay">
+
+<!--[••••••••••••••••••••••••••••]-->
+<!--[•ANIM CONTAINER OVERLAY•••••]-->
+<!--[••••••••••••••••••••••••••••]-->
+<div class="AnimContainerOverlay">
+
+        <img class="muslimBanOverlay_01 hidden" src="animations/muslim ban brief2.gif" >
+        <img class="killingTheEyelinerOverlay_02 hidden" src="animations/killing the eyeliner game_header animation.gif">
+        <img class="blockTheWallOverlay_03 hidden" src="animations/Block the wall_single.gif">
+        <img class="ourStoryOverlay_04 hidden" src="animsAll/Anims_020_Button_Our Story.gif">
+        <img class="noBaloonsOverlay_05 hidden" src="animations/no baloons.gif">
+        <img class="iCameIsawIconqueredOverlay_06 hidden" src="animsAll/Anims_007_I came I saw I conquered.gif">
+        <img class="tearItDownOverlayAnims_07 hidden" src="animsAll/Anims_017_tear it down.gif">
+        <img class="parisIsBurningOverlay_08 hidden" src="animsAll/Anims_021_Paris is Burning Button.gif">
+
+</div>
+<!--[••••••••••••••••••••••••••••••••]-->
+<!--[•END•ANIM CONTAINER OVERLAY•••••]-->
+<!--[••••••••••••••••••••••••••••••••]-->
+
+        <form id="overlayAnimButtons">
+
+
+          <input id="overlayAnimText" type="text" name="search" placeholder="TEAR IT DOWN">
+          <button></button>
+
+
+
+
+
+        </form>
+
+
+<!--[••••••••••••••••••  <div class="buttonWide">
+    <div class="buttonSelectionBackBlue hidden"></div>
+    <div class="buttonChainBlue"></div>
+<div class="buttonSearchAnimsWhite"></div>
+<div class="buttonSearchLaterAnimsWhite"></div>
+<button class="buttonRoundDictionaryWhite"></button>
+
+  </div>••••••••••••••]-->
+
+
+
+
+
+</div>
+
+
+<!--[••••••••••••••••••••••••••]-->
+<!--[•END• PAGE 03 PROFILE PAGE•••••]-->
+<!--[••••••••••••••••••••••••••]-->
+
+
+<!--[••••••••••••••••••]-->
+<!--[•END•OF•ALL•PAGES•]-->
+<!--[••••••••••••••••••]-->
+
+    </div><!--[end of fullPhoneScreen]-->
+</div><!--[end of fullSizePhone]-->
+
+<!--[••••••••••••••••••]-->
+<!--[•••••END•OF•PHONE•]-->
+<!--[••••••••••••••••••]-->
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="plusser_channels.js"></script>
+<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+<script>
+//annyang start
+if (annyang) {
+// Let's define our first command. First the text we expect, and then the function it should call
+var commands = {
+'block (the wall)': function() {
+  $("#blockTheWall_001").show().delay(4000).fadeOut();
+},
+
+'no wall': function() {
+  $("#blockTheWall_001").show().delay(4000).fadeOut();
+},
+
+
+'sixties': function() {
+$("#button1960s_002").show().delay(10000).fadeOut();
+                            },
+
+'eggs (and bacon)': function() {
+$("#eggsandbacon_005").show().delay(12000).fadeOut();
+                          },
+
+'bacon': function() {
+$("#eggsandbacon_005").show().delay(12000).fadeOut();
+                        },
+
+'(no) ban': function() {
+$("#muslimBan_016").show().delay(8000).fadeOut();
+                        },
+
+'nope': function() {
+$("#nope_015").show().delay(12000).fadeOut();
+                        },
+
+'toast': function() {
+$("#toast_018").show().delay(12000).fadeOut();
+                      },
+
+'(our) story': function() {
+$("#ourStory_020").show().delay(8000).fadeOut();
+                      },
+
+'just say (no)': function() {
+$("#justsayno_011").show().delay(8000).fadeOut();
+                      },
+
+'politics': function() {
+$("#buttonPolitics_003").show().delay(8000).fadeOut();
+                      },
+
+'(we are) the people': function() {
+$("#buttonwearethepeople_004").show().delay(8000).fadeOut();
+                  },
+
+'hot dog': function() {
+$("#hotdog_006").show().delay(8000).fadeOut();
+                  },
+
+'I came I saw I conquered': function() {
+$("#IcameIsawIconquered_007").show().delay(8000).fadeOut();
+                },
+
+'I came': function() {
+$("#Icame_008").show().delay(8000).fadeOut();
+                  },
+
+'I saw': function() {
+$("#Isaw_009").show().delay(8000).fadeOut();
+                },
+
+'jackie': function() {
+$("#jackie_010").show().delay(8000).fadeOut();
+                },
+
+              'jackie': function() {
+              $("#jackie_010").show().delay(8000).fadeOut();
+                              },
+
+'killing the eyeliner game': function() {
+$("#killingtheeyelinergame_012").show().delay(8000).fadeOut();
+              },
+
+'no way': function() {
+$("#nobaloons_014").show().delay(8000).fadeOut();
+                },
+
+'tear it down': function() {
+$("#tearitdown_017").show().delay(8000).fadeOut();
+              },
+  //------------------
+'we got a story': function() {
+$("#wegotastory_019").show().delay(8000).fadeOut();
+                },
+
+'killing (the eyeliner game)': function() {
+$("#killingtheeyelinergame_012").show().delay(8000).fadeOut();
+              },
+
+'sandwich': function() {
+$("#sandwich_022").show().delay(8000).fadeOut();
+                },
+
+'town halls': function() {
+$("#townHallsButton_023").show().delay(8000).fadeOut();
+              },
+
+'we are the people': function() {
+$("#WeAreThePeopleButton_024").show().delay(8000).fadeOut();
+              },
+
+                      };
+
+
+// Add our commands to annyang
+annyang.addCommands(commands);
+// Start listening. You can call this here, or attach this call to an event, button, etc.
+annyang.start();
+}
+</script>
+</body>
+</html>
