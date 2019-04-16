@@ -33,6 +33,10 @@ Add new image locations
         
 <!--[04-16-19• temporarily moving hidden GIFs up here for a test]-->
 <!--[•ALL HIDDEN GIFs•••••••••••••]-->
+<!--[04-16-19 updated GIFs•••••••••••••••••••••••••••••]-->        
+        <img id="speakUpClap" class="hidden" src="animsAll/Speak-up-group-clap-vert.gif" >
+        <img id="abeGrabBack" class="hidden" src="img_presentation/Abe Grab Back.gif" >
+        <img id="americaIsHomeToAll" class="hidden" src="img_presentation/America is home to all_compressed.gif" 
 <!--[•••••••••••••••••••••••••••••]-->
        <img class="muslimBanOverlay_01 hidden" src="animations/muslim ban brief2.gif" >
        <img class="killingTheEyelinerOverlay_02 hidden" src="animations/killing the eyeliner game_header animation.gif">
@@ -832,8 +836,17 @@ var commands = {
   $("#blockTheWall_001").show().delay(4000).fadeOut();
 },
 
-'no wall': function() {
-  $("#blockTheWall_001").show().delay(4000).fadeOut();
+
+'america (is)': function() {
+  $("#americaIsHomeToAll").show().delay(4000).fadeOut();
+},
+    
+    'grab (back)': function() {
+$("#abeGrabBack").show().delay(4000).fadeOut();
+},
+
+        'speak (up)': function() {
+  $("#speakUpClap").show().delay(4000).fadeOut();
 },
 
 
