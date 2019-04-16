@@ -1173,13 +1173,15 @@ $( function() {
   $( ".drag" ).draggable();
 } );
 
+
+/**
 // Configure artyom
 var UserDictation = artyom.newDictation({
     continuous: true, // Don't stop never because i have https connection
     onResult: function (text) {
         /**
          * Set the recognized text as value of the text input
-        **/
+       
         $("#artyom-redirect-output").val(text);
     },
     onStart: function () {
