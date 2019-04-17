@@ -48,7 +48,7 @@ iframe {
 <img id="smallPlanet" class="hiddenElement" src="animsAll/we all live in a small planet.gif">
 <!--our story (button)-->
 <img id="kidsProtesting" class="hiddenElement" src="animsAll/Kids protesting.gif">
-<img id="yourVoice" class="hiddenElement" src="animsAll/your voice is our moving story all.gif">
+<img id="yourVoice" class="hiddenElement" src="animsAll/your-voice-is-our-moving-story_2019.gif">
 
 
 
@@ -122,33 +122,35 @@ iframe {
 if (annyang) {
 // Let's define our first command. First the text we expect, and then the function it should call
 var commands = {
+
+
+'speak up': function() {
+$("#speakUp").show().delay(7000).fadeOut();
+},
+
+'kids': function() {
+$("#kidsProtesting").show().delay(12000).fadeOut();
+},
+
+'your voice (is our moving story)': function() {
+$("#yourVoice").show().delay(12000).fadeOut();
+},
+       
 //She was warned
 '(She was) warned': function() {
 $("#sheWasWarned").show().delay(12000).fadeOut();
 },
-
-'when you (speak up)': function() {
-$("#speakUp").show().delay(7000).fadeOut();
-},
-
-'your voice': function() {
-$("#kidsProtesting").show().delay(12000).fadeOut();
-},
-
-'your voice is our moving story': function() {
-$("#yourVoice").show().delay(12000).fadeOut();
-},
-
+       
 //She was given an explanation
-'(She was given an) explanation': function() {
+'She was given (an explanation)': function() {
 $("#explanation").show().delay(12000).fadeOut();
 },
 //Nevertheless she persisted
 'nevertheless': function() {
 $("#nevertheless").show().delay(12000).fadeOut();
 },
-//Gen-Z Kids are not afraid
-'kids (are not afraid)': function() {
+//rise up (kids protesting and cat clap)
+'rise up': function() {
 $("#riseUp").show().delay(12000).fadeOut();
 },
 //America is home to all
@@ -189,7 +191,7 @@ $("#mortal").show().delay(12000).fadeOut();
 $("#iCameISawIConquered").show().delay(12000).fadeOut();
 },
 //we are the people, we got a Story
-'(we are the) people': function() {
+'we are (the people)': function() {
 $("#weAreThePeople").show().delay(12000).fadeOut();
 },
 //this nation will rise up
@@ -210,7 +212,7 @@ $("#ball").show().delay(12000).fadeOut();
 },
 //no
 'no': function() {
-$("#ball").show().delay(12000).fadeOut();
+$("#no").show().delay(12000).fadeOut();
 }
 
                       };
