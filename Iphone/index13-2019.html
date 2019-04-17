@@ -1,0 +1,229 @@
+
+<!DOCTYPE HTML>
+<html>
+<head>
+  <!--[Date: April 17, 2019, 2:41pm ]><!-->
+  <!--[Note: had tested this before, it worked. I believe something happened where the iframe camera was placed above the images. So right now, I am moving the camera down.]><!-->
+
+<meta charset="UTF-8">
+
+<title>iphone with iframe camera</title>
+
+<style>
+
+
+iframe {
+       display: flex;
+       flex-direction: column;
+       position: relative;
+       z-index: 2;
+       background-color: lightgray;
+       width: 364px;
+       height: 660px;
+       margin-top: 0px;
+       margin-bottom: 0px;
+       margin-left: 0px;
+       margin-right: 0px;
+
+
+       overflow: hidden;
+}
+
+
+
+
+</style>
+<link rel="stylesheet" type="text/css" href="plusser.css">
+</head>
+<body>
+
+<div class="fullSizePhone">
+    <div class="fullPhoneScreen">
+<iframe src="camera.html"></iframe>
+
+<div class="topNav">
+    <div class="topHorizontalButtonRow">
+    <div class="buttonRedBack hidden"></div>
+            <div class="buttonMegaphone" style="margin-left:-8px"></div>
+            <div class="buttonPlusserLogo" style="margin-left: 24px"></div>
+            <div class="buttonChannelWhite"></div>
+</div></div>
+<!--small planet-->
+<img id="smallPlanet" class="hiddenElement" src="animsAll/we all live in a small planet.gif">
+<!--our story (button)-->
+<img id="kidsProtesting" class="hiddenElement" src="animsAll/Kids protesting.gif">
+<img id="yourVoice" class="hiddenElement" src="animsAll/your voice is our moving story all.gif">
+
+
+
+<!--we are the people-->
+<img id="weAreThePeople" class="hiddenElement" src="img_presentation/Anims_024_We_are_the_people We Got A Story.gif">
+<!--we all breathe-->
+<img id="weAllBreathe" class="hiddenElement" src="animsAll/Anims_058_we all breathe the same air.gif">
+<!--childrens future-->
+<img id="childrensFuture" class="hiddenElement" src="animsAll/Anims_059_We all cherish our children's future.gif">
+<!--we are mortal-->
+<img id="mortal" class="hiddenElement" src="animsAll/Anims_061_we are all mortal.gif">
+<!--this nation-->
+<img id="thisNation" class="hiddenElement" src="animsAll/thisNationWillRiseUp.gif">
+<!--i came i saw i conquered-->
+<img id="iCameISawIConquered" class="hiddenElement" src="animsAll/Anims_007_I came I saw I conquered.gif">
+<!--bacon-->
+<img id="bacon" class="hiddenElement" src="animsAll/Anims_005_Eggs and Bacon.gif">
+<!--I went to a ball)-->
+<img id="ball" class="hiddenElement" src="animsAll/Anims_050_I went to a ball.gif">
+<!--I got a trophy-->
+<img id="trophy" class="hiddenElement" src="animsAll/Anims_049_I got a trophy.gif">
+<!--no Ban-->
+<img id="noBan" class="hiddenElement" src="animsAll/noBan.gif">
+<!--america is home-->
+<img id="americaIsHome" class="hiddenElement" src="imagesPres/America is home_all characters_2018 update2.gif">
+<!--america is home2-->
+<img id="americaIsHome2" class="hiddenElement" src="img_presentation/America is home to all_compressed.gif">
+<!--no wall-->
+<img id="noWall" class="hiddenElement" src="animsAll/No wall, yellow_single.gif">
+<!--she was warned-->
+<img id="sheWasWarned" class="hiddenElement" src="animsAll/sheWasWarned.gif">
+<!--she ws given an explanation-->
+<img id="explanation" class="hiddenElement" src="animsAll/sheWasGivenAnExplanation.gif">
+<!--nevertheless-->
+<img id="nevertheless" class="hiddenElement" src="animsAll/nevertheless.gif">
+<!--rise up-->
+<img id="riseUp" class="hiddenElement" src="animsAll/thisNationWillRiseUp.gif">
+<!--no-->
+ <img id="no" class="hiddenElement" src="animsAll/Anims_015_no fingerwith n-o-p-e.gif">
+<img  id="speakUp" class="hiddenElement" src="animsAll/Women Clap 4 scenes.gif"></div>
+<!--[••••••••••••••••••••••••••••••••••••••••••••••••••]-->
+<div class="navBarBottom" style="margin-top: 682px;margin-left: 56px;">
+      <div class="buttonWhiteDictionary" style="margin-left: 16px;"></div>
+
+        <!--[••••••••••            <div class="buttonMoreBlue hidden"></div>
+••••••  <div class="buttonMoreBlue hidden"></div>••••••]-->
+
+<!--[••••••••  <div class="buttonSearchAnimsWhite hidden"></div>••••••••••••••]-->
+
+
+      <div class="buttonLocationProfile"></div>
+      <div class="buttonHomeGirl"></div>
+
+ </div>
+
+
+    </div><!--[end of fullPhoneScreen]-->
+</div><!--[end of fullSizePhone]-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="plusser_channels.js"></script>
+<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+<script src="annyang.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/annyang/2.6.0/annyang.min.js"></script>
+<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+<script src="https://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+<script>
+
+
+if (annyang) {
+// Let's define our first command. First the text we expect, and then the function it should call
+var commands = {
+//She was warned
+'(She was) warned': function() {
+$("#sheWasWarned").show().delay(12000).fadeOut();
+},
+
+'when you (speak up)': function() {
+$("#speakUp").show().delay(7000).fadeOut();
+},
+
+'your voice': function() {
+$("#kidsProtesting").show().delay(12000).fadeOut();
+},
+
+'your voice is our moving story': function() {
+$("#yourVoice").show().delay(12000).fadeOut();
+},
+
+//She was given an explanation
+'(She was given an) explanation': function() {
+$("#explanation").show().delay(12000).fadeOut();
+},
+//Nevertheless she persisted
+'nevertheless': function() {
+$("#nevertheless").show().delay(12000).fadeOut();
+},
+//Gen-Z Kids are not afraid
+'kids (are not afraid)': function() {
+$("#riseUp").show().delay(12000).fadeOut();
+},
+//America is home to all
+'america': function() {
+$("#americaIsHome").show().delay(12000).fadeOut();
+},
+//no ban
+'no ban': function() {
+$("#noBan").show().delay(12000).fadeOut();
+},
+//no wall
+'no wall': function() {
+$("#noWall").show().delay(12000).fadeOut();
+},
+//block the wall
+'block (the wall)': function() {
+$("#blockTheWall").show().delay(12000).fadeOut();
+},
+//we all inhabit in this small planet
+'we all inhabit (this small planet)': function() {
+$("#smallPlanet").show().delay(12000).fadeOut();
+},
+
+//We all breathe the same air
+'we all breathe (the same air)': function() {
+$("#weAllBreathe").show().delay(12000).fadeOut();
+},
+//We all cherish our children's future
+'we all cherish (our childrens future)': function() {
+$("#childrensFuture").show().delay(12000).fadeOut();
+},
+//We are all mortal
+'we are all (mortal)': function() {
+$("#mortal").show().delay(12000).fadeOut();
+},
+//I came, I saw, I conquered
+'I came *': function() {
+$("#iCameISawIConquered").show().delay(12000).fadeOut();
+},
+//we are the people, we got a Story
+'(we are the) people': function() {
+$("#weAreThePeople").show().delay(12000).fadeOut();
+},
+//this nation will rise up
+'(this) nation': function() {
+$("#thisNation").show().delay(12000).fadeOut();
+},
+//bacon
+'bacon': function() {
+$("#bacon").show().delay(12000).fadeOut();
+},
+//I got a trophy
+'(I got a) trophy': function() {
+$("#trophy").show().delay(12000).fadeOut();
+},
+//I went to a ball
+'(I went to a) ball': function() {
+$("#ball").show().delay(12000).fadeOut();
+},
+//no
+'no': function() {
+$("#ball").show().delay(12000).fadeOut();
+}
+
+                      };
+
+// Add our commands to annyang
+annyang.addCommands(commands);
+// Start listening. You can call this here, or attach this call to an event, button, etc.
+annyang.start();
+}
+</script>
+</body>
+</html>
