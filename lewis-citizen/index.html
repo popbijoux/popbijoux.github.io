@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>John Lewis Citizens version simple mapbox events</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<script src="https://api.tiles.mapbox.com/mapbox-gl-js/v2.2.0/mapbox-gl.js"></script>
+<link
+href="https://api.tiles.mapbox.com/mapbox-gl-js/v2.2.0/mapbox-gl.css"
+rel="stylesheet"
+/>
+<style>
+
+  body {
+          margin: 0;
+          padding: 0;
+        }
+
+        #map {
+          position: absolute;
+          top: 0;
+          bottom: 0;
+          width: 100%;
+        }
+</style>
+</head>
+<body>
+<div id="map"></div>
+</body>
+<script>
+
+mapboxgl.accessToken = 'pk.eyJ1IjoibWFudWVsYS1sZWFsIiwiYSI6ImNrbjkzejJsbzA1dXcyb29vdzc2MXF5a3YifQ.veHeq99_U_AWEx4AJxAsOg'; // replace this with your access token
+  var map = new mapboxgl.Map({
+    container: 'map',
+    style: 'mapbox://styles/manuela-leal/ckn9am0a600v017r6dj2rkato', // replace this with your style URL
+    center: [-98.5, 37.5], // starting position [lng, lat]
+zoom: 3 // starting zoom
+
+  });
+  // interactive underneath
+
+
+
+  map.on('click', function(e) {
+  var features = map.queryRenderedFeatures(e.point, {
+    layers: ['lewis-test3'] // lewis-test2 replace this with the name of the layer
+  });
+
+  if (!features.length) {
+    return;
+  }
+
+  var feature = features[0];
+
+  var popup = new mapboxgl.Popup({ offset: [0, -15] })
+    .setLngLat(feature.geometry.coordinates)
+    .setHTML('<h3>' + feature.properties.title + '</h3><p>' + feature.properties.description + '</p>')
+    .addTo(map);
+});
+
+</script>
+
+
+
+</body>
+</html>
