@@ -8,15 +8,36 @@ var markers = [
   "lng": -118.05297
 
 },
+  
+    {
+    //Added on Sunday, April 18, 2021 >>
+ "name": "John Lewis Votercade, 	Chicago	IL",	  
+ "url":	"https://www.mobilize.us/publiccitizen/event/384296/",
+ "lat":	41.8043379,	  
+ "lng":	-87.6030082
+
+},
+  
 
   {
-    //Added on Sunday, April 18, 2021
+    //Added on Sunday, April 18, 2021 
   "name": "John Lewis Votercade, Midland, MI",
   "url": "https://www.mobilize.us/publiccitizen/event/384443/",
   "lat": 43.6227539,
   "lng": -84.2371435
 
 },
+  
+    {
+    //Added on Sunday, April 18, 2021
+  "name": "John Lewis Votercade, 	Madison,	GA",
+  "url":	"https://www.mobilize.us/publiccitizen/event/384317/",
+  "lat":	33.5950677,	  
+  "lng":	-83.443571
+
+},
+  
+  
   
 {
   "name": "John Lewis Votercade, Kingston, NY",
