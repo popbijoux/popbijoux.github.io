@@ -178,25 +178,27 @@ var markers = [
   "lng": -82.3994214
 },
   
-      {
-    //Added on Sunday, April 18, 2021 
- "name": "John Lewis Votercade, 	Morgantown	WV",
-  "url": "https://www.mobilize.us/publiccitizen/event/384290/",
-  "lat": 39.629526,	  
-  "lng": -79.9558968
-
-},
+ 
   
   
   
   
    */
+  
+       {
+    //Added on Sunday, April 18, 2021 
+   "name": "John Lewis Votercade, 	Morgantown	WV",
+    "url": "https://www.mobilize.us/publiccitizen/event/384290/",
+    "lat": 39.629526,	  
+    "lng": -79.9558968
+
+},
     {
     //Added on Sunday, April 18, 2021 
- "name": "John Lewis Votercade, 	Chicago	IL",	  
- "url": "https://www.mobilize.us/publiccitizen/event/384296/",
- "lat": 41.8043379,	  
- "lng":	-87.6030082
+   "name": "John Lewis Votercade, 	Chicago	IL",	  
+   "url": "https://www.mobilize.us/publiccitizen/event/384296/",
+   "lat": 41.8043379,	  
+   "lng":	-87.6030082
 
 },
   
