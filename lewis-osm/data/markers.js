@@ -158,34 +158,34 @@ var markers = [
             {
     //Added on Sunday, April 18, 2021 
    "name": "John Lewis Votercade, 	Kansas City	MO",
-              "url":	"https://www.mobilize.us/publiccitizen/event/384262/",
-              "lat":	38.8895526,	  
-              "lng":	-94.5315029
+    "url":	"https://www.mobilize.us/publiccitizen/event/384262/",
+    "lat": 38.8895526,	  
+    "lng": -94.5315029
 
 },
   
           {
     //Added on Sunday, April 18, 2021 
-             "name": "John Lewis Votercade, 	Evanston	IL",
-            "url":	"https://www.mobilize.us/publiccitizen/event/384285/",
-            "lat":	42.0485611,	  
-            "lng":	-87.6985665
+  "name": "John Lewis Votercade, 	Evanston	IL",
+  "url":	"https://www.mobilize.us/publiccitizen/event/384285/",
+  "lat": 42.0485611,	  
+  "lng":	-87.6985665
 },
   
         {
     //Added on Sunday, April 18, 2021 
  "name": "John Lewis Votercade, 	Huntington	WV",
-  "url":	"https://www.mobilize.us/publiccitizen/event/384289/",
-  "lat":	38.3751952,	  
-  "lng":	-82.3994214
+  "url": "https://www.mobilize.us/publiccitizen/event/384289/",
+  "lat": 38.3751952,	  
+  "lng": -82.3994214
 },
   
       {
     //Added on Sunday, April 18, 2021 
  "name": "John Lewis Votercade, 	Morgantown	WV",
-  "url":	"https://www.mobilize.us/publiccitizen/event/384290/",
-  "lat":	39.629526,	  
-  "lng":	-79.9558968
+  "url": "https://www.mobilize.us/publiccitizen/event/384290/",
+  "lat": 39.629526,	  
+  "lng": -79.9558968
 
 },
   
@@ -194,8 +194,8 @@ var markers = [
     {
     //Added on Sunday, April 18, 2021 
  "name": "John Lewis Votercade, 	Chicago	IL",	  
- "url":	"https://www.mobilize.us/publiccitizen/event/384296/",
- "lat":	41.8043379,	  
+ "url": "https://www.mobilize.us/publiccitizen/event/384296/",
+ "lat": 41.8043379,	  
  "lng":	-87.6030082
 
 },
