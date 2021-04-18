@@ -10,20 +10,22 @@ var markers = [
 },
   
   
-    /*
+  
   
                              {
     //Added on Sunday, April 18, 2021 	
-  
-       
+   "name": "John Lewis Votercade, 	Augusta	GA",
+                               "url":	"https://www.mobilize.us/publiccitizen/event/384152/",
+                               "lat":	33.4577032,	  "lng":	-81.9643913	     
 },
-  
+
                              {
     //Added on Sunday, April 18, 2021 	
-  
+   "name": "John Lewis Votercade, 	West Palm Beach,	FL",	  "url":	"https://www.mobilize.us/publiccitizen/event/384142/",	"lat":	26.666953,	  "lng":	-80.0692442		
+
        
 },
-  
+      /*
                              {
     //Added on Sunday, April 18, 2021 	
   
@@ -45,8 +47,6 @@ var markers = [
   
    /*
   
- "name": "John Lewis Votercade, 	Carthage	NC	  "url":	https://www.mobilize.us/publiccitizen/event/384154/	"lat":	35.3459867	  "lng":	-79.4169711		
- "name": "John Lewis Votercade, 	Augusta	GA	  "url":	https://www.mobilize.us/publiccitizen/event/384152/	"lat":	33.4577032	  "lng":	-81.9643913		
  "name": "John Lewis Votercade, 	West Palm Beach	FL	  "url":	https://www.mobilize.us/publiccitizen/event/384142/	"lat":	26.666953	  "lng":	-80.0692442		
  "name": "John Lewis Votercade, 	Denver	CO	  "url":	https://www.mobilize.us/publiccitizen/event/384136/	"lat":	39.6631609	  "lng":	-104.8279512		
  "name": "John Lewis Votercade, 	Whittier	CA	  "url":	https://www.mobilize.us/publiccitizen/event/384133/	"lat":	33.9443011	  "lng":	-117.9931472		
