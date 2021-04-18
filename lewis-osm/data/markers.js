@@ -9,6 +9,15 @@ var markers = [
 
 },
 
+  {
+    //Added on Sunday, April 18, 2021
+  "name": "John Lewis Votercade, Midland, MI",
+  "url": "https://www.mobilize.us/publiccitizen/event/384443/",
+  "lat": 43.6227539,
+  "lng": -84.2371435
+
+},
+  
 {
   "name": "John Lewis Votercade, Kingston, NY",
   "url": "https://www.mobilize.us/publiccitizen/event/382792/",
