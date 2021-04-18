@@ -9,7 +9,7 @@ var markers = [
 
 },
   
-  
+  /*
   
   
                              {
@@ -78,8 +78,7 @@ var markers = [
  "name": "John Lewis Votercade, 	Cincinnati	OH	  "url":	https://www.mobilize.us/publiccitizen/event/381965/	"lat":	39.1066278	  "lng":	-84.5798623		
  "name": "John Lewis Votercade, 	Ann Arbor	MI	  "url":	https://www.mobilize.us/publiccitizen/event/381547/	"lat":	42.2844436	  "lng":	-83.7464594		
   
-    */
-  
+   
                            {
     //Added on Sunday, April 18, 2021 	
    "name": "John Lewis Votercade, 	Carthage	NC",
@@ -190,6 +189,8 @@ var markers = [
 },
   
   
+  
+   */
   
     {
     //Added on Sunday, April 18, 2021 
