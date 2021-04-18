@@ -9,8 +9,190 @@ var markers = [
 
 },
   
+  
+    /*
+  
+                             {
+    //Added on Sunday, April 18, 2021 	
+  
+       
+},
+  
+                             {
+    //Added on Sunday, April 18, 2021 	
+  
+       
+},
+  
+                             {
+    //Added on Sunday, April 18, 2021 	
+  
+       
+},
+  
+                             {
+    //Added on Sunday, April 18, 2021 	
+  
+       
+},
+  
+                             {
+    //Added on Sunday, April 18, 2021 	
+  
+       
+},
+ */
+  
+   /*
+  
+ "name": "John Lewis Votercade, 	Carthage	NC	  "url":	https://www.mobilize.us/publiccitizen/event/384154/	"lat":	35.3459867	  "lng":	-79.4169711		
+ "name": "John Lewis Votercade, 	Augusta	GA	  "url":	https://www.mobilize.us/publiccitizen/event/384152/	"lat":	33.4577032	  "lng":	-81.9643913		
+ "name": "John Lewis Votercade, 	West Palm Beach	FL	  "url":	https://www.mobilize.us/publiccitizen/event/384142/	"lat":	26.666953	  "lng":	-80.0692442		
+ "name": "John Lewis Votercade, 	Denver	CO	  "url":	https://www.mobilize.us/publiccitizen/event/384136/	"lat":	39.6631609	  "lng":	-104.8279512		
+ "name": "John Lewis Votercade, 	Whittier	CA	  "url":	https://www.mobilize.us/publiccitizen/event/384133/	"lat":	33.9443011	  "lng":	-117.9931472		
+ "name": "John Lewis Votercade, 	San Rafael	CA	  "url":	https://www.mobilize.us/publiccitizen/event/384125/	"lat":	37.9650627	  "lng":	-122.503327		
+ "name": "John Lewis Votercade, 	San Ramon	CA	  "url":	https://www.mobilize.us/publiccitizen/event/384071/	"lat":	37.7646345	  "lng":	-121.9546212		
+ "name": "John Lewis Votercade, 	Detroit	MI	  "url":	https://www.mobilize.us/publiccitizen/event/384037/	"lat":	42.4090864	  "lng":	-83.0038236		
+ "name": "John Lewis Votercade, 	Whittier	CA	  "url":	https://www.mobilize.us/publiccitizen/event/384031/	"lat":	33.9602823	  "lng":	-118.0254235		
+ "name": "John Lewis Votercade, 	Vashon	WA	  "url":	https://www.mobilize.us/publiccitizen/event/384030/	"lat":	47.4473204	  "lng":	-122.4598502		
+ "name": "John Lewis Votercade, 	Catonsville	MD	  "url":	https://www.mobilize.us/publiccitizen/event/384027/	"lat":	39.2724771	  "lng":	-76.745195		
+ "name": "John Lewis Votercade, 	New City	NY	  "url":	https://www.mobilize.us/publiccitizen/event/384024/	"lat":	41.1604286	  "lng":	-73.9947563		
+ "name": "John Lewis Votercade, 	Southbury	CT	  "url":	https://www.mobilize.us/publiccitizen/event/384023/	"lat":	41.4786815	  "lng":	-73.2151303		
+ "name": "John Lewis Votercade, 	Beckley	WV	  "url":	https://www.mobilize.us/publiccitizen/event/384021/	"lat":	37.7706968	  "lng":	-81.1679611		
+ "name": "John Lewis Votercade, 	Milwaukee	WI	  "url":	https://www.mobilize.us/publiccitizen/event/383980/	"lat":	43.0738036	  "lng":	-87.9383822		
+ "name": "John Lewis Votercade, 	West Palm Beach	FL	  "url":	https://www.mobilize.us/publiccitizen/event/383966/	"lat":	26.7619563	  "lng":	-80.1037721		
+ "name": "John Lewis Votercade, 	St. Louis	MO	  "url":	https://www.mobilize.us/publiccitizen/event/383965/	"lat":	38.6772699	  "lng":	-90.2539408		
+ "name": "John Lewis Votercade, 	Swansea	IL	  "url":	https://www.mobilize.us/publiccitizen/event/383655/	"lat":	38.5543452	  "lng":	-89.9921543		
+ "name": "John Lewis Votercade, 	Nashville	TN	  "url":	https://www.mobilize.us/publiccitizen/event/383636/	"lat":	36.1718363	  "lng":	-86.8069698		
+ "name": "John Lewis Votercade, 	West Hollywood	CA	  "url":	https://www.mobilize.us/publiccitizen/event/383632/	"lat":	34.1147313	  "lng":	-118.3637264		
+ "name": "John Lewis Votercade, 	Pensacola	FL	  "url":	https://www.mobilize.us/publiccitizen/event/383573/	"lat":	30.4502608	  "lng":	-87.216961		
+ "name": "John Lewis Votercade, 	Southern Pines	NC	  "url":	https://www.mobilize.us/publiccitizen/event/383433/	"lat":	35.1777036	  "lng":	-79.4074917		
+ "name": "John Lewis Votercade, 	Boston	MA	  "url":	https://www.mobilize.us/publiccitizen/event/383294/	"lat":	42.3053602	  "lng":	-71.0616507		
+ "name": "John Lewis Votercade, 	Doral	FL	  "url":	https://www.mobilize.us/publiccitizen/event/383271/	"lat":	25.822791	  "lng":	-80.363131		
+ "name": "John Lewis Votercade, 	Selma	AL	  "url":	https://www.mobilize.us/publiccitizen/event/382963/	"lat":	32.4198418	  "lng":	-87.0002387		
+ "name": "John Lewis Votercade, 	Kingston	NY	  "url":	https://www.mobilize.us/publiccitizen/event/382792/	"lat":	41.9346864	  "lng":	-74.0200209		
+ "name": "John Lewis Votercade, 	Columbia	SC	  "url":	https://www.mobilize.us/publiccitizen/event/382727/	"lat":	34.0329994	  "lng":	-81.0921942		
+ "name": "John Lewis Votercade, 	Atlanta	GA	  "url":	https://www.mobilize.us/publiccitizen/event/382524/	"lat":	33.7606424	  "lng":	-84.3576348		
+ "name": "John Lewis Votercade, 	Portland	ME	  "url":	https://www.mobilize.us/publiccitizen/event/382485/	"lat":	43.6629964	  "lng":	-70.2568775		
+ "name": "John Lewis Votercade, 	Dallas	TX	  "url":	https://www.mobilize.us/publiccitizen/event/382060/	"lat":	32.7764068	  "lng":	-96.7970783		
+ "name": "John Lewis Votercade, 	Cincinnati	OH	  "url":	https://www.mobilize.us/publiccitizen/event/381965/	"lat":	39.1066278	  "lng":	-84.5798623		
+ "name": "John Lewis Votercade, 	Ann Arbor	MI	  "url":	https://www.mobilize.us/publiccitizen/event/381547/	"lat":	42.2844436	  "lng":	-83.7464594		
+  
+    */
+  
+                           {
+    //Added on Sunday, April 18, 2021 	
+   "name": "John Lewis Votercade, 	Carthage	NC",
+                             "url":	"https://www.mobilize.us/publiccitizen/event/384154/",
+                             "lat":	35.3459867,	  "lng":	-79.4169711		
+
+       
+},
+                          {
+    //Added on Sunday, April 18, 2021 	
+    "name": "John Lewis Votercade, 	Charlotte	NC",
+                            "url":	"https://www.mobilize.us/publiccitizen/event/384159/",
+                            "lat":	35.1105564,
+                            "lng":	-80.7103532	
+       
+},
+                          {
+     
+    //Added on Sunday, April 18, 2021 	
+ "name": "John Lewis Votercade, 	Southern Pines	NC	  "url":	https://www.mobilize.us/publiccitizen/event/384163/	"lat":	35.2035849	  "lng":	-79.4591378		
+
+},
+  
+                            {
+    //Added on Sunday, April 18, 2021 	
+ "name": "John Lewis Votercade, 	Kingstree	SC	  "url":	https://www.mobilize.us/publiccitizen/event/384171/	"lat":	33.6676643	  "lng":	-79.8306264		
+
+},
+  
+                        {
+    //Added on Sunday, April 18, 2021 
+  "name": "John Lewis Votercade, 	Charleston	SC",
+                          "url":	"https://www.mobilize.us/publiccitizen/event/384173/",
+                          "lat":	32.7791432,
+                          "lng":	-79.9248669		
+
+},
+
+                    {
+    //Added on Sunday, April 18, 2021 
+ "name": "John Lewis Votercade, 	Savannah	GA",
+                      "url":	"https://www.mobilize.us/publiccitizen/event/384178/",
+                      "lat":	32.125949,
+                      "lng":	-81.3179364	
+},
+  
+                  {
+    //Added on Sunday, April 18, 2021 
+      "name": "John Lewis Votercade, 	Champaign	IL",
+                    "url":	"https://www.mobilize.us/publiccitizen/event/384187/",
+                    "lat":	40.1166102,
+                    "lng":	-88.2412504		
+},
+  
+ 
+  
+                {
+    //Added on Sunday, April 18, 2021 
+   "name": "John Lewis Votercade, 	Las Vegas	NV",
+                  "url":	"https://www.mobilize.us/publiccitizen/event/384221/",
+                  "lat":	36.1952895,
+                  "lng":	-115.1523582		
+
+
+},
+  
+  
+              {
+    //Added on Sunday, April 18, 2021 
+  "name": "John Lewis Votercade, 	Omaha	NE",
+                "url":	"https://www.mobilize.us/publiccitizen/event/384232/",
+                "lat":	41.2674656,
+                "lng":	-95.9604031		
+
+},
+            {
+    //Added on Sunday, April 18, 2021 
+   "name": "John Lewis Votercade, 	Kansas City	MO",
+              "url":	"https://www.mobilize.us/publiccitizen/event/384262/",
+              "lat":	38.8895526,	  
+              "lng":	-94.5315029
+
+},
+  
+          {
+    //Added on Sunday, April 18, 2021 
+             "name": "John Lewis Votercade, 	Evanston	IL",
+            "url":	"https://www.mobilize.us/publiccitizen/event/384285/",
+            "lat":	42.0485611,	  
+            "lng":	-87.6985665
+},
+  
+        {
+    //Added on Sunday, April 18, 2021 
+ "name": "John Lewis Votercade, 	Huntington	WV",
+  "url":	"https://www.mobilize.us/publiccitizen/event/384289/",
+  "lat":	38.3751952,	  
+  "lng":	-82.3994214
+},
+  
+      {
+    //Added on Sunday, April 18, 2021 
+ "name": "John Lewis Votercade, 	Morgantown	WV",
+  "url":	"https://www.mobilize.us/publiccitizen/event/384290/",
+  "lat":	39.629526,	  
+  "lng":	-79.9558968
+
+},
+  
+  
+  
     {
-    //Added on Sunday, April 18, 2021 >>
+    //Added on Sunday, April 18, 2021 
  "name": "John Lewis Votercade, 	Chicago	IL",	  
  "url":	"https://www.mobilize.us/publiccitizen/event/384296/",
  "lat":	41.8043379,	  
