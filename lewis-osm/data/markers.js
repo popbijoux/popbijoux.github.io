@@ -7,8 +7,7 @@ var markers = [
   "lat": 34.16035,
   "lng": -118.05297
 
-},
-  
+}, 
   /*
   
   
@@ -190,8 +189,8 @@ var markers = [
   
   
   
-   */
   
+   */
     {
     //Added on Sunday, April 18, 2021 
  "name": "John Lewis Votercade, 	Chicago	IL",	  
