@@ -1,3 +1,4 @@
+ //Data last updated on Wednesday, April 21, 2021
 var markers = [
 
 {
@@ -10,8 +11,68 @@ var markers = [
 },
   /*
 
- */
 
+
+
+ */
+ {
+ //Added on Wednesday, April 21, 2021
+ "name": "John Lewis Votercade, Southern Pines	NC",
+ "url":	"https://www.mobilize.us/publiccitizen/event/385310/",	"lat":	35.17281,	  "lng":	-79.392358
+},
+
+
+
+
+ {
+ //Added on Wednesday, April 21, 2021
+"name": "John Lewis Votercade, 	Lewisburg	WV",	  "url":	"https://www.mobilize.us/publiccitizen/event/384475/",	"lat":	37.8017879,	  "lng":	-80.4456303
+},
+
+
+ {
+ //Added on Wednesday, April 21, 2021
+"name": "John Lewis Votercade, 	Georgetown	SC",	  "url":	"https://www.mobilize.us/publiccitizen/event/385355/",	"lat":	33.3806239,	  "lng":	-79.3018358
+ },
+
+
+ {
+ //Added on Wednesday, April 21, 2021
+"name": "John Lewis Votercade, 	Walterboro	SC",	  "url":	"https://www.mobilize.us/publiccitizen/event/385295/",	"lat":	32.9051704,	  "lng":	-80.6667688
+ },
+
+ {
+ //Added on Wednesday, April 21, 2021
+  "name": "John Lewis Votercade, 	Schaumburg	IL",	  "url":	"https://www.mobilize.us/publiccitizen/event/384649/",
+  	"lat":	42.03,	  "lng":	-88.09
+ },
+
+ {
+ //Added on Wednesday, April 21, 2021
+  "name": "John Lewis Votercade, 	DuPage County	IL",	  "url":	"https://www.mobilize.us/publiccitizen/event/384648/",	"lat":	41.8745267,	  "lng":	-88.1193763
+ },
+
+
+ {
+ //Added on Wednesday, April 21, 2021
+  "name": "John Lewis Votercade, 	Washington	DC",
+  	  "url":	"https://www.mobilize.us/publiccitizen/event/384523/",
+      	"lat":	38.912068,	  "lng":	-77.0190228
+ },
+
+ {
+ //Added on Wednesday, April 21, 2021
+  "name": "John Lewis Votercade, 	Los Angeles	CA",
+  	  "url":	"https://www.mobilize.us/publiccitizen/event/384963/",
+      "lat":	34.0479682,	  "lng":	-118.4450073
+ },
+
+ {
+ //Added on Wednesday, April 21, 2021
+"name": "John Lewis Votercade, 	Flagstaff	AZ",
+	  "url":	"https://www.mobilize.us/publiccitizen/event/385316/",
+    	"lat":	35.1982836,	  "lng":	-111.651302
+ },
 
 
  {
