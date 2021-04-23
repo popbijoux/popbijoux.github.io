@@ -1,4 +1,3 @@
-// See post: http://asmaloney.com/2014/01/code/creating-an-interactive-map-with-leaflet-and-openstreetmap/
 
 
 
@@ -25,9 +24,8 @@ info.onAdd = function (map) {
 };
 
 info.update = function (props) {
-  this._div.innerHTML = '<h4>US Population Density</h4>' +  (props ?
-    '<b>' + props.name + '</b><br />' + props.density + ' people / mi<sup>2</sup>'
-    : 'Hover over a state');
+  this._div.innerHTML = '<h4>Events in your state</h4>' +  (props ?
+    '<b>' + props.name + '</b><br />'  /*+props.density + ' people / mi<sup>2</sup>'*/: 'Hover over a state');
 };
 
 info.addTo(map);
@@ -136,7 +134,7 @@ for ( var i=0; i < markers.length; ++i )
 
 map.attributionControl.addAttribution('Population data &copy; <a href="http://census.gov/">US Census Bureau</a>');
 
-
+/*
 var legend = L.control({position: 'bottomright'});
 
 legend.onAdd = function (map) {
@@ -160,3 +158,4 @@ legend.onAdd = function (map) {
 };
 
 legend.addTo(map);
+*/
