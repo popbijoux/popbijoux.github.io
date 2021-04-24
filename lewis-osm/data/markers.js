@@ -12,8 +12,6 @@ var markers = [
   /*
 
 
-
-
  */
  {
  //Added on Wednesday, April 21, 2021
