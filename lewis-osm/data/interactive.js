@@ -1,63 +1,55 @@
 // Get Mobilize API jsonData
+// cleaned up 3:09pm Sunday April 25, 2021
+// Thank you so much Jonathan you are a genius and a kind person!!!
+
 var request = new XMLHttpRequest();
 
-request.open('GET', 'https://api.mobilize.us/v1/organizations/7229/events?is_virtual=false');
+request.open('GET', 'https://api.mobilize.us/v1/organizations/7229/events?is_virtual=false&address_visibility=PUBLIC');
 
 request.onload = function() {
+
+	var map = L.map('map', {
+		center: [39.0, -94.0],
+		minZoom: 4,
+		zoom: 4
+	})
+
+	L.tileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+		attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>',
+		subdomains: ['a', 'b', 'c']
+	}).addTo(map)
+
 	var response = request.response;
 	var parsedData = JSON.parse(response);
-	console.log(mapDataToMarkers(parsedData));
+	console.log(mapDataToMarkers(parsedData.data));
+	const markers = mapDataToMarkers(parsedData.data);
+	for (var i = 0; i < markers.length; ++i) {
+		L.marker([markers[i].lat, markers[i].lng])
+			.bindPopup('<a href="' + markers[i].url + '" target="_blank">' + markers[i].name + '</a>')
+			.addTo(map);
+	}
+
 
 
 };
 
+
 request.send();
 
-function mapDataToMarkers (data){
-	
-const markers = [];
-const marker  = {
-	"name": "",
-	"url": "",
-	"lat": "",
-	"lng": ""
-	};
-for (let x = 0 x<data.length x++) {
-	console.log (data[x]);
-}
-	
-}
+function mapDataToMarkers(data) {
 
-var map = L.map( 'map', {
-/*
-  center: [20.0, 5.0],
-  minZoom: 2,
-  zoom: 2
-  */
+	const markers = [];
+	for (let x = 0; x < data.length; x++) {
+		console.log(data[x]);
+		if (data[x].location && data[x].location.location) {
+			markers.push({
+				"name": data[x].location.venue,
+				"url": data[x].browser_url,
+				"lat": data[x].location.location.latitude,
+				"lng": data[x].location.location.longitude
+			})
+		}
+	}
+	return markers;
 
-  center: [39.0, -94.0],
-  minZoom: 4,
-  zoom: 4
-})
-
-L.tileLayer( 'http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-  attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>',
-  subdomains: ['a', 'b', 'c']
-}).addTo( map )
-
-var myURL = jQuery( 'script[src$="interactive.js"]' ).attr( 'src' ).replace( 'interactive.js', '' )
-
-var myIcon = L.icon({
-  iconUrl: myURL + 'images/pin24.png',
-  iconRetinaUrl: myURL + 'images/pin48.png',
-  iconSize: [29, 24],
-  iconAnchor: [9, 21],
-  popupAnchor: [0, -14]
-})
-
-for ( var i=0; i < markers.length; ++i )
-{
- L.marker( [markers[i].lat, markers[i].lng], {icon: myIcon} )
-  .bindPopup( '<a href="' + markers[i].url + '" target="_blank">' + markers[i].name + '</a>' )
-  .addTo( map );
 }
