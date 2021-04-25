@@ -1,17 +1,33 @@
 // Get Mobilize API jsonData
 var request = new XMLHttpRequest();
 
-request.open('GET', 'https://api.mobilize.us/v1/organizations/7229/events');
+request.open('GET', 'https://api.mobilize.us/v1/organizations/7229/events?is_virtual=false');
 
 request.onload = function() {
 	var response = request.response;
 	var parsedData = JSON.parse(response);
-	console.log(parsedData);
+	console.log(mapDataToMarkers(parsedData));
 
 
 };
 
 request.send();
+
+function mapDataToMarkers (data){
+	
+const markers = [];
+const marker  = {
+	"name": "",
+	"url": "",
+	"lat": "",
+	"lng": ""
+	};
+for (let x = 0 x<data.length x++) {
+	console.log (data[x]);
+}
+	
+}
+
 var map = L.map( 'map', {
 /*
   center: [20.0, 5.0],
