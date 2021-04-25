@@ -1,11 +1,15 @@
 // Get Mobilize API jsonData
-// cleaned up 3:09pm Sunday April 25, 2021
+// cleaned up code at 3:09pm Sunday April 25, 2021
 // Thank you so much Jonathan you are a genius and a kind person!!!
+// 4:31pm Sunday April 25, 2021
+// Added City, State, Zip code and text to label
 
 var request = new XMLHttpRequest();
 
-request.open('GET', 'https://api.mobilize.us/v1/organizations/7229/events?is_virtual=false&address_visibility=PUBLIC');
+request.open('GET', 'https://api.mobilize.us/v1/organizations/7229/events');
+//request.open('GET', 'https://api.mobilize.us/v1/organizations/7229/events?is_virtual=false');
 
+//request.open('GET', 'https://api.mobilize.us/v1/organizations/7229/events?is_virtual=false&address_visibility=PUBLIC');
 request.onload = function() {
 
 	var map = L.map('map', {
@@ -24,8 +28,10 @@ request.onload = function() {
 	console.log(mapDataToMarkers(parsedData.data));
 	const markers = mapDataToMarkers(parsedData.data);
 	for (var i = 0; i < markers.length; ++i) {
+
 		L.marker([markers[i].lat, markers[i].lng])
-			.bindPopup('<a href="' + markers[i].url + '" target="_blank">' + markers[i].name + '</a>')
+
+			.bindPopup("<h3>John Lewis Votercade</h3>" + '<h3>' + '<a href="' + markers[i].url + '" target="_blank">' + markers[i].locality + "," + " " + markers[i].region + " " + markers[i].zipcode +  '</a>')
 			.addTo(map);
 	}
 
@@ -41,10 +47,12 @@ function mapDataToMarkers(data) {
 	const markers = [];
 	for (let x = 0; x < data.length; x++) {
 		console.log(data[x]);
-		if (data[x].location && data[x].location.location) {
+		if ( data[x].location && data[x].location.location ) {
 			markers.push({
-				"name": data[x].location.venue,
+				"locality": data[x].location.locality,
+				"region": data[x].location.region,
 				"url": data[x].browser_url,
+				"zipcode": data[x].location.postal_code,
 				"lat": data[x].location.location.latitude,
 				"lng": data[x].location.location.longitude
 			})
