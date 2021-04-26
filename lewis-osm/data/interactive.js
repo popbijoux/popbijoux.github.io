@@ -6,10 +6,10 @@
 
 var request = new XMLHttpRequest();
 
-request.open('GET', 'https://api.mobilize.us/v1/organizations/7229/events');
-//request.open('GET', 'https://api.mobilize.us/v1/organizations/7229/events?is_virtual=false');
+//request.open('GET', 'https://api.mobilize.us/v1/organizations/7229/events');
+request.open('GET', 'https://api.mobilize.us/v1/organizations/7229/events?is_virtual=false&per_page=500');
 
-//request.open('GET', 'https://api.mobilize.us/v1/organizations/7229/events?is_virtual=false&address_visibility=PUBLIC');
+
 request.onload = function() {
 
 	var map = L.map('map', {
@@ -31,7 +31,7 @@ request.onload = function() {
 
 		L.marker([markers[i].lat, markers[i].lng])
 
-			.bindPopup("<h3>John Lewis Votercade</h3>" + '<h3>' + '<a href="' + markers[i].url + '" target="_blank">' + markers[i].locality + "," + " " + markers[i].region + " " + markers[i].zipcode +  '</a>')
+			.bindPopup("<h3>John Lewis Votercade</h3>" + '<h3>' + '<a href="' + markers[i].url + '" target="_blank">' + markers[i].locality + "," + " " + markers[i].region + " " + markers[i].zipcode +  '</a>' + '</h3>')
 			.addTo(map);
 	}
 
@@ -47,7 +47,7 @@ function mapDataToMarkers(data) {
 	const markers = [];
 	for (let x = 0; x < data.length; x++) {
 		console.log(data[x]);
-		if ( data[x].location && data[x].location.location ) {
+		if ( data[x].location && data[x].location.location && data[x].location.address_lines ) {
 			markers.push({
 				"locality": data[x].location.locality,
 				"region": data[x].location.region,
