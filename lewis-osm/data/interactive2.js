@@ -213,7 +213,7 @@ function mapDataToMarkers(data) {
 
 "<h2>Event Info & RSVP</h2>" +
 
-					'</a>' + '<img src="images/lewis-sml.png" alt="john lewis Votercade" width="80%" height="">' + '<br>' + '<br>' + markers[i].description + '<br>' + '<br>'
+					'</a>' + '<img src="lewis-sml.png" alt="john lewis Votercade" width="80%" height="">' + '<br>' + '<br>' + markers[i].description + '<br>' + '<br>'
 
 
 
