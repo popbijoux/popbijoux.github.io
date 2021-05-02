@@ -14,6 +14,30 @@
   <script src="https://unpkg.com/jquery@3.4.1/dist/jquery.min.js" integrity="sha384-vk5WoKIaW/vJyUAd9n/wmopsmNhiy+L2Z+SBxGYnUkunIxVxAv/UtMOhba/xskxh" crossorigin=""></script>
   <script src="https://unpkg.com/leaflet@1.5.1/dist/leaflet.js" integrity="sha512-GffPMF3RvMeYyc1LWMHtK8EbPv0iNZ8/oTtHPx9/cc2ILxQ+u905qIwdpULaqDkyBKgOaB57QTMg7ztg8Jm2Og==" crossorigin=""></script>
   <style>
+    body {
+      text-align: left;
+
+    }
+
+    #map {
+
+      height: 600px;
+    }
+
+    #nextToMap {
+
+      height: 600px;
+      overflow: scroll;
+      padding: 46px;
+    }
+
+
+    #nextToMap:hover {
+      background-color: #f1f1f1;
+      border-left-color: blue;
+      border-left-width: 8px;
+      border-left-style: solid;
+    }
 
     .flex-container {
       display: flex;
@@ -23,9 +47,19 @@
 
       font-family: 'Playfair Display', serif;
       text-align: center;
+      width: 100%;
     }
 
-  h1 {
+    .flex-container>div {
+      background-color: white;
+
+
+
+    }
+
+
+
+    h1 {
 
       font-family: 'bitter', serif;
       font-weight: 600;
@@ -35,104 +69,351 @@
 
     h2 {
 
-        font-family: 'bitter', serif;
-        font-weight: 900;
-        font-size: 22px;
-        text-align: center;
-      }
-
-    .flex-container>div {
-      background-color: #f1f1f1;
-
-      margin: 0px;
+      font-family: 'bitter', serif;
+      font-weight: 900;
+      font-size: 28px;
       text-align: center;
-      line-height: ;
+      line-height: 1.5em;
+    }
+
+    h3 {
+
+      font-family: 'Playfair Display', serif;
+      font-weight: 400;
+      font-size: 28px;
+      text-align: center;
+    }
+
+    p {
+      padding: 24px;
+      font-size: 20px;
+
+      text-align: left;
+      line-height: 1.5em;
+    }
+
+    #searchContainer {
+
+      display: block;
 
     }
 
     form {
 
-          font-family: 'claredon', serif;
-          font-weight:400;
-          font-size: 20px;
-          text-align: left;
-        }
 
-  input {
-
-        font-family: 'bitter', serif;
-        font-weight:400;
-        font-size: 18px;
-        text-align: left;
+      box-sizing: border-box;
+      width: 100%;
+      font-family: 'claredon', serif;
+      font-weight: 400;
+      font-size: 17px;
+      text-align: left;
 
 
+    }
+
+    input {
+
+      font-family: 'bitter', serif;
+      font-weight: 400;
+      font-size: 24px;
+      text-align: left;
+
+      float: left;
+      width: 75%;
+
+    }
+
+    button {
+      width: 22%;
+      padding: 12px;
+      background: blue;
+      color: white;
+      font-size: 18px;
+      border: 2px;
+      border-color: #2196F3;
+      border-left: none;
+      cursor: pointer;
+      font-family: 'bitter', serif;
+      float: left;
+    }
+
+    input[type=text] {
+      padding: 10px;
+      font-size: 18px;
+      border: 2px solid grey;
+      border-color: #bdbdbd;
+      float: left;
+      background: #f1f1f1;
+
+
+
+
+
+    }
+
+    @media (max-width: 800px) {
+      #map {
+        display: none;
+      }
+
+      #nextToMap {
+        width: 100%;
+      }
+
+
+
+      input[type=text] {
+
+        width: ;
+
+      }
+
+      input {
+
+        width: 72%;
+      }
+
+    }
+
+
+
+    @media (min-width: 801px) {
+      #map {
+        display: block;
+        width: 60%;
+      }
+
+      #nextToMap {
+        width: 40%;
+      }
+
+      input[type=text] {
+
+        width: 74%;
+
+      }
+
+      input {
+
+        width: 74%;
       }
 
       button {
-        float: left;
-        width: 20%;
-        padding: 10px;
-        background: #2196F3;
-        color: white;
-        font-size: 17px;
-        border: 1px solid grey;
-        border-left: none;
-        cursor: pointer;
+
+        width: 22%;
       }
 
-    input[type=text] {
-  padding: 10px;
-  font-size: 17px;
-  border: 1px solid grey;
-  float: left;
-  width: 60%;
-  background: #f1f1f1;
-}
-
+    }
   </style>
 
 </head>
 
 <body>
-  <div id="landing" style="width: 100%; height: 600px; border: 0px solid #AAA; background-image: url(images/lewis-hdr.png); "></div>
+  <!--  <div id="landing" style="width: 100%; height: 600px; border: 0px solid #AAA; background-image: url(lewis-blue.png); "></div>-->
 
-  <div id="mapTitle" style="width: 100%; height: 60px; border: 0px solid #AAA;">  <h1>Find an Event Near You</h1></div>
-
-
-
-
+  <div id="mapTitle">
+    <h1>Find an Event Near You</h1>
+    <div class="et_pb_module et_pb_code et_pb_code_1">
 
 
-
-  <div id="mapContainer" class="flex-container" >
-
-
-    <div id="map" style="width: 60%; height: 600px;"></div>
-    <div id="nextToMap" style="width: 40%; height: 600px; overflow: scroll; padding: 36px; ">
-      <div class="et_pb_code_inner">
-
+      <div class="et_pb_code_inner" id="searchContainer">
         <form id="map-search-form">
-          <label></label>
-          <input type="text" id="map-search-input" placeholder="search by  zipcode" />
+          <!--    <label>Find an Event</label>-->
+          <input type="text" id="map-search-input" placeholder="Search by zip code..." />
           <button id="map-search-button" class="">Search</button>
         </form>
 
-
-
       </div>
-<div class="flex-container" style="width: 100%;">
-    
-</div>
-
-<div id="sideBarText" style=""><br></div>
 
     </div>
 
   </div>
 
+
+
+
+
+
+
+
+
+
+  <div id="mapContainer" class="flex-container">
+
+
+    <div id="map"></div>
+    <div id="nextToMap">
+
+      <div id="sideBarText" style=""><br></div>
+
+    </div>
+
   </div>
 
-  <script type='text/javascript' src='data/interactive2.js'></script>
+
+
+  <script type="text/javascript">
+    let eventMap; // We only want one map
+
+    /**
+     * Initializes map making AJAX request and loading on retrieval
+     */
+    function initMap() {
+      var request = new XMLHttpRequest();
+
+      request.open(
+        'GET',
+        'https://api.mobilize.us/v1/organizations/7229/events?is_virtual=false&per_page=500'
+      );
+
+      request.onload = function() {
+        var response = request.response;
+        var parsedData = JSON.parse(response);
+
+        const markers = mapDataToMarkers(parsedData.data);
+        loadMap(markers);
+      };
+
+      const mapSearchFormElement = document.getElementById('map-search-form');
+
+      if (mapSearchFormElement) {
+        mapSearchFormElement.addEventListener('submit', onClickSearch);
+      }
+
+      request.send();
+    }
+
+    /**
+     * On clicking search retrieves results and refreshes map
+     * zooming in to bounding box.
+     */
+    function onClickSearch(event) {
+      // Prevents form from loading
+      event.preventDefault();
+
+      var request = new XMLHttpRequest();
+      request.open(
+        'GET',
+        `https://api.mobilize.us/v1/organizations/7229/events?is_virtual=false&per_page=500&zipcode=${
+              document.getElementById('map-search-input').value
+            }&max_dist=500`
+      );
+      request.onload = function() {
+        var response = request.response;
+        var parsedData = JSON.parse(response);
+
+        const markers = mapDataToMarkers(parsedData.data);
+
+        // Need to destroy map before loading new markers
+        eventMap.remove();
+
+        loadMap(markers);
+
+        eventMap.fitBounds([
+          markers.map((marker) => [marker.lat, marker.lng]),
+        ]);
+
+
+
+
+        document.getElementById('map-section-title').scrollIntoView({
+          block: "start",
+          behavior: "smooth",
+        });
+
+      };
+      request.send();
+      return false; // Prevents the form from actually submitting to server
+    }
+
+    function mapDataToMarkers(data) {
+      const markers = [];
+      for (let x = 0; x < data.length; x++) {
+        if (data[x].location && data[x].location.location) {
+          markers.push({
+            locality: data[x].location.locality,
+            region: data[x].location.region,
+            url: data[x].browser_url,
+            zipcode: data[x].location.postal_code,
+            title: data[x].title,
+            description: data[x].description,
+            lat: data[x].location.location.latitude,
+            lng: data[x].location.location.longitude,
+          });
+        }
+      }
+      return markers;
+    }
+
+
+
+
+
+    function loadMap(markers) {
+      eventMap = L.map('map', {
+        center: [39.0, -94.0],
+        minZoom: 4,
+        zoom: 4,
+      });
+
+      L.tileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        attribution: '© <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>',
+        subdomains: ['a', 'b', 'c'],
+      }).addTo(eventMap);
+
+      for (var i = 0; i < markers.length; ++i) {
+        L.marker([markers[i].lat, markers[i].lng])
+
+          .bindPopup(
+            '<h3>John Lewis Votercade</h3>' +
+            '<h3>' +
+            '<a href="' +
+            markers[i].url +
+            '" target="_blank">' +
+            markers[i].locality +
+            ',' +
+            ' ' +
+            markers[i].region +
+            ' ' +
+            markers[i].zipcode +
+            '</a>'
+          )
+
+
+
+
+          .addTo(eventMap);
+      }
+
+      let eventsFromMarkers = '';
+      for (let i in markers) {
+        console.log(markers[i]);
+        eventsFromMarkers += '<h2>' + markers[i].title + '</h2>' + '<h3>' + "<h3>Where:" + ' ' + markers[i].locality +
+          ',' +
+
+          ' ' +
+          markers[i].region +
+          ' ' +
+          markers[i].zipcode + '</h3>' +
+
+          '<a href="' +
+          markers[i].url +
+          '" target="_blank">' +
+
+          "<h2>Event Info & RSVP</h2>" +
+
+          '</a>' + '<img src="lewis-sml.png" alt="john lewis Votercade" width="80%" height="">' + '<br>' + '<p>' + markers[i].description + '</p>' + '<br>' + '<br>'
+
+
+
+
+      }
+      document.getElementById('sideBarText').innerHTML = eventsFromMarkers;
+
+    }
+
+    initMap();
+  </script>
 </body>
 
 </html>
